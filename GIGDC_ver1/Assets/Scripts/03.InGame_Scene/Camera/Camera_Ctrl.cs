@@ -19,14 +19,14 @@ public class Camera_Ctrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        quadRender = quadGameObject.GetComponent<Renderer>();
+        //quadRender = quadGameObject.GetComponent<Renderer>();
     }
 
     //Update is called once per frame
     void Update()
     {
-        Vector2 textureOffset = new Vector2(Time.time * scrollSpeed, 0);
-        quadRender.material.mainTextureOffset = textureOffset;
+        //Vector2 textureOffset = new Vector2(Time.time * scrollSpeed, 0);
+        //quadRender.material.mainTextureOffset = textureOffset;
     }
 
     private void LateUpdate()
