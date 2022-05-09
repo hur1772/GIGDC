@@ -1564,6 +1564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 57893288}
+  quadGameObject: {fileID: 0}
   moveSpeed: 0.9
   z_move_speed: 2
 --- !u!1 &2080949697
