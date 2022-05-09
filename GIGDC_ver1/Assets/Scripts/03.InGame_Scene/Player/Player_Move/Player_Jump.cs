@@ -7,12 +7,14 @@ public class Player_Jump : MonoBehaviour
     private Rigidbody2D rigid;
     private Player_Input p_input;
     private Player_State_Ctrl Player_state;
+    private Animator animator;
 
     private float jump_power;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         Player_state = GetComponent<Player_State_Ctrl>();
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
@@ -27,6 +29,7 @@ public class Player_Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetTrigger("JumpTrigger");
             Player_state.p_state = PlayerState.player_move;
             Player_state.p_Move_state = PlayerMoveState.player_jump;
             P_Move_Jump();
