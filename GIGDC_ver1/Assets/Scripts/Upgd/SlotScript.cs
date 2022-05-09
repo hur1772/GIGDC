@@ -7,6 +7,7 @@ public class SlotScript : MonoBehaviour
 {
     public RawImage SlotBackImg = null;
     public RawImage ItemImg = null;
+    public RawImage[] ItemResultImg;
 
     // Start is called before the first frame update
     void Start()
