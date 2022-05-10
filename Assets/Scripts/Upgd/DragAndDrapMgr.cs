@@ -240,5 +240,4 @@ public class DragAndDrapMgr : MonoBehaviour
          //---------- 구매불가 텍스트 서서히 사라지게 처리하는 연출
 
     }//void BuyDirection() //구매 연출 함수
-
 }
