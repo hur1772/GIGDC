@@ -7,42 +7,63 @@ public class InGameMgr : MonoBehaviour
 {
     public Text m_TimerText;
     public Text m_InfoText;
-    private float m_LifeTimer;
-    private float m_InfoTimer;
-  
+    private float m_ShowMsTimer;
+    private float m_EndureTimer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        m_LifeTimer = 10.0f;
-        m_InfoTimer = 10.0f;
+        m_ShowMsTimer = 5.0f;
+        m_EndureTimer = 10.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (m_LifeTimer <= 0.0f)
+        if (0.0f < m_ShowMsTimer) // 가이드 타이머 스타트
+        {
+            m_ShowMsTimer -= Time.deltaTime;
+            TextOnOff("멧돼지와 버티기", true); //가이드 on
+
+            if(m_ShowMsTimer <= 0.0f) //n초뒤 사라짐
+            {
+                TextOnOff("", false);
+            }
+        }
+
+        if (m_EndureTimer == 0.0f)
+        {
             return;
-       
-        if (m_TimerText != null)
-        {
-            m_LifeTimer -= Time.deltaTime;
-            m_InfoTimer -= Time.deltaTime;
         }
-        m_TimerText.text = ((int)m_LifeTimer / 60 % 60).ToString() + " : " +
-        ((int)m_LifeTimer % 60).ToString();//+ Mathf.Round(m_Timer) + "초";
 
-        if(m_InfoTimer < 30.0f)
+        if(0.0f < m_EndureTimer)
         {
+            m_EndureTimer -= Time.deltaTime;
+            m_TimerText.text = ((int)m_EndureTimer / 60 % 60).ToString() + " : " +
+            ((int)m_EndureTimer % 60).ToString();//+ Mathf.Round(m_Timer) + "초";
+                                                             
+        }
+        else
+        {
+            m_TimerText.gameObject.SetActive(false);
+            TextOnOff("Clear!!\n 포탈로 이동하세요!", true);
+        }
+
+    }
+
+    void TextOnOff(string a_Mess = "", bool a_isOn = true)
+    {
+        if (a_isOn == true)
+        {
+            m_InfoText.text = a_Mess;
             m_InfoText.gameObject.SetActive(true);
-            m_InfoText.text = "사람들이 도망갈 때까지 생존하기";
+            
         }
-        if(m_InfoTimer <= 0.0f)
+        else
         {
-            m_InfoText.text = "<color=#0000ff>" + "Clear!!" + "</color>";
-            if (m_InfoTimer <= -5.0f)
-                m_InfoText.gameObject.SetActive(false);
+            m_InfoText.text = "";
+            m_InfoText.gameObject.SetActive(false);
         }
-
     }
 }
