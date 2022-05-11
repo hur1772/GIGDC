@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,11 @@ public class PigMonster : Monster
 
     float m_DelayTime = 0.0f;
     bool m_IsRight = false;
+
+    //--- 멧돼지 스킬(돌진)
+    float m_SkillCoolTime = 0.0f;
+    float m_SkillDelayTime = 0.5f;
+    bool m_IsSkillOn = false;
 
     private void Start()
     {
@@ -18,6 +23,9 @@ public class PigMonster : Monster
 
         m_ChaseDistance = 7.0f;
         m_AttackDistance = 3.0f;
+
+        m_SkillCoolTime = 5.0f;
+        m_SkillDelayTime = 0.5f;
 
         m_DelayTime = Random.Range(2.0f, 3.0f);
 
@@ -35,10 +43,26 @@ public class PigMonster : Monster
     {
         CheckDistanceFromPlayer();
         MonAiUpdate();
-        
+
+        SkillCoolUpdate();
+
         if(Input.GetKeyDown(KeyCode.G))
         {
-            m_Animator.SetTrigger("DieTrigger");
+            m_Animator.SetTrigger("SkillTrigger");
+            m_Monstate = MonsterState.SKILL;
+        }
+    }
+
+    void SkillCoolUpdate()
+    {
+        if(m_SkillCoolTime >= 0.0f)
+        {
+            m_SkillCoolTime -= Time.deltaTime;
+            if(m_SkillCoolTime <= 0.0f)
+            {
+                m_IsSkillOn = true;
+                m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
+            }
         }
     }
 
@@ -79,11 +103,12 @@ public class PigMonster : Monster
         }
         else if(m_Monstate == MonsterState.PATROL)
         {
-
-
             if (m_CalcVec.magnitude <= m_ChaseDistance) // 체이스 거리 안에 들어올 시
             {
-                m_Monstate = MonsterState.CHASE;
+                if (m_IsSkillOn)
+                    m_Monstate = MonsterState.SKILL;
+                else
+                    m_Monstate = MonsterState.CHASE;
             }
 
             if(m_DelayTime >= 0.0f)
@@ -112,6 +137,8 @@ public class PigMonster : Monster
         }
         else if(m_Monstate == MonsterState.CHASE)
         {
+            if (m_IsSkillOn)
+                m_Monstate = MonsterState.SKILL;
 
             if (m_CalcVec.x >= 0.1f)
             {
@@ -134,6 +161,36 @@ public class PigMonster : Monster
                 m_Monstate = MonsterState.ATTACK;
                 m_Animator.SetBool("IsAttack", true);
             }
+
+        }
+        else if(m_Monstate == MonsterState.SKILL)
+        {
+            if (m_SkillDelayTime >= 0.0f)
+            {
+                m_SkillDelayTime -= Time.deltaTime;
+                if (m_SkillDelayTime <= 0.0f)
+                {
+                    if (m_CalcVec.x >= 0.1f)
+                    {
+                        Debug.Log("right");
+                        m_Rb.AddForce(Vector2.right * 500.0f);
+                    }
+                    else if (m_CalcVec.x <= -0.1f)
+                    {
+                        Debug.Log("left");
+                        m_Rb.AddForce(Vector2.left * 500.0f);
+                    }
+
+                    m_Monstate = MonsterState.IDLE;
+                    m_SkillDelayTime = 0.5f;
+                    m_SkillCoolTime = 5.0f;
+                    m_IsSkillOn = false;
+                    m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
+                }
+            }
+            else
+                m_Monstate = MonsterState.IDLE;
+
 
         }
         else if(m_Monstate == MonsterState.ATTACK)
