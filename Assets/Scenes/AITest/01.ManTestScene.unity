@@ -2520,7 +2520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &204973217
 Animator:
   serializedVersion: 3
@@ -3086,6 +3086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PigMonster
       objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682374, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
 --- !u!1 &1178051672
@@ -3099,8 +3103,11 @@ GameObject:
   - component: {fileID: 1178051675}
   - component: {fileID: 1178051674}
   - component: {fileID: 1178051673}
+  - component: {fileID: 1178051677}
+  - component: {fileID: 1178051676}
+  - component: {fileID: 1178051678}
   m_Layer: 0
-  m_Name: BirdIdle_0
+  m_Name: BirdMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3165,12 +3172,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5626739899825357528, guid: 5b186bd6ace9e3842947a27196ef6945, type: 3}
+  m_Sprite: {fileID: -4153263727312996860, guid: 5b186bd6ace9e3842947a27196ef6945, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.1321516, y: 2.99}
+  m_Size: {x: 3.1421583, y: 2.4099998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3184,12 +3191,65 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178051672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.47, z: 0}
+  m_LocalPosition: {x: 3.94, y: -3.87, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1178051676
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178051672}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &1178051677
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178051672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.19119787, y: 1.2335656}
+  serializedVersion: 2
+  m_Radius: 0.8641226
+--- !u!114 &1178051678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178051672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f289533e0f1d0984fac372a1d755e0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FindDist: 5
+  m_FlyHeight: 4.3
+  m_FlySpeed: 3
+  m_FlyMonState: 0
 --- !u!1 &2137705717
 GameObject:
   m_ObjectHideFlags: 0
