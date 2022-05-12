@@ -60,8 +60,10 @@ public class Player_Walk : MonoBehaviour
 
         animator.SetBool("IsWalk", true);
         Vector2 p_vector = new Vector2(p_input.horizontal, .0f);
-        Vector2 p_move = p_vector * move_speed * Time.deltaTime;
-        rigid.position += p_move;
+        Vector2 p_move;
+        p_move.x = p_vector.x * move_speed * Time.deltaTime;
+        p_move.y = transform.position.y;
+        rigid.position = p_move;
 
         if (p_input.horizontal < 0)
             key = -1;
