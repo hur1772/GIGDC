@@ -8,6 +8,7 @@ public enum MonsterState
     PATROL,
     CHASE,
     ATTACK,
+    SKILL,
     DIE
 }
 
