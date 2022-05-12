@@ -14,8 +14,8 @@ public class InGameMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_ShowMsTimer = 5.0f;
-        m_EndureTimer = 10.0f;
+        m_ShowMsTimer = 10.0f;
+        m_EndureTimer = 20.0f;
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class InGameMgr : MonoBehaviour
         if (0.0f < m_ShowMsTimer) // 가이드 타이머 스타트
         {
             m_ShowMsTimer -= Time.deltaTime;
-            TextOnOff("멧돼지와 버티기", true); //가이드 on
+            TextOnOff("Stage1\n 감염된 멧돼지 공격을 버티세요! ", true); //가이드 on
 
             if(m_ShowMsTimer <= 0.0f) //n초뒤 사라짐
             {
@@ -37,10 +37,10 @@ public class InGameMgr : MonoBehaviour
             return;
         }
 
-        if(0.0f < m_EndureTimer)
+        if(0.0f < m_EndureTimer) //버티기 시간
         {
             m_EndureTimer -= Time.deltaTime;
-            m_TimerText.text = ((int)m_EndureTimer / 60 % 60).ToString() + " : " +
+            m_TimerText.text = "남은 시간 " +((int)m_EndureTimer / 60 % 60).ToString() + " : " +
             ((int)m_EndureTimer % 60).ToString();//+ Mathf.Round(m_Timer) + "초";
                                                              
         }
