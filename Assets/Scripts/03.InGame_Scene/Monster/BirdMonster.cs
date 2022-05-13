@@ -19,6 +19,11 @@ public class BirdMonster : Monster
     float m_MaxHeight = 0.0f;
     public float m_FlyHeight = 4.3f;
     public float m_FlySpeed = 0.0f;
+    public float m_IdleDistance = 0.0f;
+
+    //Chase상태 관련 변수
+    public float m_ChaseDelay = 2.0f;
+    public Vector3 m_ChaseVec = Vector3.zero;
 
 
     public FlyMonsterState m_FlyMonState;
@@ -79,12 +84,28 @@ void Update()
         }
         else if (m_FlyMonState == FlyMonsterState.FLY)
         {
-            if(this.transform.position.y <= m_MaxHeight)    //최대 날기 높이보다 낮다면 날기
+            //방향 전환 코드
+            ChangeRotate();
+
+            if (this.transform.position.y <= m_MaxHeight)    //최대 날기 높이보다 낮다면 날기
             {
                 m_Rb.transform.position += Vector3.up * m_FlySpeed * Time.deltaTime;
+
+                if (m_CalcVec.x >= 0.1f)
+                {
+                    m_Rb.transform.position += Vector3.left * Time.deltaTime * 2.0f;
+                }
+                else if (m_CalcVec.x <= -0.1f)
+                {
+                    m_Rb.transform.position += Vector3.right * Time.deltaTime * 2.0f;
+                }
+            }
+            else // 체이스 테스트
+            {
+                m_FlyMonState = FlyMonsterState.CHASE;
             }
 
-            if(m_DistanceFromPlayer >= 15.0f)  //사정거리 밖으로 나갔을 시
+            if(m_DistanceFromPlayer >= m_IdleDistance)  //사정거리 밖으로 나갔을 시
             {
                 if(m_IdleTimer >= 0.0f)
                 {
@@ -108,11 +129,45 @@ void Update()
         }
         else if (m_FlyMonState == FlyMonsterState.CHASE)
         {
+            //방향전환 코드
+            ChangeRotate();
+
+            if (m_ChaseDelay >= 0.0f)    //쫒을 위치 탐색
+            {
+                m_ChaseDelay -= Time.deltaTime;
+                if(m_ChaseDelay <= 0.0f)
+                {
+                    m_ChaseVec = m_Player.transform.position;
+                    m_ChaseDelay = 2.0f;
+                }
+            }
+
+            if(m_ChaseVec.x >= this.transform.position.x)
+            {
+                m_Rb.transform.position += Vector3.right * Time.deltaTime * 5.0f;
+            }
+            else
+            {
+                m_Rb.transform.position += Vector3.left * Time.deltaTime * 5.0f;
+            }
+
 
         }
         else if (m_FlyMonState == FlyMonsterState.ATTACK)
         {
 
+        }
+    }
+
+    void ChangeRotate()
+    {
+        if (m_CalcVec.x >= 0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+        }
+        else if (m_CalcVec.x <= -0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 0.0f, 0);
         }
     }
 }

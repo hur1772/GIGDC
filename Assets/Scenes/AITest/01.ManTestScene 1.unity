@@ -3249,6 +3249,9 @@ MonoBehaviour:
   m_FindDist: 5
   m_FlyHeight: 4.3
   m_FlySpeed: 3
+  m_IdleDistance: 10
+  m_ChaseDelay: 2
+  m_ChaseVec: {x: 0, y: 0, z: 0}
   m_FlyMonState: 0
 --- !u!1 &2137705717
 GameObject:
