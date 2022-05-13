@@ -1,0 +1,73 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum TutorialState
+{
+    NextStage,
+    TargetStage,
+    Fight,
+    ScarecrowStage,
+    Clear
+}
+
+public class TutorialMgr : MonoBehaviour
+{
+    public static TutorialState m_TutorialState = TutorialState.NextStage;
+
+    public GameObject ScarecrowPrefab = null;
+    public GameObject TargetPrefab = null;
+
+    GameObject PrefabPos = null;
+
+
+    [HideInInspector] public int StageLv = 0;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        StageLv = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(StageLv == 1)
+        {
+            m_TutorialState = TutorialState.TargetStage;
+        }
+
+        else if ( StageLv == 3)
+        {
+            m_TutorialState = TutorialState.ScarecrowStage;
+        }
+        else if (StageLv == 5)
+        {
+            m_TutorialState = TutorialState.Clear;
+        }
+
+        switch (m_TutorialState)
+        {
+            case TutorialState.NextStage:
+                StageLv++;
+                break;
+
+            case TutorialState.TargetStage :
+                PrefabPos = Instantiate(TargetPrefab) as GameObject;
+                StageLv++;
+                m_TutorialState = TutorialState.Fight;
+                break;
+
+            case TutorialState.ScarecrowStage:
+                PrefabPos = Instantiate(ScarecrowPrefab) as GameObject;
+                StageLv++;
+                m_TutorialState = TutorialState.Fight;
+                break;
+
+            case TutorialState.Clear :
+
+                break;
+
+        }
+    }
+}
