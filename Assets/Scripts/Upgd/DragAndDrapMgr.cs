@@ -205,7 +205,7 @@ public class DragAndDrapMgr : MonoBehaviour
     void BuyDirection() //구매 연출 함수
     {
         //---------- 장착된 아이콘이 서서히 사라지게 처리하는 연출
-        if (0.0f < m_AddTimer)
+        if (0.0f <= m_AddTimer)
         {
             m_AddTimer = m_AddTimer - Time.deltaTime;
             m_CacTime = m_AddTimer / AniDuring;

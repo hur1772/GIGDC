@@ -57,6 +57,8 @@ public class Player_Walk : MonoBehaviour
 
     private void P_Move_Walk()
     {
+        if (Player_state.p_Move_state == PlayerMoveState.player_dash)
+            return;
 
         animator.SetBool("IsWalk", true);
         Vector2 p_vector = new Vector2(p_input.horizontal, .0f);

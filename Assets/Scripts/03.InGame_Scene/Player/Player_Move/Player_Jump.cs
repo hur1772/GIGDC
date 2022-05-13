@@ -21,7 +21,7 @@ public class Player_Jump : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        jump_power = 600.0f;
+        jump_power = 350.0f;
     }
 
     // Update is called once per frame

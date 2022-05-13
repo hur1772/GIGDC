@@ -304,7 +304,7 @@ TextureImporter:
       name: "\uC8FC\uC778\uACF5 \uC2A4\uD504\uB77C\uC774\uD2B8_\uAC77\uAE30_6"
       rect:
         serializedVersion: 2
-        x: 3918
+        x: 3925
         y: 18
         width: 708
         height: 1072
@@ -325,7 +325,7 @@ TextureImporter:
       name: "\uC8FC\uC778\uACF5 \uC2A4\uD504\uB77C\uC774\uD2B8_\uAC77\uAE30_7"
       rect:
         serializedVersion: 2
-        x: 4704
+        x: 4711
         y: 14
         width: 786
         height: 1076
