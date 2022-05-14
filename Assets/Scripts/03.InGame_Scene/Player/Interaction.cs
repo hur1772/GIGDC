@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum InteractionState
 {
@@ -47,68 +48,22 @@ public class Interaction : MonoBehaviour
         switch (m_interactionState)
         {
             case InteractionState.king:
-
+                Debug.Log("king");
                 break;
 
             case InteractionState.NPC:
-
+                Debug.Log("NPC");
                 break;
 
             case InteractionState.Shop:
-
+                Debug.Log("Shop");
                 break;
 
             case InteractionState.Portal:
-                Debug.Log("Portal");
+                SceneManager.LoadScene("01.TutorialMap");
                 break;
         }
     }
 
 
-
-    //void NPCInteraction()
-    //{
-    //    if (NPCDistance < 5.0f)
-    //    {
-    //        if (GKey != null)
-    //        {
-    //            GKey.gameObject.SetActive(true);
-    //            animator.SetFloat("Interaction", NPCDistance);
-    //        }
-
-    //    }
-    //    else
-    //    {
-    //        if (GKey != null)
-    //        {
-    //            GKey.gameObject.SetActive(false);
-    //            animator.SetFloat("ChaseRange", NPCDistance);
-
-    //        }
-
-    //    }
-    //}
-
-    //void ShopInteraction()
-    //{
-    //    if (ShopDistance < 5.0f)
-    //    {
-    //        if (GKey != null)
-    //        {
-    //            GKey.gameObject.SetActive(true);
-    //            animator.SetFloat("ChaseRange", ShopDistance);
-    //        }
-
-    //    }
-    //    else
-    //    {
-    //        if (GKey != null)
-    //        {
-    //            GKey.gameObject.SetActive(false);
-    //            animator.SetFloat("ChaseRange", ShopDistance);
-
-    //        }
-
-    //    }
-    //}
 }
