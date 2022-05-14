@@ -12,6 +12,16 @@ public enum MonsterState
     DIE
 }
 
+public enum FlyMonsterState
+{
+    IDLE,
+    PATROL,
+    FLY,
+    ATTACK,
+    CHASE,
+    DIE,
+}
+
 public class Monster : MonoBehaviour
 {
     //플레이어, 거리 구하기용 벡터
@@ -28,17 +38,59 @@ public class Monster : MonoBehaviour
     protected float m_ChaseDistance = 0;
     protected float m_AttackDistance = 0;
 
-    public MonsterState m_Monstate = MonsterState.IDLE;
+    protected MonsterState m_Monstate = MonsterState.IDLE;
     protected Animator m_Animator;
 
-    private void Update()
-    {
+    //private void Update()
+    //{
         
+    //}
+
+    //private void Start()
+    //{
+        
+    //}
+
+    void AiUpdate()
+    {
+        if (m_Player == null)
+        {
+            Debug.Log("Player Null");
+            return;
+        }
+
+        if (m_Monstate == MonsterState.IDLE)
+        {
+
+        }
+        else if (m_Monstate == MonsterState.PATROL)
+        {
+
+        }
+        else if (m_Monstate == MonsterState.CHASE)
+        {
+
+        }
+        else if (m_Monstate == MonsterState.SKILL)
+        {
+
+        }
+        else if (m_Monstate == MonsterState.ATTACK)
+        {
+
+        }
     }
 
-    private void Start()
+    protected virtual void InitMonster()
     {
-        
+        if (m_Animator == null)
+            m_Animator = this.GetComponent<Animator>();
+
+        if (m_Player == null)
+            m_Player = GameObject.Find("Player");
+
+        if (m_Rb == null)
+            m_Rb = GetComponent<Rigidbody2D>();
     }
 
     protected virtual void TakeDamage(float a_Value)

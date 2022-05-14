@@ -77,9 +77,10 @@ public class DragAndDrapMgr : MonoBehaviour
         {
             BuyMouseBtnUp();
         }//if (Input.GetMouseButtonUp(0)) 
-
-        BuyDirection();
-
+        if(m_DrtIndex>1)
+        {
+            BuyDirection();
+        }
     }// void Update()
 
     bool IsCollSlot(GameObject a_CkObj)  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수
@@ -207,7 +208,7 @@ public class DragAndDrapMgr : MonoBehaviour
         //---------- 장착된 아이콘이 서서히 사라지게 처리하는 연출
         if (0.0f <= m_AddTimer)
         {
-            m_AddTimer = m_AddTimer - Time.deltaTime;
+            m_AddTimer = m_AddTimer - 0.01f;
             m_CacTime = m_AddTimer / AniDuring;
             m_Color = m_SlotSc[m_DrtIndex].ItemImg.color;
             m_Color.a = m_CacTime;
