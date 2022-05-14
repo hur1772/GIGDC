@@ -47,10 +47,10 @@ public class Player_Dash : MonoBehaviour
         }
         else
         {
+            dash_speed = p_walk.move_speed;
+            dash_time -= Time.deltaTime;
             animator.SetBool("IsDash", false);
             isDash = false;
-            dash_time -= Time.deltaTime;
-            dash_speed = p_walk.move_speed;
         }
 
         if (0.0f < dash_time)
