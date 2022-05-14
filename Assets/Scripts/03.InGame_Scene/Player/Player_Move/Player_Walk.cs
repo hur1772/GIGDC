@@ -9,8 +9,8 @@ public class Player_Walk : MonoBehaviour
     private Player_State_Ctrl Player_state;
     Animator animator;
 
-    private float move_speed;
-    private float crawl_speed;
+    public float move_speed;
+    public float crawl_speed;
     public int key = 0;
 
     // Start is called before the first frame update
