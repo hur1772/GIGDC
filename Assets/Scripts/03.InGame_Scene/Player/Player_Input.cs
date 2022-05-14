@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player_Input : MonoBehaviour
 {
     Transform player_trans;
-    public float horizontal { get; private set; }
-
+    public float horizontal { get; private set; } 
     public float vertical { get; private set; }
 
 
@@ -24,6 +23,5 @@ public class Player_Input : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         fire = Input.GetButton("Fire1");
-
     }
 }
