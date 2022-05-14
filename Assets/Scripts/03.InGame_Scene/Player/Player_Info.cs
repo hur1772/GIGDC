@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class Player_Info : MonoBehaviour
 {
+    
     public Image m_HpBar = null;
     public Text m_HpText = null;
-    [HideInInspector] public float m_MaxHp = 100;
-    [HideInInspector] public float m_CurHp = 100;
+    [HideInInspector] public float m_MaxHp;
+    [HideInInspector] public float m_CurHp;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_MaxHp = 100;
+        m_CurHp = m_MaxHp;
     }
 
     // Update is called once per frame
@@ -42,4 +46,6 @@ public class Player_Info : MonoBehaviour
             //GameOver();
         }
     }
+
+
 }
