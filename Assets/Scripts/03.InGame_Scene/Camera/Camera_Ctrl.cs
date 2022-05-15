@@ -31,7 +31,7 @@ public class Camera_Ctrl : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (0 <= p_Input.horizontal)
+        if (0 < p_Input.horizontal)
         {
             key = 1;
 
@@ -58,7 +58,7 @@ public class Camera_Ctrl : MonoBehaviour
 
             if (target.gameObject != null)
             {
-                targetPosition.Set(key * (target.transform.position.x + 4), target.transform.position.y + 4, this.transform.position.z);
+                targetPosition.Set((target.transform.position.x - 4), target.transform.position.y + 4, this.transform.position.z);
                 this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime * 5.0f);
             }
 

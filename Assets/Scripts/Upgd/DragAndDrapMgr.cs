@@ -54,7 +54,7 @@ public class DragAndDrapMgr : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {             
         if (Input.GetMouseButtonDown(0)) //왼쪽 마우스 버튼을 클릭한 순간
         {
             for(int ii = 0; ii < m_SlotSc[2].ItemResultImg.Length;ii++ )
