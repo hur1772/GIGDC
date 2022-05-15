@@ -14,12 +14,13 @@ public class NPCInteraction : MonoBehaviour
     void Update()
     {
         Interaction.Inst.NPCDistance = Vector2.Distance(Interaction.Inst.PlayPos.transform.position, this.transform.position);
+        Debug.Log("NPCDistance" + Interaction.Inst.NPCDistance);
         KingInter();
     }
 
     void KingInter()
     {
-        if (Interaction.Inst.NPCDistance < 5.0f && Interaction.Inst.NPCDistance < Interaction.Inst.PortalDistance && Interaction.Inst.NPCDistance < Interaction.Inst.ShopDistance && Interaction.Inst.NPCDistance < Interaction.Inst.KingDistance)
+        if (Interaction.Inst.NPCDistance < 5.0f || Interaction.Inst.NPCDistance < Interaction.Inst.PortalDistance&& Interaction.Inst.NPCDistance < Interaction.Inst.ShopDistance  && Interaction.Inst.NPCDistance < Interaction.Inst.KingDistance)
         {
             if (Interaction.Inst.GKey != null)
             {
@@ -33,7 +34,7 @@ public class NPCInteraction : MonoBehaviour
             }
 
         }
-        else if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+        else if (Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
         {
             {
                 if (Interaction.Inst.GKey != null)
