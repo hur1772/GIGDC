@@ -169,6 +169,15 @@ public class PigMonster : Monster
         {
             if(m_SkillTriggerBool)
             {
+                if (m_CalcVec.x >= 0.1f)
+                {
+                    this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else if (m_CalcVec.x <= -0.1f)
+                {
+                    this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+                }
+
                 m_Animator.SetTrigger("SkillTrigger");
                 m_SkillTriggerBool = false;
             }
