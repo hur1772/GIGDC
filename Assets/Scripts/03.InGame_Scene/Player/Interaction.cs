@@ -22,10 +22,10 @@ public class Interaction : MonoBehaviour
     [HideInInspector] public Animator animator;
     [HideInInspector] public Transform PlayPos;
 
-    [HideInInspector] public float KingDistance;
-    [HideInInspector] public float NPCDistance;
-    [HideInInspector] public float ShopDistance;
-    [HideInInspector] public float PortalDistance;
+    [HideInInspector] public float KingDistance = 10;
+    [HideInInspector] public float NPCDistance = 10;
+    [HideInInspector] public float ShopDistance = 10;
+    [HideInInspector] public float PortalDistance =10;
 
     public Image GKey;
 
