@@ -5,12 +5,10 @@ using UnityEngine;
 public class Camera_Ctrl : MonoBehaviour
 {
     public GameObject target;
-    public GameObject quadGameObject;
     
-    float scrollSpeed = 0.5f;
     public float moveSpeed;
     public float z_move_speed;
-    private Renderer quadRender;
+
     private Vector3 targetPosition;
     private Vector3 z_keyPosition;
 
@@ -22,15 +20,13 @@ public class Camera_Ctrl : MonoBehaviour
     void Start()
     {
         p_Input = GameObject.Find("Player").GetComponent<Player_Input>();
-        //quadRender = quadGameObject.GetComponent<Renderer>();
+      
     }
 
     //Update is called once per frame
     void Update()
     {
 
-        //Vector2 textureOffset = new Vector2(Time.time * scrollSpeed, 0);
-        //quadRender.material.mainTextureOffset = textureOffset;
     }
 
     private void LateUpdate()

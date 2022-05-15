@@ -29,12 +29,24 @@ public class TutorialMgr : MonoBehaviour
     public Text m_CurTxt = null;
     float m_CurTimer = 0.0f;
 
+    [Header("------ Talk ------")]
+    public Text talkText;
+    public TalkMgr talkManager;
+    public GameObject TalkImage;
+    public GameObject scanObject;
+    public Image portraitImage;
+
+    public bool isMove;
+    public int talkIndex;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         StageLv = 0;
         m_InfoText.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -83,8 +95,45 @@ public class TutorialMgr : MonoBehaviour
         }
 
     }
+    public void ShowText(GameObject scanObj)
+    {
+        scanObject = scanObj;
+        ObjectData objectData = scanObject.GetComponent<ObjectData>();
+        OnTalk(objectData.id, objectData.isNpc);
 
-    void GuideTimer()
+        TalkImage.SetActive(isMove);
+    }
+
+    void OnTalk(int id, bool isNpc)
+    {
+        string talkData = talkManager.GetTalk(id, talkIndex);
+
+        if (talkData == null)
+        {
+            isMove = false;
+            talkIndex = 0;
+            return;
+        }
+
+        if (isNpc)
+        {
+            talkText.text = talkData;
+            portraitImage.sprite = talkManager.GetSprite(id);
+            portraitImage.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            talkText.text = talkData;
+            portraitImage.color = new Color(1, 1, 1, 0);
+        }
+
+        isMove = true;
+        talkIndex++;
+    }
+
+
+
+void GuideTimer()
     {
         if (0.0f <= m_CurTimer)
         {
@@ -119,4 +168,5 @@ public class TutorialMgr : MonoBehaviour
 
         }
     }
+
 }
