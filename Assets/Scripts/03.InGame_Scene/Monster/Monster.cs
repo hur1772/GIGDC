@@ -38,7 +38,7 @@ public class Monster : MonoBehaviour
     protected float m_ChaseDistance = 0;
     protected float m_AttackDistance = 0;
 
-    protected MonsterState m_Monstate = MonsterState.IDLE;
+    public MonsterState m_Monstate = MonsterState.IDLE;
     protected Animator m_Animator;
 
     //private void Update()
