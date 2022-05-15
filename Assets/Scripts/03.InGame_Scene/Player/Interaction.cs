@@ -22,6 +22,8 @@ public class Interaction : MonoBehaviour
     [HideInInspector] public Animator animator;
     [HideInInspector] public Transform PlayPos;
 
+    [HideInInspector] public bool IsInteraction = false;
+
     [HideInInspector] public float KingDistance = 10;
     [HideInInspector] public float NPCDistance = 10;
     [HideInInspector] public float ShopDistance = 10;

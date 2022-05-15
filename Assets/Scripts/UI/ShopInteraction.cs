@@ -19,29 +19,40 @@ public class ShopInteraction : MonoBehaviour
 
     void KingInter()
     {
-        if (Interaction.Inst.ShopDistance < 5.0f || Interaction.Inst.ShopDistance < Interaction.Inst.PortalDistance && Interaction.Inst.ShopDistance < Interaction.Inst.NPCDistance && Interaction.Inst.ShopDistance < Interaction.Inst.KingDistance)
+        if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.GKey != null)
+            if (Interaction.Inst.ShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.ShopDistance < Interaction.Inst.NPCDistance || Interaction.Inst.ShopDistance < Interaction.Inst.KingDistance)
             {
-                Interaction.Inst.GKey.gameObject.SetActive(true);
-                Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
-
-                if (Input.GetKey(KeyCode.G))
+                if (Interaction.Inst.ShopDistance < 5.0f)
                 {
-                    Interaction.Inst.m_interactionState = InteractionState.Shop;
+                    if (Interaction.Inst.GKey != null)
+                    {
+                        Interaction.Inst.GKey.gameObject.SetActive(true);
+                        Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
+
+                        Interaction.Inst.IsInteraction = true;
+
+                        if (Input.GetKey(KeyCode.G))
+                        {
+                            Interaction.Inst.m_interactionState = InteractionState.Shop;
+                        }
+                    }
                 }
             }
-
         }
-        else if (Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+        if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.GKey != null)
+            if (Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
             {
-                Interaction.Inst.GKey.gameObject.SetActive(false);
-                Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
-
+                if (Interaction.Inst.NPCDistance > 5.0f)
+                {
+                    if (Interaction.Inst.GKey != null)
+                    {
+                        Interaction.Inst.GKey.gameObject.SetActive(false);
+                        Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
+                    }
+                }
             }
-
         }
     }
 }
