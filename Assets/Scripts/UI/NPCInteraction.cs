@@ -31,17 +31,16 @@ public class NPCInteraction : MonoBehaviour
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.NPCDistance);
 
                         Interaction.Inst.IsInteraction = true;
-
-                        if (Input.GetKey(KeyCode.G))
-                        {
-                            Interaction.Inst.m_interactionState = InteractionState.NPC;
-                        }
                     }
                 }
             }
         }
         if (Interaction.Inst.IsInteraction == true)
         {
+            if (Input.GetKey(KeyCode.G))
+            {
+                Interaction.Inst.m_interactionState = InteractionState.NPC;
+            }
             if (Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.NPCDistance > 5.0f)

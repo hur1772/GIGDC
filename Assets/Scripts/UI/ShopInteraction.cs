@@ -31,17 +31,16 @@ public class ShopInteraction : MonoBehaviour
                         Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
 
                         Interaction.Inst.IsInteraction = true;
-
-                        if (Input.GetKey(KeyCode.G))
-                        {
-                            Interaction.Inst.m_interactionState = InteractionState.Shop;
-                        }
                     }
                 }
             }
         }
         if (Interaction.Inst.IsInteraction == false)
         {
+            if (Input.GetKey(KeyCode.G))
+            {
+                Interaction.Inst.m_interactionState = InteractionState.Shop;
+            }
             if (Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.NPCDistance > 5.0f)

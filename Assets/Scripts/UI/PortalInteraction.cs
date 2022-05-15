@@ -31,16 +31,19 @@ public class PortalInteraction : MonoBehaviour
 
                         Interaction.Inst.IsInteraction = true;
 
-                        if (Input.GetKey(KeyCode.G))
-                        {
-                            Interaction.Inst.m_interactionState = InteractionState.Portal;
-                        }
+                        Debug.Log("PortalDistance" + Interaction.Inst.PortalDistance);
+
+                        
                     }
                 }
             }
         }
         if (Interaction.Inst.IsInteraction == true)
         {
+            if (Input.GetKey(KeyCode.G))
+            {
+                Interaction.Inst.m_interactionState = InteractionState.Portal;
+            }
             if (Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f)
             {
                 if (Interaction.Inst.PortalDistance > 5.0f)
