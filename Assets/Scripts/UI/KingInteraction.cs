@@ -29,7 +29,7 @@ public class KingInteraction : MonoBehaviour
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(true);
                         Interaction.Inst.animator.SetFloat("KingInteraction", Interaction.Inst.KingDistance);
-
+                        Interaction.Inst.m_interactionState = InteractionState.king;
                         Interaction.Inst.IsInteraction = true;
                     }
                 }
@@ -37,10 +37,6 @@ public class KingInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Input.GetKey(KeyCode.G))
-            {
-                Interaction.Inst.m_interactionState = InteractionState.king;
-            }
             if (Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.KingDistance > 5.0f)

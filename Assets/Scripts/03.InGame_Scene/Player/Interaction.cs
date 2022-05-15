@@ -50,19 +50,31 @@ public class Interaction : MonoBehaviour
         switch (m_interactionState)
         {
             case InteractionState.king:
-                Debug.Log("king");
+                if (Input.GetKey(KeyCode.G))
+                {
+                    Debug.Log("king");
+                }
                 break;
 
             case InteractionState.NPC:
-                Debug.Log("NPC");
+                if (Input.GetKey(KeyCode.G))
+                {
+                    Debug.Log("NPC");
+                }
                 break;
 
             case InteractionState.Shop:
-                Debug.Log("Shop");
+                if (Input.GetKey(KeyCode.G))
+                {
+                    Debug.Log("Shop");
+                }                
                 break;
 
             case InteractionState.Portal:
-                SceneManager.LoadScene("01.TutorialMap");
+                if (Input.GetKey(KeyCode.G))
+                {
+                    SceneManager.LoadScene("01.TutorialMap");
+                }
                 break;
         }
     }

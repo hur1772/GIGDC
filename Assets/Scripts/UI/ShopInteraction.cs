@@ -29,7 +29,7 @@ public class ShopInteraction : MonoBehaviour
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(true);
                         Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
-
+                        Interaction.Inst.m_interactionState = InteractionState.Shop;
                         Interaction.Inst.IsInteraction = true;
                     }
                 }
@@ -37,10 +37,6 @@ public class ShopInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == false)
         {
-            if (Input.GetKey(KeyCode.G))
-            {
-                Interaction.Inst.m_interactionState = InteractionState.Shop;
-            }
             if (Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.NPCDistance > 5.0f)
