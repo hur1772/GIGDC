@@ -19,12 +19,12 @@ public class ShopInteraction : MonoBehaviour
 
     void KingInter()
     {
-        if (Interaction.Inst.ShopDistance < 5.0f)
+        if (Interaction.Inst.ShopDistance < 5.0f && Interaction.Inst.ShopDistance < Interaction.Inst.PortalDistance && Interaction.Inst.ShopDistance < Interaction.Inst.NPCDistance && Interaction.Inst.ShopDistance < Interaction.Inst.KingDistance)
         {
             if (Interaction.Inst.GKey != null)
             {
                 Interaction.Inst.GKey.gameObject.SetActive(true);
-                Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.ShopDistance);
+                Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
 
                 if (Input.GetKey(KeyCode.G))
                 {
@@ -33,12 +33,12 @@ public class ShopInteraction : MonoBehaviour
             }
 
         }
-        else
+        else if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
         {
             if (Interaction.Inst.GKey != null)
             {
                 Interaction.Inst.GKey.gameObject.SetActive(false);
-                Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.ShopDistance);
+                Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.ShopDistance);
 
             }
 

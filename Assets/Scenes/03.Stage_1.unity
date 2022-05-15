@@ -195,6 +195,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11261265}
   m_CullTransparentMesh: 1
+--- !u!1 &49115384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2487450172245682374, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+  m_PrefabInstance: {fileID: 1691306059}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &49115385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49115384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498525b3df6938842a26be31de9a7ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &113818144
 GameObject:
   m_ObjectHideFlags: 0
@@ -6680,6 +6697,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1691306059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682370, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487450172245682374, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_Name
+      value: PigMonster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
 --- !u!1 &1691723847
 GameObject:
   m_ObjectHideFlags: 0

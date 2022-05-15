@@ -18,7 +18,7 @@ public class PortalInteraction : MonoBehaviour
 
     void PortalInter()
     {
-        if (Interaction.Inst.PortalDistance < 5.0f)
+        if (Interaction.Inst.PortalDistance < 5.0f && Interaction.Inst.PortalDistance< Interaction.Inst.NPCDistance && Interaction.Inst.PortalDistance< Interaction.Inst.ShopDistance&& Interaction.Inst.PortalDistance< Interaction.Inst.KingDistance)
         {
             if (Interaction.Inst.GKey != null)
             {
@@ -32,15 +32,17 @@ public class PortalInteraction : MonoBehaviour
             }
 
         }
-        else
+        else if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
         {
-            if (Interaction.Inst.GKey != null)
             {
-                Interaction.Inst.GKey.gameObject.SetActive(false);
-                Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
+                if (Interaction.Inst.GKey != null)
+                {
+                    Interaction.Inst.GKey.gameObject.SetActive(false);
+                    Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
+
+                }
 
             }
-
         }
     }
 }

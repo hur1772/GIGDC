@@ -19,7 +19,7 @@ public class NPCInteraction : MonoBehaviour
 
     void KingInter()
     {
-        if (Interaction.Inst.NPCDistance < 5.0f)
+        if (Interaction.Inst.NPCDistance < 5.0f && Interaction.Inst.NPCDistance < Interaction.Inst.PortalDistance && Interaction.Inst.NPCDistance < Interaction.Inst.ShopDistance && Interaction.Inst.NPCDistance < Interaction.Inst.KingDistance)
         {
             if (Interaction.Inst.GKey != null)
             {
@@ -33,15 +33,17 @@ public class NPCInteraction : MonoBehaviour
             }
 
         }
-        else
+        else if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
         {
-            if (Interaction.Inst.GKey != null)
             {
-                Interaction.Inst.GKey.gameObject.SetActive(false);
-                Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.NPCDistance);
+                if (Interaction.Inst.GKey != null)
+                {
+                    Interaction.Inst.GKey.gameObject.SetActive(false);
+                    Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.NPCDistance);
+
+                }
 
             }
-
         }
     }
 }
