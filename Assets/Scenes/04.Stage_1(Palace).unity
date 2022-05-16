@@ -4204,7 +4204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
       propertyPath: m_TagString
-      value: 01.TutorialMap
+      value: 04.Stage_1(Palace_In)
       objectReference: {fileID: 0}
     - target: {fileID: 2269875320446877071, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
       propertyPath: m_SortingOrder

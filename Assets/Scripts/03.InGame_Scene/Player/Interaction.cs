@@ -82,6 +82,12 @@ public class Interaction : MonoBehaviour
                         m_interactionState = InteractionState.Nomal;
                         ResetPos();
                     }
+                    if(Portal.tag == "04.Stage_1(Palace_In)")
+                    {
+                        SceneManager.LoadScene("04.Stage_1(Palace_In)");
+                        m_interactionState = InteractionState.Nomal;
+                        ResetPos();
+                    }
                     if (Portal.tag == "01.TutorialMap")
                     {
                         SceneManager.LoadScene("01.TutorialMap");
