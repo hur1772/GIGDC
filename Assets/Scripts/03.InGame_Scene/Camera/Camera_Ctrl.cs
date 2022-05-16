@@ -58,13 +58,13 @@ public class Camera_Ctrl : MonoBehaviour
 
             if (target.gameObject != null)
             {
-                targetPosition.Set((target.transform.position.x - 4), target.transform.position.y + 4, this.transform.position.z);
+                targetPosition.Set((target.transform.position.x - 3), target.transform.position.y + 4, this.transform.position.z);
                 this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime * 5.0f);
             }
 
             if (Input.GetKey(KeyCode.LeftControl))
             {
-                z_keyPosition.Set(key *(this.transform.position.x), this.transform.position.y - 1.5f, this.transform.position.z);
+                z_keyPosition.Set(this.transform.position.x, this.transform.position.y - 1.5f, this.transform.position.z);
                 this.transform.position = Vector3.Lerp(this.transform.position, z_keyPosition, z_move_speed * Time.deltaTime);
             }
 
@@ -73,6 +73,7 @@ public class Camera_Ctrl : MonoBehaviour
                 this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
             }
         }
+        Debug.Log(this.transform.position.x);
 
     }
 }
