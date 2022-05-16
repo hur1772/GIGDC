@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: 9d86731b40a70054aa705337a0a818c8
+guid: 25778601435c7e94d8c45d774ac75cc9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 372942175240445238
-    second: PigIdle_0.3_0
+      213: 8761597175724643453
+    second: Pig Die_0.3(B)_0
   - first:
-      213: 3281494423948636215
-    second: PigIdle_0.3_1
+      213: 3850367535467300085
+    second: Pig Die_0.3(B)_1
   - first:
-      213: -4744730405153844323
-    second: PigIdle_0.3_2
+      213: 850002233095078907
+    second: Pig Die_0.3(B)_2
   - first:
-      213: -6476247441758316896
-    second: PigIdle_0.3_3
+      213: 1832858832254919690
+    second: Pig Die_0.3(B)_3
   - first:
-      213: 1075684274754730296
-    second: PigIdle_0.3_4
-  - first:
-      213: -516174981465247406
-    second: PigIdle_0.3_5
-  - first:
-      213: -2263141140572523303
-    second: PigIdle_0.3_6
+      213: 4990056148806398236
+    second: Pig Die_0.3(B)_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PigIdle_0.3_0
+      name: Pig Die_0.3(B)_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 22
-        width: 354
-        height: 242
+        x: 26
+        y: 18
+        width: 397
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,19 +120,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63dd7f4bee4fc2500800000000000000
-      internalID: 372942175240445238
+      spriteID: d74122cd532779970800000000000000
+      internalID: 8761597175724643453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PigIdle_0.3_1
+      name: Pig Die_0.3(B)_1
       rect:
         serializedVersion: 2
-        x: 479
+        x: 445
+        y: 18
+        width: 363
+        height: 249
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f489369fd04f6530800000000000000
+      internalID: 3850367535467300085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pig Die_0.3(B)_2
+      rect:
+        serializedVersion: 2
+        x: 871
         y: 22
-        width: 353
+        width: 408
         height: 237
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -147,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73032efdac53a8d20800000000000000
-      internalID: 3281494423948636215
+      spriteID: bf3cbe90780dbcb00800000000000000
+      internalID: 850002233095078907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PigIdle_0.3_2
+      name: Pig Die_0.3(B)_3
       rect:
         serializedVersion: 2
-        x: 961
-        y: 22
-        width: 342
-        height: 224
+        x: 1352
+        y: 16
+        width: 453
+        height: 240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,40 +183,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d935fcdc5d4572eb0800000000000000
-      internalID: -4744730405153844323
+      spriteID: a04edf3a56f9f6910800000000000000
+      internalID: 1832858832254919690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PigIdle_0.3_3
+      name: Pig Die_0.3(B)_4
       rect:
         serializedVersion: 2
-        x: 1426
-        y: 22
-        width: 345
-        height: 226
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a6967ca34fbf16a0800000000000000
-      internalID: -6476247441758316896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PigIdle_0.3_4
-      rect:
-        serializedVersion: 2
-        x: 1876
-        y: 22
-        width: 373
+        x: 1847
+        y: 16
+        width: 466
         height: 234
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -210,50 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 839ba3f06299dee00800000000000000
-      internalID: 1075684274754730296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PigIdle_0.3_5
-      rect:
-        serializedVersion: 2
-        x: 2339
-        y: 22
-        width: 402
-        height: 229
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 251f1d3d69d26d8f0800000000000000
-      internalID: -516174981465247406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PigIdle_0.3_6
-      rect:
-        serializedVersion: 2
-        x: 2823
-        y: 22
-        width: 354
-        height: 227
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d43a9f8f15b790e0800000000000000
-      internalID: -2263141140572523303
+      spriteID: c11fbdef0ad304540800000000000000
+      internalID: 4990056148806398236
       vertices: []
       indices: 
       edges: []
