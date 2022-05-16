@@ -73,7 +73,7 @@ public class Interaction : MonoBehaviour
             case InteractionState.Portal:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    SceneManager.LoadScene("01.TutorialMap");
+                    SceneManager.LoadScene("04.Stage_1(Palace)");
                 }
                 break;
         }

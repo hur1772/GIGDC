@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial/01.TutorialMap.unity
     guid: 6e68b83010c4cb3478fab5ae425ac889
+  - enabled: 1
+    path: Assets/Scenes/04.Stage_1(Palace).unity
+    guid: 483a6c7ad07300443bc5963bc66ebad2
   m_configObjects: {}
