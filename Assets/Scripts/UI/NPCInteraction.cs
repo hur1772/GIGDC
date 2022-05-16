@@ -36,13 +36,15 @@ public class NPCInteraction : MonoBehaviour
             }
         }
         if (Interaction.Inst.IsInteraction == true)
-        {
-            if (Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
+        {   
+            if (Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.NPCDistance > 5.0f)
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        Debug.Log("!");
+
                         Interaction.Inst.GKey.gameObject.SetActive(false);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.NPCDistance);
 

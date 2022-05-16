@@ -92,7 +92,6 @@ public class Interaction : MonoBehaviour
                     {
                         SceneManager.LoadScene("01.TutorialMap");
                         m_interactionState = InteractionState.Nomal;
-                        ResetPos();
                     }
                 }
                 break;
@@ -104,6 +103,7 @@ public class Interaction : MonoBehaviour
         KingDistance = 5.1f;
         NPCDistance = 5.1f;
         ShopDistance = 5.1f;
+        PortalDistance = 5.1f;
         IsInteraction = false;
     }
 }

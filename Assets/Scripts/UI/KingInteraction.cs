@@ -37,7 +37,7 @@ public class KingInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f || Interaction.Inst.PortalDistance > 5.0f)
+            if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.KingDistance > 5.0f)
                 {
