@@ -73,7 +73,6 @@ public class Camera_Ctrl : MonoBehaviour
                 this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
             }
         }
-        Debug.Log(this.transform.position.x);
 
     }
 }
