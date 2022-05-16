@@ -21,13 +21,14 @@ public class Interaction : MonoBehaviour
 
     [HideInInspector] public Animator animator;
     [HideInInspector] public Transform PlayPos;
+    private GameObject Portal;
 
     [HideInInspector] public bool IsInteraction = false;
 
-    [HideInInspector] public float KingDistance = 10;
-    [HideInInspector] public float NPCDistance = 10;
-    [HideInInspector] public float ShopDistance = 10;
-    [HideInInspector] public float PortalDistance =10;
+    [HideInInspector] public float KingDistance = 5.1f;
+    [HideInInspector] public float NPCDistance = 5.1f;
+    [HideInInspector] public float ShopDistance = 5.1f;
+    [HideInInspector] public float PortalDistance =5.1f;
 
     public Image GKey;
 
@@ -40,44 +41,63 @@ public class Interaction : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-
         PlayPos = this.gameObject.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        PlayPos = this.gameObject.transform;
         switch (m_interactionState)
         {
             case InteractionState.king:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    Debug.Log("king");
+                    Debug.Log("king");                   
                 }
                 break;
 
             case InteractionState.NPC:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    Debug.Log("NPC");
+                    Debug.Log("NPC");                    
                 }
                 break;
 
             case InteractionState.Shop:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    Debug.Log("Shop");
-                }                
+                    Debug.Log("Shop");                    
+                }
                 break;
 
             case InteractionState.Portal:
+
+                Portal = GameObject.Find("Protal");
                 if (Input.GetKey(KeyCode.G))
                 {
-                    SceneManager.LoadScene("04.Stage_1(Palace)");
+                    if (Portal.tag == "04.Stage_1(Palace)")
+                    {
+                        SceneManager.LoadScene("04.Stage_1(Palace)");
+                        m_interactionState = InteractionState.Nomal;
+                        ResetPos();
+                    }
+                    if (Portal.tag == "01.TutorialMap")
+                    {
+                        SceneManager.LoadScene("01.TutorialMap");
+                        m_interactionState = InteractionState.Nomal;
+                        ResetPos();
+                    }
                 }
                 break;
         }
     }
 
-
+    public void ResetPos()
+    {
+        KingDistance = 5.1f;
+        NPCDistance = 5.1f;
+        ShopDistance = 5.1f;
+        IsInteraction = false;
+    }
 }

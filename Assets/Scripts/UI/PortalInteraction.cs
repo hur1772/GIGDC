@@ -7,12 +7,12 @@ public class PortalInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Interaction.Inst.ResetPos();
     }
 
     void Update()
     {
-        Interaction.Inst.PortalDistance = Vector2.Distance(Interaction.Inst.PlayPos.transform.position, this.transform.position);
+        Interaction.Inst.PortalDistance = Vector2.Distance(Interaction.Inst.PlayPos.transform.position, this.transform.position);        
         PortalInter();
     }
 
@@ -20,8 +20,9 @@ public class PortalInteraction : MonoBehaviour
     {
         if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.PortalDistance < Interaction.Inst.NPCDistance || Interaction.Inst.PortalDistance < Interaction.Inst.ShopDistance || Interaction.Inst.PortalDistance < Interaction.Inst.KingDistance)
+            if ( Interaction.Inst.PortalDistance < Interaction.Inst.NPCDistance || Interaction.Inst.PortalDistance < Interaction.Inst.ShopDistance || Interaction.Inst.PortalDistance < Interaction.Inst.KingDistance)
             {
+                
                 if (Interaction.Inst.PortalDistance < 5.0f)
                 {
                     if (Interaction.Inst.GKey != null)
@@ -31,16 +32,13 @@ public class PortalInteraction : MonoBehaviour
                         Interaction.Inst.m_interactionState = InteractionState.Portal;
                         Interaction.Inst.IsInteraction = true;
 
-                        Debug.Log("PortalDistance" + Interaction.Inst.PortalDistance);
-
-                        
                     }
                 }
             }
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f)
+            if ( Interaction.Inst.NPCDistance > 5.0f || Interaction.Inst.KingDistance > 5.0f || Interaction.Inst.ShopDistance > 5.0f)
             {
                 if (Interaction.Inst.PortalDistance > 5.0f)
                 {
