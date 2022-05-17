@@ -32,6 +32,8 @@ public class Interaction : MonoBehaviour
 
     public Image GKey;
 
+    public GameObject ShopPanel = null;
+
     private void Awake()
     {
         Inst = this;
@@ -67,7 +69,10 @@ public class Interaction : MonoBehaviour
             case InteractionState.Shop:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    Debug.Log("Shop");                    
+                    if (ShopPanel != null)
+                    {
+                        ShopPanel.SetActive(true);
+                    }
                 }
                 break;
 

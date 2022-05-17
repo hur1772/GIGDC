@@ -7,7 +7,7 @@ public class NPCInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Interaction.Inst.IsInteraction = false;
+
     }
 
     // Update is called once per frame
