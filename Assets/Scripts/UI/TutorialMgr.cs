@@ -24,20 +24,10 @@ public class TutorialMgr : MonoBehaviour
 
     [HideInInspector] public int StageLv = 0;
 
-    [Header("------ GuideText ------")]
-    public Text m_InfoText = null;
+
     public Text m_CurTxt = null;
     float m_CurTimer = 0.0f;
 
-    [Header("------ Talk ------")]
-    public Text talkText;
-    public TalkMgr talkManager;
-    public GameObject TalkImage;
-    public GameObject scanObject;
-    public Image portraitImage;
-
-    public bool isMove;
-    public int talkIndex;
 
 
 
@@ -45,16 +35,14 @@ public class TutorialMgr : MonoBehaviour
     void Start()
     {
         StageLv = 0;
-        m_InfoText.gameObject.SetActive(false);
+      
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        GuideTimer();
-        if (m_CurTimer > 20.0f)
-        {
+       
             if (StageLv == 1)
             {
                 m_TutorialState = TutorialState.TargetStage;
@@ -92,81 +80,44 @@ public class TutorialMgr : MonoBehaviour
                     break;
 
             }
-        }
-
-    }
-    public void ShowText(GameObject scanObj)
-    {
-        scanObject = scanObj;
-        ObjectData objectData = scanObject.GetComponent<ObjectData>();
-        OnTalk(objectData.id, objectData.isNpc);
-
-        TalkImage.SetActive(isMove);
-    }
-
-    void OnTalk(int id, bool isNpc)
-    {
-        string talkData = talkManager.GetTalk(id, talkIndex);
-
-        if (talkData == null)
-        {
-            isMove = false;
-            talkIndex = 0;
-            return;
-        }
-
-        if (isNpc)
-        {
-            talkText.text = talkData;
-            portraitImage.sprite = talkManager.GetSprite(id);
-            portraitImage.color = new Color(1, 1, 1, 1);
-        }
-        else
-        {
-            talkText.text = talkData;
-            portraitImage.color = new Color(1, 1, 1, 0);
-        }
-
-        isMove = true;
-        talkIndex++;
     }
 
 
 
-void GuideTimer()
-    {
-        if (0.0f <= m_CurTimer)
-        {
-            m_CurTimer += Time.deltaTime;
+//void GuideTimer()
+//    {
+//        if (0.0f <= m_CurTimer)
+//        {
+//            m_CurTimer += Time.deltaTime;
             
-            if (m_CurTxt != null)
-                m_CurTxt.text = " 연무장\n " + ((int)m_CurTimer / 60 % 60).ToString("00") + " : " +
-             ((int)m_CurTimer % 60).ToString("00");//+ Mathf.Round(m_Timer) + "초";        
-            if (m_CurTimer > 0.0f)
-            {
-                m_InfoText.gameObject.SetActive(true);
-                m_InfoText.text = "연무장에 오신것을 환영합니다.\n 이 곳에서 전투 방법을 배우십시오.";
+//            if (m_CurTxt != null)
+//                m_CurTxt.text = " 연무장\n " + ((int)m_CurTimer / 60 % 60).ToString("00") + " : " +
+//             ((int)m_CurTimer % 60).ToString("00");//+ Mathf.Round(m_Timer) + "초";        
+//            if (m_CurTimer > 0.0f)
+//            {
+//                m_InfoText.gameObject.SetActive(true);
+//                m_InfoText.text = "연무장에 오신것을 환영합니다.\n 이 곳에서 전투 방법을 배우십시오.";
                 
-            }
-            if(m_CurTimer > 7.0f)
-            {
-                m_InfoText.gameObject.SetActive(false);
-            }
-            if (m_CurTimer > 10.0f)
-            {
-                m_InfoText.gameObject.SetActive(true);
-                m_InfoText.text = "10초 후 과녁이 생성 됩니다.";
-            }
-            if (m_CurTimer > 20.0f)
-            {
-                m_InfoText.text = "과녁이 생성되었습니다.\n 좌클릭으로 적을 공격하세요! ";
-            }
-            if(m_CurTimer > 30.0f)
-            {
-                m_InfoText.gameObject.SetActive(false);
-            }
+//            }
+//            if(m_CurTimer > 7.0f)
+//            {
+//                m_InfoText.gameObject.SetActive(false);
+//            }
+//            if (m_CurTimer > 10.0f)
+//            {
+//                m_InfoText.gameObject.SetActive(true);
+//                m_InfoText.text = "10초 후 과녁이 생성 됩니다.";
+//            }
+//            if (m_CurTimer > 20.0f)
+//            {
+//                m_InfoText.text = "과녁이 생성되었습니다.\n 좌클릭으로 적을 공격하세요! ";
+//            }
+//            if(m_CurTimer > 30.0f)
+//            {
+//                m_InfoText.gameObject.SetActive(false);
+//            }
 
-        }
-    }
+//        }
+//    }
 
 }

@@ -51,8 +51,8 @@ public class Interaction : MonoBehaviour
                 Debug.Log("king");
                 break;
 
-            case InteractionState.NPC:
-                Debug.Log("NPC");
+            case InteractionState.NPC:             
+                //Debug.Log("NPC");
                 break;
 
             case InteractionState.Shop:
