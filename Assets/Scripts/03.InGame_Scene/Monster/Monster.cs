@@ -93,6 +93,11 @@ public class Monster : MonoBehaviour
             m_Rb = GetComponent<Rigidbody2D>();
     }
 
+    protected virtual void CheckDistanceFromPlayer()
+    {
+        m_CalcVec = m_Player.transform.position - this.transform.position;
+    }
+
     protected virtual void TakeDamage(float a_Value)
     {
         m_CurHP -= a_Value;
