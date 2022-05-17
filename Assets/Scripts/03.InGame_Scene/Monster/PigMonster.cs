@@ -31,14 +31,7 @@ public class PigMonster : Monster
 
         m_DelayTime = Random.Range(2.0f, 3.0f);
 
-        if (m_Animator == null)
-            m_Animator = this.GetComponent<Animator>();
-
-        if (m_Player == null)
-            m_Player = GameObject.Find("Player");
-
-        if (m_Rb == null)
-            m_Rb = GetComponent<Rigidbody2D>();
+        InitMonster();
     }
 
     private void Update()
@@ -69,10 +62,10 @@ public class PigMonster : Monster
     }
 
     //플레이어와의 거리 구하기 함수
-    void CheckDistanceFromPlayer()
-    {
-        m_CalcVec = m_Player.transform.position - this.transform.position;
-    }
+    //void CheckDistanceFromPlayer()
+    //{
+    //    m_CalcVec = m_Player.transform.position - this.transform.position;
+    //}
 
     void MonAiUpdate()
     {
