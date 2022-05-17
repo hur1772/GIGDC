@@ -812,8 +812,8 @@ MonoBehaviour:
   a_MsObj:
   - {fileID: 1184964934}
   - {fileID: 510396765}
-  Ok_Btn: {fileID: 0}
-  Back_Btn: {fileID: 0}
+  Ok_Btn: {fileID: 825588346}
+  Back_Btn: {fileID: 495584392}
 --- !u!1 &495584390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,7 +2884,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 934291726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498525b3df6938842a26be31de9a7ade, type: 3}
+  m_Script: {fileID: 11500000, guid: 44abfe9e4c2035949ad096277a6a052f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &934291729
@@ -3229,7 +3229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1150392362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3649,6 +3649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997899, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: ShopPanel
+      value: 
+      objectReference: {fileID: 1150392361}
     - target: {fileID: 4109632169616997905, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_SortingOrder
       value: 2
