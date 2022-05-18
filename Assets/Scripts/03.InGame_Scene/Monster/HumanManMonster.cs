@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HumanManMonster : Monster
 {
-    float m_DelayTime = 0.0f;
+    public float m_DelayTime = 0.0f;
     bool m_IsRight = false;
 
 
@@ -20,11 +20,12 @@ public class HumanManMonster : Monster
     private void UpdateFunc()
     {
         CheckDistanceFromPlayer();
+        AiUpdate();
     }
 
     void InitState()
     {
-
+        m_DelayTime = Random.Range(2.0f, 3.0f);
         m_MaxHP = 100;
         m_CurHP = m_MaxHP;
 
@@ -51,7 +52,7 @@ public class HumanManMonster : Monster
                 if (m_DelayTime <= 0.0f)
                 {
                     m_Monstate = MonsterState.PATROL;
-                    m_DelayTime = Random.Range(1.0f, 2.0f);
+                    m_DelayTime = Random.Range(2.0f, 3.0f);
                     m_Animator.SetBool("IsMove", true);
                 }
             }
@@ -60,7 +61,6 @@ public class HumanManMonster : Monster
             {
                 m_Monstate = MonsterState.CHASE;
                 m_Animator.SetBool("IsMove", true);
-
             }
         }
         else if (m_Monstate == MonsterState.PATROL)
