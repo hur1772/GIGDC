@@ -193,9 +193,9 @@ TextureImporter:
       name: dash v.1.1_2
       rect:
         serializedVersion: 2
-        x: 2061
+        x: 2055
         y: 0
-        width: 724
+        width: 730
         height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -206,27 +206,6 @@ TextureImporter:
       bones: []
       spriteID: d4d09f09be8903970800000000000000
       internalID: 8732647814988369229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dash v.1.1_3
-      rect:
-        serializedVersion: 2
-        x: 2871
-        y: 560
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e35427437e35fe30800000000000000
-      internalID: 4536600864481367010
       vertices: []
       indices: 
       edges: []
@@ -248,48 +227,6 @@ TextureImporter:
       bones: []
       spriteID: e9a264ec8ff1d24b0800000000000000
       internalID: -5463675619457488226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dash v.1.1_5
-      rect:
-        serializedVersion: 2
-        x: 1858
-        y: 485
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b0650090a3046b40800000000000000
-      internalID: 5432471038661583026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dash v.1.1_6
-      rect:
-        serializedVersion: 2
-        x: 2789
-        y: 485
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c3827e5aba281f0800000000000000
-      internalID: -1044083434560406490
       vertices: []
       indices: 
       edges: []
