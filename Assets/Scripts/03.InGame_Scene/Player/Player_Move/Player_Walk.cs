@@ -78,11 +78,16 @@ public class Player_Walk : MonoBehaviour
                 transform.localScale = new Vector3(key * 0.3f, 0.3f, 1);
             }
         }
+        animator.SetBool("IsCrawl", false);
 
     }
 
     private void P_Move_Crawl()
     {
+        if (Player_state.p_Move_state == PlayerMoveState.player_dash || Player_state.p_Move_state == PlayerMoveState.player_jump)
+            return;
+
+        animator.SetBool("IsCrawl", true);
         move_speed = crawl_speed;
     }
 }
