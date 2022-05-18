@@ -20,8 +20,6 @@ public class HumanManMonster : Monster
     private void UpdateFunc()
     {
         CheckDistanceFromPlayer();
-
-
     }
 
     void InitState()
