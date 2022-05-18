@@ -78,7 +78,6 @@ public class Interaction : MonoBehaviour
                 break;
 
             case InteractionState.Portal:
-
                 Portal = GameObject.Find("Protal");
                 if (Input.GetKey(KeyCode.G))
                 {
@@ -86,13 +85,11 @@ public class Interaction : MonoBehaviour
                     {
                         SceneManager.LoadScene("04.Stage_1(Palace)");
                         m_interactionState = InteractionState.Nomal;
-                        ResetPos();
                     }
                     if(Portal.tag == "04.Stage_1(Palace_In)")
                     {
                         SceneManager.LoadScene("04.Stage_1(Palace_In)");
                         m_interactionState = InteractionState.Nomal;
-                        ResetPos();
                     }
                     if (Portal.tag == "01.TutorialMap")
                     {
@@ -104,12 +101,12 @@ public class Interaction : MonoBehaviour
         }
     }
 
-    public void ResetPos()
+    public void ResetPos(float Pos = 5.1f)
     {
-        KingDistance = 5.1f;
-        NPCDistance = 5.1f;
-        ShopDistance = 5.1f;
-        PortalDistance = 5.1f;
+        KingDistance = Pos;
+        NPCDistance = Pos;
+        ShopDistance = Pos;
+        PortalDistance = Pos;
         IsInteraction = false;
     }
 }
