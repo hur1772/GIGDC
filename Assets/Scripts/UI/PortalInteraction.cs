@@ -28,7 +28,6 @@ public class PortalInteraction : MonoBehaviour
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(true);
 
-                        Debug.Log(Interaction.Inst.PortalDistance);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
                         Interaction.Inst.m_interactionState = InteractionState.Portal;
                         Interaction.Inst.IsInteraction = true;
