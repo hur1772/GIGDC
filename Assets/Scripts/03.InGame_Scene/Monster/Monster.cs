@@ -96,6 +96,7 @@ public class Monster : MonoBehaviour
     protected virtual void CheckDistanceFromPlayer()
     {
         m_CalcVec = m_Player.transform.position - this.transform.position;
+        m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
     }
 
     protected virtual void TakeDamage(float a_Value)
