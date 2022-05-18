@@ -1386,6 +1386,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4249599871318713091, guid: 9b7fdd4d4158e164a9ddd8bdc4ea40d5, type: 3}
+      propertyPath: m_AttackImgs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249599871318713091, guid: 9b7fdd4d4158e164a9ddd8bdc4ea40d5, type: 3}
+      propertyPath: m_AttackImgs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5866787550848399400, guid: 8d848a13be339f24bb7f802d96b782af, type: 3}
+    - target: {fileID: 4249599871318713091, guid: 9b7fdd4d4158e164a9ddd8bdc4ea40d5, type: 3}
+      propertyPath: m_AttackImgs.Array.data[1]
+      value: 
+      objectReference: {fileID: -2287021499012003856, guid: 8d848a13be339f24bb7f802d96b782af, type: 3}
+    - target: {fileID: 4249599871318713091, guid: 9b7fdd4d4158e164a9ddd8bdc4ea40d5, type: 3}
+      propertyPath: m_AttackImgs.Array.data[2]
+      value: 
+      objectReference: {fileID: -1710651063068769449, guid: 8d848a13be339f24bb7f802d96b782af, type: 3}
+    - target: {fileID: 4249599871318713092, guid: 9b7fdd4d4158e164a9ddd8bdc4ea40d5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4249599871318713093, guid: 9b7fdd4d4158e164a9ddd8bdc4ea40d5, type: 3}
       propertyPath: m_Name
       value: BirdMonster
@@ -1671,7 +1691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &974092859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1775,6 +1795,8 @@ MonoBehaviour:
   m_IdleDistance: 10
   m_ChaseDelay: 1.2
   m_ChaseVec: {x: 0, y: 0, z: 0}
+  m_BodyAttackState: 0
+  m_AttackImgs: []
   m_FlyMonState: 0
 --- !u!61 &974092863
 BoxCollider2D:

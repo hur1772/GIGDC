@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum BodyAttack
+{
+    ATTACK_BEFORE,
+    ATTACK,
+    ATTACK_AFTER
+}
+
 public class BirdMonster : Monster
 {
-
     float m_DelayTime = 0.0f;
     float m_DistanceFromPlayer = 0.0f;
     bool m_IsRight = false;
@@ -25,6 +31,14 @@ public class BirdMonster : Monster
     public float m_ChaseDelay = 2.0f;
     public Vector3 m_ChaseVec = Vector3.zero;
 
+    //Attack상태 관련 변수
+    float m_AttackDelay = 5.0f;
+    [SerializeField]BodyAttack m_BodyAttackState = BodyAttack.ATTACK_BEFORE;
+    Vector3 m_AttackVec = Vector3.zero;
+    Vector3 m_AttackCurVec = Vector3.zero;
+    public Sprite[] m_AttackImgs;
+    SpriteRenderer m_SpRenderer;
+
 
     public FlyMonsterState m_FlyMonState;
 
@@ -36,6 +50,7 @@ public class BirdMonster : Monster
         m_FirstVec = this.transform.position;
         m_CurHeight = m_FirstVec.y;
         m_MaxHeight = m_CurHeight + m_FlyHeight;
+        m_SpRenderer = GetComponent<SpriteRenderer>();
     }
 
 // Update is called once per frame
@@ -151,11 +166,54 @@ void Update()
                 m_Rb.transform.position += Vector3.left * Time.deltaTime * 5.0f;
             }
 
+            if(m_AttackDelay >= 0.0f)
+            {
+                m_AttackDelay -= Time.deltaTime;
+                if(m_AttackDelay <= 0.0f)
+                {
+                    m_AttackDelay = 1.0f;   //공격상태 돌입 시 Attack _BEFORE 재사용을 위한 시간
+                    m_Animator.enabled = false;
+                    m_FlyMonState = FlyMonsterState.ATTACK;
+                    m_BodyAttackState = BodyAttack.ATTACK_BEFORE;
+                }
+            }
 
         }
         else if (m_FlyMonState == FlyMonsterState.ATTACK)
         {
+            if(m_BodyAttackState == BodyAttack.ATTACK_BEFORE)
+            {
+                m_SpRenderer.sprite = m_AttackImgs[0];
 
+                if(m_AttackDelay >= 0.0f)
+                {
+                    m_AttackDelay -= Time.deltaTime;
+                    if(m_AttackDelay <= 0.0f)
+                    {
+                        m_AttackVec = m_Player.transform.position - this.transform.position;
+                        m_AttackVec.y += 1.0f;
+                        m_BodyAttackState = BodyAttack.ATTACK;
+                        m_AttackDelay = 5.0f;
+                        m_SpRenderer.sprite = m_AttackImgs[1];
+                    }
+                }
+            }
+            else if(m_BodyAttackState == BodyAttack.ATTACK)
+            {
+                m_AttackCurVec = m_AttackVec - this.transform.position;
+                m_Rb.transform.position += m_AttackVec * Time.deltaTime;
+                Debug.Log(m_AttackCurVec.magnitude);
+                if(m_AttackCurVec.magnitude <= 1.0f)
+                {
+                    m_BodyAttackState = BodyAttack.ATTACK_AFTER;
+                }
+            }
+            else if(m_BodyAttackState == BodyAttack.ATTACK_AFTER)
+            {
+                m_Animator.enabled = true;
+                m_FlyMonState = FlyMonsterState.FLY;
+                m_AttackDelay = 5.0f;
+            }
         }
     }
 
