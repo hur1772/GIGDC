@@ -38,7 +38,7 @@ public class Monster : MonoBehaviour
     protected float m_ChaseDistance = 0;
     protected float m_AttackDistance = 0;
 
-    protected MonsterState m_Monstate = MonsterState.IDLE;
+    public MonsterState m_Monstate = MonsterState.IDLE;
     protected Animator m_Animator;
 
     //private void Update()
@@ -91,6 +91,11 @@ public class Monster : MonoBehaviour
 
         if (m_Rb == null)
             m_Rb = GetComponent<Rigidbody2D>();
+    }
+
+    protected virtual void CheckDistanceFromPlayer()
+    {
+        m_CalcVec = m_Player.transform.position - this.transform.position;
     }
 
     protected virtual void TakeDamage(float a_Value)

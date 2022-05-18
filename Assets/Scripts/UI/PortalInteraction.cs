@@ -7,41 +7,52 @@ public class PortalInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Interaction.Inst.ResetPos();
     }
 
     void Update()
     {
-        Interaction.Inst.PortalDistance = Vector2.Distance(Interaction.Inst.PlayPos.transform.position, this.transform.position);
+        Interaction.Inst.PortalDistance = Vector2.Distance(Interaction.Inst.PlayPos.transform.position, this.transform.position);        
         PortalInter();
     }
 
     void PortalInter()
     {
-        if (Interaction.Inst.PortalDistance < 5.0f && Interaction.Inst.PortalDistance< Interaction.Inst.NPCDistance && Interaction.Inst.PortalDistance< Interaction.Inst.ShopDistance&& Interaction.Inst.PortalDistance< Interaction.Inst.KingDistance)
+        if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.GKey != null)
+            if ( Interaction.Inst.PortalDistance < Interaction.Inst.NPCDistance || Interaction.Inst.PortalDistance < Interaction.Inst.ShopDistance || Interaction.Inst.PortalDistance < Interaction.Inst.KingDistance)
             {
-                Interaction.Inst.GKey.gameObject.SetActive(true);
-                Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
-
-                if (Input.GetKey(KeyCode.G))
+                if (Interaction.Inst.PortalDistance < 5.0f)
                 {
-                    Interaction.Inst.m_interactionState = InteractionState.Portal;
+                    if (Interaction.Inst.GKey != null)
+                    {
+                        Interaction.Inst.GKey.gameObject.SetActive(true);
+
+                        Debug.Log(Interaction.Inst.PortalDistance);
+                        Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
+                        Interaction.Inst.m_interactionState = InteractionState.Portal;
+                        Interaction.Inst.IsInteraction = true;
+
+                    }
                 }
             }
-
         }
-        else if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+        if (Interaction.Inst.IsInteraction == true)
         {
+            if ( Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f)
             {
-                if (Interaction.Inst.GKey != null)
+                if (Interaction.Inst.PortalDistance > 5.0f)
                 {
-                    Interaction.Inst.GKey.gameObject.SetActive(false);
-                    Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
+                    if (Interaction.Inst.GKey != null)
+                    {
+                        Interaction.Inst.GKey.gameObject.SetActive(false);
+                        Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.PortalDistance);
+
+                        Interaction.Inst.IsInteraction = false;
+
+                    }
 
                 }
-
             }
         }
     }

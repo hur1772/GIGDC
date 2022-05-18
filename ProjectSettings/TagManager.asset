@@ -6,6 +6,9 @@ TagManager:
   tags:
   - King
   - NPC
+  - 04.Stage_1(Palace)
+  - 01.TutorialMap
+  - 04.Stage_1(Palace_In)
   layers:
   - Default
   - TransparentFX
