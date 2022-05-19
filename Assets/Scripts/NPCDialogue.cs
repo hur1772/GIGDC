@@ -22,7 +22,7 @@ public class NPCDialogue : MonoBehaviour
     private bool IsDialog = false;
     private int count = 0;
 
-    NPCDialogue Inst;
+    public static NPCDialogue Inst;
     [SerializeField] private Dialogue[] dialogue;
     GameObject Player;
     GameObject NPC;
@@ -32,8 +32,7 @@ public class NPCDialogue : MonoBehaviour
     public void ShowDialogue()
     {
         OnOff(true);
-        count = 0;
-        NextDialouge();
+        //NextDialouge();
         if (TalkBtn != null)
         {
             TalkBtn.gameObject.SetActive(false);
@@ -43,13 +42,9 @@ public class NPCDialogue : MonoBehaviour
     public void NextDialouge()
     {
         TalkTxt.text = dialogue[count].dialogue;
+        Debug.Log(dialogue[count].dialogue);
+        Debug.Log(count);
         count++;
-        int dlgLength = dialogue.Length;
-        if(count == dlgLength)
-        {
-            IsTalk = false;
-            Interaction.Inst.m_interactionState = InteractionState.king;
-        }
     }
 
     public void OnOff(bool a_flag)
@@ -84,15 +79,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (Interaction.Inst.m_interactionState == InteractionState.king_talk)
         {
-            if (IsTalk == false)
-            {
-                ShowDialogue();
-                IsTalk = true;
-            }
-            if (IsTalk == true)
-            {
-                NPCInteraction();
-            }
+            NPCInteraction();
         }
     }
 
@@ -123,6 +110,10 @@ public class NPCDialogue : MonoBehaviour
                     {
                         TalkBtn.gameObject.SetActive(true);
                     }
+                    count = 0;
+                    TalkTxt.text = dialogue[count].dialogue;
+                    count = 1;
+                    Interaction.Inst.m_interactionState = InteractionState.Nomal;
                 }
             }
         }
