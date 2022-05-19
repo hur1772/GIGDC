@@ -27,18 +27,29 @@ public class NPCDialogue : MonoBehaviour
     GameObject Player;
     GameObject NPC;
 
+    bool IsTalk = false;
+
     public void ShowDialogue()
     {
         OnOff(true);
         count = 0;
         NextDialouge();
-        TalkBtn.gameObject.SetActive(false);
+        if (TalkBtn != null)
+        {
+            TalkBtn.gameObject.SetActive(false);
+        }
     }
 
     public void NextDialouge()
     {
         TalkTxt.text = dialogue[count].dialogue;
         count++;
+        int dlgLength = dialogue.Length;
+        if(count == dlgLength)
+        {
+            IsTalk = false;
+            Interaction.Inst.m_interactionState = InteractionState.king;
+        }
     }
 
     public void OnOff(bool a_flag)
@@ -49,7 +60,10 @@ public class NPCDialogue : MonoBehaviour
         NPCLabelTxt.gameObject.SetActive(a_flag);
         InfoTxt.gameObject.SetActive(a_flag);
         Player.SetActive(false);
-        NPC.SetActive(false);
+        if (NPC != null)
+        {
+            NPC.SetActive(false);
+        }
         IsDialog = a_flag;
     }
     void Awake()
@@ -63,7 +77,23 @@ public class NPCDialogue : MonoBehaviour
         Player = GameObject.Find("Player");
         NPC = GameObject.Find("NPC");
             
-        TalkBtn.onClick.AddListener(TalkFunc);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Interaction.Inst.m_interactionState == InteractionState.king_talk)
+        {
+            if (IsTalk == false)
+            {
+                ShowDialogue();
+                IsTalk = true;
+            }
+            if (IsTalk == true)
+            {
+                NPCInteraction();
+            }
+        }
     }
 
     public void TalkFunc()
@@ -75,7 +105,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (IsDialog)
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G) )
             {
                 if (count < dialogue.Length)
                 {
@@ -85,16 +115,16 @@ public class NPCDialogue : MonoBehaviour
                 {
                     OnOff(false);
                     Player.SetActive(true);
-                    NPC.SetActive(true);
-                    TalkBtn.gameObject.SetActive(true);
+                    if (NPC != null)
+                    {
+                        NPC.SetActive(true);
+                    }
+                    if (TalkBtn != null)
+                    {
+                        TalkBtn.gameObject.SetActive(true);
+                    }
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        NPCInteraction();
     }
 }
