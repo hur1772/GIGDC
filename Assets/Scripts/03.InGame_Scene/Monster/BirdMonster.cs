@@ -18,6 +18,7 @@ public class BirdMonster : Monster
     bool m_IsFind = false;  //플레이어 탐지
     float m_IdleTimer = 5.0f;   // Idle 상태로 돌아가기 위한 시간
     public float m_FindDist = 5.0f;
+    bool IsRight = false;   //방향 확인용 변수
 
     //날기 벡터 계산
     Vector2 m_FirstVec = Vector2.zero;
@@ -187,21 +188,27 @@ void Update()
 
                 if(m_AttackDelay >= 0.0f)
                 {
+                    if(m_IsRight)
+                        m_Rb.transform.position += (new Vector3(1, 1, 0)) * Time.deltaTime;
+                    else
+                        m_Rb.transform.position += (new Vector3(-1, 1, 0)) * Time.deltaTime;
+
                     m_AttackDelay -= Time.deltaTime;
                     if(m_AttackDelay <= 0.0f)
                     {
-                        m_AttackVec = m_Player.transform.position - this.transform.position;
-                        m_AttackVec.y += 1.0f;
+                        m_AttackVec = m_Player.transform.position;
+                        m_AttackVec.y += 1.5f;
                         m_BodyAttackState = BodyAttack.ATTACK;
                         m_AttackDelay = 5.0f;
                         m_SpRenderer.sprite = m_AttackImgs[1];
+                        ChangeRotate();
                     }
                 }
             }
             else if(m_BodyAttackState == BodyAttack.ATTACK)
             {
                 m_AttackCurVec = m_AttackVec - this.transform.position;
-                m_Rb.transform.position += m_AttackVec * Time.deltaTime;
+                m_Rb.transform.position += m_AttackCurVec.normalized * m_FlySpeed * 8.0f * Time.deltaTime;
                 Debug.Log(m_AttackCurVec.magnitude);
                 if(m_AttackCurVec.magnitude <= 1.0f)
                 {
@@ -221,10 +228,12 @@ void Update()
     {
         if (m_CalcVec.x >= 0.1f)
         {
+            m_IsRight = true;
             this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
         }
         else if (m_CalcVec.x <= -0.1f)
         {
+            m_IsRight = false;
             this.transform.rotation = Quaternion.Euler(0, 0.0f, 0);
         }
     }
