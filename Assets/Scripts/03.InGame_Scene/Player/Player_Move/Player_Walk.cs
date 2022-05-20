@@ -23,8 +23,8 @@ public class Player_Walk : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        move_speed = 3.0f;
-        crawl_speed = 2.0f;
+        move_speed = 4.0f;
+        crawl_speed = 2.5f;
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class Player_Walk : MonoBehaviour
         }
         else
         {
-            move_speed = 3.0f;
+            move_speed = 4.0f;
         }
     }
 
