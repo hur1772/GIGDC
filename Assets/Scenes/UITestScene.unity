@@ -1803,7 +1803,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4109632169616997899, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
 --- !u!1 &791819613
 GameObject:
@@ -2068,6 +2069,8 @@ MonoBehaviour:
       \uD658\uC601\uD569\uB2C8\uB2E4."
   - dialogue: "\uC774 \uACF3\uC5D0\uC11C \uAE30\uBCF8 \uC804\uD22C\uBC29\uBC95\uC744
       \uBC30\uC6B0\uC2ED\uC2DC\uC624."
+  - dialogue: "\uACF5\uACA9\uC740 \uB300\uCDA9 \uC774\uAC70~~"
+  - dialogue: "\uC2A4\uD0AC\uC740 \uC774\uAC70 ~~  "
 --- !u!4 &1044312652
 Transform:
   m_ObjectHideFlags: 0
