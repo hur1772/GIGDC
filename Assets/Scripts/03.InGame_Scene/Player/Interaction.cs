@@ -57,6 +57,7 @@ public class Interaction : MonoBehaviour
                 if (Input.GetKey(KeyCode.G))
                 {
                     m_interactionState = InteractionState.king_talk;
+                    NPCDialogue.Inst.ShowDialogue();
                 }
                 break;
 
