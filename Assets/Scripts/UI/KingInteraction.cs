@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class KingInteraction : MonoBehaviour
 {
+    float Pos = 10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        Interaction.Inst.ResetPos();
+        Interaction.Inst.ResetPos(Pos + 0.1f);
     }
 
     // Update is called once per frame
@@ -23,12 +25,12 @@ public class KingInteraction : MonoBehaviour
         {
             if (Interaction.Inst.KingDistance < Interaction.Inst.NPCDistance || Interaction.Inst.KingDistance < Interaction.Inst.ShopDistance || Interaction.Inst.KingDistance < Interaction.Inst.PortalDistance)
             {
-                if (Interaction.Inst.KingDistance < 5.0f)
+                if (Interaction.Inst.KingDistance < Pos)
                 {
                     if (Interaction.Inst.GKey != null)
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(true);
-                        Interaction.Inst.animator.SetFloat("KingInteraction", Interaction.Inst.KingDistance);
+                        Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.KingDistance);
                         Interaction.Inst.m_interactionState = InteractionState.king;
                         Interaction.Inst.IsInteraction = true;
                     }
@@ -37,14 +39,14 @@ public class KingInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+            if (Interaction.Inst.NPCDistance > Pos && Interaction.Inst.ShopDistance > Pos && Interaction.Inst.PortalDistance > Pos)
             {
-                if (Interaction.Inst.KingDistance > 5.0f)
+                if (Interaction.Inst.KingDistance > Pos)
                 {
                     if (Interaction.Inst.GKey != null)
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(false);
-                        Interaction.Inst.animator.SetFloat("KingInteraction", Interaction.Inst.KingDistance);
+                        Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.KingDistance);
 
                         Interaction.Inst.IsInteraction = false;
                     }

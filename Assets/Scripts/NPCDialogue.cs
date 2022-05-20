@@ -22,22 +22,28 @@ public class NPCDialogue : MonoBehaviour
     private bool IsDialog = false;
     private int count = 0;
 
-    NPCDialogue Inst;
+    public static NPCDialogue Inst;
     [SerializeField] private Dialogue[] dialogue;
     GameObject Player;
     GameObject NPC;
 
+    bool IsTalk = false;
+
     public void ShowDialogue()
     {
         OnOff(true);
-        count = 0;
-        NextDialouge();
-        TalkBtn.gameObject.SetActive(false);
+        //NextDialouge();
+        if (TalkBtn != null)
+        {
+            TalkBtn.gameObject.SetActive(false);
+        }
     }
 
     public void NextDialouge()
     {
         TalkTxt.text = dialogue[count].dialogue;
+        Debug.Log(dialogue[count].dialogue);
+        Debug.Log(count);
         count++;
     }
 
@@ -49,7 +55,10 @@ public class NPCDialogue : MonoBehaviour
         NPCLabelTxt.gameObject.SetActive(a_flag);
         InfoTxt.gameObject.SetActive(a_flag);
         Player.SetActive(false);
-        NPC.SetActive(false);
+        if (NPC != null)
+        {
+            NPC.SetActive(false);
+        }
         IsDialog = a_flag;
     }
     void Awake()
@@ -63,7 +72,15 @@ public class NPCDialogue : MonoBehaviour
         Player = GameObject.Find("Player");
         NPC = GameObject.Find("NPC");
             
-        TalkBtn.onClick.AddListener(TalkFunc);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Interaction.Inst.m_interactionState == InteractionState.king_talk)
+        {
+            NPCInteraction();
+        }
     }
 
     public void TalkFunc()
@@ -75,7 +92,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (IsDialog)
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G) )
             {
                 if (count < dialogue.Length)
                 {
@@ -85,16 +102,20 @@ public class NPCDialogue : MonoBehaviour
                 {
                     OnOff(false);
                     Player.SetActive(true);
-                    NPC.SetActive(true);
-                    TalkBtn.gameObject.SetActive(true);
+                    if (NPC != null)
+                    {
+                        NPC.SetActive(true);
+                    }
+                    if (TalkBtn != null)
+                    {
+                        TalkBtn.gameObject.SetActive(true);
+                    }
+                    count = 0;
+                    TalkTxt.text = dialogue[count].dialogue;
+                    count = 1;
+                    Interaction.Inst.m_interactionState = InteractionState.Nomal;
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        NPCInteraction();
     }
 }

@@ -27,6 +27,14 @@ public class Player_Attack : MonoBehaviour
 
     private void UpdateFunc()
     {
-        
+        if(Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        animator.SetTrigger("AttackTrigger");
     }
 }
