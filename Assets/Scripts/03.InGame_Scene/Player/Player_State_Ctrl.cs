@@ -29,32 +29,24 @@ public enum PlayerMoveState
 public enum PlayerAttackState
 {
     player_no_att = 0,
-    player_handgun = 1,
-    player_riflegun = 2,
-    player_sabor = 3,
-
+    player_sword = 1,
+    player_bow = 2
 }
 
-public enum PlayerAttack1   //handgun
+public enum PlayerAttack1   //sword
 {
     player_att1_normal = 0,
-    player_att1_aim = 1,
-    player_att1_grenade = 2,
-    player_att1_skill = 3
+    player_att1_skill1 = 1,
+    player_att1_skill2 = 2,
+    player_att1_skill3 = 3
 }
-public enum PlayerAttack2   //riflegun
+public enum PlayerAttack2   //bow
 {
     player_att2_normal = 0,
     player_att2_aim = 1,
-    player_att2_grenade = 2,
-    player_att2_skill = 3
-}
-public enum PlayerAttack3   //sabor
-{
-    player_attS_normal = 0,
-    player_attS_block = 1,
-    player_attS_Grenade = 2,
-    player_attS_skill = 3
+    player_att1_skill1 = 2,
+    player_att1_skill2 = 3,
+    player_att1_skill3 = 4
 }
 #endregion
 

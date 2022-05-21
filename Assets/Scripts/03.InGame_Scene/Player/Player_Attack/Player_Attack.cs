@@ -27,14 +27,37 @@ public class Player_Attack : MonoBehaviour
 
     private void UpdateFunc()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Attack();
+            Player_State.p_state = PlayerState.player_attack;
+            Player_State.p_Attack_state = PlayerAttackState.player_sword;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Player_State.p_state = PlayerState.player_attack;
+            Player_State.p_Attack_state = PlayerAttackState.player_bow;
         }
     }
 
-    void Attack()
+    public void Sword_Attack(int a)
     {
-        animator.SetTrigger("AttackTrigger");
+
+        if (a == 0)
+        {
+            animator.SetTrigger("Sword_Attack_1");
+        }
+        if (a == 1)
+        {
+            animator.SetTrigger("Sword_Attack_2");
+        }
+        if (a == 2)
+        {
+            animator.SetTrigger("Sword_Attack_3");
+        }
+        if (a == 3)
+        {
+            animator.SetTrigger("Sword_Attack_4");
+        }
     }
 }
