@@ -10,9 +10,10 @@ public class Attack_State_Ctrl : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        int ran_att = Random.Range(0, 3);
+        int ran_att = Random.Range(0, 4);
         p_Attack = animator.GetComponent<Player_Attack>();
         p_Attack.Sword_Attack(ran_att);
+
 
     }
 

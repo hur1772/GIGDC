@@ -26,7 +26,7 @@ public class Player_Input : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("Sword_Attack_Start");
         }
