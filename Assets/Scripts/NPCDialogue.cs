@@ -8,6 +8,7 @@ public class Dialogue
 {
     [TextArea]
     public string dialogue;
+    public Sprite cg;
 }
 
 
