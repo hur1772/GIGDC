@@ -16,6 +16,8 @@ public class TutorialMgr : MonoBehaviour
 {
     public static TutorialState m_TutorialState = TutorialState.NextStage;
 
+    PadeOutMgr m_PadeIn;
+
     public GameObject ScarecrowPrefab = null;
     public GameObject TargetPrefab = null;
 
@@ -42,7 +44,8 @@ public class TutorialMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        PadeOutMgr.Inst.PadeIn();
+
             if (StageLv == 1)
             {
                 m_TutorialState = TutorialState.TargetStage;

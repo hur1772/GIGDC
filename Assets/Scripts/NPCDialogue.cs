@@ -23,6 +23,8 @@ public class NPCDialogue : MonoBehaviour
     private bool IsDialog = false;
     private int count = 0;
 
+    public GameObject TypeObject = null;
+
     public static NPCDialogue Inst;
     [SerializeField] private Dialogue[] dialogue;
     GameObject Player;
@@ -72,7 +74,6 @@ public class NPCDialogue : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         NPC = GameObject.Find("NPC");
-            
     }
 
     // Update is called once per frame
@@ -114,7 +115,13 @@ public class NPCDialogue : MonoBehaviour
                     count = 0;
                     TalkTxt.text = dialogue[count].dialogue;
                     count = 1;
-                    Interaction.Inst.m_interactionState = InteractionState.Nomal;
+                    if (TypeObject != null)
+                    {
+                        if (TypeObject.gameObject.name == "King")
+                        {
+                            Interaction.Inst.m_interactionState = InteractionState.king_talkEnd;
+                        }
+                    }
                 }
             }
         }
