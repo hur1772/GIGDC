@@ -9,6 +9,7 @@ public enum InteractionState
     Nomal,
     king,
     king_talk,
+    king_talkEnd,
     NPC,
     Shop,
     Portal
@@ -60,7 +61,6 @@ public class Interaction : MonoBehaviour
                     NPCDialogue.Inst.ShowDialogue();
                 }
                 break;
-
 
             case InteractionState.NPC:
                 if (Input.GetKey(KeyCode.G))
