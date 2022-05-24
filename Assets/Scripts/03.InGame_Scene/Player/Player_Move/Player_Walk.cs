@@ -9,8 +9,8 @@ public class Player_Walk : MonoBehaviour
     private Player_State_Ctrl Player_state;
     Animator animator;
 
-    private float move_speed;
-    private float crawl_speed;
+    public float move_speed;
+    public float crawl_speed;
     public int key = 0;
 
     // Start is called before the first frame update
@@ -23,8 +23,8 @@ public class Player_Walk : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        move_speed = 3.0f;
-        crawl_speed = 2.0f;
+        move_speed = 4.0f;
+        crawl_speed = 2.5f;
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class Player_Walk : MonoBehaviour
         }
         else
         {
-            move_speed = 3.0f;
+            move_speed = 4.0f;
         }
     }
 
@@ -78,11 +78,16 @@ public class Player_Walk : MonoBehaviour
                 transform.localScale = new Vector3(key * 0.3f, 0.3f, 1);
             }
         }
+        animator.SetBool("IsCrawl", false);
 
     }
 
     private void P_Move_Crawl()
     {
+        if (Player_state.p_Move_state == PlayerMoveState.player_dash || Player_state.p_Move_state == PlayerMoveState.player_jump)
+            return;
+
+        animator.SetBool("IsCrawl", true);
         move_speed = crawl_speed;
     }
 }

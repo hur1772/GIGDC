@@ -13,30 +13,25 @@ public class PigMonster : Monster
     float m_SkillDelayTime = 0.5f;
     bool m_IsSkillOn = false;
 
+    bool m_SkillTriggerBool = true;
+
     private void Start()
     {
         m_MaxHP = 100;
         m_CurHP = m_MaxHP;
 
         m_Atk = 5;
-        m_MoveSpeed = 5;
+        m_MoveSpeed = 4;
 
         m_ChaseDistance = 7.0f;
         m_AttackDistance = 3.0f;
 
         m_SkillCoolTime = 5.0f;
-        m_SkillDelayTime = 0.5f;
+        m_SkillDelayTime = 1.5f;
 
         m_DelayTime = Random.Range(2.0f, 3.0f);
 
-        if (m_Animator == null)
-            m_Animator = this.GetComponent<Animator>();
-
-        if (m_Player == null)
-            m_Player = GameObject.Find("Player");
-
-        if (m_Rb == null)
-            m_Rb = GetComponent<Rigidbody2D>();
+        InitMonster();
     }
 
     private void Update()
@@ -67,10 +62,10 @@ public class PigMonster : Monster
     }
 
     //플레이어와의 거리 구하기 함수
-    void CheckDistanceFromPlayer()
-    {
-        m_CalcVec = m_Player.transform.position - this.transform.position;
-    }
+    //void CheckDistanceFromPlayer()
+    //{
+    //    m_CalcVec = m_Player.transform.position - this.transform.position;
+    //}
 
     void MonAiUpdate()
     {
@@ -165,6 +160,21 @@ public class PigMonster : Monster
         }
         else if(m_Monstate == MonsterState.SKILL)
         {
+            if(m_SkillTriggerBool)
+            {
+                if (m_CalcVec.x >= 0.1f)
+                {
+                    this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else if (m_CalcVec.x <= -0.1f)
+                {
+                    this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+                }
+
+                m_Animator.SetTrigger("SkillTrigger");
+                m_SkillTriggerBool = false;
+            }
+
             if (m_SkillDelayTime >= 0.0f)
             {
                 m_SkillDelayTime -= Time.deltaTime;
@@ -182,9 +192,10 @@ public class PigMonster : Monster
                     }
 
                     m_Monstate = MonsterState.IDLE;
-                    m_SkillDelayTime = 0.5f;
+                    m_SkillDelayTime = 1.5f;
                     m_SkillCoolTime = 5.0f;
                     m_IsSkillOn = false;
+                    m_SkillTriggerBool = true;
                     m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
                 }
             }

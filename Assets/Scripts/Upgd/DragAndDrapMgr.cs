@@ -19,9 +19,14 @@ public class DragAndDrapMgr : MonoBehaviour
     private Color m_Color;
     //-------- 아이콘 투명하게 사라지게 하기 연출용 변수
 
+    public Button Ok_Btn;
+    public Button Back_Btn;
+
     //[Header("-------- Buy Item --------")]
     //public Text m_GoldTxt;
     //public Text m_SkillTxt;
+
+    bool IsUpGd = false;
 
     [Header("-------- Info Txt --------")]
     //public Text m_InfoTxt;
@@ -31,6 +36,12 @@ public class DragAndDrapMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Ok_Btn != null)
+            Ok_Btn.onClick.AddListener(OkBtnFunc);
+
+        if (Back_Btn != null)
+            Back_Btn.onClick.AddListener(ResetPos);
+
         //GlobalUserData.LoadGameInfo();
 
         //if (m_GoldTxt != null)
@@ -57,12 +68,15 @@ public class DragAndDrapMgr : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) //왼쪽 마우스 버튼을 클릭한 순간
         {
-            for(int ii = 0; ii < m_SlotSc[2].ItemResultImg.Length;ii++ )
+            if (m_SlotSc[2].ItemResultImg[0].gameObject.activeSelf == false && m_SlotSc[2].ItemResultImg[1].gameObject.activeSelf == false)
             {
-                m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
-            }
+                for (int ii = 0; ii < m_SlotSc[2].ItemResultImg.Length; ii++)
+                {
+                    m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
+                }
 
-            BuyMouseBtnDown();
+                BuyMouseBtnDown();
+            }
         }//if (Input.GetMouseButtonDown(0))
 
         if (Input.GetMouseButton(0)) //왼쪽 마우스를 누르고 있는 동안
@@ -77,9 +91,13 @@ public class DragAndDrapMgr : MonoBehaviour
         {
             BuyMouseBtnUp();
         }//if (Input.GetMouseButtonUp(0)) 
-
-        BuyDirection();
-
+        if (IsUpGd == true)
+        {
+            if (m_DrtIndex > 1)
+            {
+                BuyDirection();
+            }
+        }
     }// void Update()
 
     bool IsCollSlot(GameObject a_CkObj)  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수
@@ -125,8 +143,8 @@ public class DragAndDrapMgr : MonoBehaviour
             if (m_SlotSc[ii].ItemImg.gameObject.activeSelf == false &&
                 IsCollSlot(m_SlotSc[ii].gameObject) == true)
             {
-                m_SlotSc[ii].ItemImg.gameObject.SetActive(true);
-                m_SlotSc[ii].ItemImg.color = Color.white;
+                //m_SlotSc[ii].ItemImg.gameObject.SetActive(true);
+                //m_SlotSc[ii].ItemImg.color = Color.white;
                 m_AddTimer = AniDuring;
                 m_IsPick = false;
                 a_MsObj[m_SaveIndex].gameObject.SetActive(false);
@@ -136,7 +154,7 @@ public class DragAndDrapMgr : MonoBehaviour
 
         if (m_IsPick == true && 0 <= m_SaveIndex)
         {
-            m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
+            //m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
             m_IsPick = false;
             a_MsObj[m_SaveIndex].gameObject.SetActive(false);
         }
@@ -190,12 +208,12 @@ public class DragAndDrapMgr : MonoBehaviour
 
                 break;
             }
-            
+
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
 
         if (0 <= m_SaveIndex)
         {
-            m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
+            //m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
             m_IsPick = false;
             a_MsObj[m_SaveIndex].gameObject.SetActive(false);
         }
@@ -204,10 +222,11 @@ public class DragAndDrapMgr : MonoBehaviour
 
     void BuyDirection() //구매 연출 함수
     {
+
         //---------- 장착된 아이콘이 서서히 사라지게 처리하는 연출
         if (0.0f <= m_AddTimer)
         {
-            m_AddTimer = m_AddTimer - Time.deltaTime;
+            m_AddTimer = m_AddTimer - 0.01f;
             m_CacTime = m_AddTimer / AniDuring;
             m_Color = m_SlotSc[m_DrtIndex].ItemImg.color;
             m_Color.a = m_CacTime;
@@ -216,6 +235,8 @@ public class DragAndDrapMgr : MonoBehaviour
             if (m_AddTimer <= 0.0f)
             {
                 m_SlotSc[m_DrtIndex].ItemResultImg[m_SaveIndex].gameObject.SetActive(false);
+                IsUpGd = false;
+                m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
             }
 
         }//if (0.0f < m_AddTimer)
@@ -240,4 +261,20 @@ public class DragAndDrapMgr : MonoBehaviour
          //---------- 구매불가 텍스트 서서히 사라지게 처리하는 연출
 
     }//void BuyDirection() //구매 연출 함수
+
+    void OkBtnFunc()
+    {
+        IsUpGd = true;
+    }
+
+    void ResetPos()
+    {
+        for (int ii = 0; ii < m_SlotSc[2].ItemResultImg.Length; ii++)
+        {
+            m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
+        }
+
+        m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
+        BuyMouseBtnDown();
+    }
 }

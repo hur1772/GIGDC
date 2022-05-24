@@ -29,10 +29,15 @@ public class UIMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.G))
+        if (ShopPanel != null)
         {
-            ShopPanel.SetActive(true);
-            Time.timeScale = 0.0f;
+            if (ShopPanel.activeSelf == true)
+            {
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    ShopPanel.SetActive(false);
+                }
+            }
         }
 
         if (Input.GetKey(KeyCode.Alpha1) && UseItemCoolTime1 >= 5.0f)
