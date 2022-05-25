@@ -27,7 +27,7 @@ public class TutorialMgr : MonoBehaviour
     [HideInInspector] public int StageLv = 0;
 
 
-    public Text m_CurTxt = null;
+    //public Text m_CurTxt = null;
     float m_CurTimer = 0.0f;
 
 
@@ -46,6 +46,8 @@ public class TutorialMgr : MonoBehaviour
     {
         PadeOutMgr.Inst.PadeIn();
 
+        if (Interaction.Inst.m_interactionState == InteractionState.NPC_talkEnd)
+        {
             if (StageLv == 1)
             {
                 m_TutorialState = TutorialState.TargetStage;
@@ -83,44 +85,9 @@ public class TutorialMgr : MonoBehaviour
                     break;
 
             }
+        }
     }
 
 
-
-//void GuideTimer()
-//    {
-//        if (0.0f <= m_CurTimer)
-//        {
-//            m_CurTimer += Time.deltaTime;
-            
-//            if (m_CurTxt != null)
-//                m_CurTxt.text = " 연무장\n " + ((int)m_CurTimer / 60 % 60).ToString("00") + " : " +
-//             ((int)m_CurTimer % 60).ToString("00");//+ Mathf.Round(m_Timer) + "초";        
-//            if (m_CurTimer > 0.0f)
-//            {
-//                m_InfoText.gameObject.SetActive(true);
-//                m_InfoText.text = "연무장에 오신것을 환영합니다.\n 이 곳에서 전투 방법을 배우십시오.";
-                
-//            }
-//            if(m_CurTimer > 7.0f)
-//            {
-//                m_InfoText.gameObject.SetActive(false);
-//            }
-//            if (m_CurTimer > 10.0f)
-//            {
-//                m_InfoText.gameObject.SetActive(true);
-//                m_InfoText.text = "10초 후 과녁이 생성 됩니다.";
-//            }
-//            if (m_CurTimer > 20.0f)
-//            {
-//                m_InfoText.text = "과녁이 생성되었습니다.\n 좌클릭으로 적을 공격하세요! ";
-//            }
-//            if(m_CurTimer > 30.0f)
-//            {
-//                m_InfoText.gameObject.SetActive(false);
-//            }
-
-//        }
-//    }
 
 }

@@ -36,7 +36,7 @@ public class NPCDialogue : MonoBehaviour
     GameObject Player;
     GameObject NPC;
 
-    bool IsTalk = false;
+    //bool IsTalk = false;
 
     public void ShowDialogue()
     {
@@ -85,38 +85,65 @@ public class NPCDialogue : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         NPC = GameObject.Find("NPC");
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (TypeObject == null)
+            return;
+        if (TypeObject.gameObject.name == "King")
+        {      
+            if (0.0f < GuideTimer)
+            {
+                GuideTimer -= Time.deltaTime;
+
+                if (GuideTimer <= 4.0f)
+                {
+                    GuideTxt.gameObject.SetActive(true);
+                }
+
+                if (GuideTimer < 0.0f)
+                {
+                    GuideTimer = 0.0f;
+                    GuideTxt.gameObject.SetActive(false);
+                }
+            }
+        }
+        if(TypeObject.gameObject.name == "NPC")
+        {
+            if (0.0f < GuideTimer)
+            {
+                GuideTimer -= Time.deltaTime;
+
+                if (GuideTimer <= 4.0f)
+                {
+                    GuideTxt.gameObject.SetActive(true);
+                }
+
+                if (GuideTimer < 0.0f)
+                {
+                    GuideTimer = 0.0f;
+                    GuideTxt.gameObject.SetActive(false);
+                }
+            }
+        }
+
         if (Interaction.Inst.m_interactionState == InteractionState.king_talk)
         {
             NPCInteraction();
         }
-
-        if (0.0f < GuideTimer)
+        if (Interaction.Inst.m_interactionState == InteractionState.NPC)
         {
-            GuideTimer -= Time.deltaTime;
-
-            if (GuideTimer <= 4.0f)
-            {
-                GuideTxt.gameObject.SetActive(true);
-            }
-
-            if (GuideTimer < 0.0f)
-            {
-                GuideTimer = 0.0f;
-                GuideTxt.gameObject.SetActive(false);
-            }
+            NPCInteraction();
         }
+
     }
 
-    public void TalkFunc()
-    {
-        ShowDialogue();
-    }
+    //public void TalkFunc()
+    //{
+    //    ShowDialogue();
+    //}
 
     public void NPCInteraction()
     {
@@ -143,7 +170,7 @@ public class NPCDialogue : MonoBehaviour
                     {
                         if (TypeObject.gameObject.name == "King")
                         {
-                            Interaction.Inst.m_interactionState = InteractionState.king_talkEnd;
+                            Interaction.Inst.m_interactionState =       InteractionState.king_talkEnd;
                         }
                         else if (TypeObject.gameObject.name == "NPC")
                         {
