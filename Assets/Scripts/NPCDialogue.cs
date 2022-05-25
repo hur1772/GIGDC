@@ -9,28 +9,30 @@ public class Dialogue
     [TextArea]
     public string dialogue;
     public Sprite cg;
+    public Sprite PlayerCg;
 }
 
 
 public class NPCDialogue : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer sprite_StandingCG;    
+    [SerializeField] private SpriteRenderer sprite_StandingCG;
+    [SerializeField] private SpriteRenderer Player_StandingCG;
     [SerializeField] private SpriteRenderer sprite_DialogBox;
     [SerializeField] private Text TalkTxt;
     //[SerializeField] private Text NPCLabelTxt;
     [SerializeField] private Text InfoTxt;
     [SerializeField] private Text GuideTxt;
-    
+
     //[SerializeField] private Button TalkBtn;
     private bool IsDialog = false;
     private int count = 0;
     private float GuideTimer = 4.0f;
-
+    public GameObject TypeObject = null;
 
     public static NPCDialogue Inst;
     [SerializeField] private Dialogue[] dialogue;
-    
-    
+
+
     GameObject Player;
     GameObject NPC;
 
@@ -51,7 +53,8 @@ public class NPCDialogue : MonoBehaviour
     {
         //NPCLabelTxt.text = dialogue[count].dialogue;
         TalkTxt.text = dialogue[count].dialogue;
-        sprite_StandingCG.sprite = dialogue[count].cg;        
+        sprite_StandingCG.sprite = dialogue[count].cg;
+        Player_StandingCG.sprite = dialogue[count].PlayerCg;
         //Debug.Log(dialogue[count].dialogue);
         //Debug.Log(count);
         count++;
@@ -60,6 +63,7 @@ public class NPCDialogue : MonoBehaviour
     public void OnOff(bool a_flag)
     {
         sprite_StandingCG.gameObject.SetActive(a_flag);
+        Player_StandingCG.gameObject.SetActive(a_flag);
         sprite_DialogBox.gameObject.SetActive(a_flag);
         TalkTxt.gameObject.SetActive(a_flag);
         //NPCLabelTxt.gameObject.SetActive(a_flag);
@@ -81,7 +85,7 @@ public class NPCDialogue : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         NPC = GameObject.Find("NPC");
-              
+
     }
 
     // Update is called once per frame
@@ -96,7 +100,7 @@ public class NPCDialogue : MonoBehaviour
         {
             GuideTimer -= Time.deltaTime;
 
-            if(GuideTimer <= 4.0f)
+            if (GuideTimer <= 4.0f)
             {
                 GuideTxt.gameObject.SetActive(true);
             }
@@ -118,7 +122,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (IsDialog)
         {
-            if (Input.GetKeyDown(KeyCode.G) )
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 if (count < dialogue.Length)
                 {
@@ -132,20 +136,20 @@ public class NPCDialogue : MonoBehaviour
                     {
                         NPC.SetActive(true);
                     }
-                    //if (TalkBtn != null)
-                    //{
-                    //    TalkBtn.gameObject.SetActive(true);
-                    //}
                     count = 0;
                     TalkTxt.text = dialogue[count].dialogue;
-                    //if(count <= 0)
-                    //{
-                    //    GuideTxt.gameObject.SetActive(true);
-                    //    GuideTxt.text = "집으로 돌아가기";
-                    //    GuideTimer = 5.0f;
-                    //}
                     count = 1;
-                    Interaction.Inst.m_interactionState = InteractionState.Nomal;
+                    if (TypeObject != null)
+                    {
+                        if (TypeObject.gameObject.name == "King")
+                        {
+                            Interaction.Inst.m_interactionState = InteractionState.king_talkEnd;
+                        }
+                        else if (TypeObject.gameObject.name == "NPC")
+                        {
+                            Interaction.Inst.m_interactionState =   InteractionState.NPC_talkEnd;
+                        }
+                    }
                 }
             }
         }
