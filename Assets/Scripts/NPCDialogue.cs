@@ -24,7 +24,7 @@ public class NPCDialogue : MonoBehaviour
     //[SerializeField] private Button TalkBtn;
     private bool IsDialog = false;
     private int count = 0;
-    private float GuideTimer = 5.0f;
+    private float GuideTimer = 4.0f;
 
 
     public static NPCDialogue Inst;
@@ -96,7 +96,7 @@ public class NPCDialogue : MonoBehaviour
         {
             GuideTimer -= Time.deltaTime;
 
-            if(GuideTimer < 4.0f)
+            if(GuideTimer <= 4.0f)
             {
                 GuideTxt.gameObject.SetActive(true);
             }
@@ -138,12 +138,12 @@ public class NPCDialogue : MonoBehaviour
                     //}
                     count = 0;
                     TalkTxt.text = dialogue[count].dialogue;
-                    if(count <= 0)
-                    {
-                        GuideTxt.gameObject.SetActive(true);
-                        GuideTxt.text = "집으로 돌아가기";
-                        GuideTimer = 5.0f;
-                    }
+                    //if(count <= 0)
+                    //{
+                    //    GuideTxt.gameObject.SetActive(true);
+                    //    GuideTxt.text = "집으로 돌아가기";
+                    //    GuideTimer = 5.0f;
+                    //}
                     count = 1;
                     Interaction.Inst.m_interactionState = InteractionState.Nomal;
                 }
