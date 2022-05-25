@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
+    float Pos = 8.0f;
+
+    public static NPCInteraction Inst;
+     void Awake()
+    {
+        Inst = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-
+        Interaction.Inst.ResetPos(Pos + 0.1f);
     }
 
     // Update is called once per frame
@@ -15,6 +22,7 @@ public class NPCInteraction : MonoBehaviour
     {
         Interaction.Inst.NPCDistance = Vector2.Distance(Interaction.Inst.PlayPos.transform.position, this.transform.position);
         KingInter();
+        
     }
 
     void KingInter()
@@ -43,7 +51,7 @@ public class NPCInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
-                        Debug.Log("!");
+                        //Debug.Log("!");
 
                         Interaction.Inst.GKey.gameObject.SetActive(false);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.NPCDistance);
