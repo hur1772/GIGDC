@@ -30,13 +30,13 @@ public class Monster : MonoBehaviour
     protected Rigidbody2D m_Rb;
 
     //몬스터 기본 스탯, 상태
-    protected float m_MaxHP = 0;
-    protected float m_CurHP = 0;
-    protected float m_Atk   = 0;
-    protected float m_MoveSpeed = 0;
+    public float m_MaxHP = 0;
+    public float m_CurHP = 0;
+    public float m_Atk   = 0;
+    public float m_MoveSpeed = 0;
 
-    protected float m_ChaseDistance = 0;
-    protected float m_AttackDistance = 0;
+    public float m_ChaseDistance = 0;
+    public float m_AttackDistance = 0;
 
     public MonsterState m_Monstate = MonsterState.IDLE;
     protected Animator m_Animator;
