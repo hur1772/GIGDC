@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HpBar: {fileID: 1474966272525499970}
+  ThisGameObject: {fileID: 3270714247158334663}
 --- !u!1 &5452010044374685487
 GameObject:
   m_ObjectHideFlags: 0
