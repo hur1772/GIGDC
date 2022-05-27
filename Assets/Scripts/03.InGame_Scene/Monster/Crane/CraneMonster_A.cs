@@ -101,7 +101,7 @@ public class CraneMonster_A : Monster
             m_Animator.SetBool("CanAttack", true);
         }
 
-        if(m_ChaseDistance * 1.5f  < m_CalcVec.magnitude)
+        if (m_ChaseDistance * 1.5f  < m_CalcVec.magnitude)
         {
             m_Monstate = MonsterState.PATROL;
         }
@@ -109,15 +109,9 @@ public class CraneMonster_A : Monster
 
     public void AttackUpdate()
     {
-        if(m_AttackDelay >= 0.0f)
+        if (m_CalcVec.magnitude >= m_AttackDistance)
         {
-            m_AttackDelay -= Time.deltaTime;
-            if(m_AttackDelay <= 0.0f)
-            {
-                m_AttackDelay = 1.5f;
-                m_Monstate = MonsterState.CHASE;
-                m_Animator.SetBool("CanAttack", false);
-            }
+            m_Animator.SetBool("CanAttack", false);
         }
     }
 }
