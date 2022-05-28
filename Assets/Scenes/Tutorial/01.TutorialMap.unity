@@ -8439,8 +8439,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256395657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.12, y: 3, z: 0}
-  m_LocalScale: {x: 2, y: 4, z: 1}
+  m_LocalPosition: {x: 28, y: 1.5, z: 0}
+  m_LocalScale: {x: 2.5498335, y: 3.9301195, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -10000,7 +10000,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30.007326}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1293860915
@@ -10239,9 +10239,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1909947809118455920, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909947809118455920, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4109632169165357629, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1979163247}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: enemyLayers.m_Bits
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Name
@@ -10408,6 +10428,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844632336}
   m_CullTransparentMesh: 1
+--- !u!4 &1979163247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1909947809118455920, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+  m_PrefabInstance: {fileID: 1705301347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2008026359
 GameObject:
   m_ObjectHideFlags: 0
