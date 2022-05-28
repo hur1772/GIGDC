@@ -430,27 +430,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "walk_\uC138\uC790 v.1.1_22"
-      rect:
-        serializedVersion: 2
-        x: 6035
-        y: 396
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2685a56e11c7506d0800000000000000
-      internalID: -3024875158388451230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "walk_\uC138\uC790 v.1.1_23"
       rect:
         serializedVersion: 2
@@ -509,27 +488,6 @@ TextureImporter:
       bones: []
       spriteID: 35f975cb86e1954b0800000000000000
       internalID: -5451292438769983661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "walk_\uC138\uC790 v.1.1_26"
-      rect:
-        serializedVersion: 2
-        x: 7195
-        y: 13
-        width: 18
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 830be011b40ef1430800000000000000
-      internalID: 3755967227263627320
       vertices: []
       indices: 
       edges: []
