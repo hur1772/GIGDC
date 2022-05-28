@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: c5bf5a113b80c89409b6f07c307c1b27
+guid: eac74fbdd58f8d549a0fda02afa177a0
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: Mobile_Backgrounds_01_1
+    second: Mobile_Backgrounds_04_0
   - first:
       213: 21300002
-    second: Mobile_Backgrounds_02_1
+    second: Mobile_Backgrounds_04_1
   - first:
       213: 21300004
-    second: Mobile_Backgrounds_03_1
+    second: Mobile_Backgrounds_04_2
   - first:
       213: 21300006
-    second: Mobile_Backgrounds_05_4
-  - first:
-      213: 21300008
-    second: Mobile_Backgrounds_05_5
-  - first:
-      213: 21300010
-    second: Mobile_Backgrounds_06_3
-  - first:
-      213: 21300012
-    second: Mobile_Backgrounds_08_0
-  - first:
-      213: 21300014
-    second: Mobile_Backgrounds_08_1
+    second: Mobile_Backgrounds_04_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +86,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -110,33 +98,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -151,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mobile_Backgrounds_01_1
+      name: Mobile_Backgrounds_04_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3754
+        y: 3072
         width: 4096
-        height: 337
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,13 +136,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile_Backgrounds_02_1
+      name: Mobile_Backgrounds_04_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 3413
+        y: 2046
         width: 4096
-        height: 338
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,13 +157,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile_Backgrounds_03_1
+      name: Mobile_Backgrounds_04_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 3072
+        y: 1022
         width: 4096
-        height: 336
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,13 +178,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile_Backgrounds_05_4
+      name: Mobile_Backgrounds_04_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 2286
+        y: 0
         width: 4096
-        height: 781
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,90 +194,6 @@ TextureImporter:
       bones: []
       spriteID: 62305410000000000800000000000000
       internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile_Backgrounds_05_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1551
-        width: 4096
-        height: 731
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile_Backgrounds_06_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 571
-        width: 4096
-        height: 969
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile_Backgrounds_08_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 314
-        width: 4096
-        height: 251
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile_Backgrounds_08_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4096
-        height: 302
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
       vertices: []
       indices: 
       edges: []
