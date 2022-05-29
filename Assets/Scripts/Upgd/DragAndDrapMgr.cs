@@ -120,11 +120,11 @@ public class DragAndDrapMgr : MonoBehaviour
 
         for (int ii = 0; ii < m_SlotSc.Length; ii++)
         {
-            if (m_SlotSc[ii].ItemImg.gameObject.activeSelf == true &&
+            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == true &&
                IsCollSlot(m_SlotSc[ii].gameObject) == true)
             {
                 m_SaveIndex = ii;
-                m_SlotSc[ii].ItemImg.gameObject.SetActive(false);
+                m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.SetActive(false);
                 m_IsPick = true;
                 a_MsObj[m_SaveIndex].gameObject.SetActive(true);
                 a_MsObj[m_SaveIndex].transform.position = Input.mousePosition;
@@ -140,7 +140,7 @@ public class DragAndDrapMgr : MonoBehaviour
 
         for (int ii = 0; ii < m_SlotSc.Length; ii++)
         {
-            if (m_SlotSc[ii].ItemImg.gameObject.activeSelf == false &&
+            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == false &&
                 IsCollSlot(m_SlotSc[ii].gameObject) == true)
             {
                 //m_SlotSc[ii].ItemImg.gameObject.SetActive(true);
@@ -173,11 +173,11 @@ public class DragAndDrapMgr : MonoBehaviour
             if (ii == 2)
                 continue;
 
-            if (m_SlotSc[ii].ItemImg.gameObject.activeSelf == true &&
+            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == true &&
                IsCollSlot(m_SlotSc[ii].gameObject) == true)
             {
                 m_SaveIndex = ii;
-                m_SlotSc[ii].ItemImg.gameObject.SetActive(false);
+                m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.SetActive(false);
                 m_IsPick = true;
                 a_MsObj[m_SaveIndex].gameObject.SetActive(true);
                 a_MsObj[m_SaveIndex].transform.position = Input.mousePosition;
@@ -196,7 +196,7 @@ public class DragAndDrapMgr : MonoBehaviour
             if (ii <= 1) //자기 자리에 놓은 경우 구매 불가
                 continue;
 
-            if (m_SlotSc[ii].ItemImg.gameObject.activeSelf == false &&
+            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == false &&
             IsCollSlot(m_SlotSc[ii].gameObject) == true)
             {
                 m_SlotSc[ii].ItemResultImg[m_SaveIndex].gameObject.SetActive(true);
@@ -228,7 +228,7 @@ public class DragAndDrapMgr : MonoBehaviour
         {
             m_AddTimer = m_AddTimer - 0.01f;
             m_CacTime = m_AddTimer / AniDuring;
-            m_Color = m_SlotSc[m_DrtIndex].ItemImg.color;
+            m_Color = m_SlotSc[m_DrtIndex].ItemImg[m_SaveIndex].color;
             m_Color.a = m_CacTime;
             m_SlotSc[m_DrtIndex].ItemResultImg[m_SaveIndex].color = m_Color;
 
@@ -236,7 +236,7 @@ public class DragAndDrapMgr : MonoBehaviour
             {
                 m_SlotSc[m_DrtIndex].ItemResultImg[m_SaveIndex].gameObject.SetActive(false);
                 IsUpGd = false;
-                m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
+                m_SlotSc[m_SaveIndex].ItemImg[m_SaveIndex].gameObject.SetActive(true);
             }
 
         }//if (0.0f < m_AddTimer)
@@ -274,7 +274,7 @@ public class DragAndDrapMgr : MonoBehaviour
             m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
         }
 
-        m_SlotSc[m_SaveIndex].ItemImg.gameObject.SetActive(true);
+        m_SlotSc[m_SaveIndex].ItemImg[m_SaveIndex].gameObject.SetActive(true);
         BuyMouseBtnDown();
     }
 }
