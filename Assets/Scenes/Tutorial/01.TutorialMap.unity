@@ -10127,7 +10127,7 @@ MonoBehaviour:
       \uC4F0\uB824\uB2C8 \uC5B4\uC0C9\uD558\uAD6C\uB098\r. \uB108\uAC00 \uC880 \uB3C4\uC640\uC8FC\uC9C0
       \uC54A\uC73C\uB828\r?"
     cg: {fileID: 0}
-    PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
+    PlayerCg: {fileID: 21300000, guid: 28e5d2840f34c364f801066eee7db382, type: 3}
   - dialogue: "\uD638\uC704\uBB34\uC0AC\n\n\uC608 \uADF8\uB7FC \uC81C\uAC00 \uC54C\uB824\uB4DC\uB9AC\uC9C0\uC694."
     cg: {fileID: 21300000, guid: 0ceef8ee82b686449907f8ba1cd38bb6, type: 3}
     PlayerCg: {fileID: 0}
@@ -10136,7 +10136,7 @@ MonoBehaviour:
     PlayerCg: {fileID: 0}
   - dialogue: "\uC138\uC790\n\n(\uBAA9\uAC80\uC744 \uB4E4\uC5B4 \uBCF8\uB2E4)"
     cg: {fileID: 0}
-    PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
+    PlayerCg: {fileID: 21300000, guid: 28e5d2840f34c364f801066eee7db382, type: 3}
   - dialogue: "\uD638\uC704\uBB34\uC0AC\n\n\uC608 \uC798\uD558\uC168\uC2B5\uB2C8\uB2E4\r.
       \uC774\uC81C \uB9C8\uC6B0\uC2A4 \uC67C\uCABD\uC744 \uB20C\uB7EC \uC55E\uC5D0
       \uC788\uB294 \uD5C8\uC218\uC544\uBE44\uB97C \uCCD0 \uBCF4\uC2DC\uC9C0\uC694\r"
