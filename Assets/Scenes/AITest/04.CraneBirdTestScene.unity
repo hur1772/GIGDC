@@ -1721,7 +1721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1472026978
 Animator:
   serializedVersion: 3
@@ -1843,7 +1843,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 3.0133333, y: 1.9068935}
+    oldSize: {x: 3.0133333, y: 1.6535301}
     newSize: {x: 4.52, y: 2.86034}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2512,6 +2512,10 @@ PrefabInstance:
     - target: {fileID: 4891488012293272266, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
       propertyPath: m_Name
       value: Crane
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891488012293272266, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}

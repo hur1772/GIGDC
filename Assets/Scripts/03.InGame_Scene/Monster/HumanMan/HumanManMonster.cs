@@ -21,6 +21,12 @@ public class HumanManMonster : Monster
     {
         CheckDistanceFromPlayer();
         AiUpdate();
+
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            m_Monstate = MonsterState.DIE;
+        }
     }
 
     void InitState()
@@ -129,6 +135,15 @@ public class HumanManMonster : Monster
                 //m_Monstate = MonsterState.CHASE;
                 m_Animator.SetBool("IsAttack", false);
             }
+        }
+        else if(m_Monstate == MonsterState.DIE)
+        {
+            m_Animator.SetTrigger("DieTrigger");
+            m_Monstate = MonsterState.CORPSE;
+        }
+        else if(m_Monstate == MonsterState.CORPSE)
+        {
+            //아무것도 안할거
         }
     }
 }
