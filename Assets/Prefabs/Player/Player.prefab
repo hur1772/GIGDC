@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3722298394722748990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909947809118455920}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1909947809118455920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722298394722748990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.76, y: 6.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4109632169616997910}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4109632168660036979
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +244,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4109632168660036976}
+  - {fileID: 1909947809118455920}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -414,9 +445,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800430790b337be4d9ab638acf8b9779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_interactionState: 0
   animator: {fileID: 0}
   PlayPos: {fileID: 0}
+  IsInteraction: 0
   KingDistance: 0
   NPCDistance: 0
   ShopDistance: 0
+  PortalDistance: 5.1
   GKey: {fileID: 4109632169165357571}
+  ShopPanel: {fileID: 0}

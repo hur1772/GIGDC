@@ -16,22 +16,12 @@ public class TutorialMgr : MonoBehaviour
 {
     public static TutorialState m_TutorialState = TutorialState.NextStage;
 
-    PadeOutMgr m_PadeIn;
-
     public GameObject ScarecrowPrefab = null;
     public GameObject TargetPrefab = null;
 
     GameObject PrefabPos = null;
 
-
     [HideInInspector] public int StageLv = 0;
-
-
-    //public Text m_CurTxt = null;
-    float m_CurTimer = 0.0f;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -87,7 +77,4 @@ public class TutorialMgr : MonoBehaviour
             }
         }
     }
-
-
-
 }
