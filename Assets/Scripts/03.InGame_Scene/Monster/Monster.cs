@@ -9,7 +9,8 @@ public enum MonsterState
     CHASE,
     ATTACK,
     SKILL,
-    DIE
+    DIE,
+    CORPSE
 }
 
 public enum FlyMonsterState
