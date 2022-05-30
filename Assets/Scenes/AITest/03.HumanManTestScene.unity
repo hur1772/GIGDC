@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 2121952392}
     - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1908,7 +1912,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 7.9600005, y: 2.771894}
+    oldSize: {x: 2.704, y: 7.8341417}
     newSize: {x: 3.3618493, y: 8.429999}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2703,6 +2707,11 @@ MonoBehaviour:
 --- !u!1 &2121952380 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+  m_PrefabInstance: {fileID: 46573592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2121952392 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
   m_PrefabInstance: {fileID: 46573592}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2137705717
