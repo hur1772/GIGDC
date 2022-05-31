@@ -94,9 +94,11 @@ public class Monster : MonoBehaviour
             m_Rb = GetComponent<Rigidbody2D>();
     }
 
-    protected virtual void CheckDistanceFromPlayer()
+    protected virtual void CheckDistanceFromPlayer(bool OnlyX = false)
     {
         m_CalcVec = m_Player.transform.position - this.transform.position;
+        if (OnlyX)
+            m_CalcVec.y = 0.0f;
         m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
     }
 

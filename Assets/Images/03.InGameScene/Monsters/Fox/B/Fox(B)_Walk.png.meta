@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 0352c6a7ebddc9c44bb2eb7b764fe81a
+guid: f0b09c17aa21a0d4185cb3268ed90905
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8415644553164319939
-    second: Crane(B) Attack 0.1_0
+      213: -405506903645602823
+    second: Fox(B)_Walk_0
   - first:
-      213: -6838830167635530274
-    second: Crane(B) Attack 0.1_1
+      213: 621321568501989639
+    second: Fox(B)_Walk_1
   - first:
-      213: 6748779618877660875
-    second: Crane(B) Attack 0.1_2
+      213: 2417510796886982379
+    second: Fox(B)_Walk_2
   - first:
-      213: 1220259534838737276
-    second: Crane(B) Attack 0.1_3
+      213: -452141812862451746
+    second: Fox(B)_Walk_3
+  - first:
+      213: 8204725883498202224
+    second: Fox(B)_Walk_4
+  - first:
+      213: -5128608468165461077
+    second: Fox(B)_Walk_5
+  - first:
+      213: 4547789875416420626
+    second: Fox(B)_Walk_6
+  - first:
+      213: 8619329471402800480
+    second: Fox(B)_Walk_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 110
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,85 +115,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_0
+      name: Fox(B)_Walk_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 137
-        width: 271
-        height: 460
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 29
+        y: 49
+        width: 338
+        height: 212
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc6f4312206ac470800000000000000
-      internalID: 8415644553164319939
+      spriteID: 9fb3c3e9e995f5af0800000000000000
+      internalID: -405506903645602823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_1
+      name: Fox(B)_Walk_1
       rect:
         serializedVersion: 2
-        x: 558
-        y: 173
-        width: 340
-        height: 445
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 436
+        y: 49
+        width: 339
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddebda32389711a0800000000000000
-      internalID: -6838830167635530274
+      spriteID: 70189d5bca06f9800800000000000000
+      internalID: 621321568501989639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_2
+      name: Fox(B)_Walk_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 91
+        x: 824
+        y: 51
         width: 337
-        height: 467
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce599a8e4b78ad50800000000000000
-      internalID: 6748779618877660875
+      spriteID: beebe11e249bc8120800000000000000
+      internalID: 2417510796886982379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_3
+      name: Fox(B)_Walk_3
       rect:
         serializedVersion: 2
-        x: 1528
-        y: 89
-        width: 425
-        height: 405
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 1179
+        y: 49
+        width: 342
+        height: 191
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79a8dbe49b3fe010800000000000000
-      internalID: 1220259534838737276
+      spriteID: edf7b30ba6ba9b9f0800000000000000
+      internalID: -452141812862451746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox(B)_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 48
+        width: 343
+        height: 212
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0740d5578ba0dd170800000000000000
+      internalID: 8204725883498202224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox(B)_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 51
+        width: 336
+        height: 204
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babffee45c583d8b0800000000000000
+      internalID: -5128608468165461077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox(B)_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 51
+        width: 343
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2115055ebcefc1f30800000000000000
+      internalID: 4547789875416420626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox(B)_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 51
+        width: 354
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065f401bc720e9770800000000000000
+      internalID: 8619329471402800480
       vertices: []
       indices: 
       edges: []
