@@ -11,6 +11,9 @@ public class DragAndDrapMgr : MonoBehaviour
     int m_SaveIndex = -1;
     int m_DrtIndex = -1;  //Direction Index
     bool m_IsPick = false;
+    int m_BowIndex = -1;
+    int m_SwordIndex = -1;
+    int m_SaveTier = -1;
 
     //-------- 아이콘 투명하게 사라지게 하기 연출용 변수
     private float AniDuring = 0.8f;  //페이드아웃 연출을 시간 설정
@@ -41,6 +44,25 @@ public class DragAndDrapMgr : MonoBehaviour
 
         if (Back_Btn != null)
             Back_Btn.onClick.AddListener(ResetPos);
+
+        for(int ii = 0; ii<m_SlotSc.Length; ii++)
+		{
+            for(int aa = 0; aa< m_SlotSc[ii].ItemResultImg.Length - 1; aa++)
+			{
+                m_SlotSc[ ii ].ItemImg[ aa ].gameObject.SetActive( false );
+			}
+            if(ii == 0)
+			{
+                m_SlotSc[ ii ].ItemImg[ GlobalUserData.BowTier ].gameObject.SetActive( true );
+                m_BowIndex = GlobalUserData.BowTier;
+            }
+            if( ii == 1 )
+            {
+                m_SlotSc[ ii ].ItemImg[ GlobalUserData.SwordTier ].gameObject.SetActive( true );
+                m_SaveIndex = GlobalUserData.SwordTier;
+            }
+        }
+
 
         //GlobalUserData.LoadGameInfo();
 
@@ -120,15 +142,33 @@ public class DragAndDrapMgr : MonoBehaviour
 
         for (int ii = 0; ii < m_SlotSc.Length; ii++)
         {
-            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == true &&
-               IsCollSlot(m_SlotSc[ii].gameObject) == true)
+            if( ii == 0 )
             {
-                m_SaveIndex = ii;
-                m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.SetActive(false);
-                m_IsPick = true;
-                a_MsObj[m_SaveIndex].gameObject.SetActive(true);
-                a_MsObj[m_SaveIndex].transform.position = Input.mousePosition;
-                break;
+                if( m_SlotSc[ ii ].ItemImg[ m_BowIndex ].gameObject.activeSelf == true &&
+                   IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
+                {
+                    m_SaveIndex = ii;
+                    m_SlotSc[ ii ].ItemImg[ m_BowIndex ].gameObject.SetActive( false );
+                    m_IsPick = true;
+                    m_SaveTier = m_BowIndex;
+                    a_MsObj[ m_SaveIndex ].gameObject.SetActive( true );
+                    a_MsObj[ m_SaveIndex ].transform.position = Input.mousePosition;
+                    break;
+                }
+            }
+            if( ii == 1 )
+            {
+                if( m_SlotSc[ ii ].ItemImg[ m_SwordIndex ].gameObject.activeSelf == true &&
+                   IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
+                {
+                    m_SaveIndex = ii;
+                    m_SlotSc[ ii ].ItemImg[ m_SwordIndex ].gameObject.SetActive( false );
+                    m_IsPick = true;
+                    m_SaveTier = m_SwordIndex;
+                    a_MsObj[ m_SaveIndex ].gameObject.SetActive( true );
+                    a_MsObj[ m_SaveIndex ].transform.position = Input.mousePosition;
+                    break;
+                }
             }
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
     }//void MouseBtnDown()
@@ -140,14 +180,14 @@ public class DragAndDrapMgr : MonoBehaviour
 
         for (int ii = 0; ii < m_SlotSc.Length; ii++)
         {
-            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == false &&
-                IsCollSlot(m_SlotSc[ii].gameObject) == true)
+            if( m_SlotSc[ ii ].ItemImg[ m_SaveTier ].gameObject.activeSelf == false &&
+                IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
             {
                 //m_SlotSc[ii].ItemImg.gameObject.SetActive(true);
                 //m_SlotSc[ii].ItemImg.color = Color.white;
                 m_AddTimer = AniDuring;
                 m_IsPick = false;
-                a_MsObj[m_SaveIndex].gameObject.SetActive(false);
+                a_MsObj[ m_SaveIndex ].gameObject.SetActive( false );
                 break;
             }
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
@@ -172,15 +212,16 @@ public class DragAndDrapMgr : MonoBehaviour
             //구매 확정 슬롯인 경우 스킵
             if (ii == 2)
                 continue;
-
-            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == true &&
-               IsCollSlot(m_SlotSc[ii].gameObject) == true)
+            
+            if( m_SlotSc[ ii ].ItemImg[ m_SaveTier ].gameObject.activeSelf == true &&
+                IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
             {
                 m_SaveIndex = ii;
-                m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.SetActive(false);
+                m_SlotSc[ ii ].ItemImg[ m_SaveTier ].gameObject.SetActive( false );
                 m_IsPick = true;
-                a_MsObj[m_SaveIndex].gameObject.SetActive(true);
-                a_MsObj[m_SaveIndex].transform.position = Input.mousePosition;
+                a_MsObj[ m_SaveIndex ].gameObject.SetActive( true );
+                a_MsObj[ m_SaveIndex ].transform.position = Input.mousePosition;
+                Debug.Log( m_SaveTier );
                 break;
             }
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
@@ -196,19 +237,18 @@ public class DragAndDrapMgr : MonoBehaviour
             if (ii <= 1) //자기 자리에 놓은 경우 구매 불가
                 continue;
 
-            if (m_SlotSc[ii].ItemImg[m_SaveIndex].gameObject.activeSelf == false &&
-            IsCollSlot(m_SlotSc[ii].gameObject) == true)
+            if( m_SlotSc[ ii ].ItemImg[ m_SaveTier ].gameObject.activeSelf == false &&
+            IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
             {
-                m_SlotSc[ii].ItemResultImg[m_SaveIndex].gameObject.SetActive(true);
-                m_SlotSc[ii].ItemResultImg[m_SaveIndex].color = Color.white;
+                m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex ].gameObject.SetActive( true );
+                m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex ].color = Color.white;
                 m_DrtIndex = ii;
                 m_AddTimer = AniDuring;
                 m_IsPick = false;
-                a_MsObj[m_SaveIndex].gameObject.SetActive(false);
+                a_MsObj[ m_SaveIndex ].gameObject.SetActive( false );
 
                 break;
             }
-
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
 
         if (0 <= m_SaveIndex)
@@ -226,17 +266,20 @@ public class DragAndDrapMgr : MonoBehaviour
         //---------- 장착된 아이콘이 서서히 사라지게 처리하는 연출
         if (0.0f <= m_AddTimer)
         {
+            
             m_AddTimer = m_AddTimer - 0.01f;
             m_CacTime = m_AddTimer / AniDuring;
-            m_Color = m_SlotSc[m_DrtIndex].ItemImg[m_SaveIndex].color;
+            m_Color = m_SlotSc[ m_DrtIndex ].ItemImg[ m_SaveTier ].color;
             m_Color.a = m_CacTime;
-            m_SlotSc[m_DrtIndex].ItemResultImg[m_SaveIndex].color = m_Color;
-
+            m_SlotSc[ m_DrtIndex ].ItemResultImg[ m_SaveIndex ].color = m_Color;
+            
             if (m_AddTimer <= 0.0f)
             {
-                m_SlotSc[m_DrtIndex].ItemResultImg[m_SaveIndex].gameObject.SetActive(false);
+                
+                m_SlotSc[ m_DrtIndex ].ItemResultImg[ m_SaveIndex ].gameObject.SetActive( false );
                 IsUpGd = false;
-                m_SlotSc[m_SaveIndex].ItemImg[m_SaveIndex].gameObject.SetActive(true);
+                m_SlotSc[ m_SaveIndex ].ItemImg[ m_SaveTier ].gameObject.SetActive( true );
+                
             }
 
         }//if (0.0f < m_AddTimer)
@@ -274,7 +317,7 @@ public class DragAndDrapMgr : MonoBehaviour
             m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
         }
 
-        m_SlotSc[m_SaveIndex].ItemImg[m_SaveIndex].gameObject.SetActive(true);
+        m_SlotSc[m_SaveIndex].ItemImg[ m_SaveTier ].gameObject.SetActive(true);
         BuyMouseBtnDown();
     }
 }
