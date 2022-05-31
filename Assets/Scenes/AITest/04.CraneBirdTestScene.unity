@@ -1825,11 +1825,10 @@ MonoBehaviour:
   m_MaxHP: 0
   m_CurHP: 0
   m_Atk: 0
-  m_MoveSpeed: 0
-  m_ChaseDistance: 0
-  m_AttackDistance: 0
+  m_MoveSpeed: 1
+  m_ChaseDistance: 5
+  m_AttackDistance: 3
   m_Monstate: 1
-  MoveSpeed: 1
 --- !u!61 &1472026982
 BoxCollider2D:
   m_ObjectHideFlags: 0
