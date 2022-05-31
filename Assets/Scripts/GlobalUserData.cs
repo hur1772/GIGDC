@@ -7,6 +7,8 @@ public class GlobalUserData
     public static int s_GoldCount = 0;
     public static int s_SkillCount = 0;
     public static string s_NickName = "User";
+    public static int BowTier = 0;
+    public static int SwordTier = 0;
 
     public static ulong UniqueCount = 0; //임시 Item 고유키 발급기...
     //public static List<ItemValue> g_ItemList = new List<ItemValue>();
@@ -16,6 +18,8 @@ public class GlobalUserData
         s_GoldCount = PlayerPrefs.GetInt("GoldCount", 0);
         s_SkillCount = PlayerPrefs.GetInt("SkillCount", 0);
         s_NickName = PlayerPrefs.GetString("UserNick", "User");
+        BowTier= PlayerPrefs.GetInt( "BowTier", 0 );
+        SwordTier= PlayerPrefs.GetInt( "SwordTier", 0);
 
         ReflashItemLoad();
     }

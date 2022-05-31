@@ -48,6 +48,7 @@ public enum PlayerAttack2   //bow
     player_att1_skill2 = 3,
     player_att1_skill3 = 4
 }
+
 #endregion
 
 public class Player_State_Ctrl : MonoBehaviour
