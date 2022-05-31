@@ -142,6 +142,7 @@ public class DragAndDrapMgr : MonoBehaviour
 
         for (int ii = 0; ii < m_SlotSc.Length; ii++)
         {
+            Debug.Log( m_SlotSc.Length );
             if( ii == 0 )
             {
                 if( m_SlotSc[ ii ].ItemImg[ m_BowIndex ].gameObject.activeSelf == true &&

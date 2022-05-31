@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 3270714247158334658}
   - component: {fileID: 3270714247158334657}
   - component: {fileID: 3178064543553526172}
+  - component: {fileID: 113506789601145403}
   m_Layer: 6
   m_Name: ScarecrowObj
   m_TagString: Untagged
@@ -354,6 +355,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HpBar: {fileID: 1474966272525499970}
   ThisGameObject: {fileID: 3270714247158334663}
+--- !u!95 &113506789601145403
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270714247158334663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd14199b09ec78c46ba001b4171dd725, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5452010044374685487
 GameObject:
   m_ObjectHideFlags: 0
