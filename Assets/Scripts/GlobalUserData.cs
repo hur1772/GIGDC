@@ -18,8 +18,8 @@ public class GlobalUserData
         s_GoldCount = PlayerPrefs.GetInt("GoldCount", 0);
         s_SkillCount = PlayerPrefs.GetInt("SkillCount", 0);
         s_NickName = PlayerPrefs.GetString("UserNick", "User");
-        BowTier= PlayerPrefs.GetInt( "BowTier", 0 );
-        SwordTier= PlayerPrefs.GetInt( "SwordTier", 0);
+        //BowTier= PlayerPrefs.GetInt( "BowTier", 0 );
+        //SwordTier= PlayerPrefs.GetInt( "SwordTier", 0);
 
         ReflashItemLoad();
     }

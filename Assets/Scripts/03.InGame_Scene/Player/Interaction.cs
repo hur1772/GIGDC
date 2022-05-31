@@ -76,6 +76,7 @@ public class Interaction : MonoBehaviour
                 {
                     if (ShopPanel != null)
                     {
+                        Time.timeScale = 0.0f;
                         ShopPanel.SetActive(true);
                     }
                 }
