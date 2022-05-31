@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 0352c6a7ebddc9c44bb2eb7b764fe81a
+guid: 9866745f044f3a04e811baf5f6749de3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8415644553164319939
-    second: Crane(B) Attack 0.1_0
+      213: -51462009970218399
+    second: Fox_Throw_0
   - first:
-      213: -6838830167635530274
-    second: Crane(B) Attack 0.1_1
+      213: -5926733167671783360
+    second: Fox_Throw_1
   - first:
-      213: 6748779618877660875
-    second: Crane(B) Attack 0.1_2
+      213: 427585330284285321
+    second: Fox_Throw_2
   - first:
-      213: 1220259534838737276
-    second: Crane(B) Attack 0.1_3
+      213: -6304360590439034905
+    second: Fox_Throw_3
+  - first:
+      213: -7501083709276694571
+    second: Fox_Throw_4
+  - first:
+      213: 499707687573571190
+    second: Fox_Throw_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 110
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,85 +109,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_0
+      name: Fox_Throw_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 137
-        width: 271
-        height: 460
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 37
+        y: 75
+        width: 349
+        height: 266
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc6f4312206ac470800000000000000
-      internalID: 8415644553164319939
+      spriteID: 16a2c48139b294ff0800000000000000
+      internalID: -51462009970218399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_1
+      name: Fox_Throw_1
       rect:
         serializedVersion: 2
-        x: 558
-        y: 173
-        width: 340
-        height: 445
+        x: 527
+        y: 75
+        width: 333
+        height: 240
       alignment: 9
-      pivot: {x: 1, y: 0.2}
+      pivot: {x: 0.48, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddebda32389711a0800000000000000
-      internalID: -6838830167635530274
+      spriteID: 040d56ec59300cda0800000000000000
+      internalID: -5926733167671783360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_2
+      name: Fox_Throw_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 91
+        x: 1026
+        y: 75
+        width: 351
+        height: 232
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d43caa7961fe500800000000000000
+      internalID: 427585330284285321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Throw_3
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 75
+        width: 341
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efc8e6e1796288a0800000000000000
+      internalID: -6304360590439034905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Throw_4
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 75
         width: 337
-        height: 467
+        height: 226
       alignment: 9
-      pivot: {x: 1, y: 0.2}
+      pivot: {x: 0.48, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce599a8e4b78ad50800000000000000
-      internalID: 6748779618877660875
+      spriteID: 5d7d71edb1cc6e790800000000000000
+      internalID: -7501083709276694571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_3
+      name: Fox_Throw_5
       rect:
         serializedVersion: 2
-        x: 1528
-        y: 89
-        width: 425
-        height: 405
+        x: 2542
+        y: 75
+        width: 340
+        height: 252
       alignment: 9
-      pivot: {x: 1, y: 0.2}
+      pivot: {x: 0.485, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79a8dbe49b3fe010800000000000000
-      internalID: 1220259534838737276
+      spriteID: 676ca598e715fe600800000000000000
+      internalID: 499707687573571190
       vertices: []
       indices: 
       edges: []

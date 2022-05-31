@@ -19,7 +19,7 @@ public class CraneMonster_B : Monster
 
     private void UpdateFunc()
     {
-        CheckDistanceFromPlayer();
+        CheckDistanceFromPlayer(true);
         MonUpdate();
 
     }
@@ -111,6 +111,17 @@ public class CraneMonster_B : Monster
         if (m_CalcVec.magnitude >= m_AttackDistance)
         {
             m_Animator.SetBool("CanAttack", false);
+        }
+
+        if (m_CalcVec.x >= 0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+            MoveRight = true;
+        }
+        else if (m_CalcVec.x <= -0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 0.0f, 0);
+            MoveRight = false;
         }
     }
 }

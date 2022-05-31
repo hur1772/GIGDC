@@ -20,6 +20,7 @@ public class CraneAttackState_B : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<CraneMonster_B>().m_Monstate = MonsterState.CHASE;
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

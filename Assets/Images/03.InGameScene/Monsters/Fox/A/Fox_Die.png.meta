@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 0352c6a7ebddc9c44bb2eb7b764fe81a
+guid: 5223fe23016fc1c45bc935363a685841
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8415644553164319939
-    second: Crane(B) Attack 0.1_0
+      213: 404989940835769375
+    second: Fox_Die_0
   - first:
-      213: -6838830167635530274
-    second: Crane(B) Attack 0.1_1
+      213: -8292607513682298767
+    second: Fox_Die_1
   - first:
-      213: 6748779618877660875
-    second: Crane(B) Attack 0.1_2
+      213: -1560470361120654073
+    second: Fox_Die_2
   - first:
-      213: 1220259534838737276
-    second: Crane(B) Attack 0.1_3
+      213: 6724976199493653486
+    second: Fox_Die_3
+  - first:
+      213: 412189789255512494
+    second: Fox_Die_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 110
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,85 +106,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_0
+      name: Fox_Die_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 137
-        width: 271
-        height: 460
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 72
+        y: 87
+        width: 272
+        height: 225
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc6f4312206ac470800000000000000
-      internalID: 8415644553164319939
+      spriteID: f1c5f199430de9500800000000000000
+      internalID: 404989940835769375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_1
+      name: Fox_Die_1
       rect:
         serializedVersion: 2
-        x: 558
-        y: 173
-        width: 340
-        height: 445
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 448
+        y: 27
+        width: 231
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddebda32389711a0800000000000000
-      internalID: -6838830167635530274
+      spriteID: 1783b35076dbaec80800000000000000
+      internalID: -8292607513682298767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_2
+      name: Fox_Die_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 91
-        width: 337
-        height: 467
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 748
+        y: 88
+        width: 251
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce599a8e4b78ad50800000000000000
-      internalID: 6748779618877660875
+      spriteID: 70db0ea6978185ae0800000000000000
+      internalID: -1560470361120654073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crane(B) Attack 0.1_3
+      name: Fox_Die_3
       rect:
         serializedVersion: 2
-        x: 1528
-        y: 89
-        width: 425
-        height: 405
-      alignment: 9
-      pivot: {x: 1, y: 0.2}
+        x: 1079
+        y: 77
+        width: 291
+        height: 201
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79a8dbe49b3fe010800000000000000
-      internalID: 1220259534838737276
+      spriteID: ee396c5193ae35d50800000000000000
+      internalID: 6724976199493653486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Die_4
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 46
+        width: 335
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea13e90fd6468b500800000000000000
+      internalID: 412189789255512494
       vertices: []
       indices: 
       edges: []
