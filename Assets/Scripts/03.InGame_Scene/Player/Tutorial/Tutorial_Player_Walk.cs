@@ -41,18 +41,6 @@ public class Tutorial_Player_Walk : MonoBehaviour
         {
             animator.SetBool("IsWalk", false);
         }
-
-
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            Player_state.p_state = PlayerState.player_move;
-            Player_state.p_Move_state = PlayerMoveState.player_crawl;
-            P_Move_Crawl();
-        }
-        else
-        {
-            move_speed = 4.0f;
-        }
     }
 
     private void P_Move_Walk()
@@ -78,15 +66,5 @@ public class Tutorial_Player_Walk : MonoBehaviour
                 transform.localScale = new Vector3(key * 0.3f, 0.3f, 1);
             }
         }
-        animator.SetBool("IsCrawl", false);
-
-    }
-    private void P_Move_Crawl()
-    {
-        if (Player_state.p_Move_state == PlayerMoveState.player_dash || Player_state.p_Move_state == PlayerMoveState.player_jump)
-            return;
-
-        animator.SetBool("IsCrawl", true);
-        move_speed = crawl_speed;
-    }
+    }   
 }
