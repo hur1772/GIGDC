@@ -93,7 +93,6 @@ public class DragAndDrapMgr : MonoBehaviour
                 {
                     m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
                 }
-                Debug.Log( m_SaveTier );
                 BuyMouseBtnDown();
             }
         }//if (Input.GetMouseButtonDown(0))
@@ -205,7 +204,6 @@ public class DragAndDrapMgr : MonoBehaviour
 
     void BuyMouseBtnDown()
     {
-        m_SaveIndex = -1;
         m_DrtIndex = -1;
 
         for (int ii = 0; ii < m_SlotSc.Length; ii++)
@@ -222,13 +220,14 @@ public class DragAndDrapMgr : MonoBehaviour
                     m_SaveTier = m_BowIndex;
                 if( ii == 1 )
                     m_SaveTier = m_SwordIndex;
-                Debug.Log( m_SaveTier );
+                Debug.Log(m_SaveTier);
+                Debug.Log(m_SaveIndex + (m_SaveTier * 2));
 
                 m_SaveIndex = ii;
                 m_SlotSc[ ii ].ItemImg[ m_SaveTier ].gameObject.SetActive( false );
                 m_IsPick = true;
-                a_MsObj[ m_SaveIndex + m_SaveTier * 2 ].gameObject.SetActive( true );
-                a_MsObj[ m_SaveIndex + m_SaveTier * 2 ].transform.position = Input.mousePosition;
+                a_MsObj[ m_SaveIndex + (m_SaveTier * 2) ].gameObject.SetActive( true );
+                a_MsObj[m_SaveIndex + (m_SaveTier * 2)].transform.position = Input.mousePosition;
                 break;
             }
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
@@ -247,9 +246,9 @@ public class DragAndDrapMgr : MonoBehaviour
             if( m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex + m_SaveTier * 2 ].gameObject.activeSelf == false &&
             IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
             {
-                Debug.Log( m_IsPick );
-                m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex+ m_SaveTier * 2 ].gameObject.SetActive( true );
-                m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex+ m_SaveTier * 2 ].color = Color.white;
+                Debug.Log(m_SaveIndex + m_SaveTier * 2);
+                m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex + m_SaveTier * 2 ].gameObject.SetActive( true );
+                m_SlotSc[ ii ].ItemResultImg[ m_SaveIndex + m_SaveTier * 2 ].color = Color.white;
                 m_DrtIndex = ii;
                 m_AddTimer = AniDuring;
                 m_IsPick = false;
@@ -342,7 +341,7 @@ public class DragAndDrapMgr : MonoBehaviour
             m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
         }
 
-        m_SlotSc[m_SaveIndex].ItemImg[ m_SaveTier ].gameObject.SetActive(true);
+        m_SlotSc[m_SaveIndex].ItemImg[m_SaveIndex + (m_SaveTier * 2)].gameObject.SetActive(true);
         BuyMouseBtnDown();
     }
 }
