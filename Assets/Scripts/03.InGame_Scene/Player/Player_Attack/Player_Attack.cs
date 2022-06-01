@@ -66,11 +66,22 @@ public class Player_Attack : MonoBehaviour
 
         //Detect Enemy,Target...etc
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+       
 
         //Damage Enemy
-        foreach (Collider2D enemy in hitEnemies) 
+        //foreach (Collider2D enemy in hitEnemies) 
+        //{
+        //    Debug.Log("hit");
+          
+        //}
+
+        foreach (Collider2D collider in hitEnemies)
         {
             Debug.Log("hit");
+            if (collider.tag == "enemy")
+            {
+                collider.GetComponent<TargetCtrl>().TakeDamage(10);
+            }
         }
     }
 

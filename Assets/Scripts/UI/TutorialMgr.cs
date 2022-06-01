@@ -18,7 +18,7 @@ public class TutorialMgr : MonoBehaviour
 
     public GameObject ScarecrowPrefab = null;
     public GameObject TargetPrefab = null;
-
+    public Text TutoGuidetext = null;
     GameObject PrefabPos = null;
 
     [HideInInspector] public int StageLv = 0;
@@ -27,7 +27,7 @@ public class TutorialMgr : MonoBehaviour
     void Start()
     {
         StageLv = 0;
-      
+        
         
     }
 

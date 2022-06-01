@@ -243,15 +243,14 @@ MonoBehaviour:
   GuideTxt: {fileID: 562755012}
   TypeObject: {fileID: 2035147762}
   dialogue:
-  - dialogue: "\uC8FC\uC778\uACF5\n\n\uC544\uBC14\uB9C8\uB9C8, \uC18C\uC790\uB97C
-      \uBD80\uB974\uC168\uC0AC\uC635\uB2C8\uAE4C?"
+  - dialogue: "\uC138\uC790\n\n\uC544\uBC14\uB9C8\uB9C8, \uC18C\uC790\uB97C \uBD80\uB974\uC168\uC0AC\uC635\uB2C8\uAE4C?"
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
   - dialogue: "\uC655\n\n\uC138\uC790, \uC9C0\uAE08 \uC870\uC120\uC5D0 \uC758\uBB38\uC758
       \uC5ED\uBCD1\uC774 \uB3CC\uACE0\uC788\uB294 \uC0AC\uC2E4\uC744 \uC54C\uACE0\uC788\uB290\uB0D0?"
     cg: {fileID: 21300000, guid: 3a54bb8aac2c11c4f9ced491efdbdd17, type: 3}
     PlayerCg: {fileID: 0}
-  - dialogue: "\uC8FC\uC778\uACF5\n\n\uC608, \uC9C0\uAE08 \uC5ED\uBCD1\uC774 \uACBD\uAE30\uB3C4
+  - dialogue: "\uC138\uC790\n\n\uC608, \uC9C0\uAE08 \uC5ED\uBCD1\uC774 \uACBD\uAE30\uB3C4
       \uB05D\uC790\uB77D\uAE4C\uC9C0 \uC654\uB2E4\uACE0 \uD558\uC635\uB2C8\uB2E4."
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
@@ -261,7 +260,7 @@ MonoBehaviour:
       \uC138\uC790, \uB108\uC5D0\uAC8C \uD558\uB098\uB97C \uBD80\uD0C1\uD558\uACE0\uC2F6\uAD6C\uB098\r\n"
     cg: {fileID: 21300000, guid: 3a54bb8aac2c11c4f9ced491efdbdd17, type: 3}
     PlayerCg: {fileID: 0}
-  - dialogue: "\uC8FC\uC778\uACF5\n\n\uC608, \uB9D0\uC500\uD558\uC2DC\uC635\uC18C\uC11C
+  - dialogue: "\uC138\uC790\n\n\uC608, \uB9D0\uC500\uD558\uC2DC\uC635\uC18C\uC11C
       \uC544\uBC14\uB9C8\uB9C8"
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
@@ -271,7 +270,7 @@ MonoBehaviour:
       \uB108\uB294 \uC5B4\uCC0C \uD558\uACA0\uB290\uB0D0\r"
     cg: {fileID: 21300000, guid: 3a54bb8aac2c11c4f9ced491efdbdd17, type: 3}
     PlayerCg: {fileID: 0}
-  - dialogue: "\uC8FC\uC778\uACF5\n\n\uC81C\uAC8C \uB9E1\uACA8\uB9CC \uC8FC\uC2ED\uC2DC\uC624\r\n\uC81C\uAC00
+  - dialogue: "\uC138\uC790\n\n\uC81C\uAC8C \uB9E1\uACA8\uB9CC \uC8FC\uC2ED\uC2DC\uC624\r\n\uC81C\uAC00
       \uC5ED\uBCD1\uC744 \uD574\uACB0\uD558\uACE0 \uB3CC\uC544\uC624\uACA0\uC0AC\uC635\uB098\uC774\uB2E4\r"
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
@@ -280,7 +279,7 @@ MonoBehaviour:
       \uC624\uB108\uB77C"
     cg: {fileID: 21300000, guid: 3a54bb8aac2c11c4f9ced491efdbdd17, type: 3}
     PlayerCg: {fileID: 0}
-  - dialogue: "\uC8FC\uC778\uACF5\n\n\uC608, \uC544\uBC14\uB9C8\uB9C8 \uADF8\uB3D9\uC548
+  - dialogue: "\uC138\uC790\n\n\uC608, \uC544\uBC14\uB9C8\uB9C8 \uADF8\uB3D9\uC548
       \uAC15\uB155\uD558\uC2ED\uC2DC\uC624"
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
@@ -509,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.45, y: -0.66}
+  m_AnchoredPosition: {x: 0.84, y: -0.66}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773825951
@@ -564,7 +563,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1884,7 +1883,7 @@ RectTransform:
   m_GameObject: {fileID: 1440111235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 300, y: 100, z: 1}
+  m_LocalScale: {x: 500, y: 200, z: 1}
   m_Children:
   - {fileID: 1065114435}
   - {fileID: 1952747269}
@@ -1937,15 +1936,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 5680c1a9719b046e0bc08d861902f606, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02f3c11e503bc3c40824fa95dde2b24d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.62352943}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.84, y: 2.88}
+  m_Size: {x: 2.25, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!222 &1440111238
@@ -2229,7 +2228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.469574, y: 1.04}
+  m_AnchoredPosition: {x: -0.81, y: 0.76}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952747270
@@ -2254,7 +2253,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2

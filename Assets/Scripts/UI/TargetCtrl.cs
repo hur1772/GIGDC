@@ -20,17 +20,17 @@ public class TargetCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurHp -= Time.deltaTime *10;
-        HpBar.fillAmount = CurHp / MaxHp;
+        //CurHp -= Time.deltaTime *10;
+        //HpBar.fillAmount = CurHp / MaxHp;
 
-        if(CurHp <=0)
-        {
-            Destroy(this.gameObject);
-            TutorialMgr.m_TutorialState = TutorialState.NextStage;
-        }
+        //if (CurHp <= 0)
+        //{
+        //    Destroy(this.gameObject);
+        //    TutorialMgr.m_TutorialState = TutorialState.NextStage;
+        //}
     }
 
-    void TakeDamage(float a_Damage)
+    public void TakeDamage(float a_Damage)
     {
         CurHp -= a_Damage;
         HpBar.fillAmount = CurHp / MaxHp;
@@ -38,7 +38,8 @@ public class TargetCtrl : MonoBehaviour
         if (CurHp <= 0)
         {
             Destroy(this.gameObject);
-
+            Debug.Log("Ç¥Àû»ç¸Á!");                      
+            
             if(ThisGameObject.name == "ScarecrowObj")
             {
                 TutorialMgr.m_TutorialState = TutorialState.NextStage;
