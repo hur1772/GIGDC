@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 2121952392}
     - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1800,7 +1804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472026977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.29, y: 0, z: 0}
+  m_LocalPosition: {x: 5.89, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1821,11 +1825,10 @@ MonoBehaviour:
   m_MaxHP: 0
   m_CurHP: 0
   m_Atk: 0
-  m_MoveSpeed: 0
-  m_ChaseDistance: 0
-  m_AttackDistance: 0
+  m_MoveSpeed: 1
+  m_ChaseDistance: 5
+  m_AttackDistance: 2
   m_Monstate: 1
-  MoveSpeed: 1
 --- !u!61 &1472026982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1843,7 +1846,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 3.0133333, y: 1.6535301}
+    oldSize: {x: 3.0133333, y: 1.9068935}
     newSize: {x: 4.52, y: 2.86034}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2414,6 +2417,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
   m_PrefabInstance: {fileID: 46573592}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2121952392 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+  m_PrefabInstance: {fileID: 46573592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2137705717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +2516,10 @@ PrefabInstance:
     - target: {fileID: 4891488012293272261, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891488012293272262, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4891488012293272266, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
       propertyPath: m_Name
