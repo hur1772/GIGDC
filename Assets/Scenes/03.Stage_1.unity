@@ -698,7 +698,6 @@ GameObject:
   - component: {fileID: 319935088}
   - component: {fileID: 319935087}
   - component: {fileID: 319935086}
-  - component: {fileID: 319935090}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -788,27 +787,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &319935090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319935085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d933b675bafe38c42beb99d7cd09542a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SlotSc:
-  - {fileID: 1619860458}
-  - {fileID: 1160027508}
-  - {fileID: 1691723851}
-  a_MsObj:
-  - {fileID: 1184964934}
-  - {fileID: 510396765}
-  Ok_Btn: {fileID: 825588346}
-  Back_Btn: {fileID: 495584392}
 --- !u!1 &495584390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,7 +2605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlotBackImg: {fileID: 1160027509}
-  ItemImg: {fileID: 11261267}
+  ItemImg:
+  - {fileID: 0}
   ItemResultImg: []
 --- !u!114 &1160027509
 MonoBehaviour:
@@ -3203,7 +3182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlotBackImg: {fileID: 1619860459}
-  ItemImg: {fileID: 1498950379}
+  ItemImg:
+  - {fileID: 0}
   ItemResultImg: []
 --- !u!114 &1619860459
 MonoBehaviour:
@@ -4804,7 +4784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlotBackImg: {fileID: 1691723849}
-  ItemImg: {fileID: 1592821330}
+  ItemImg:
+  - {fileID: 0}
   ItemResultImg:
   - {fileID: 1592821330}
   - {fileID: 955018376}

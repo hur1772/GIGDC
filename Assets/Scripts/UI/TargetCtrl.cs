@@ -10,6 +10,7 @@ public class TargetCtrl : MonoBehaviour
 
     float MaxHp = 100;
     float CurHp = 100;
+    bool isdie = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,17 +39,25 @@ public class TargetCtrl : MonoBehaviour
         if (CurHp <= 0)
         {
             Destroy(this.gameObject);
-            Debug.Log("Ç¥Àû»ç¸Á!");                      
+            Debug.Log("Ç¥Àû»ç¸Á!");
+            isdie = true;
+            if(isdie == true)
+            {
+                TutorialMgr.m_TutorialState = TutorialState.NextStage;
+                //TutorialMgr tutorial = GetComponent<TutorialMgr>();
+                //tutorial.TutoGuidetext.gameObject.SetActive(true);
+                //tutorial.TutoGuidetext.text = "¤·¤±¤¤¤·¤¤¤±¤·¤¤¤±";
+            }
             
-            if(ThisGameObject.name == "ScarecrowObj")
-            {
-                TutorialMgr.m_TutorialState = TutorialState.NextStage;
-            }
+            //if(ThisGameObject.name == "ScarecrowObj")
+            //{
+            //    TutorialMgr.m_TutorialState = TutorialState.NextStage;
+            //}
 
-            if(ThisGameObject.name == "TtargetObj")
-            {
-                TutorialMgr.m_TutorialState = TutorialState.NextStage;
-            }
+            //if(ThisGameObject.name == "TtargetObj")
+            //{
+            //    TutorialMgr.m_TutorialState = TutorialState.NextStage;
+            //}
         }
     }
 }
