@@ -43,7 +43,7 @@ public class TargetCtrl : MonoBehaviour
             isdie = true;
             if(isdie == true)
             {
-                TutorialMgr.m_TutorialState = TutorialState.NextStage;
+                Interaction.Inst.m_interactionState = InteractionState.Nomal;
                 //TutorialMgr tutorial = GetComponent<TutorialMgr>();
                 //tutorial.TutoGuidetext.gameObject.SetActive(true);
                 //tutorial.TutoGuidetext.text = "しけいしいけしいけ";
