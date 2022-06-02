@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 8f35dc23a6d63034ca8c70c0ae34593b
+guid: d8997f47fd4fd264db676fa1706673cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2504176560410919092
-    second: HumanWoman Idle_0
+      213: 8496517192128632541
+    second: HumanMan_Attack_0.4_0
   - first:
-      213: -1715079494750409058
-    second: HumanWoman Idle_1
+      213: -7129559744114579991
+    second: HumanMan_Attack_0.4_1
   - first:
-      213: -5153508644018984634
-    second: HumanWoman Idle_2
+      213: -2144224736582781755
+    second: HumanMan_Attack_0.4_2
   - first:
-      213: -2614955908169786275
-    second: HumanWoman Idle_3
+      213: -7884779472516637481
+    second: HumanMan_Attack_0.4_3
   - first:
-      213: -465498187109011568
-    second: HumanWoman Idle_3
+      213: 948640226139066574
+    second: HumanMan_Attack_0.4_3
   - first:
-      213: -4715891041151085042
-    second: HumanWoman Idle_4
+      213: -8480673195480768665
+    second: HumanMan_Attack_0.4_4
+  - first:
+      213: 1986485244698379766
+    second: HumanMan_Attack_0.4_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 325
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanWoman Idle_0
+      name: HumanMan_Attack_0.4_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 59
-        width: 424
-        height: 1019
+        x: 417
+        y: 61
+        width: 652
+        height: 968
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,113 +126,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b00722605f90c220800000000000000
-      internalID: 2504176560410919092
+      spriteID: dd693d8ae51b9e570800000000000000
+      internalID: 8496517192128632541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_1
+      name: HumanMan_Attack_0.4_1
       rect:
         serializedVersion: 2
-        x: 960
-        y: 59
-        width: 410
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
+        x: 1349
+        y: 61
+        width: 668
+        height: 947
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9e68d15940d238e0800000000000000
-      internalID: -1715079494750409058
+      spriteID: 9e5202fcf27be0d90800000000000000
+      internalID: -7129559744114579991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_2
+      name: HumanMan_Attack_0.4_2
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 59
-        width: 394
-        height: 1019
-      alignment: 9
-      pivot: {x: 0.54, y: 0}
+        x: 2414
+        y: 45
+        width: 446
+        height: 1271
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649e756513f0b78b0800000000000000
-      internalID: -5153508644018984634
+      spriteID: 5c4b06176fe2e32e0800000000000000
+      internalID: -2144224736582781755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_3
+      name: HumanMan_Attack_0.4_3
       rect:
         serializedVersion: 2
-        x: 2385
-        y: 59
-        width: 412
-        height: 1010
+        x: 3471
+        y: 45
+        width: 717
+        height: 1174
       alignment: 9
-      pivot: {x: 0.52, y: 0}
+      pivot: {x: 0.58, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5c1b36c47fc5bbd0800000000000000
-      internalID: -2614955908169786275
+      spriteID: 7dc9a5858d2a39290800000000000000
+      internalID: -7884779472516637481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_4
+      name: HumanMan_Attack_0.4_4
       rect:
         serializedVersion: 2
-        x: 3148
-        y: 59
-        width: 392
-        height: 1019
+        x: 4735
+        y: 45
+        width: 883
+        height: 1044
       alignment: 9
-      pivot: {x: 0.55, y: 0}
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f67c97dd73a89f0800000000000000
-      internalID: -465498187109011568
+      spriteID: ec05aa2724f3a2d00800000000000000
+      internalID: 948640226139066574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_5
+      name: HumanMan_Attack_0.4_5
       rect:
         serializedVersion: 2
-        x: 3832
-        y: 59
-        width: 410
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
+        x: 5966
+        y: 61
+        width: 600
+        height: 939
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e061ebc751acd8eb0800000000000000
-      internalID: -4715891041151085042
+      spriteID: 76f113749a89e4a80800000000000000
+      internalID: -8480673195480768665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanMan_Attack_0.4_6
+      rect:
+        serializedVersion: 2
+        x: 7157
+        y: 72
+        width: 652
+        height: 968
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f54dc12ec9619b10800000000000000
+      internalID: 1986485244698379766
       vertices: []
       indices: 
       edges: []

@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 8f35dc23a6d63034ca8c70c0ae34593b
+guid: ad220f0b1d9c37145a9922d22e17bcec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2504176560410919092
-    second: HumanWoman Idle_0
+      213: -8435992524089440288
+    second: HumanWoman Attack_0
   - first:
-      213: -1715079494750409058
-    second: HumanWoman Idle_1
+      213: 4682801552344362547
+    second: HumanWoman Attack_1
   - first:
-      213: -5153508644018984634
-    second: HumanWoman Idle_2
+      213: 6623671178697790051
+    second: HumanWoman Attack_2
   - first:
-      213: -2614955908169786275
-    second: HumanWoman Idle_3
+      213: 2529287149955828595
+    second: HumanWoman Attack_3
   - first:
-      213: -465498187109011568
-    second: HumanWoman Idle_3
+      213: 7660032327778013515
+    second: HumanWoman Attack_4
   - first:
-      213: -4715891041151085042
-    second: HumanWoman Idle_4
+      213: 5153966157986671707
+    second: HumanWoman Attack_5
+  - first:
+      213: 6175045385211160226
+    second: HumanWoman Attack_6
+  - first:
+      213: -8953249831275800687
+    second: HumanWoman Attack_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanWoman Idle_0
+      name: HumanWoman Attack_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 59
-        width: 424
-        height: 1019
+        x: 158
+        y: 48
+        width: 386
+        height: 1026
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,83 +129,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b00722605f90c220800000000000000
-      internalID: 2504176560410919092
+      spriteID: 0e74cc1ce755dea80800000000000000
+      internalID: -8435992524089440288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_1
+      name: HumanWoman Attack_1
       rect:
         serializedVersion: 2
-        x: 960
-        y: 59
-        width: 410
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
+        x: 986
+        y: 53
+        width: 382
+        height: 1021
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9e68d15940d238e0800000000000000
-      internalID: -1715079494750409058
+      spriteID: 33e22298337acf040800000000000000
+      internalID: 4682801552344362547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_2
+      name: HumanWoman Attack_2
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 59
-        width: 394
-        height: 1019
-      alignment: 9
-      pivot: {x: 0.54, y: 0}
+        x: 1872
+        y: 65
+        width: 495
+        height: 1030
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649e756513f0b78b0800000000000000
-      internalID: -5153508644018984634
+      spriteID: 3625643e7d10ceb50800000000000000
+      internalID: 6623671178697790051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_3
+      name: HumanWoman Attack_3
       rect:
         serializedVersion: 2
-        x: 2385
-        y: 59
-        width: 412
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5c1b36c47fc5bbd0800000000000000
-      internalID: -2614955908169786275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanWoman Idle_4
-      rect:
-        serializedVersion: 2
-        x: 3148
-        y: 59
-        width: 392
-        height: 1019
+        x: 2845
+        y: 53
+        width: 452
+        height: 1148
       alignment: 9
       pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,29 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f67c97dd73a89f0800000000000000
-      internalID: -465498187109011568
+      spriteID: 37bc31c1345d91320800000000000000
+      internalID: 2529287149955828595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_5
+      name: HumanWoman Attack_4
       rect:
         serializedVersion: 2
-        x: 3832
-        y: 59
-        width: 410
-        height: 1010
+        x: 3888
+        y: 53
+        width: 496
+        height: 1108
       alignment: 9
-      pivot: {x: 0.52, y: 0}
+      pivot: {x: 0.48, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e061ebc751acd8eb0800000000000000
-      internalID: -4715891041151085042
+      spriteID: b41973941d6ed4a60800000000000000
+      internalID: 7660032327778013515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Attack_5
+      rect:
+        serializedVersion: 2
+        x: 5129
+        y: 53
+        width: 631
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c2e2fe9e0968740800000000000000
+      internalID: 5153966157986671707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Attack_6
+      rect:
+        serializedVersion: 2
+        x: 6466
+        y: 53
+        width: 381
+        height: 1021
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a62d61af0b22b550800000000000000
+      internalID: 6175045385211160226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Attack_7
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 48
+        width: 382
+        height: 1026
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197da7df6baafb380800000000000000
+      internalID: -8953249831275800687
       vertices: []
       indices: 
       edges: []

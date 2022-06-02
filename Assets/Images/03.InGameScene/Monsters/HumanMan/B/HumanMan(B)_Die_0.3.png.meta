@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 8f35dc23a6d63034ca8c70c0ae34593b
+guid: 0c108e63d6dcfff429ab67415b36be50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2504176560410919092
-    second: HumanWoman Idle_0
+      213: -7418552628188616034
+    second: HumanMan(B)_Die_0.3_0
   - first:
-      213: -1715079494750409058
-    second: HumanWoman Idle_1
+      213: -5247643612398744481
+    second: HumanMan(B)_Die_0.3_1
   - first:
-      213: -5153508644018984634
-    second: HumanWoman Idle_2
+      213: 4291798900524836598
+    second: HumanMan(B)_Die_0.3_2
   - first:
-      213: -2614955908169786275
-    second: HumanWoman Idle_3
+      213: 3046276942874224617
+    second: HumanMan(B)_Die_0.3_3
   - first:
-      213: -465498187109011568
-    second: HumanWoman Idle_3
-  - first:
-      213: -4715891041151085042
-    second: HumanWoman Idle_4
+      213: 8684390632859659057
+    second: HumanMan(B)_Die_0.3_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 325
+  spritePixelsToUnits: 375
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanWoman Idle_0
+      name: HumanMan(B)_Die_0.3_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 59
-        width: 424
-        height: 1019
+        x: 713
+        y: 156
+        width: 536
+        height: 1104
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,113 +120,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b00722605f90c220800000000000000
-      internalID: 2504176560410919092
+      spriteID: e9ae64990b10c0990800000000000000
+      internalID: -7418552628188616034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_1
+      name: HumanMan(B)_Die_0.3_1
       rect:
         serializedVersion: 2
-        x: 960
-        y: 59
-        width: 410
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
+        x: 1816
+        y: 142
+        width: 681
+        height: 1073
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9e68d15940d238e0800000000000000
-      internalID: -1715079494750409058
+      spriteID: f5c002f00ff9c27b0800000000000000
+      internalID: -5247643612398744481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_2
+      name: HumanMan(B)_Die_0.3_2
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 59
-        width: 394
-        height: 1019
+        x: 2919
+        y: 97
+        width: 813
+        height: 924
       alignment: 9
-      pivot: {x: 0.54, y: 0}
+      pivot: {x: 0.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649e756513f0b78b0800000000000000
-      internalID: -5153508644018984634
+      spriteID: 6f6e1317c588f8b30800000000000000
+      internalID: 4291798900524836598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_3
+      name: HumanMan(B)_Die_0.3_3
       rect:
         serializedVersion: 2
-        x: 2385
-        y: 59
-        width: 412
-        height: 1010
+        x: 4219
+        y: 110
+        width: 1059
+        height: 530
       alignment: 9
-      pivot: {x: 0.52, y: 0}
+      pivot: {x: 0.12, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5c1b36c47fc5bbd0800000000000000
-      internalID: -2614955908169786275
+      spriteID: 9e72b7b5dbc864a20800000000000000
+      internalID: 3046276942874224617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_4
+      name: HumanMan(B)_Die_0.3_4
       rect:
         serializedVersion: 2
-        x: 3148
-        y: 59
-        width: 392
-        height: 1019
+        x: 5707
+        y: 69
+        width: 1051
+        height: 357
       alignment: 9
-      pivot: {x: 0.55, y: 0}
+      pivot: {x: 0.12, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f67c97dd73a89f0800000000000000
-      internalID: -465498187109011568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanWoman Idle_5
-      rect:
-        serializedVersion: 2
-        x: 3832
-        y: 59
-        width: 410
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e061ebc751acd8eb0800000000000000
-      internalID: -4715891041151085042
+      spriteID: 13b645ac447258870800000000000000
+      internalID: 8684390632859659057
       vertices: []
       indices: 
       edges: []

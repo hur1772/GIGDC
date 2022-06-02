@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 8f35dc23a6d63034ca8c70c0ae34593b
+guid: be98991a0047392489eead6d37ad6138
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2504176560410919092
-    second: HumanWoman Idle_0
+      213: -8099363422866875990
+    second: HumanWoman ThrowStone_0
   - first:
-      213: -1715079494750409058
-    second: HumanWoman Idle_1
+      213: -70464802768645622
+    second: HumanWoman ThrowStone_1
   - first:
-      213: -5153508644018984634
-    second: HumanWoman Idle_2
+      213: 7081665907168033632
+    second: HumanWoman ThrowStone_1
   - first:
-      213: -2614955908169786275
-    second: HumanWoman Idle_3
+      213: -6545230376617050550
+    second: HumanWoman ThrowStone_3
   - first:
-      213: -465498187109011568
-    second: HumanWoman Idle_3
+      213: 8841943856695902254
+    second: HumanWoman ThrowStone_2
   - first:
-      213: -4715891041151085042
-    second: HumanWoman Idle_4
+      213: -2158124550727073790
+    second: HumanWoman ThrowStone_3
+  - first:
+      213: 2425240035566434407
+    second: HumanWoman ThrowStone_4
+  - first:
+      213: -9154024878788510753
+    second: HumanWoman ThrowStone_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanWoman Idle_0
+      name: HumanWoman ThrowStone_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 59
-        width: 424
-        height: 1019
+        x: 158
+        y: 53
+        width: 386
+        height: 1026
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,83 +129,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b00722605f90c220800000000000000
-      internalID: 2504176560410919092
+      spriteID: aa95a3111e7499f80800000000000000
+      internalID: -8099363422866875990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_1
+      name: HumanWoman ThrowStone_1
       rect:
         serializedVersion: 2
-        x: 960
-        y: 59
-        width: 410
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
+        x: 986
+        y: 53
+        width: 382
+        height: 1021
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9e68d15940d238e0800000000000000
-      internalID: -1715079494750409058
+      spriteID: a029ecd92a8a50ff0800000000000000
+      internalID: -70464802768645622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_2
+      name: HumanWoman ThrowStone_2
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 59
-        width: 394
-        height: 1019
-      alignment: 9
-      pivot: {x: 0.54, y: 0}
+        x: 1872
+        y: 53
+        width: 500
+        height: 1030
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649e756513f0b78b0800000000000000
-      internalID: -5153508644018984634
+      spriteID: 06bbebe4f91274260800000000000000
+      internalID: 7081665907168033632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_3
+      name: HumanWoman ThrowStone_3
       rect:
         serializedVersion: 2
-        x: 2385
-        y: 59
-        width: 412
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5c1b36c47fc5bbd0800000000000000
-      internalID: -2614955908169786275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanWoman Idle_4
-      rect:
-        serializedVersion: 2
-        x: 3148
-        y: 59
-        width: 392
-        height: 1019
+        x: 2845
+        y: 53
+        width: 452
+        height: 1161
       alignment: 9
       pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,29 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f67c97dd73a89f0800000000000000
-      internalID: -465498187109011568
+      spriteID: a4ef4ac86abaa25a0800000000000000
+      internalID: -6545230376617050550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_5
+      name: HumanWoman ThrowStone_4
       rect:
         serializedVersion: 2
-        x: 3832
-        y: 59
-        width: 410
-        height: 1010
+        x: 3888
+        y: 53
+        width: 509
+        height: 1108
       alignment: 9
-      pivot: {x: 0.52, y: 0}
+      pivot: {x: 0.48, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e061ebc751acd8eb0800000000000000
-      internalID: -4715891041151085042
+      spriteID: e208e4e4715e4ba70800000000000000
+      internalID: 8841943856695902254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman ThrowStone_5
+      rect:
+        serializedVersion: 2
+        x: 5136
+        y: 53
+        width: 631
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2000dd4c72dcc02e0800000000000000
+      internalID: -2158124550727073790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman ThrowStone_6
+      rect:
+        serializedVersion: 2
+        x: 6466
+        y: 71
+        width: 381
+        height: 1021
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7683efe76fe28a120800000000000000
+      internalID: 2425240035566434407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman ThrowStone_7
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 48
+        width: 382
+        height: 1026
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbf8b27fde56f080800000000000000
+      internalID: -9154024878788510753
       vertices: []
       indices: 
       edges: []
