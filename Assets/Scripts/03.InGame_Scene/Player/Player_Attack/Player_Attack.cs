@@ -11,6 +11,10 @@ public class Player_Attack : MonoBehaviour
     Animator animator;
     private void Start() => StartFunc();
 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+
     private void StartFunc()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -42,7 +46,7 @@ public class Player_Attack : MonoBehaviour
 
     public void Sword_Attack(int a)
     {
-
+        //Attack animation play
         if (a == 0)
         {
             animator.SetTrigger("Sword_Attack_1");
@@ -59,5 +63,33 @@ public class Player_Attack : MonoBehaviour
         {
             animator.SetTrigger("Sword_Attack_4");
         }
+
+        //Detect Enemy,Target...etc
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+       
+
+        //Damage Enemy
+        //foreach (Collider2D enemy in hitEnemies) 
+        //{
+        //    Debug.Log("hit");
+          
+        //}
+
+        foreach (Collider2D collider in hitEnemies)
+        {
+            Debug.Log("hit");
+            if (collider.tag == "enemy")
+            {
+                collider.GetComponent<TargetCtrl>().TakeDamage(10);
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
