@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 6c8bf63c6ec1dcf4d8bfd61bf4c9b202
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9027015700922278782
+    second: HumanMan(B) Run_0.2_0
+  - first:
+      213: 2142072006575908006
+    second: HumanMan(B) Run_0.2_1
+  - first:
+      213: -8842570235212173704
+    second: HumanMan(B) Run_0.2_2
+  - first:
+      213: 4600016984808057300
+    second: HumanMan(B) Run_0.2_3
+  - first:
+      213: -6165713527024839753
+    second: HumanMan(B) Run_0.2_4
+  - first:
+      213: 6418911994563580244
+    second: HumanMan(B) Run_0.2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +59,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 375
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +93,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HumanMan(B) Run_0.2_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 64
+        width: 742
+        height: 1098
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c57a41c0999b280800000000000000
+      internalID: -9027015700922278782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanMan(B) Run_0.2_1
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 54
+        width: 979
+        height: 1098
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4e34b042b2abd10800000000000000
+      internalID: 2142072006575908006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanMan(B) Run_0.2_2
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 58
+        width: 883
+        height: 1091
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e6cb49831e84580800000000000000
+      internalID: -8842570235212173704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanMan(B) Run_0.2_3
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 58
+        width: 569
+        height: 1094
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d96f34631b86df30800000000000000
+      internalID: 4600016984808057300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanMan(B) Run_0.2_4
+      rect:
+        serializedVersion: 2
+        x: 4836
+        y: 45
+        width: 774
+        height: 1102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b31ddae63cfe6aa0800000000000000
+      internalID: -6165713527024839753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanMan(B) Run_0.2_5
+      rect:
+        serializedVersion: 2
+        x: 6114
+        y: 43
+        width: 788
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451d470437e841950800000000000000
+      internalID: 6418911994563580244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

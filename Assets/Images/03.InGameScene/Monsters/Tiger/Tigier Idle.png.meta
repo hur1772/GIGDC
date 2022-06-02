@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 8f35dc23a6d63034ca8c70c0ae34593b
+guid: bcedb1d488e695b4caaee97d24928563
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2504176560410919092
-    second: HumanWoman Idle_0
+      213: 2141120922262764824
+    second: Tigier Idle_0
   - first:
-      213: -1715079494750409058
-    second: HumanWoman Idle_1
+      213: 5342365208452154789
+    second: Tigier Idle_1
   - first:
-      213: -5153508644018984634
-    second: HumanWoman Idle_2
+      213: -3515477474579264441
+    second: Tigier Idle_2
   - first:
-      213: -2614955908169786275
-    second: HumanWoman Idle_3
+      213: 8891119402658062049
+    second: Tigier Idle_3
   - first:
-      213: -465498187109011568
-    second: HumanWoman Idle_3
+      213: -5021008601785344831
+    second: Tigier Idle_4
   - first:
-      213: -4715891041151085042
-    second: HumanWoman Idle_4
+      213: 1820530475630168750
+    second: Tigier Idle_5
+  - first:
+      213: -2938317451964658570
+    second: Tigier Idle_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 325
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanWoman Idle_0
+      name: Tigier Idle_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 59
-        width: 424
-        height: 1019
+        x: 54
+        y: 307
+        width: 572
+        height: 310
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,113 +126,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b00722605f90c220800000000000000
-      internalID: 2504176560410919092
+      spriteID: 81df0a8722ac6bd10800000000000000
+      internalID: 2141120922262764824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_1
+      name: Tigier Idle_1
       rect:
         serializedVersion: 2
-        x: 960
-        y: 59
-        width: 410
-        height: 1010
+        x: 691
+        y: 307
+        width: 582
+        height: 312
       alignment: 9
-      pivot: {x: 0.52, y: 0}
+      pivot: {x: 0.515, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9e68d15940d238e0800000000000000
-      internalID: -1715079494750409058
+      spriteID: 5a5423e1ad4e32a40800000000000000
+      internalID: 5342365208452154789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_2
+      name: Tigier Idle_2
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 59
-        width: 394
-        height: 1019
+        x: 1331
+        y: 307
+        width: 592
+        height: 315
       alignment: 9
-      pivot: {x: 0.54, y: 0}
+      pivot: {x: 0.51, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649e756513f0b78b0800000000000000
-      internalID: -5153508644018984634
+      spriteID: 74cc0d7dcd3863fc0800000000000000
+      internalID: -3515477474579264441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_3
+      name: Tigier Idle_3
       rect:
         serializedVersion: 2
-        x: 2385
-        y: 59
-        width: 412
-        height: 1010
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
+        x: 1988
+        y: 307
+        width: 589
+        height: 315
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5c1b36c47fc5bbd0800000000000000
-      internalID: -2614955908169786275
+      spriteID: 1ee54035df9936b70800000000000000
+      internalID: 8891119402658062049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_4
+      name: Tigier Idle_4
       rect:
         serializedVersion: 2
-        x: 3148
-        y: 59
-        width: 392
-        height: 1019
+        x: 2612
+        y: 307
+        width: 595
+        height: 315
       alignment: 9
-      pivot: {x: 0.55, y: 0}
+      pivot: {x: 0.51, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f67c97dd73a89f0800000000000000
-      internalID: -465498187109011568
+      spriteID: 1cc5764774bc15ab0800000000000000
+      internalID: -5021008601785344831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Idle_5
+      name: Tigier Idle_5
       rect:
         serializedVersion: 2
-        x: 3832
-        y: 59
-        width: 410
-        height: 1010
+        x: 3266
+        y: 307
+        width: 589
+        height: 312
       alignment: 9
-      pivot: {x: 0.52, y: 0}
+      pivot: {x: 0.51, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e061ebc751acd8eb0800000000000000
-      internalID: -4715891041151085042
+      spriteID: eaa85be62d2d34910800000000000000
+      internalID: 1820530475630168750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tigier Idle_6
+      rect:
+        serializedVersion: 2
+        x: 3927
+        y: 307
+        width: 572
+        height: 310
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cc05668dff837d0800000000000000
+      internalID: -2938317451964658570
       vertices: []
       indices: 
       edges: []

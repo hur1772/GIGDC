@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 4fd9b5fea250fc64d813157ee4e5bf38
+guid: 5b6c6f23b310cfd44988e5183b32fb45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 311505204787827246
-    second: HumanMan(B)_Run_0
+      213: -517912622500281390
+    second: HumanWoman Walk_0
   - first:
-      213: -4034561183266865516
-    second: HumanMan(B)_Run_1
+      213: -1041566151502241812
+    second: HumanWoman Walk_1
   - first:
-      213: -8489687038235494974
-    second: HumanMan(B)_Run_2
+      213: -5342431126039698271
+    second: HumanWoman Walk_2
   - first:
-      213: 1191683495823494320
-    second: HumanMan(B)_Run_3
+      213: 5355174272306995409
+    second: HumanWoman Walk_3
   - first:
-      213: -8100727605919274656
-    second: HumanMan(B)_Run_4
+      213: 3017760634214302778
+    second: HumanWoman Walk_4
   - first:
-      213: 3890880258908344312
-    second: HumanMan(B)_Run_5
+      213: -8341328128009570580
+    second: HumanWoman Walk_10
+  - first:
+      213: 6543685433543965156
+    second: HumanWoman Walk_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 125
+  spritePixelsToUnits: 325
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanMan(B)_Run_0
+      name: HumanWoman Walk_0
       rect:
         serializedVersion: 2
-        x: 124
-        y: 53
-        width: 739
-        height: 1100
+        x: 140
+        y: 54
+        width: 471
+        height: 1016
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +126,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2250155550b25400800000000000000
-      internalID: 311505204787827246
+      spriteID: 2d30e2fb63100d8f0800000000000000
+      internalID: -517912622500281390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanMan(B)_Run_1
+      name: HumanWoman Walk_1
       rect:
         serializedVersion: 2
-        x: 665
+        x: 956
+        y: 52
+        width: 381
+        height: 1018
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef53a98a1d9b81f0800000000000000
+      internalID: -1041566151502241812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1842
         y: 56
-        width: 984
-        height: 1097
+        width: 437
+        height: 1020
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e7cc6dafb5208c0800000000000000
-      internalID: -4034561183266865516
+      spriteID: 1a4e96f323fdbd5b0800000000000000
+      internalID: -5342431126039698271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanMan(B)_Run_2
+      name: HumanWoman Walk_3
       rect:
         serializedVersion: 2
-        x: 1555
-        y: 56
-        width: 883
-        height: 1091
+        x: 2777
+        y: 52
+        width: 378
+        height: 1018
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c53cb77e929e2a80800000000000000
-      internalID: -8489687038235494974
+      spriteID: 1d06b23b0a6615a40800000000000000
+      internalID: 5355174272306995409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanMan(B)_Run_3
+      name: HumanWoman Walk_4
       rect:
         serializedVersion: 2
-        x: 2592
-        y: 59
-        width: 565
-        height: 1094
+        x: 3704
+        y: 54
+        width: 473
+        height: 1016
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,50 +210,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc414d53d5b98010800000000000000
-      internalID: 1191683495823494320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanMan(B)_Run_4
-      rect:
-        serializedVersion: 2
-        x: 3366
-        y: 53
-        width: 772
-        height: 1103
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0692bf2792f649f80800000000000000
-      internalID: -8100727605919274656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanMan(B)_Run_5
-      rect:
-        serializedVersion: 2
-        x: 4209
-        y: 44
-        width: 792
-        height: 1103
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ffcfcf0bfe2ff530800000000000000
-      internalID: 3890880258908344312
+      spriteID: a34408bde4d31e920800000000000000
+      internalID: 3017760634214302778
       vertices: []
       indices: 
       edges: []
