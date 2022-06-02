@@ -35,28 +35,22 @@ public class NPCDialogue : MonoBehaviour
 
     GameObject Player;
     GameObject NPC;
+    public int[] newcount;
 
     //bool IsTalk = false;
 
     public void ShowDialogue()
     {
         OnOff(true);
-        //NextDialouge();
-        //if (TalkBtn != null)
-        //{
-        //    TalkBtn.gameObject.SetActive(false);
-        //}
 
     }
 
     public void NextDialouge()
     {
-        //NPCLabelTxt.text = dialogue[count].dialogue;
         TalkTxt.text = dialogue[count].dialogue;
         sprite_StandingCG.sprite = dialogue[count].cg;
         Player_StandingCG.sprite = dialogue[count].PlayerCg;
-        //Debug.Log(dialogue[count].dialogue);
-        //Debug.Log(count);
+    
         count++;
     }
 
@@ -90,6 +84,9 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if( Interaction.Inst.m_interactionState == InteractionState.Nomal )
+            NPC.gameObject.SetActive( true );
+
         if (TypeObject == null)
             return;
         if (TypeObject.gameObject.name == "King")
@@ -116,7 +113,7 @@ public class NPCDialogue : MonoBehaviour
             {
                 GuideTimer -= Time.deltaTime;
 
-                if (GuideTimer <= 4.0f)
+                if (GuideTimer <= 3.0f)
                 {
                     GuideTxt.gameObject.SetActive(true);
                 }
@@ -133,7 +130,7 @@ public class NPCDialogue : MonoBehaviour
         {
             NPCInteraction();
         }
-        if (Interaction.Inst.m_interactionState == InteractionState.NPC)
+        if (Interaction.Inst.m_interactionState == InteractionState.NPC_Talk)
         {
             NPCInteraction();
         }
@@ -149,32 +146,59 @@ public class NPCDialogue : MonoBehaviour
     {
         if (IsDialog)
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if( sprite_DialogBox.gameObject.activeSelf == true && Interaction.Inst.m_interactionState == InteractionState.NPC_Talk)
             {
-                if (count < dialogue.Length)
+                if( Input.GetKeyDown( KeyCode.G ) )
                 {
-                    NextDialouge();
-                }
-                else
-                {
-                    OnOff(false);
-                    Player.SetActive(true);
-                    if (NPC != null)
+                    if( count < dialogue.Length )
                     {
-                        NPC.SetActive(true);
-                    }
-                    count = 0;
-                    TalkTxt.text = dialogue[count].dialogue;
-                    count = 1;
-                    if (TypeObject != null)
-                    {
-                        if (TypeObject.gameObject.name == "King")
+                        for( int ii = 0; ii < newcount.Length; ii++ )
                         {
-                            Interaction.Inst.m_interactionState =       InteractionState.king_talkEnd;
+                            if( count == newcount[ ii ] )
+                            {
+                                sprite_DialogBox.gameObject.SetActive( false );
+                                sprite_StandingCG.gameObject.SetActive( false );
+                                Player_StandingCG.gameObject.SetActive( false );
+                                Interaction.Inst.m_interactionState = InteractionState.Fight;
+                                TutorialMgr.m_TutorialState = TutorialState.NextStage;
+                                Interaction.Inst.GKey.gameObject.SetActive( false );
+                                Player.SetActive( true );
+                                break;
+                            }
                         }
-                        else if (TypeObject.gameObject.name == "NPC")
+                        NextDialouge();
+                        
+                    }
+                    else
+                    {
+                        OnOff( false );
+                        Player.SetActive( true );
+                        if( NPC != null )
                         {
-                            Interaction.Inst.m_interactionState =   InteractionState.NPC_talkEnd;
+                            NPC.SetActive( true );
+                        }
+                        count = 0;
+                        TalkTxt.text = dialogue[ count ].dialogue;
+                        count = 1;
+
+                        if( TypeObject != null )
+                        {
+                            if( TypeObject.gameObject.name == "King" )
+                            {
+                                Interaction.Inst.m_interactionState =   InteractionState.king_talkEnd;
+                            }
+                            else if( TypeObject.gameObject.name == "NPC" )
+                            {
+                                Interaction.Inst.m_interactionState =   InteractionState.NPC_talkEnd;
+                                Interaction.Inst.ResetPos();
+                                NPC.gameObject.SetActive( false );
+                                Interaction.Inst.GKey.gameObject.SetActive( false );
+                            }
+                            else if( TypeObject.gameObject.name == "Protal" )
+                            {
+                                Interaction.Inst.m_interactionState = InteractionState.Portal;
+                                Interaction.Inst.GKey.gameObject.SetActive( true );
+                            }
                         }
                     }
                 }

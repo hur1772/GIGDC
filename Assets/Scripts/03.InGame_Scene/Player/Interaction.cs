@@ -11,6 +11,8 @@ public enum InteractionState
     king_talk,
     king_talkEnd,
     NPC,
+    NPC_Talk,
+    Fight,
     NPC_talkEnd,
     Shop,
     Portal
@@ -25,6 +27,8 @@ public class Interaction : MonoBehaviour
     [HideInInspector] public Animator animator;
     [HideInInspector] public Transform PlayPos;
     private GameObject Portal;
+
+    public GameObject NPC;
 
     [HideInInspector] public bool IsInteraction = false;
 
@@ -66,7 +70,7 @@ public class Interaction : MonoBehaviour
             case InteractionState.NPC:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    m_interactionState = InteractionState.NPC;
+                    m_interactionState = InteractionState.NPC_Talk;
                     NPCDialogue.Inst.ShowDialogue();
                 }
                 break;

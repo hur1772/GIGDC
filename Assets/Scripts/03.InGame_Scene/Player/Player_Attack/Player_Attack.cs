@@ -80,7 +80,7 @@ public class Player_Attack : MonoBehaviour
             Debug.Log("hit");
             if (collider.tag == "enemy")
             {
-                collider.GetComponent<TargetCtrl>().TakeDamage(10);
+                collider.GetComponent<TargetCtrl>().TakeDamage(50);
             }
         }
     }

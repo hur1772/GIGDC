@@ -21,7 +21,7 @@ public class TutorialMgr : MonoBehaviour
     public Text TutoGuidetext = null;
     GameObject PrefabPos = null;
 
-    [HideInInspector] public int StageLv = 0;
+    [HideInInspector] public static int StageLv = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class TutorialMgr : MonoBehaviour
     {
         PadeOutMgr.Inst.PadeIn();
 
-        if (Interaction.Inst.m_interactionState == InteractionState.NPC_talkEnd)
+        if (Interaction.Inst.m_interactionState == InteractionState.Fight)
         {
             if (StageLv == 1)
             {
@@ -62,12 +62,14 @@ public class TutorialMgr : MonoBehaviour
                     PrefabPos = Instantiate(TargetPrefab) as GameObject;
                     StageLv++;
                     m_TutorialState = TutorialState.Fight;
+                    //Interaction.Inst.m_interactionState = InteractionState.Nomal;
                     break;
 
                 case TutorialState.ScarecrowStage:
                     PrefabPos = Instantiate(ScarecrowPrefab) as GameObject;
                     StageLv++;
                     m_TutorialState = TutorialState.Fight;
+                    //Interaction.Inst.m_interactionState = InteractionState.Nomal;
                     break;
 
                 case TutorialState.Clear:
