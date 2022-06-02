@@ -84,56 +84,59 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( Interaction.Inst.m_interactionState == InteractionState.Nomal )
-            NPC.gameObject.SetActive( true );
-
-        if (TypeObject == null)
-            return;
-        if (TypeObject.gameObject.name == "King")
-        {      
-            if (0.0f < GuideTimer)
+        if (NPC != null)
+        {
+            if (Interaction.Inst.m_interactionState == InteractionState.Nomal)
+                NPC.gameObject.SetActive(true);
+        }
+            if (TypeObject == null)
+                return;
+            if (TypeObject.gameObject.name == "King")
             {
-                GuideTimer -= Time.deltaTime;
-
-                if (GuideTimer <= 4.0f)
+                if (0.0f < GuideTimer)
                 {
-                    GuideTxt.gameObject.SetActive(true);
-                }
+                    GuideTimer -= Time.deltaTime;
 
-                if (GuideTimer < 0.0f)
-                {
-                    GuideTimer = 0.0f;
-                    GuideTxt.gameObject.SetActive(false);
+                    if (GuideTimer <= 4.0f)
+                    {
+                        GuideTxt.gameObject.SetActive(true);
+                    }
+
+                    if (GuideTimer < 0.0f)
+                    {
+                        GuideTimer = 0.0f;
+                        GuideTxt.gameObject.SetActive(false);
+                    }
                 }
             }
-        }
-        if(TypeObject.gameObject.name == "NPC")
-        {
-            if (0.0f < GuideTimer)
+            if (TypeObject.gameObject.name == "NPC")
             {
-                GuideTimer -= Time.deltaTime;
-
-                if (GuideTimer <= 3.0f)
+                if (0.0f < GuideTimer)
                 {
-                    GuideTxt.gameObject.SetActive(true);
-                }
+                    GuideTimer -= Time.deltaTime;
 
-                if (GuideTimer < 0.0f)
-                {
-                    GuideTimer = 0.0f;
-                    GuideTxt.gameObject.SetActive(false);
+                    if (GuideTimer <= 3.0f)
+                    {
+                        GuideTxt.gameObject.SetActive(true);
+                    }
+
+                    if (GuideTimer < 0.0f)
+                    {
+                        GuideTimer = 0.0f;
+                        GuideTxt.gameObject.SetActive(false);
+                    }
                 }
             }
-        }
 
-        if (Interaction.Inst.m_interactionState == InteractionState.king_talk)
-        {
-            NPCInteraction();
-        }
-        if (Interaction.Inst.m_interactionState == InteractionState.NPC_Talk)
-        {
-            NPCInteraction();
-        }
+            if (Interaction.Inst.m_interactionState == InteractionState.king_talk)
+            {
+                NPCInteraction();
+            }
+            if (Interaction.Inst.m_interactionState == InteractionState.NPC_Talk)
+            {
+                NPCInteraction();
+            }
+        
 
     }
 
@@ -146,13 +149,15 @@ public class NPCDialogue : MonoBehaviour
     {
         if (IsDialog)
         {
-            if( sprite_DialogBox.gameObject.activeSelf == true && Interaction.Inst.m_interactionState == InteractionState.NPC_Talk)
+            if( sprite_DialogBox.gameObject.activeSelf == true && (Interaction.Inst.m_interactionState == InteractionState.NPC_Talk
+                || Interaction.Inst.m_interactionState == InteractionState.king_talk))
             {
                 if( Input.GetKeyDown( KeyCode.G ) )
                 {
                     if( count < dialogue.Length )
                     {
-                        for( int ii = 0; ii < newcount.Length; ii++ )
+                        //NextDialouge();
+                        for ( int ii = 0; ii < newcount.Length; ii++ )
                         {
                             if( count == newcount[ ii ] )
                             {
@@ -167,7 +172,7 @@ public class NPCDialogue : MonoBehaviour
                             }
                         }
                         NextDialouge();
-                        
+
                     }
                     else
                     {
