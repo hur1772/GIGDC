@@ -95,8 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HpBar: {fileID: 3133440418896239212}
-  ThisGameObject: {fileID: 3133440418600069018}
-  animator: {fileID: 0}
+  ThisGameObject: {fileID: 0}
 --- !u!1 &3133440418896239210
 GameObject:
   m_ObjectHideFlags: 0

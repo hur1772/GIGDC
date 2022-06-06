@@ -12,35 +12,15 @@ public class TargetCtrl : MonoBehaviour
     float CurHp = 100;
     bool isdie = false;
 
-    public Animator animator;
-    float hitAnimTimer = 0.0f;
-    float hitAnimCool = 0.3f;
-
     // Start is called before the first frame update
     void Start()
     {
-        if (ThisGameObject.name == "ScarecrowObj")
-        {
-            if (animator != null)
-            {
-                animator = GetComponent<Animator>();
-            }
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        hitAnimTimer -= Time.deltaTime;
-        if (ThisGameObject.name == "ScarecrowObj")
-        {
-            if (hitAnimTimer <= 0.0f)
-            {
-                animator.SetBool("Hit", false);
-                hitAnimTimer = 0.0f;
-            }
-        }
-
         //CurHp -= Time.deltaTime *10;
         //HpBar.fillAmount = CurHp / MaxHp;
 
@@ -55,15 +35,6 @@ public class TargetCtrl : MonoBehaviour
     {
         CurHp -= a_Damage;
         HpBar.fillAmount = CurHp / MaxHp;
-        hitAnimTimer = hitAnimCool;
-
-        if (ThisGameObject.name == "ScarecrowObj")
-        {
-            if (hitAnimTimer >= 0.25f)
-            {
-                animator.SetBool("Hit", true);
-            }
-        }
 
         if (CurHp <= 0)
         {
