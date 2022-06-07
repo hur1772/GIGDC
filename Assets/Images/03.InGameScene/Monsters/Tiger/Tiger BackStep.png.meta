@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 20ada98e24dcab541ad7d3abb48a5878
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4568249833774140809
+    second: Tiger BackStep_0
+  - first:
+      213: -5570774723149433275
+    second: Tiger BackStep_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +107,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tiger BackStep_0
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 97
+        width: 304
+        height: 216
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772b7a4daf05a90c0800000000000000
+      internalID: -4568249833774140809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiger BackStep_1
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 97
+        width: 285
+        height: 216
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546f3fe87e1a0b2b0800000000000000
+      internalID: -5570774723149433275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

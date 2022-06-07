@@ -5,39 +5,34 @@ using UnityEngine.UI;
 
 public class TargetCtrl : MonoBehaviour
 {
+    public Animator animator = null;
+
     public Image HpBar = null;
     public GameObject ThisGameObject = null;
+
+    float AimCurTimer = 0.0f;
+    float AimTimer = 0.5f;
 
     float MaxHp = 100;
     float CurHp = 100;
     bool isdie = false;
 
-    public Animator animator;
-    float hitAnimTimer = 0.0f;
-    float hitAnimCool = 0.3f;
-
     // Start is called before the first frame update
-    void Start()
-    {
-        if (ThisGameObject.name == "ScarecrowObj")
-        {
-            if (animator != null)
-            {
-                animator = GetComponent<Animator>();
-            }
-        }
-    }
+    //void Start()
+    //{
+        
+    //}
 
     // Update is called once per frame
     void Update()
     {
-        hitAnimTimer -= Time.deltaTime;
-        if (ThisGameObject.name == "ScarecrowObj")
+        if (animator != null)
         {
-            if (hitAnimTimer <= 0.0f)
+            AimCurTimer -= Time.deltaTime;
+            if (AimCurTimer <= 0.0f)
             {
+                AimCurTimer = 0.0f;
                 animator.SetBool("Hit", false);
-                hitAnimTimer = 0.0f;
             }
         }
 
@@ -55,15 +50,13 @@ public class TargetCtrl : MonoBehaviour
     {
         CurHp -= a_Damage;
         HpBar.fillAmount = CurHp / MaxHp;
-        hitAnimTimer = hitAnimCool;
 
-        if (ThisGameObject.name == "ScarecrowObj")
+        if(animator != null)
         {
-            if (hitAnimTimer >= 0.25f)
-            {
-                animator.SetBool("Hit", true);
-            }
+            AimCurTimer = AimTimer;
+            animator.SetBool("Hit", true);
         }
+
 
         if (CurHp <= 0)
         {

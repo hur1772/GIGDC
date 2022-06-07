@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: 8d720f39769b2394abffaf7ca270e75e
+guid: a0826abbb47653a4190d532091537258
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8419388251596102000
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_0"
+      213: 7660342524385478242
+    second: Tiger Attack 0.2_0
   - first:
-      213: 3542248830114991314
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_1"
+      213: -2162993284246620202
+    second: Tiger Attack 0.2_1
   - first:
-      213: -2433255234687566069
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_2"
+      213: 4553179847740005918
+    second: Tiger Attack 0.2_2
   - first:
-      213: -1656737303330340580
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_3"
+      213: 8390793410741586568
+    second: Tiger Attack 0.2_3
   - first:
-      213: -4417329565258800367
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_4"
-  - first:
-      213: -1297389853931355024
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_5"
-  - first:
-      213: 6621669390904429332
-    second: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_6"
+      213: 3242026106421571902
+    second: Tiger Attack 0.2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -67,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,152 +102,122 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_0"
+      name: Tiger Attack 0.2_0
       rect:
         serializedVersion: 2
-        x: 97
-        y: 64
-        width: 830
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 103
+        y: 51
+        width: 323
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09664853ef2582b80800000000000000
-      internalID: -8419388251596102000
+      spriteID: 266c0df80f00f4a60800000000000000
+      internalID: 7660342524385478242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_1"
+      name: Tiger Attack 0.2_1
       rect:
         serializedVersion: 2
-        x: 1391
-        y: 64
-        width: 832
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 467
+        y: 52
+        width: 328
+        height: 206
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dc0c091b88982130800000000000000
-      internalID: 3542248830114991314
+      spriteID: 6d7bce861118bf1e0800000000000000
+      internalID: -2162993284246620202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_2"
+      name: Tiger Attack 0.2_2
       rect:
         serializedVersion: 2
-        x: 2679
-        y: 64
-        width: 828
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 874
+        y: 52
+        width: 327
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f769881475b3ed0800000000000000
-      internalID: -2433255234687566069
+      spriteID: e1e920f92f4203f30800000000000000
+      internalID: 4553179847740005918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_3"
+      name: Tiger Attack 0.2_3
       rect:
         serializedVersion: 2
-        x: 4042
-        y: 64
-        width: 832
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1305
+        y: 49
+        width: 454
+        height: 199
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c114bdc43361209e0800000000000000
-      internalID: -1656737303330340580
+      spriteID: 88ac0f69626127470800000000000000
+      internalID: 8390793410741586568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_4"
+      name: Tiger Attack 0.2_4
       rect:
         serializedVersion: 2
-        x: 5370
-        y: 64
-        width: 831
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1807
+        y: 52
+        width: 356
+        height: 178
+      alignment: 9
+      pivot: {x: 0.47, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1132be61a2e72b2c0800000000000000
-      internalID: -4417329565258800367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_5"
-      rect:
-        serializedVersion: 2
-        x: 6759
-        y: 64
-        width: 832
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 074c93d3dcebefde0800000000000000
-      internalID: -1297389853931355024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uC9DA\uB2E8\uC778\uD615 \uC2A4\uD504\uB77C\uC774\uD2B8_6"
-      rect:
-        serializedVersion: 2
-        x: 8020
-        y: 64
-        width: 832
-        height: 1484
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41b8fe85a35e4eb50800000000000000
-      internalID: 6621669390904429332
+      spriteID: e31fcc9119dfdfc20800000000000000
+      internalID: 3242026106421571902
       vertices: []
       indices: 
       edges: []
