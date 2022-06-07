@@ -35,6 +35,7 @@ public class NPCDialogue : MonoBehaviour
 
     GameObject Player;
     GameObject NPC;
+    public GameObject Protal;
     public int[] newcount;
 
     //bool IsTalk = false;
@@ -52,6 +53,14 @@ public class NPCDialogue : MonoBehaviour
         Player_StandingCG.sprite = dialogue[count].PlayerCg;
     
         count++;
+        if (Protal != null)
+        {
+            if (dialogue.Length +1 == count)
+            {
+
+                Protal.gameObject.SetActive(true);
+            }
+        }
     }
 
     public void OnOff(bool a_flag)
@@ -59,8 +68,7 @@ public class NPCDialogue : MonoBehaviour
         sprite_StandingCG.gameObject.SetActive(a_flag);
         Player_StandingCG.gameObject.SetActive(a_flag);
         sprite_DialogBox.gameObject.SetActive(a_flag);
-        TalkTxt.gameObject.SetActive(a_flag);
-        //NPCLabelTxt.gameObject.SetActive(a_flag);
+        TalkTxt.gameObject.SetActive(a_flag);        
         InfoTxt.gameObject.SetActive(a_flag);
         Player.SetActive(false);
         if (NPC != null)
@@ -79,6 +87,11 @@ public class NPCDialogue : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         NPC = GameObject.Find("NPC");
+        
+        if (Protal != null)
+        {
+            Protal.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -136,14 +149,12 @@ public class NPCDialogue : MonoBehaviour
             {
                 NPCInteraction();
             }
-        
+
+
 
     }
 
-    //public void TalkFunc()
-    //{
-    //    ShowDialogue();
-    //}
+
 
     public void NPCInteraction()
     {
@@ -156,7 +167,7 @@ public class NPCDialogue : MonoBehaviour
                 {
                     if( count < dialogue.Length )
                     {
-                        //NextDialouge();
+                        
                         for ( int ii = 0; ii < newcount.Length; ii++ )
                         {
                             if( count == newcount[ ii ] )
@@ -166,8 +177,8 @@ public class NPCDialogue : MonoBehaviour
                                 Player_StandingCG.gameObject.SetActive( false );
                                 Interaction.Inst.m_interactionState = InteractionState.Fight;
                                 TutorialMgr.m_TutorialState = TutorialState.NextStage;
-                                Interaction.Inst.GKey.gameObject.SetActive( false );
-                                Player.SetActive( true );
+                                Interaction.Inst.GKey.gameObject.SetActive( false );                                
+                                Player.SetActive( true );                               
                                 break;
                             }
                         }
@@ -182,6 +193,7 @@ public class NPCDialogue : MonoBehaviour
                         {
                             NPC.SetActive( true );
                         }
+
                         count = 0;
                         TalkTxt.text = dialogue[ count ].dialogue;
                         count = 1;
@@ -194,15 +206,19 @@ public class NPCDialogue : MonoBehaviour
                             }
                             else if( TypeObject.gameObject.name == "NPC" )
                             {
-                                Interaction.Inst.m_interactionState =   InteractionState.NPC_talkEnd;
-                                Interaction.Inst.ResetPos();
+                                Interaction.Inst.m_interactionState =   InteractionState.NPC_talkEnd;                                
+                                Interaction.Inst.ResetPos();                                
                                 NPC.gameObject.SetActive( false );
                                 Interaction.Inst.GKey.gameObject.SetActive( false );
+                                if (Protal != null)
+                                {
+                                    Protal.gameObject.SetActive(true);
+                                }
                             }
                             else if( TypeObject.gameObject.name == "Protal" )
                             {
-                                Interaction.Inst.m_interactionState = InteractionState.Portal;
-                                Interaction.Inst.GKey.gameObject.SetActive( true );
+                                Interaction.Inst.m_interactionState = InteractionState.Portal;       
+                                 Interaction.Inst.GKey.gameObject.SetActive(true);                                
                             }
                         }
                     }

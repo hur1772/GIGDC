@@ -22,7 +22,7 @@ public class Player_Attack : MonoBehaviour
         Player_State = GetComponent<Player_State_Ctrl>();
         p_input = GetComponent<Player_Input>();
         Player_State.p_state = PlayerState.player_attack;
-        Player_State.p_Attack_state = PlayerAttackState.player_no_att;
+        GlobalUserData.Player_Att_State = PlayerAttackState.player_no_att;
         // 공격'상태'State = no_att으로 초기화 해둠
         // 추후 무기 입력에 따라 state 추가할 예정
     }
@@ -35,13 +35,23 @@ public class Player_Attack : MonoBehaviour
         {
             Player_State.p_state = PlayerState.player_attack;
             Player_State.p_Attack_state = PlayerAttackState.player_sword;
+            GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
+            animator.SetInteger("WeaponState", (int)PlayerAttackState.player_sword);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
             Player_State.p_state = PlayerState.player_attack;
             Player_State.p_Attack_state = PlayerAttackState.player_bow;
+            GlobalUserData.Player_Att_State = PlayerAttackState.player_bow;
+            //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
         }
+    }
+
+    public void Bow_Attack()
+    {
+        animator.SetTrigger("Bow_Attack");
     }
 
     public void Sword_Attack(int a)

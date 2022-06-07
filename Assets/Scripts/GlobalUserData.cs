@@ -9,12 +9,20 @@ public class GlobalUserData
     public static string s_NickName = "User";
     public static int BowTier = 0;
     public static int SwordTier = 0;
+    public static PlayerAttackState Player_Att_State;
 
     public static ulong UniqueCount = 0; //임시 Item 고유키 발급기...
-    //public static List<ItemValue> g_ItemList = new List<ItemValue>();
+                                         //public static List<ItemValue> g_ItemList = new List<ItemValue>();
+
+    void Start()
+    {
+        Player_Att_State = PlayerAttackState.player_no_att;
+    }
 
     public static void LoadGameInfo()
     {
+
+        //Player_Att_State = PlayerAttackState.player_no_att;
         s_GoldCount = PlayerPrefs.GetInt("GoldCount", 0);
         s_SkillCount = PlayerPrefs.GetInt("SkillCount", 0);
         s_NickName = PlayerPrefs.GetString("UserNick", "User");
