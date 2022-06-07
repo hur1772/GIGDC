@@ -11,6 +11,7 @@ TagManager:
   - 04.Stage_1(Palace_In)
   - enemy
   - Target
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
