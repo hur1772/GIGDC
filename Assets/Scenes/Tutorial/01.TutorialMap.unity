@@ -7321,6 +7321,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &182660313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
+  m_PrefabInstance: {fileID: 1789329681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &256395657
 GameObject:
   m_ObjectHideFlags: 0
@@ -8878,6 +8883,7 @@ MonoBehaviour:
   - dialogue: "\u3134\u3141\u3147\u3141\u3134"
     cg: {fileID: 0}
     PlayerCg: {fileID: 0}
+  Protal: {fileID: 0}
   newcount: 
 --- !u!1 &1244928690
 GameObject:
@@ -9235,6 +9241,7 @@ MonoBehaviour:
       \uAE30\uB2E4\uB9AC\uACE0 \uC788\uACA0\uC2B5\uB2C8\uB2E4"
     cg: {fileID: 21300000, guid: 0ceef8ee82b686449907f8ba1cd38bb6, type: 3}
     PlayerCg: {fileID: 0}
+  Protal: {fileID: 182660313}
   newcount: 060000000a000000
 --- !u!4 &1384784294
 Transform:
