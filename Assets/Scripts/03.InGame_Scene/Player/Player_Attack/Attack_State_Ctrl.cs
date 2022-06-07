@@ -13,8 +13,6 @@ public class Attack_State_Ctrl : StateMachineBehaviour
         int ran_att = Random.Range(0, 4);
         p_Attack = animator.GetComponent<Player_Attack>();
         p_Attack.Sword_Attack(ran_att);
-
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,6 +25,7 @@ public class Attack_State_Ctrl : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetTrigger("Sword_Attack_end");
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

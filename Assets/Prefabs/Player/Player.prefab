@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcf0e1a0191c544cbf493cbf55a83a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BulletObj: {fileID: 1897709992600352988, guid: 93c00398acd316545badcc821de082f2, type: 3}
 --- !u!114 &4109632169616997903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb4e1b654159e1408e0495fa79b7f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &4109632169616997899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +454,7 @@ MonoBehaviour:
   m_interactionState: 0
   animator: {fileID: 0}
   PlayPos: {fileID: 0}
+  NPC: {fileID: 0}
   IsInteraction: 0
   KingDistance: 0
   NPCDistance: 0

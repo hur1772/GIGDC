@@ -5,22 +5,37 @@ using UnityEngine.UI;
 
 public class TargetCtrl : MonoBehaviour
 {
+    public Animator animator = null;
+
     public Image HpBar = null;
     public GameObject ThisGameObject = null;
+
+    float AimCurTimer = 0.0f;
+    float AimTimer = 0.5f;
 
     float MaxHp = 100;
     float CurHp = 100;
     bool isdie = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
     // Update is called once per frame
     void Update()
     {
+        if (animator != null)
+        {
+            AimCurTimer -= Time.deltaTime;
+            if (AimCurTimer <= 0.0f)
+            {
+                AimCurTimer = 0.0f;
+                animator.SetBool("Hit", false);
+            }
+        }
+
         //CurHp -= Time.deltaTime *10;
         //HpBar.fillAmount = CurHp / MaxHp;
 
@@ -35,6 +50,13 @@ public class TargetCtrl : MonoBehaviour
     {
         CurHp -= a_Damage;
         HpBar.fillAmount = CurHp / MaxHp;
+
+        if(animator != null)
+        {
+            AimCurTimer = AimTimer;
+            animator.SetBool("Hit", true);
+        }
+
 
         if (CurHp <= 0)
         {
