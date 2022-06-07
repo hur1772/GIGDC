@@ -43,8 +43,10 @@ public class Player_Input : MonoBehaviour
                 a_NewObj = (GameObject)Instantiate(m_BulletObj);
                 //오브젝트의 클론(복사체) 생성 함수   
                 a_BulletSC = a_NewObj.GetComponent<BulletCtrl>();
-                Debug.Log(this.transform.position);
-                a_BulletSC.BulletSpawn(this.transform.position, Vector3.right);
+                if (this.transform.localScale.x >= 0.0f)
+                    a_BulletSC.BulletSpawn(this.transform.position, Vector3.right);
+                if (this.transform.localScale.x <= 0.0f)
+                    a_BulletSC.BulletSpawn(this.transform.position, Vector3.left);
                 ArrowNum++;
             }           
         }
@@ -60,11 +62,15 @@ public class Player_Input : MonoBehaviour
             {
                 animator.SetTrigger("Sword_Attack_Start");
             }
-            if (GlobalUserData.Player_Att_State == PlayerAttackState.player_bow)
+
+            if (BowAttCurTimer <= 0)
             {
-                animator.SetTrigger("Bow_Attack");
-                BowAttCurTimer = BowAttTimer;
-                ArrowNum = 0;
+                if (GlobalUserData.Player_Att_State == PlayerAttackState.player_bow)
+                {
+                    animator.SetTrigger("Bow_Attack");
+                    BowAttCurTimer = BowAttTimer;
+                    ArrowNum = 0;
+                }
             }
         }
     }

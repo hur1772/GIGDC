@@ -8220,7 +8220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbaac79057a0c8c48b9339db67cdc622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScarecrowPrefab: {fileID: 3270714247158334663, guid: ba3470ae8cf06fb4283e6a8123607303, type: 3}
+  ScarecrowPrefab: {fileID: 5814545156648553214, guid: ba3470ae8cf06fb4283e6a8123607303, type: 3}
   TargetPrefab: {fileID: 3133440418600069018, guid: 3db9899d1d4b2ce429ff59dc5943ba13, type: 3}
   TutoGuidetext: {fileID: 1277254610}
 --- !u!4 &363377232
