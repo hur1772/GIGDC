@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 20ada98e24dcab541ad7d3abb48a5878
+guid: a0826abbb47653a4190d532091537258
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4568249833774140809
-    second: Tiger BackStep_0
+      213: 7660342524385478242
+    second: Tiger Attack 0.2_0
   - first:
-      213: -5570774723149433275
-    second: Tiger BackStep_1
+      213: -2162993284246620202
+    second: Tiger Attack 0.2_1
+  - first:
+      213: 4553179847740005918
+    second: Tiger Attack 0.2_2
+  - first:
+      213: 8390793410741586568
+    second: Tiger Attack 0.2_3
+  - first:
+      213: 3242026106421571902
+    second: Tiger Attack 0.2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tiger BackStep_0
+      name: Tiger Attack 0.2_0
       rect:
         serializedVersion: 2
-        x: 136
-        y: 97
-        width: 304
-        height: 216
+        x: 103
+        y: 51
+        width: 323
+        height: 187
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 772b7a4daf05a90c0800000000000000
-      internalID: -4568249833774140809
+      spriteID: 266c0df80f00f4a60800000000000000
+      internalID: 7660342524385478242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger BackStep_1
+      name: Tiger Attack 0.2_1
       rect:
         serializedVersion: 2
-        x: 552
-        y: 97
-        width: 285
-        height: 216
+        x: 467
+        y: 52
+        width: 328
+        height: 206
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +153,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 546f3fe87e1a0b2b0800000000000000
-      internalID: -5570774723149433275
+      spriteID: 6d7bce861118bf1e0800000000000000
+      internalID: -2162993284246620202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiger Attack 0.2_2
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 52
+        width: 327
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e920f92f4203f30800000000000000
+      internalID: 4553179847740005918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiger Attack 0.2_3
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 49
+        width: 454
+        height: 199
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ac0f69626127470800000000000000
+      internalID: 8390793410741586568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiger Attack 0.2_4
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 52
+        width: 356
+        height: 178
+      alignment: 9
+      pivot: {x: 0.47, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31fcc9119dfdfc20800000000000000
+      internalID: 3242026106421571902
       vertices: []
       indices: 
       edges: []

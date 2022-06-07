@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum MonsterState
@@ -9,6 +7,9 @@ public enum MonsterState
     CHASE,
     ATTACK,
     SKILL,
+    SKILL2,
+    SKILL3,
+    STAY,
     DIE,
     CORPSE
 }
@@ -81,6 +82,23 @@ public class Monster : MonoBehaviour
 
         }
     }
+
+    protected virtual void ChangeRotate1()
+    {
+        if (m_CalcVec.x < 0.0f)
+            this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+        else
+            this.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+    }
+
+    protected virtual void ChangeRotate2()
+    {
+        if (m_CalcVec.x < 0.0f)
+            this.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+        else
+            this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+    }
+
 
     protected virtual void InitMonster()
     {
