@@ -10,6 +10,14 @@ public class TigerMonster : Monster
         RUSH,
         RUSH_AFTER
     }
+    
+    enum JumpEnum
+    {
+        BACKSTEP,
+        JUMP_BEFORE,
+        JUMP,
+        JUMP_AFTER
+    }
 
     //대기 관련 변수
     float idleDelay;
@@ -22,13 +30,14 @@ public class TigerMonster : Monster
     public float m_AttackDelay = 1.5f;
 
     //스킬 관련 변수
-    float SkillCoolTime = 8.0f;
+    float SkillCoolTime = 5.0f;
     bool IsSkillOn = false;
     float RushDelay = 2.0f;
     Vector3 RushVec = Vector3.zero;
     Vector3 RushCurVec = Vector3.zero;
-    float StayTime = 5.0f;
+    float StayTime = 2.5f;
     RushEnum rushEnum = RushEnum.BACKSTEP;
+    JumpEnum jumpEnum = JumpEnum.BACKSTEP;
 
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
@@ -51,6 +60,16 @@ public class TigerMonster : Monster
         CheckDistanceFromPlayer();
         MonUpdate();
         SkillCoolUpdate();
+
+        //삭제하셈
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            m_Monstate = MonsterState.SKILL;
+        }
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            m_Monstate = MonsterState.SKILL2;
+        }
     }
 
     public void MonUpdate()
@@ -71,9 +90,62 @@ public class TigerMonster : Monster
         {
             AttackUpdate();
         }
-        else if(m_Monstate == MonsterState.SKILL)  //주인공 한테 돌격
+        else if(m_Monstate == MonsterState.SKILL)  //주인공한테 돌격
         {
             RushSkill();
+        }
+        else if(m_Monstate == MonsterState.SKILL2)  //주인공한테 점프공격
+        {
+            JumpSkill();
+        }
+    }
+
+    public void JumpSkill()
+    {
+        if (jumpEnum == JumpEnum.BACKSTEP)
+        {
+            BackStep();
+            jumpEnum = JumpEnum.JUMP_BEFORE;
+        }
+        else if (jumpEnum == JumpEnum.JUMP_BEFORE)
+        {
+            if (RushDelay >= 0.0f)
+            {
+                RushDelay -= Time.deltaTime;
+                if (RushDelay <= 0.0f)
+                {
+                    jumpEnum = JumpEnum.JUMP;
+                    m_MoveSpeed = 3.0f;
+                    RushVec = m_Player.transform.position;
+                    RushVec.y = this.transform.position.y;
+                    RushVec.z = 0.0f;
+                    m_Animator.enabled = true;
+                    m_Rb.AddForce(Vector2.up * 700.0f);
+                    m_Animator.SetTrigger("Jump");
+                }
+            }
+        }
+        else if (jumpEnum == JumpEnum.JUMP)
+        {
+            ChangeRotate2();
+            RushCurVec = RushVec - this.transform.position;
+
+            m_Rb.transform.position += RushCurVec * Time.deltaTime * m_MoveSpeed;
+
+            if (RushCurVec.magnitude <= 1.0f)
+            {
+                Debug.Log("arrive");
+                RushDelay = 2.0f;
+                m_MoveSpeed = 2.0f;
+                jumpEnum = JumpEnum.JUMP_AFTER;
+                m_Animator.SetBool("IsMove", false);
+                m_Animator.SetBool("CanAttack", false);
+                m_Animator.SetBool("FindPlayer", false);
+            }
+        }
+        else if (jumpEnum == JumpEnum.JUMP_AFTER)
+        {
+            MonStay();
         }
     }
 
@@ -124,6 +196,19 @@ public class TigerMonster : Monster
         } 
     }
 
+    public void RandSkillFunc()
+    {
+        if (m_Monstate == MonsterState.SKILL || m_Monstate == MonsterState.SKILL2)
+            return;
+
+        int rand = Random.Range(0, 2);
+        Debug.Log(rand);
+        if (rand == 0)
+            m_Monstate = MonsterState.SKILL;
+        else
+            m_Monstate = MonsterState.SKILL2;
+    }
+
     public void SkillCoolUpdate()
     {
         if(SkillCoolTime >= 0.0f && IsSkillOn == false)
@@ -132,7 +217,7 @@ public class TigerMonster : Monster
             if(SkillCoolTime <= 0.0f)
             {
                 IsSkillOn = true;
-                SkillCoolTime = 8.0f;
+                SkillCoolTime = 5.0f;
             }
         }
     }
@@ -143,16 +228,15 @@ public class TigerMonster : Monster
 
         if(StayTime >= 0.0f)
         {
-            Debug.Log(StayTime);
             StayTime -= Time.deltaTime;
             if(StayTime <= 0.0f)
             {
-                m_Monstate = MonsterState.CHASE;
-                StayTime = 5.0f;
-                rushEnum = RushEnum.BACKSTEP;
-                m_Animator.SetBool("IsMove", true);
-                m_Animator.SetBool("FindPlayer", true);
                 IsSkillOn = false;
+                m_Monstate = MonsterState.CHASE;
+                StayTime = 2.5f;
+                rushEnum = RushEnum.BACKSTEP;
+                jumpEnum = JumpEnum.BACKSTEP;
+                m_Animator.SetBool("FindPlayer", true);
             }
         }
 
@@ -223,7 +307,10 @@ public class TigerMonster : Monster
     public void ChaseUpdate()
     {
         if (IsSkillOn)
-            m_Monstate = MonsterState.SKILL;
+        {
+            RandSkillFunc();
+            return;
+        }
 
         if (m_CalcVec.x >= 0.1f)
         {
@@ -243,20 +330,13 @@ public class TigerMonster : Monster
             m_Monstate = MonsterState.ATTACK;
             m_Animator.SetBool("CanAttack", true);
         }
-
-        if (m_ChaseDistance * 1.5f < m_CalcVec.magnitude)
-        {
-            m_Monstate = MonsterState.PATROL;
-            m_Animator.SetBool("FindPlayer", false);
-            m_MoveSpeed = 1.0f;
-        }
     }
 
     public void AttackUpdate()
     {
         if (IsSkillOn)
         {
-            m_Monstate = MonsterState.SKILL;
+            RandSkillFunc();
             m_Animator.SetBool("CanAttack", false);
         }
 

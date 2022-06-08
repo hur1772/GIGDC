@@ -19,9 +19,11 @@ public class TigerAttackState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<TigerMonster>().m_Monstate = MonsterState.CHASE;
-        animator.SetBool("CanAttack", false);
-
+        if (animator.GetComponent<TigerMonster>().m_Monstate == MonsterState.ATTACK)
+        {
+            animator.GetComponent<TigerMonster>().m_Monstate = MonsterState.CHASE;
+            animator.SetBool("CanAttack", false);
+        }
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
