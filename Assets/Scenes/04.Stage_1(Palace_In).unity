@@ -283,6 +283,7 @@ MonoBehaviour:
       \uAC15\uB155\uD558\uC2ED\uC2DC\uC624"
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: be51ec88104fc1b4ca43f0a5453b5802, type: 3}
+  Protal: {fileID: 0}
   newcount: 
 --- !u!4 &197646781
 Transform:
@@ -1812,7 +1813,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
