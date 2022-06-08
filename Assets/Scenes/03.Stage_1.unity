@@ -2364,7 +2364,7 @@ SpriteRenderer:
   m_Size: {x: 2.12, y: 2.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &955018374
@@ -4930,6 +4930,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8600818407166503472, guid: 2d96d99127993ba46ad4fb7cdb609c51, type: 3}
   m_PrefabInstance: {fileID: 8600818407923562065}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830837346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830837345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669816471d520ea4d8c5eecb36c2498f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShopPanel: {fileID: 0}
+  CloseBtn: {fileID: 0}
+  UseItemImg1: {fileID: 0}
+  UseItemImg2: {fileID: 0}
+  UseItemImg3: {fileID: 0}
 --- !u!1 &2126551717
 GameObject:
   m_ObjectHideFlags: 0
