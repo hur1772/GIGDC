@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class UIMgr : MonoBehaviour
 {
-    public GameObject ShopPanel;
-
-    public Button CloseBtn = null;
     public Image m_HpBar = null;
     public Image UseItemImg1 = null;
     public Image UseItemImg2 = null;
@@ -24,27 +21,14 @@ public class UIMgr : MonoBehaviour
     {
         m_CurHp = 100.0f;
         m_MaxHp = m_CurHp;
-        //if (CloseBtn != null)
-        //{
-        //    CloseBtn.onClick.AddListener(CloseBtnFunc);
-        //}
+
         Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        TakeDamage(0.01f);
-        //if (ShopPanel != null)
-        //{
-        //    if (ShopPanel.activeSelf == true)
-        //    {
-        //        if (Input.GetKey(KeyCode.Escape))
-        //        {
-        //            ShopPanel.SetActive(false);
-        //        }
-        //    }
-        //}
+        //TakeDamage(0.01f);
 
         //if (Input.GetKey(KeyCode.Alpha1) && UseItemCoolTime1 >= 5.0f)
         //{
@@ -89,11 +73,6 @@ public class UIMgr : MonoBehaviour
         //}
     }
 
-    void CloseBtnFunc()
-    {
-        ShopPanel.SetActive(false);
-        Time.timeScale = 1.0f;
-    }
 
     public void TakeDamage(float a_val)
     {
