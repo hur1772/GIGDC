@@ -10,9 +10,12 @@ public class FoxMarble : MonoBehaviour
     public float shotDelay = 0.0f;
     bool shootRight = false;
 
+    SpriteRenderer _spriteRenderer;
+
     private void Start()
     {
-
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer.enabled = false;
     }
 
     private void Update()
@@ -20,10 +23,14 @@ public class FoxMarble : MonoBehaviour
         if (shotDelay >= 0.0f)
         {
             shotDelay -= Time.deltaTime;
+            if (shotDelay <= 0.0f)
+                _spriteRenderer.enabled = true;
+            
         }
         else
         {
-            if(shootRight)
+
+            if (shootRight)
                 this.transform.position += Vector3.right * Time.deltaTime * moveSpeed;
             else
                 this.transform.position += Vector3.left * Time.deltaTime * moveSpeed;

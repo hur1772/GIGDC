@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoxMonster_A : Monster
+public class FoxMonster_B : Monster
 {
     //대기 관련 변수
     float m_IdleTime = 0.0f;
@@ -17,7 +17,7 @@ public class FoxMonster_A : Monster
     float m_CurattackDelay;
     GameObject marblePrefab;
     public Transform weaponPos;
-    public float attackDealy = 0.0f;
+    public float attackDealy_2 = 0.0f;
 
     private void Awake()
     {
@@ -152,9 +152,9 @@ public class FoxMonster_A : Monster
 
     public void AttackUpdate()
     {
-        if(attackDealy >= 0.0f)
+        if(attackDealy_2 >= 0.0f)
         {
-            attackDealy -= Time.deltaTime;
+            attackDealy_2 -= Time.deltaTime;
         }
         else
         {
@@ -179,7 +179,7 @@ public class FoxMonster_A : Monster
                     marble.transform.eulerAngles = this.transform.eulerAngles;
                     marble.GetComponent<FoxMarble>().SetRightBool(MonRight);
                     m_Animator.SetTrigger("Attack");
-                    attackDealy = 1.0f;
+                    attackDealy_2 = 1.0f;
                     Destroy(marble, 3.0f);
                 }
             }
