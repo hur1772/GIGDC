@@ -14,8 +14,14 @@ public class FoxMonster_A : Monster
 
     //공격 관련 변수
     public float m_AttackDelay = 1.5f;
+    float m_CurattackDelay;
     GameObject marblePrefab;
-    Transform weaponPos;
+    public Transform weaponPos;
+
+    private void Awake()
+    {
+        marblePrefab = (GameObject)Resources.Load("FoxMarble");
+    }
 
     private void Start() => StartFunc();
 
@@ -23,6 +29,8 @@ public class FoxMonster_A : Monster
     {
         InitMonster();
         m_Monstate = MonsterState.IDLE;
+
+        m_CurattackDelay = m_AttackDelay;
 
         m_IdleTime = Random.Range(2.0f, 3.0f);
     }
@@ -73,6 +81,12 @@ public class FoxMonster_A : Monster
             }
         }
 
+        if (m_CalcVec.magnitude <= m_ChaseDistance)
+        {
+            m_Monstate = MonsterState.CHASE;
+            m_Animator.SetBool("IsMove", true);
+
+        }
     }
 
     public void PatrolUpdate()
@@ -83,7 +97,6 @@ public class FoxMonster_A : Monster
             if (MoveRight)
             {
                 m_Rb.transform.position += Vector3.right * m_MoveSpeed * Time.deltaTime;
-
             }
             else
             {
@@ -103,7 +116,7 @@ public class FoxMonster_A : Monster
         if (m_CalcVec.magnitude <= m_ChaseDistance)
         {
             m_Monstate = MonsterState.CHASE;
-
+            m_Animator.SetBool("IsMove", true);
         }
     }
 
@@ -127,6 +140,7 @@ public class FoxMonster_A : Monster
         {
             m_Monstate = MonsterState.ATTACK;
             m_Animator.SetBool("CanAttack", true);
+            m_Animator.SetBool("IsMove", false);
         }
 
         if (m_ChaseDistance * 1.5f < m_CalcVec.magnitude)
@@ -137,9 +151,29 @@ public class FoxMonster_A : Monster
 
     public void AttackUpdate()
     {
+        ChangeRotate2();
+
         if (m_CalcVec.magnitude >= m_AttackDistance)
         {
             m_Animator.SetBool("CanAttack", false);
+            m_Animator.SetBool("IsMove", true);
+            m_Monstate = MonsterState.CHASE;
+        }
+
+        //공격기능
+        if(m_CurattackDelay >= 0.0f)
+        {
+            m_CurattackDelay -= Time.deltaTime;
+            if(m_CurattackDelay <= 0.0f)
+            {
+                m_CurattackDelay = m_AttackDelay;
+                GameObject marble = Instantiate(marblePrefab);
+                marble.transform.position = weaponPos.position;
+                marble.transform.eulerAngles = this.transform.eulerAngles;
+                marble.GetComponent<FoxMarble>().SetRightBool(MonRight);
+                m_Animator.SetTrigger("Attack");
+                Destroy(marble, 3.0f);
+            }
         }
     }
 

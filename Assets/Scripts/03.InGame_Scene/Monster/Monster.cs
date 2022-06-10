@@ -36,6 +36,7 @@ public class Monster : MonoBehaviour
     public float m_CurHP = 0;
     public float m_Atk   = 0;
     public float m_MoveSpeed = 0;
+    [HideInInspector] public bool MonRight;
 
     public float m_ChaseDistance = 0;
     public float m_AttackDistance = 0;
@@ -94,9 +95,15 @@ public class Monster : MonoBehaviour
     protected virtual void ChangeRotate2()
     {
         if (m_CalcVec.x < 0.0f)
+        {
             this.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+            MonRight = false;
+        }
         else
+        {
             this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+            MonRight = true;
+        }
     }
 
 
