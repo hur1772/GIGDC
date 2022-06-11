@@ -28,7 +28,7 @@ public class UIMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TakeDamage(0.01f);
+        TakeDamage(0.1f);
 
         //if (Input.GetKey(KeyCode.Alpha1) && UseItemCoolTime1 >= 5.0f)
         //{
@@ -86,10 +86,10 @@ public class UIMgr : MonoBehaviour
 
         if(m_CurHp <=0.0f)
         {
-            Debug.Log("»ç¸Á!!");
+            //Debug.Log("»ç¸Á!!");
             // PlayerDie();
 
-            Time.timeScale = 0.0f;
+            //Time.timeScale = 0.0f;
         }
         
     }

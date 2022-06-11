@@ -17,8 +17,7 @@ public class TutorialMgr : MonoBehaviour
     public static TutorialState m_TutorialState = TutorialState.NextStage;
 
     public GameObject ScarecrowPrefab = null;
-    public GameObject TargetPrefab = null;
-    public Text TutoGuidetext = null;
+    public GameObject TargetPrefab = null;    
     GameObject PrefabPos = null;
 
     [HideInInspector] public static int StageLv = 0;

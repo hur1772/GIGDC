@@ -9,7 +9,8 @@ public class Dialogue
     [TextArea]
     public string dialogue;
     public Sprite cg;
-    public Sprite PlayerCg;
+    public Sprite PlayerCg;    
+    public string name;
 }
 
 
@@ -18,10 +19,10 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite_StandingCG;
     [SerializeField] private SpriteRenderer Player_StandingCG;
     [SerializeField] private SpriteRenderer sprite_DialogBox;
-    [SerializeField] private Text TalkTxt;
-    //[SerializeField] private Text NPCLabelTxt;
+    [SerializeField] private Text TalkTxt;    
     [SerializeField] private Text InfoTxt;
     [SerializeField] private Text GuideTxt;
+    [SerializeField] private Text LabelTxt;
 
     //[SerializeField] private Button TalkBtn;
     private bool IsDialog = false;
@@ -51,7 +52,8 @@ public class NPCDialogue : MonoBehaviour
         TalkTxt.text = dialogue[count].dialogue;
         sprite_StandingCG.sprite = dialogue[count].cg;
         Player_StandingCG.sprite = dialogue[count].PlayerCg;
-    
+        LabelTxt.text = dialogue[count].name;
+        
         count++;
         if (Protal != null)
         {
@@ -70,6 +72,7 @@ public class NPCDialogue : MonoBehaviour
         sprite_DialogBox.gameObject.SetActive(a_flag);
         TalkTxt.gameObject.SetActive(a_flag);        
         InfoTxt.gameObject.SetActive(a_flag);
+        LabelTxt.gameObject.SetActive(a_flag);
         Player.SetActive(false);
         if (NPC != null)
         {
