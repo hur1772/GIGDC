@@ -21,7 +21,7 @@ public class FoxMonster_B : Monster
 
     private void Awake()
     {
-        marblePrefab = (GameObject)Resources.Load("FoxMarble");
+        marblePrefab = (GameObject)Resources.Load("FoxNiddle");
     }
 
     private void Start() => StartFunc();
@@ -174,13 +174,15 @@ public class FoxMonster_B : Monster
                 if (m_CurattackDelay <= 0.0f)
                 {
                     m_CurattackDelay = m_AttackDelay;
-                    GameObject marble = Instantiate(marblePrefab);
-                    marble.transform.position = weaponPos.position;
-                    marble.transform.eulerAngles = this.transform.eulerAngles;
-                    marble.GetComponent<FoxMarble>().SetRightBool(MonRight);
+                    GameObject niddle = Instantiate(marblePrefab);
+                    niddle.transform.position = weaponPos.position;
+                    Vector3 playerVec = m_Player.transform.position - this.transform.position;
+                    playerVec.y -= 2.0f;
+                    niddle.transform.eulerAngles = Quaternion.FromToRotation(Vector3.up, playerVec).eulerAngles;
+                    niddle.GetComponent<FoxNiddle>().NiddleInit(playerVec);
                     m_Animator.SetTrigger("Attack");
                     attackDealy_2 = 1.0f;
-                    Destroy(marble, 3.0f);
+                    Destroy(niddle, 3.0f);
                 }
             }
         }
