@@ -39,7 +39,7 @@ public class Interaction : MonoBehaviour
 
     public Image GKey;
 
-    public GameObject ShopPanel = null;
+    public GameObject UpGdPanel = null;
 
     private void Awake()
     {
@@ -78,10 +78,10 @@ public class Interaction : MonoBehaviour
             case InteractionState.Shop:
                 if (Input.GetKey(KeyCode.G))
                 {
-                    if (ShopPanel != null)
+                    if (UpGdPanel != null)
                     {
                         Time.timeScale = 0.0f;
-                        ShopPanel.SetActive(true);
+                        UpGdPanel.SetActive(true);
                     }
                 }
                 break;

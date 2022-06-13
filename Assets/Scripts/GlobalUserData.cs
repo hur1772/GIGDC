@@ -26,6 +26,7 @@ public class Item_Info  //각 Item 정보
     public int m_CurItemCount = 1;   //사용할 수 있는 스킬 카운트
     public string m_ItemExp = "";    //스킬 효과 설명
     public Sprite m_IconImg = null;   //캐릭터 아이템에 사용될 이미지
+    public Sprite m_ShopIconImg = null;
 
     public void SetType(ItemType a_CrType)
     {
@@ -40,6 +41,7 @@ public class Item_Info  //각 Item 정보
 
             m_ItemExp = "Hp 30% 회복";
             m_IconImg = Resources.Load("IconImg/탕약v2", typeof(Sprite)) as Sprite;
+            m_ShopIconImg = Resources.Load("탕약", typeof(Sprite)) as Sprite;
         }
         else if (a_CrType == ItemType.Item_1)
         {
@@ -51,6 +53,7 @@ public class Item_Info  //각 Item 정보
 
             m_ItemExp = "Hp 50% 회복";
             m_IconImg = Resources.Load("IconImg/고약", typeof(Sprite)) as Sprite;
+            m_ShopIconImg = Resources.Load("보약", typeof(Sprite)) as Sprite;
         }
         else if (a_CrType == ItemType.Item_2)
         {
@@ -98,6 +101,7 @@ public class Item_Info  //각 Item 정보
 
             m_ItemExp = "공격속도 +5";
             m_IconImg = Resources.Load("IconImg/추어탕v2", typeof(Sprite)) as Sprite;
+            m_ShopIconImg = Resources.Load("추어탕", typeof(Sprite)) as Sprite;
         }
 
         else if (a_CrType == ItemType.Item_6)
@@ -110,6 +114,7 @@ public class Item_Info  //각 Item 정보
 
             m_ItemExp = "치명타 데미지 + 5";
             m_IconImg = Resources.Load("IconImg/감자전v2", typeof(Sprite)) as Sprite;
+            m_ShopIconImg = Resources.Load("감자전", typeof(Sprite)) as Sprite;
         }
 
         else if (a_CrType == ItemType.Item_7)
@@ -122,9 +127,10 @@ public class Item_Info  //각 Item 정보
 
             m_ItemExp = "치명타 확률 + 10";
             m_IconImg = Resources.Load("IconImg/막걸리v2", typeof(Sprite)) as Sprite;
+            m_ShopIconImg = Resources.Load("막걸리", typeof(Sprite)) as Sprite;
         }
 
-        else if (a_CrType == ItemType.Item_7)
+        else if (a_CrType == ItemType.Item_8)
         {
             m_Name = "무기도감";
             m_IconSize.x = 1.0f;     //세로에 대한 가로 비율
@@ -151,7 +157,24 @@ public class GlobalUserData
     public static ulong UniqueCount = 0; //임시 Item 고유키 발급기...
                                          //public static List<ItemValue> g_ItemList = new List<ItemValue>();
 
-    void Start()
+    public static List<Item_Info> m_ItemDataList = new List<Item_Info>();
+
+    public static void InitData()
+    {
+        if (m_ItemDataList.Count <= 0)
+        {
+            Item_Info a_SkItemNd;
+            for (int ii = 0; ii < (int)ItemType.ItemCount; ii++)
+            {
+                a_SkItemNd = new Item_Info();
+                a_SkItemNd.SetType((ItemType)ii);
+                a_SkItemNd.m_CurItemCount = 0;
+                m_ItemDataList.Add(a_SkItemNd);
+            }
+        }
+    }
+
+        void Start()
     {
         Player_Att_State = PlayerAttackState.player_no_att;
     }
