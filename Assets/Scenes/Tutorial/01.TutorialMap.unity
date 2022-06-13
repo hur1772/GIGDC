@@ -9078,8 +9078,8 @@ MonoBehaviour:
     cg: {fileID: 0}
     PlayerCg: {fileID: 21300000, guid: 28e5d2840f34c364f801066eee7db382, type: 3}
     name: "\uC138\uC790"
-  - dialogue: "\uC774\uC81C \uB9C8\uC6B0\uC2A4 \uC624\uB978\uCABD\uC744 \uB20C\uB7EC
-      \uD65C\uC2DC\uC704\uB97C \uB2F9\uAE30\uC2DC\uACE0\r \n\uC67C\uCABD\uC744 \uB20C\uB7EC
+  - dialogue: "\uC774\uC81C \uD0A4\uBCF4\uB4DC 2\uBC88\uC744 \uB20C\uB7EC \uD65C\uB85C
+      \uBC14\uAFB8\uC2DC\uACE0\r \uB9C8\uC6B0\uC2A4\uC67C\uCABD\uC744 \uB20C\uB7EC
       \uD65C\uC744 \uC3D8\uC2ED\uC2DC\uC624.\n"
     cg: {fileID: 21300000, guid: 0ceef8ee82b686449907f8ba1cd38bb6, type: 3}
     PlayerCg: {fileID: 0}
@@ -9118,7 +9118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1495537866670715690, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1909947809118455920, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.x
