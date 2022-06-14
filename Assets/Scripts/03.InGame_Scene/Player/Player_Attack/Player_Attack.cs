@@ -9,12 +9,12 @@ public class Player_Attack : MonoBehaviour
     private Player_Input p_input;
     private Player_State_Ctrl Player_State;
     Animator animator;
-    private void Start() => StartFunc();
 
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
+    private void Start() => StartFunc();
     private void StartFunc()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -28,7 +28,6 @@ public class Player_Attack : MonoBehaviour
     }
 
     private void Update() => UpdateFunc();
-
     private void UpdateFunc()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
