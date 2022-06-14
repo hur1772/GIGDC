@@ -1288,8 +1288,8 @@ BoxCollider2D:
   m_Offset: {x: 0.009845734, y: 0.98749113}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 4.5776744, y: 2.4800003}
+    pivot: {x: 1, y: 0}
+    oldSize: {x: 4.1285715, y: 2.4908075}
     newSize: {x: 5.7220926, y: 3.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1335,6 +1335,7 @@ MonoBehaviour:
   m_CurHP: 0
   m_Atk: 0
   m_MoveSpeed: 1
+  MonRight: 0
   m_ChaseDistance: 8
   m_AttackDistance: 3.5
   m_Monstate: 0
@@ -3275,7 +3276,7 @@ MonoBehaviour:
   ShopDistance: 0
   PortalDistance: 5.1
   GKey: {fileID: 4109632169194301979}
-  ShopPanel: {fileID: 0}
+  UpGdPanel: {fileID: 0}
 --- !u!114 &4109632169579599380
 MonoBehaviour:
   m_ObjectHideFlags: 0

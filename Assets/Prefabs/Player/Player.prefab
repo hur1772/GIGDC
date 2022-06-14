@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb4e1b654159e1408e0495fa79b7f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 1909947809118455920}
   attackRange: 0.5
   enemyLayers:
     serializedVersion: 2
@@ -610,7 +610,7 @@ MonoBehaviour:
   ShopDistance: 0
   PortalDistance: 5.1
   GKey: {fileID: 4109632169165357571}
-  ShopPanel: {fileID: 0}
+  UpGdPanel: {fileID: 0}
 --- !u!114 &1495537866670715690
 MonoBehaviour:
   m_ObjectHideFlags: 0
