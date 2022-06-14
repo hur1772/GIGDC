@@ -88,9 +88,13 @@ public class Player_Attack : MonoBehaviour
         foreach (Collider2D collider in hitEnemies)
         {
             Debug.Log("hit");
-            if (collider.tag == "enemy")
+            if (collider.tag == "target")
             {
                 collider.GetComponent<TargetCtrl>().TakeDamage(50);
+            }
+            else if(collider.tag == "monster")
+            {
+                collider.GetComponent<Monster>().TakeDamage(10);
             }
         }
     }

@@ -127,7 +127,7 @@ public class Monster : MonoBehaviour
         m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
     }
 
-    protected virtual void TakeDamage(float a_Value)
+    public virtual void TakeDamage(float a_Value)
     {
         m_CurHP -= a_Value;
         if (m_CurHP <= 0)
