@@ -147,5 +147,18 @@ public class HumanManMonster : Monster
         }
     }
 
+    public void HumanManAttackEff()
+    {
 
+        Vector3 attackdir = attackPos.position - originPos;
+
+        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        if (attackhit)
+        {
+            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                playerTakeDmg.P_TakeDamage();
+            }
+        }
+    }
 }
