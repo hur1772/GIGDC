@@ -20,10 +20,10 @@ public class Player_TakeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            animator.SetTrigger("Hit");
-        }
+    }
 
+    public void P_TakeDamage()
+    {
+        animator.SetTrigger("Hit");
     }
 }
