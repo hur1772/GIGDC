@@ -146,4 +146,6 @@ public class HumanManMonster : Monster
             //아무것도 안할거
         }
     }
+
+
 }
