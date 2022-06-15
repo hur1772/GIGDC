@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MonAttackEff : MonoBehaviour
 {
+    Player_TakeDamage takedam;
+
 
     private void Start() => StartFunc();
 
@@ -29,7 +31,14 @@ public class MonAttackEff : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("플레이어 공격당함");
+            if (collision.gameObject.TryGetComponent(out takedam))
+            {
+
+            }
+            else
+                Debug.Log("플레이어 공격당함 / takedam 없음");
+
+
         }
     }
 }
