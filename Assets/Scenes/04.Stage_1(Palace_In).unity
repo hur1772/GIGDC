@@ -679,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8600818407166503474, guid: 2d96d99127993ba46ad4fb7cdb609c51, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8600818407166503474, guid: 2d96d99127993ba46ad4fb7cdb609c51, type: 3}
       propertyPath: m_LocalPosition.y
@@ -728,6 +728,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8600818407166503472, guid: 2d96d99127993ba46ad4fb7cdb609c51, type: 3}
   m_PrefabInstance: {fileID: 1061211885}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1061211897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061211886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0287ea344c73d243a65e585cbdca40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1065114434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,28 +1504,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1129197607}
     m_ColliderPaths:
-    - - X: 430000100
-        Y: -40000041
-      - X: 430000100
-        Y: -30000041
-      - X: 430000041
-        Y: -30000100
-      - X: -70000041
-        Y: -30000100
-      - X: -70000100
-        Y: -30000041
-      - X: -70000100
-        Y: -40000041
-      - X: -70000041
-        Y: -40000100
-      - X: 430000041
-        Y: -40000100
+    - - X: -70000000
+        Y: -40000000
+      - X: 430000000
+        Y: -40000000
+      - X: 430000000
+        Y: -30000000
+      - X: -70000000
+        Y: -30000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 42.999973, y: -4.00001}
-      - {x: 42.999973, y: -3.00001}
-      - {x: -7.0000095, y: -3.0000334}
-      - {x: -6.9999743, y: -4.00001}
+    - - {x: 42.999973, y: -4}
+      - {x: 42.999973, y: -3}
+      - {x: -7, y: -3.0000293}
+      - {x: -6.9999704, y: -4}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1129197609
@@ -1832,7 +1836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238737123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: -10}
+  m_LocalPosition: {x: 3.7, y: 2.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1847,12 +1851,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238737123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c491f70510fb64ebe5597499bc02fd, type: 3}
+  m_Script: {fileID: 11500000, guid: be41e8d7427612942a3257374b5bb675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1061211886}
-  moveSpeed: 0.9
-  z_move_speed: 2
+  moveSpeed: 2
+  z_move_speed: 0
 --- !u!1 &1538711318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,8 +2090,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924781450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.9944, y: 3.95, z: 0}
-  m_LocalScale: {x: 50, y: 15.9008, z: 1}
+  m_LocalPosition: {x: 17.9944, y: 4.0209, z: 0}
+  m_LocalScale: {x: 50, y: 16.042318, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
