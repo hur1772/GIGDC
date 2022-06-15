@@ -23,7 +23,7 @@ public class Item_Info  //각 Item 정보
     public Vector2 m_IconSize = Vector2.one;  //아이콘의 가로 사이즈, 세로 사이즈
     public int m_Price = 500;   //아이템 기본 가격 
     public string m_DropMobType = "Monster"; //드롭 몬스터 타입
-    public int m_CurItemCount = 1;   //사용할 수 있는 스킬 카운트
+    public int m_CurItemCount = 0;   //사용할 수 있는 스킬 카운트
     public string m_ItemExp = "";    //스킬 효과 설명
     public Sprite m_IconImg = null;   //캐릭터 아이템에 사용될 이미지
     public Sprite m_ShopIconImg = null;
@@ -98,6 +98,7 @@ public class Item_Info  //각 Item 정보
             m_IconSize.y = 1.0f;     //세로를 기준으로 잡을 것이기 때문에 그냥 1.0f
 
             m_Price = 2000; //기본가격
+            m_CurItemCount = 0;
 
             m_ItemExp = "공격속도 +5";
             m_IconImg = Resources.Load("IconImg/추어탕v2", typeof(Sprite)) as Sprite;
@@ -111,6 +112,7 @@ public class Item_Info  //각 Item 정보
             m_IconSize.y = 1.0f;     //세로를 기준으로 잡을 것이기 때문에 그냥 1.0f
 
             m_Price = 2000; //기본가격
+            m_CurItemCount = 0;
 
             m_ItemExp = "치명타 데미지 + 5";
             m_IconImg = Resources.Load("IconImg/감자전v2", typeof(Sprite)) as Sprite;
@@ -124,6 +126,7 @@ public class Item_Info  //각 Item 정보
             m_IconSize.y = 1.0f;     //세로를 기준으로 잡을 것이기 때문에 그냥 1.0f
 
             m_Price = 2000; //기본가격
+            m_CurItemCount = 0;
 
             m_ItemExp = "치명타 확률 + 10";
             m_IconImg = Resources.Load("IconImg/막걸리v2", typeof(Sprite)) as Sprite;
