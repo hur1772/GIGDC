@@ -16,6 +16,8 @@ public class UIMgr : MonoBehaviour
     float UseItemCoolTime2 = 5.0f;
     float UseItemCoolTime3 = 5.0f;
 
+    Player_TakeDamage pTakeDamage = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +25,13 @@ public class UIMgr : MonoBehaviour
         m_MaxHp = m_CurHp;
 
         Time.timeScale = 1.0f;
+        pTakeDamage = GetComponent<Player_TakeDamage>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        TakeDamage(0.1f);
+        //TakeDamage();
 
         //if (Input.GetKey(KeyCode.Alpha1) && UseItemCoolTime1 >= 5.0f)
         //{
@@ -73,20 +76,31 @@ public class UIMgr : MonoBehaviour
         //}
     }
 
+    public void OnCollisionEnter2D(Collision2D coll)
+    {
+        if(coll.gameObject.tag == "enemy")
+        {
+            pTakeDamage.P_TakeDamage();
+            TakeDamage(10.0f);
+        }
+    }
+
 
     public void TakeDamage(float a_val)
     {
         if (m_CurHp <= 0.0f)
             return;
-
+        if (pTakeDamage == null)
+            return;
+        
         m_CurHp -= a_val;
-
+        
         if (m_HpBar != null)
             m_HpBar.fillAmount = m_CurHp / m_MaxHp;
-
-        if(m_CurHp <=0.0f)
+        
+        if (m_CurHp <=0.0f)
         {
-            //Debug.Log("»ç¸Á!!");
+            Debug.Log("Die");
             // PlayerDie();
 
             //Time.timeScale = 0.0f;
