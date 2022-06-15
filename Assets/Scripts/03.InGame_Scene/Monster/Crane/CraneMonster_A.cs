@@ -45,7 +45,6 @@ public class CraneMonster_A : Monster
             if (effTimer <= 0.0f)
             {
                 attackEff.SetActive(false);
-                attackEff.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
     }
@@ -143,7 +142,6 @@ public class CraneMonster_A : Monster
     public void CraneAttEff()
     {
         attackEff.SetActive(true);
-        attackEff.GetComponent<BoxCollider2D>().enabled = true;
         effTimer = 0.2f;
     }
 }

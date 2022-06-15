@@ -31,14 +31,15 @@ public class MonAttackEff : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Hit");
             if (collision.gameObject.TryGetComponent(out takedam))
             {
-
+                takedam.P_TakeDamage();
             }
             else
                 Debug.Log("플레이어 공격당함 / takedam 없음");
-
-
         }
+        else
+            Debug.Log(collision.gameObject);
     }
 }
