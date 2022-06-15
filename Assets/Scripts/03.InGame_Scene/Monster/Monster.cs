@@ -48,6 +48,9 @@ public class Monster : MonoBehaviour
     protected RaycastHit2D attackhit;
     protected Player_TakeDamage playerTakeDmg;
     public LayerMask playerMask;
+    public Transform attackPos;
+    public Vector3 originPos;
+
 
     //private void Update()
     //{

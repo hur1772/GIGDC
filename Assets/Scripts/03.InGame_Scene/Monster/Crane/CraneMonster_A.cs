@@ -10,9 +10,7 @@ public class CraneMonster_A : Monster
     //공격 관련 변수
     public float m_AttackDelay = 1.5f;
 
-    public Transform attackPos;
     public GameObject attackEff;
-    Vector3 originPos;
 
     float effTimer = 0.3f;
 
