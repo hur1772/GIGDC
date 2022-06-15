@@ -10,7 +10,6 @@ public class CraneMonster_A : Monster
     //공격 관련 변수
     public float m_AttackDelay = 1.5f;
 
-    public Transform attackPos;
     public GameObject attackEff;
 
     float effTimer = 0.3f;
@@ -22,15 +21,19 @@ public class CraneMonster_A : Monster
         InitMonster();
         m_Monstate = MonsterState.PATROL;
 
-        attackEff = (GameObject)Resources.Load("CraneAttEff");
-        attackEff = Instantiate(attackEff, attackPos);
-        attackEff.SetActive(false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(originPos, (attackPos.position - originPos));
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
+
         CheckDistanceFromPlayer();
         MonUpdate();
         AttEffUpdate();
@@ -141,7 +144,16 @@ public class CraneMonster_A : Monster
 
     public void CraneAttEff()
     {
-        attackEff.SetActive(true);
-        effTimer = 0.2f;
+        Vector3 attackdir = attackPos.position - originPos;
+
+        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        if(attackhit)
+        {
+            if(attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                playerTakeDmg.P_TakeDamage();
+            }
+        }
+
     }
 }

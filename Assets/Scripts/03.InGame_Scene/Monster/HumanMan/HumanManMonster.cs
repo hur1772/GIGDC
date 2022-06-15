@@ -19,6 +19,9 @@ public class HumanManMonster : Monster
 
     private void UpdateFunc()
     {
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
+
+
         CheckDistanceFromPlayer();
         AiUpdate();
 
@@ -144,6 +147,21 @@ public class HumanManMonster : Monster
         else if(m_Monstate == MonsterState.CORPSE)
         {
             //아무것도 안할거
+        }
+    }
+
+    public void HumanManAttackEff()
+    {
+
+        Vector3 attackdir = attackPos.position - originPos;
+
+        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        if (attackhit)
+        {
+            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                playerTakeDmg.P_TakeDamage();
+            }
         }
     }
 }

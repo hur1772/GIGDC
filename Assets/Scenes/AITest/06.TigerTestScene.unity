@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 194913547}
   - component: {fileID: 194913546}
   - component: {fileID: 194913548}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Tigier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1289,7 +1289,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 4.1142855, y: 1.5173886}
+    oldSize: {x: 4.5776744, y: 2.4800003}
     newSize: {x: 5.7220926, y: 3.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1339,6 +1339,9 @@ MonoBehaviour:
   m_ChaseDistance: 8
   m_AttackDistance: 3.5
   m_Monstate: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
   m_AttackDelay: 1.5
   sprites:
   - {fileID: -4568249833774140809, guid: 20ada98e24dcab541ad7d3abb48a5878, type: 3}
