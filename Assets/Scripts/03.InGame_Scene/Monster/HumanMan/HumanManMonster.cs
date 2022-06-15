@@ -15,12 +15,16 @@ public class HumanManMonster : Monster
 
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(originPos, (attackPos.position - originPos));
+    }
+
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
         originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
-
 
         CheckDistanceFromPlayer();
         AiUpdate();

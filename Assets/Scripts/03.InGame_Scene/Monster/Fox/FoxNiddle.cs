@@ -12,6 +12,7 @@ public class FoxNiddle : MonoBehaviour
     Vector3 shootVec = Vector3.zero;
 
     SpriteRenderer _spriteRenderer;
+    Player_TakeDamage playerdmg;
 
     private void Start()
     {
@@ -40,8 +41,11 @@ public class FoxNiddle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.TryGetComponent(out playerdmg))
+        {
+            playerdmg.P_TakeDamage();
             Destroy(this.gameObject);
+        }
     }
 
 }

@@ -10,8 +10,6 @@ public class CraneMonster_A : Monster
     //공격 관련 변수
     public float m_AttackDelay = 1.5f;
 
-    public GameObject attackEff;
-
     float effTimer = 0.3f;
 
     private void Start() => StartFunc();
@@ -36,20 +34,6 @@ public class CraneMonster_A : Monster
 
         CheckDistanceFromPlayer();
         MonUpdate();
-        AttEffUpdate();
-
-    }
-
-    public void AttEffUpdate()
-    {
-        if (effTimer >= 0.0f)
-        {
-            effTimer -= Time.deltaTime;
-            if (effTimer <= 0.0f)
-            {
-                attackEff.SetActive(false);
-            }
-        }
     }
 
     public void MonUpdate()

@@ -53,10 +53,18 @@ public class TigerMonster : Monster
         spRend = GetComponent<SpriteRenderer>();
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(originPos, (attackPos.position - originPos));
+    }
+
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
+
+
         CheckDistanceFromPlayer();
         MonUpdate();
         SkillCoolUpdate();
@@ -360,5 +368,25 @@ public class TigerMonster : Monster
         spRend.sprite = sprites[0]; //대기모션
 
         m_Rb.gravityScale = 2.0f;
+    }
+
+    public void TigerAttack()
+    {
+        Vector3 attackdir = attackPos.position - originPos;
+
+        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        if (attackhit)
+        {
+            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                playerTakeDmg.P_TakeDamage();
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.TryGetComponent(out playerTakeDmg))
+            playerTakeDmg.P_TakeDamage();
     }
 }
