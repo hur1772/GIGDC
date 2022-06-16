@@ -216,12 +216,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 573022147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c491f70510fb64ebe5597499bc02fd, type: 3}
+  m_Script: {fileID: 11500000, guid: b69e5296227a92444bfb0c0de7fbc2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1505222933}
-  moveSpeed: 0.9
-  z_move_speed: 2
+  playerTransform: {fileID: 1505222944}
+  cameraPosition: {x: 0, y: 2, z: -10}
+  center: {x: 22.7, y: 2.32}
+  mapSize: {x: 41, y: 7.21}
+  cameraMoveSpeed: 4
 --- !u!1 &597471279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6541,6 +6543,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a1da603e8acef47b2cd6d9f51187c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1505222944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8600818407166503474, guid: 2d96d99127993ba46ad4fb7cdb609c51, type: 3}
+  m_PrefabInstance: {fileID: 1505222932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695444927
 GameObject:
   m_ObjectHideFlags: 0
