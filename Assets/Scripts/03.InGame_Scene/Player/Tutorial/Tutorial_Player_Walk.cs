@@ -23,7 +23,7 @@ public class Tutorial_Player_Walk : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        move_speed = 4.0f;
+        move_speed = 10.0f;
         crawl_speed = 2.5f;
     }
 

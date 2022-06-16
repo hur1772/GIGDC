@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 5814545156648553215}
   m_Layer: 6
   m_Name: ScarecrowObj
-  m_TagString: enemy
+  m_TagString: target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

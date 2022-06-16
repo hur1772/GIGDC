@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3027860340146256577}
   m_Layer: 6
   m_Name: TtargetObj
-  m_TagString: enemy
+  m_TagString: target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a798327cc497c94381d895e92f4033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   HpBar: {fileID: 3133440418896239212}
   ThisGameObject: {fileID: 0}
 --- !u!1 &3133440418896239210
