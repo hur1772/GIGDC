@@ -37,7 +37,7 @@ public class ItemStoreMgr : MonoBehaviour
             a_ItemObj.transform.SetParent(m_Item_ScrollContent.transform, false);
             // false  Prefab의 로컬 포지션을 유지하면서 추가해 주겠다는 뜻.
 
-            //RefreshCrItemList();
+            RefreshCrItemList();
         }//for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
          //----------------- 아이템 목록 추가
 
@@ -67,7 +67,9 @@ public class ItemStoreMgr : MonoBehaviour
 
             if (0 == GlobalUserData.m_ItemDataList[ii].m_CurItemCount) //구입상태
             {
-                m_CrNodeList[ii].SetState(ItemState.Active);
+                Debug.Log(ii + "액티브");
+                Debug.Log(m_CrNodeList[ii - 5] + "액티브");
+                m_CrNodeList[ii-5].SetState(ItemState.Active);
             }
             //else //if (GlobalUserData.m_ItemDataList[ii].m_Level <= 0)
 
@@ -81,15 +83,16 @@ public class ItemStoreMgr : MonoBehaviour
             //}
             else if (1 == GlobalUserData.m_ItemDataList[ii].m_CurItemCount)
             {
+                Debug.Log(ii + "Lock");
                 //전부 Lock 표시
-                m_CrNodeList[ii].SetState(ItemState.Lock);
+                m_CrNodeList[ii-5].SetState(ItemState.Lock);
             }
 
         }//for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
     }
     public void BuySkItem(ItemType a_ItemType)
     {//리스트뷰에 있는 캐릭터 가격버튼을 눌러 구입시도를 한 경우
-        Debug.Log("구매하다");
+        //Debug.Log(m_CrNodeList[5].m_ItemState);
         m_BuyCrType = a_ItemType;
         BuyBeforeJobCo();
     }
