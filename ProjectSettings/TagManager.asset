@@ -13,6 +13,7 @@ TagManager:
   - Target
   - EnemyWeapon
   - AllyBullet
+  - monster
   layers:
   - Default
   - TransparentFX
@@ -23,6 +24,7 @@ TagManager:
   - Target
   - Player
   - Monster
+  - obstacle
   - 
   - 
   - 
@@ -44,8 +46,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - MonBottom
   m_SortingLayers:
   - name: Default
     uniqueID: 0

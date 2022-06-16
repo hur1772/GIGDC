@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PigMonster : Monster
 {
+    enum ChargeSkill
+    {
+        CHARGE_BEFORE,
+        CHARGE,
+        CHARGE_AFTER
+    }    
 
     float m_DelayTime = 0.0f;
     bool m_IsRight = false;
@@ -12,6 +18,9 @@ public class PigMonster : Monster
     float m_SkillCoolTime = 0.0f;
     float m_SkillDelayTime = 0.5f;
     bool m_IsSkillOn = false;
+    Vector3 SkillPos = Vector3.zero;
+    bool goSkill = false;
+    ChargeSkill echargeSkill = ChargeSkill.CHARGE_BEFORE;
 
     bool m_SkillTriggerBool = true;
 
@@ -36,16 +45,11 @@ public class PigMonster : Monster
 
     private void Update()
     {
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
+
         CheckDistanceFromPlayer();
         MonAiUpdate();
-
         SkillCoolUpdate();
-
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            m_Animator.SetTrigger("SkillTrigger");
-            m_Monstate = MonsterState.SKILL;
-        }
     }
 
     void SkillCoolUpdate()
@@ -160,52 +164,29 @@ public class PigMonster : Monster
         }
         else if(m_Monstate == MonsterState.SKILL)
         {
-            if(m_SkillTriggerBool)
+            if(echargeSkill == ChargeSkill.CHARGE_BEFORE)
             {
-                if (m_CalcVec.x >= 0.1f)
-                {
-                    this.transform.rotation = Quaternion.Euler(0, 0, 0);
-                }
-                else if (m_CalcVec.x <= -0.1f)
-                {
-                    this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
-                }
-
-                m_Animator.SetTrigger("SkillTrigger");
-                m_SkillTriggerBool = false;
+                NewSkill();
             }
-
-            if (m_SkillDelayTime >= 0.0f)
+            else if(echargeSkill == ChargeSkill.CHARGE)
             {
-                m_SkillDelayTime -= Time.deltaTime;
-                if (m_SkillDelayTime <= 0.0f)
-                {
-                    if (m_CalcVec.x >= 0.1f)
-                    {
-                        Debug.Log("right");
-                        m_Rb.AddForce(Vector2.right * 500.0f);
-                    }
-                    else if (m_CalcVec.x <= -0.1f)
-                    {
-                        Debug.Log("left");
-                        m_Rb.AddForce(Vector2.left * 500.0f);
-                    }
-
-                    m_Monstate = MonsterState.IDLE;
-                    m_SkillDelayTime = 1.5f;
-                    m_SkillCoolTime = 5.0f;
-                    m_IsSkillOn = false;
-                    m_SkillTriggerBool = true;
-                    m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
-                }
+                Charge();
             }
             else
+            {
                 m_Monstate = MonsterState.IDLE;
-
-
+                m_IsSkillOn = false;
+                m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
+                m_SkillCoolTime = 5.0f;
+                m_SkillTriggerBool = true;
+                echargeSkill = ChargeSkill.CHARGE_BEFORE;
+            }
         }
         else if(m_Monstate == MonsterState.ATTACK)
         {
+            if (m_IsSkillOn)
+                m_Monstate = MonsterState.SKILL;
+
             if(m_CalcVec.magnitude >= m_AttackDistance)
             {
                 m_Monstate = MonsterState.CHASE;
@@ -215,4 +196,101 @@ public class PigMonster : Monster
         
     }
 
+    void OldSkill()
+    {
+        if (m_SkillTriggerBool)
+        {
+            if (m_CalcVec.x >= 0.1f)
+            {
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (m_CalcVec.x <= -0.1f)
+            {
+                this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+            }
+
+            m_Animator.SetTrigger("SkillTrigger");
+            m_SkillTriggerBool = false;
+        }
+
+        if (m_SkillDelayTime >= 0.0f)
+        {
+            m_SkillDelayTime -= Time.deltaTime;
+            if (m_SkillDelayTime <= 0.0f)
+            {
+                if (m_CalcVec.x >= 0.1f)
+                {
+                    Debug.Log("right");
+                    //m_Rb.AddForce(Vector2.right * 500.0f);
+                }
+                else if (m_CalcVec.x <= -0.1f)
+                {
+                    Debug.Log("left");
+                    //m_Rb.AddForce(Vector2.left * 500.0f);
+                }
+
+                m_Monstate = MonsterState.IDLE;
+                m_SkillDelayTime = 1.5f;
+                m_SkillCoolTime = 5.0f;
+                m_IsSkillOn = false;
+                m_SkillTriggerBool = true;
+                m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
+            }
+        }
+        else
+            m_Monstate = MonsterState.IDLE;
+    }
+
+    void NewSkill()
+    {
+        if (m_CalcVec.x >= 0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            SkillPos = this.transform.position + new Vector3(15.0f, 0, 0);
+        }
+        else if (m_CalcVec.x <= -0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+            SkillPos = this.transform.position + new Vector3(-15.0f, 0, 0);
+        }
+
+        if(m_SkillTriggerBool)
+        {
+            m_Animator.SetTrigger("SkillTrigger");
+            m_SkillTriggerBool = false;
+        }
+    }
+
+    public void GoCharge()
+    {
+        echargeSkill = ChargeSkill.CHARGE;
+
+        Debug.Log(SkillPos);
+    }
+
+    public void Charge()
+    {
+        Vector3 gopos = (SkillPos - this.transform.position);
+
+        this.transform.position += gopos.normalized * Time.deltaTime * m_MoveSpeed * 5;
+
+        if(gopos.magnitude <= 0.5f)
+        {
+            echargeSkill = ChargeSkill.CHARGE_AFTER;
+        }
+    }
+
+    void Attack()
+    {
+        Vector3 attackdir = attackPos.position - originPos;
+
+        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        if (attackhit)
+        {
+            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                playerTakeDmg.P_TakeDamage();
+            }
+        }
+    }
 }

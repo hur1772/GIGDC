@@ -138,6 +138,7 @@ public class Monster : MonoBehaviour
     public virtual void TakeDamage(float a_Value)
     {
         m_CurHP -= a_Value;
+        Debug.Log("몬스터피격");
         if (m_CurHP <= 0)
         {
             Die();
