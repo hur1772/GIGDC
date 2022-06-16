@@ -209,7 +209,6 @@ void Update()
             {
                 m_AttackCurVec = m_AttackVec - this.transform.position;
                 m_Rb.transform.position += m_AttackCurVec.normalized * m_FlySpeed * 8.0f * Time.deltaTime;
-                Debug.Log(m_AttackCurVec.magnitude);
                 if(m_AttackCurVec.magnitude <= 1.0f)
                 {
                     m_BodyAttackState = BodyAttack.ATTACK_AFTER;
@@ -236,5 +235,11 @@ void Update()
             m_IsRight = false;
             this.transform.rotation = Quaternion.Euler(0, 0.0f, 0);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out playerTakeDmg))
+            playerTakeDmg.P_TakeDamage();
     }
 }
