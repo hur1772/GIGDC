@@ -20,9 +20,9 @@ public class TutorialMap : MonoBehaviour
         {
             m_Pos.x = -8.4f;
         }
-        if (19.9f < tr.position.x)
+        if (24.5f < tr.position.x)
         {
-            m_Pos.x = 19.9f;
+            m_Pos.x = 24.5f;
         }
 
         tr.position = m_Pos;

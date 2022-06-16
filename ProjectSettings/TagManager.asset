@@ -10,10 +10,13 @@ TagManager:
   - 01.TutorialMap
   - 04.Stage_1(Palace_In)
   - enemy
-  - Target
   - EnemyWeapon
   - AllyBullet
+<<<<<<< HEAD
   - monster
+=======
+  - target
+>>>>>>> 1bc177ec36c82b208bd508c43a5837a4a97432c9
   layers:
   - Default
   - TransparentFX
