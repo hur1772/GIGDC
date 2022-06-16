@@ -150,7 +150,7 @@ public class Item_Info  //각 Item 정보
 
 public class GlobalUserData 
 {
-    public static int s_GoldCount = 0;
+    public static int s_GoldCount = 5000;
     public static int s_ItemCount = 0;
     public static string s_NickName = "User";
     public static int BowTier = 0;

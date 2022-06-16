@@ -37,11 +37,10 @@ public class ItemStoreMgr : MonoBehaviour
             a_ItemObj.transform.SetParent(m_Item_ScrollContent.transform, false);
             // false  Prefab의 로컬 포지션을 유지하면서 추가해 주겠다는 뜻.
 
-            RefreshCrItemList();
         }//for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
          //----------------- 아이템 목록 추가
 
-        //RefreshCrItemList();
+        RefreshCrItemList();
     } //void Start()
 
     // Update is called once per frame
@@ -58,18 +57,18 @@ public class ItemStoreMgr : MonoBehaviour
                 m_CrNodeList =
                     m_Item_ScrollContent.GetComponentsInChildren<ItemNoodCtrl>();
         }
-
         //int a_FindAv = -1;
-        for (int ii = 5; ii < 8; ii++)
+        for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count-6; ii++)
+        //for (int ii = 5; ii < 8; ii++)
         {
+            //Debug.Log(GlobalUserData.m_ItemDataList.Count);
             //if (m_CrNodeList[ii].m_ItemType != GlobalUserData.m_ItemDataList[ii].m_SkType)
             //    continue;
 
-            if (0 == GlobalUserData.m_ItemDataList[ii].m_CurItemCount) //구입상태
+            if (0 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount) //구입상태
             {
-                Debug.Log(ii + "액티브");
-                Debug.Log(m_CrNodeList[ii - 5] + "액티브");
-                m_CrNodeList[ii-5].SetState(ItemState.Active);
+                m_CrNodeList[ii].SetState(ItemState.Active);
+                Debug.Log("Active" + m_CrNodeList[ii].m_ItemType);
             }
             //else //if (GlobalUserData.m_ItemDataList[ii].m_Level <= 0)
 
@@ -81,11 +80,11 @@ public class ItemStoreMgr : MonoBehaviour
 
             //    a_FindAv = ii;
             //}
-            else if (1 == GlobalUserData.m_ItemDataList[ii].m_CurItemCount)
+            else if (1 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount)
             {
                 Debug.Log(ii + "Lock");
                 //전부 Lock 표시
-                m_CrNodeList[ii-5].SetState(ItemState.Lock);
+                m_CrNodeList[ii].SetState(ItemState.Lock);
             }
 
         }//for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
@@ -128,28 +127,31 @@ public class ItemStoreMgr : MonoBehaviour
         //    );
 
 
-        int a_GetValue = PlayerPrefs.GetInt("UserGold", 0);
-        if (a_GetValue != GlobalUserData.s_GoldCount)
-            isDifferent = true;
-        GlobalUserData.s_GoldCount = a_GetValue;
+        //int a_GetValue = PlayerPrefs.GetInt("UserGold", 0);
+        //if (a_GetValue != GlobalUserData.s_GoldCount)
+        //    isDifferent = true;
+        //GlobalUserData.s_GoldCount = a_GetValue;
 
-        string a_MkKey = "";
-        for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
-        {
-            a_MkKey = "ChrItem_" + ii.ToString();
-            a_GetValue = PlayerPrefs.GetInt(a_MkKey, 0);
-            if (a_GetValue != GlobalUserData.m_ItemDataList[ii].m_CurItemCount)
-                isDifferent = true;
-            GlobalUserData.m_ItemDataList[ii].m_CurItemCount = a_GetValue;
-        }
+        //string a_MkKey = "";
+        ////for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
+        //for (int ii = 5; ii < 8; ii++)
+        //{
+        //    a_MkKey = "ChrItem_" + ii.ToString();
+        //    a_GetValue = PlayerPrefs.GetInt(a_MkKey, 0);
+        //    if (a_GetValue != GlobalUserData.m_ItemDataList[ii].m_CurItemCount)
+        //        isDifferent = true;
+        //    GlobalUserData.m_ItemDataList[ii].m_CurItemCount = a_GetValue;
+        //}
 
         string a_Mess = "";
         ItemState a_ItemState = ItemState.Lock;
         bool a_NeedDelegate = false;
         Item_Info a_SkInfo = GlobalUserData.m_ItemDataList[(int)m_BuyCrType];
-        if (m_CrNodeList != null && (int)m_BuyCrType < m_CrNodeList.Length)
+        Debug.Log(m_CrNodeList.Length);
+        if (m_CrNodeList != null && ((int)m_BuyCrType)-5 < m_CrNodeList.Length)
         {
-            a_ItemState = m_CrNodeList[(int)m_BuyCrType].m_ItemState;
+            a_ItemState = m_CrNodeList[(int)m_BuyCrType-5].m_ItemState;
+            Debug.Log(a_ItemState);
         }
 
         if (a_ItemState == ItemState.Lock) //잠긴 상태
@@ -224,74 +226,72 @@ public class ItemStoreMgr : MonoBehaviour
 
         } ////for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
 
-        //if (a_BuyOK == true)
-        //    BuyRequestCo();
+        if (a_BuyOK == true)
+            BuyRequestCo();
 
     } //public void TryBuyCrItem()  //구매 2단계 함수 
 
-    //void BuyRequestCo() //구매 3단계 함수 (서버에 데이터 값 전달하기...)
-    //{
-    //    if (a_SetLevel.Count <= 0)
-    //        return;     //아이템 목록이 정상적으로 만들어지지 않았으면 리턴
+    void BuyRequestCo() //구매 3단계 함수 (서버에 데이터 값 전달하기...)
+    {
+        if (a_SetLevel.Count <= 0)
+            return;     //아이템 목록이 정상적으로 만들어지지 않았으면 리턴
 
-    //    //RefreshMyInfoCo();
+        RefreshMyInfoCo();
 
-    //    if (GlobalUserData.g_Unique_ID == "")
-    //        return;            //로그인 상태가 아니면 그냥 리턴
+        //if (GlobalUserData.g_Unique_ID == "")
+        //    return;            //로그인 상태가 아니면 그냥 리턴
 
-    //    Dictionary<string, string> a_ItemList = new Dictionary<string, string>();
-    //    string a_MkKey = "";
-    //    a_ItemList.Clear();
-    //    a_ItemList.Add("UserGold", m_SvMyGold.ToString());
-    //    //Dictionary 노드 추가 방법
-    //    for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
-    //    {
-    //        a_MkKey = "ChrItem_" + ii.ToString();
-    //        a_ItemList.Add(a_MkKey, a_SetLevel[ii].ToString());
-    //    }
+        Dictionary<string, string> a_ItemList = new Dictionary<string, string>();
+        string a_MkKey = "";
+        a_ItemList.Clear();
+        a_ItemList.Add("UserGold", m_SvMyGold.ToString());
+        //Dictionary 노드 추가 방법
+        for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
+        {
+            a_MkKey = "ChrItem_" + ii.ToString();
+            a_ItemList.Add(a_MkKey, a_SetLevel[ii].ToString());
+        }
 
-    //    var request = new UpdateUserDataRequest()
-    //    {
-    //        Data = a_ItemList
-    //    };
+        //var request = new UpdateUserDataRequest()
+        //{
+        //    Data = a_ItemList
+        //};
 
-    //    PlayFabClientAPI.UpdateUserData(request,
-    //            (result) =>
-    //            {
-    //                //매뉴상태를 갱신해 주어야 한다.
-    //                RefreshMyInfoCo();
-    //            },
-    //            (error) =>
-    //            {
-    //                //StatText.text = "데이터 저장 실패"; 
-    //            }
-    //         );
+        //PlayFabClientAPI.UpdateUserData(request,
+        //        (result) =>
+        //        {
+        //            //매뉴상태를 갱신해 주어야 한다.
+        //            RefreshMyInfoCo();
+        //        },
+        //        (error) =>
+        //        {
+        //            //StatText.text = "데이터 저장 실패"; 
+        //        }
+        //     );
 
-    //} //void BuyRequestCo() //구매 3단계 함수 (서버에 데이터 값 전달하기...)
+    } //void BuyRequestCo() //구매 3단계 함수 (서버에 데이터 값 전달하기...)
 
-    //void RefreshMyInfoCo() //구매 4단계 함수 (로컬의 변수, UI 값들을 갱신해 주기...)
-    //{
-    //    if (m_BuyCrType < SkillType.Skill_0 || SkillType.SkCount <= m_BuyCrType)
-    //        return;
+    void RefreshMyInfoCo() //구매 4단계 함수 (로컬의 변수, UI 값들을 갱신해 주기...)
+    {
+        if (m_BuyCrType < ItemType.Item_0 || ItemType.ItemCount <= m_BuyCrType)
+            return;
 
-    //    GlobalUserData.g_UserGold = m_SvMyGold;
-    //    GlobalUserData.m_ItemDataList[(int)m_BuyCrType].m_Level
-    //                                = a_SetLevel[(int)m_BuyCrType];
+        GlobalUserData.s_GoldCount = m_SvMyGold;
+        GlobalUserData.m_ItemDataList[(int)m_BuyCrType].m_CurItemCount
+                                    = a_SetLevel[(int)m_BuyCrType];
 
-    //    ////----로컬에 저장
-    //    //PlayerPrefs.SetInt("UserGold", GlobalUserData.g_UserGold);
-    //    //string a_MkKey = "";
-    //    //for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
-    //    //{
-    //    //    a_MkKey = "ChrItem_" + ii.ToString();
-    //    //    PlayerPrefs.SetInt(a_MkKey, GlobalUserData.m_ItemDataList[ii].m_Level);
-    //    //}
-    //    ////----로컬에 저장
+        ////----로컬에 저장
+        //PlayerPrefs.SetInt("UserGold", GlobalUserData.g_UserGold);
+        //string a_MkKey = "";
+        //for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
+        //{
+        //    a_MkKey = "ChrItem_" + ii.ToString();
+        //    PlayerPrefs.SetInt(a_MkKey, GlobalUserData.m_ItemDataList[ii].m_Level);
+        //}
+        ////----로컬에 저장
 
-    //    RefreshCrItemList();
-    //    m_UserInfoTxt.text = "별명(" + GlobalUserData.g_NickName
-    //                    + ") : 보유골드(" + GlobalUserData.g_UserGold + ")";
-    //}
+        RefreshCrItemList();
+    }
 
 
     ////void RefreshCrItemList()

@@ -59,9 +59,11 @@ public class ItemNoodCtrl : MonoBehaviour
         if (a_CrState == ItemState.Lock) //잠긴 상태
         {
             m_ItemIconImg.gameObject.SetActive(false);
+            Debug.Log(a_CrState + "Lock");
         }
         else if (a_CrState == ItemState.Active) //활성화 상태
         {
+            Debug.Log(a_CrState + "Active");
             m_ItemIconImg.gameObject.SetActive(true);
         }
     }
