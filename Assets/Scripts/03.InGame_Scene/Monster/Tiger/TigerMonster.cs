@@ -342,6 +342,9 @@ public class TigerMonster : Monster
 
     public void AttackUpdate()
     {
+        if (m_Animator.GetBool("CanAttack") == false)
+            m_Animator.SetBool("CanAttack", true);
+
         if (IsSkillOn)
         {
             RandSkillFunc();
@@ -354,6 +357,7 @@ public class TigerMonster : Monster
         {
             m_Animator.SetBool("CanAttack", false);
         }
+
     }
 
     public void BackStep()
@@ -388,5 +392,13 @@ public class TigerMonster : Monster
     {
         if(collision.TryGetComponent(out playerTakeDmg))
             playerTakeDmg.P_TakeDamage();
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+        m_Monstate = MonsterState.DIE;
+        m_Animator.SetBool("CanAttack", false);
+        m_Animator.SetTrigger("Die");
     }
 }

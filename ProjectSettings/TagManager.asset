@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AllyBullet
   layers:
   - Default
   - TransparentFX
@@ -11,6 +12,8 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
+  - Monster
   - 
   - 
   - 
@@ -34,9 +37,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Monster_Bottom
   m_SortingLayers:
   - name: Default
     uniqueID: 0

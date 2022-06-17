@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_RootOrder
@@ -2328,6 +2328,10 @@ PrefabInstance:
     - target: {fileID: 4527390684432505893, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
       propertyPath: m_Name
       value: HumanMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527390684432505893, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4527390684432505894, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
       propertyPath: m_RootOrder

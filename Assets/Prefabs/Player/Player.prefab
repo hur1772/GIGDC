@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 4109632169616997899}
   - component: {fileID: 1495537866670715690}
   - component: {fileID: 8471129730917706574}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ MonoBehaviour:
   attackRange: 0.5
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &4109632169616997899
 MonoBehaviour:
   m_ObjectHideFlags: 0
