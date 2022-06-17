@@ -393,12 +393,6 @@ public class TigerMonster : Monster
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.TryGetComponent(out playerTakeDmg))
-            playerTakeDmg.P_TakeDamage();
-    }
-
     protected override void Die()
     {
         base.Die();
@@ -412,6 +406,7 @@ public class TigerMonster : Monster
     {
         GameObject boss = Instantiate(bossPrefab);
         boss.transform.position = bossSpawnPos.transform.position;
+        boss.transform.eulerAngles = bossSpawnPos.eulerAngles;
         this.m_Animator.enabled = false;
         this.spRend.sprite = sprites[1];
     }
