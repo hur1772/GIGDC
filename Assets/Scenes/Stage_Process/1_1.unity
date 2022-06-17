@@ -87476,6 +87476,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1909947809118455920, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: attackPoint
       value: 

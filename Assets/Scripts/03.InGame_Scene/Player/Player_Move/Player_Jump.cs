@@ -23,7 +23,7 @@ public class Player_Jump : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        jump_power = 9.0f;
+        jump_power = 8.0f;
         isJumping = false;
     }
 
@@ -35,7 +35,6 @@ public class Player_Jump : MonoBehaviour
             if(isJumping == false)
             {
                 isJumping = true;
-                animator.SetBool("IsJump", true);
                 Player_state.p_state = PlayerState.player_move;
                 Player_state.p_Move_state = PlayerMoveState.player_jump;
                 P_Move_Jump();
@@ -64,6 +63,7 @@ public class Player_Jump : MonoBehaviour
 
     private void P_Move_Jump()
     {
+        animator.SetBool("IsJump", true);
         rigid.AddForce(transform.up* jump_power, ForceMode2D.Impulse);
 
     }
