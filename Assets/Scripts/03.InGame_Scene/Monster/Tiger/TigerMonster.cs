@@ -42,6 +42,11 @@ public class TigerMonster : Monster
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
 
+    //보스소환
+    [Header("--- Boss ---")]
+    public Transform bossSpawnPos;
+    public GameObject bossPrefab;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -401,5 +406,13 @@ public class TigerMonster : Monster
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
+    }
+
+    public void SpawnBoss()
+    {
+        GameObject boss = Instantiate(bossPrefab);
+        boss.transform.position = bossSpawnPos.transform.position;
+        this.m_Animator.enabled = false;
+        this.spRend.sprite = sprites[1];
     }
 }
