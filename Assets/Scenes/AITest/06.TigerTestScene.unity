@@ -2771,6 +2771,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3314670175295778700, guid: 39969ae1bcd72c94aa4ab32cb4079bbd, type: 3}
+      propertyPath: m_CurHP
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3314670175295778703, guid: 39969ae1bcd72c94aa4ab32cb4079bbd, type: 3}
       propertyPath: m_Name
       value: Tigier
