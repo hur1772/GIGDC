@@ -399,6 +399,7 @@ public class TigerMonster : Monster
         base.Die();
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
     }
 }
