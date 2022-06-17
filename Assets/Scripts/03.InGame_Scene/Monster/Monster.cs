@@ -132,7 +132,7 @@ public class Monster : MonoBehaviour
         m_CalcVec = m_Player.transform.position - this.transform.position;
         if (OnlyX)
             m_CalcVec.y = 0.0f;
-        //m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
+        m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
     }
 
     public virtual void TakeDamage(float a_Value)

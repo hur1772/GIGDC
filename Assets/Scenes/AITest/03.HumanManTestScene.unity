@@ -2325,6 +2325,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2776394921597652537, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
+      propertyPath: m_AttackDistance
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776394921597652537, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4527390684432505893, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
       propertyPath: m_Name
       value: HumanMan
@@ -2339,7 +2347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4527390684432505894, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.55
+      value: 10.88
       objectReference: {fileID: 0}
     - target: {fileID: 4527390684432505894, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
       propertyPath: m_LocalPosition.y

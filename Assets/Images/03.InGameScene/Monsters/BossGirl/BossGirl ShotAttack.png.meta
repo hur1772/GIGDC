@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 8a19e46b45322084a91ec55ff237a696
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7052743747621081246
+    second: BossGirl ShotAttack_0
+  - first:
+      213: 7715249761507069301
+    second: BossGirl ShotAttack_1
+  - first:
+      213: -3842947067104247451
+    second: BossGirl ShotAttack_2
+  - first:
+      213: -2385450563361997592
+    second: BossGirl ShotAttack_3
+  - first:
+      213: 915197583866969506
+    second: BossGirl ShotAttack_4
+  - first:
+      213: -5379388931665451843
+    second: BossGirl ShotAttack_5
+  - first:
+      213: -8985274908997005794
+    second: BossGirl ShotAttack_6
+  - first:
+      213: -961912959773552463
+    second: BossGirl ShotAttack_7
+  - first:
+      213: -1171292425595020503
+    second: BossGirl ShotAttack_8
+  - first:
+      213: -9110360821029332549
+    second: BossGirl ShotAttack_9
+  - first:
+      213: -3551411150834258170
+    second: BossGirl ShotAttack_10
+  - first:
+      213: -5521606501247191410
+    second: BossGirl ShotAttack_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +68,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +77,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +111,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_0
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 74
+        width: 439
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f2037bdee9f1e90800000000000000
+      internalID: -7052743747621081246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_1
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 74
+        width: 502
+        height: 1040
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57dcb0ce7c2121b60800000000000000
+      internalID: 7715249761507069301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_2
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 74
+        width: 479
+        height: 1040
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5614f96d00c1baac0800000000000000
+      internalID: -3842947067104247451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_3
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 74
+        width: 501
+        height: 1040
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec7d8de95d25eed0800000000000000
+      internalID: -2385450563361997592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_4
+      rect:
+        serializedVersion: 2
+        x: 4014
+        y: 74
+        width: 439
+        height: 1285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adbfa58a5f63bc00800000000000000
+      internalID: 915197583866969506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_5
+      rect:
+        serializedVersion: 2
+        x: 4961
+        y: 69
+        width: 559
+        height: 1370
+      alignment: 9
+      pivot: {x: 0.46, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4a96394429855b0800000000000000
+      internalID: -5379388931665451843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_6
+      rect:
+        serializedVersion: 2
+        x: 5845
+        y: 74
+        width: 764
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.28, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ec0088314ed4380800000000000000
+      internalID: -8985274908997005794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_7
+      rect:
+        serializedVersion: 2
+        x: 6831
+        y: 74
+        width: 605
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b05adf624996a2f0800000000000000
+      internalID: -961912959773552463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_8
+      rect:
+        serializedVersion: 2
+        x: 7778
+        y: 74
+        width: 536
+        height: 1028
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b9d44aebbbebfe0800000000000000
+      internalID: -1171292425595020503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_9
+      rect:
+        serializedVersion: 2
+        x: 8844
+        y: 74
+        width: 468
+        height: 1028
+      alignment: 9
+      pivot: {x: 0.47, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb919ee1a1f719180800000000000000
+      internalID: -9110360821029332549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_10
+      rect:
+        serializedVersion: 2
+        x: 9756
+        y: 74
+        width: 468
+        height: 1028
+      alignment: 9
+      pivot: {x: 0.46, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fa92fdf5ad6bec0800000000000000
+      internalID: -3551411150834258170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGirl ShotAttack_11
+      rect:
+        serializedVersion: 2
+        x: 10686
+        y: 74
+        width: 433
+        height: 1028
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e867caf44205f53b0800000000000000
+      internalID: -5521606501247191410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
