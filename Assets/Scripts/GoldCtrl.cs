@@ -16,4 +16,6 @@ public class GoldCtrl : MonoBehaviour
     {
          transform.Rotate(new Vector3(0.0f, 0.0f, m_Speed * Time.deltaTime));
     }
+
+
 }

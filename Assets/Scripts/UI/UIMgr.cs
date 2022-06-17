@@ -76,15 +76,30 @@ public class UIMgr : MonoBehaviour
         //}
     }
 
-    public void OnCollisionEnter2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D coll)
     {
         if(coll.gameObject.tag == "enemy")
         {
             pTakeDamage.P_TakeDamage();
             TakeDamage(10.0f);
         }
+
     }
 
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.name.Contains("Gold") == true)
+        {
+            AddGold();
+            Destroy(coll.gameObject);
+        }
+    }
+
+    public void AddGold(int a_Val = 100)
+    {
+        //GlobalUserData.s_GoldCount = GlobalUserData.s_GoldCount + a_Val;
+        //m_GoldTxt.text = "x " + GlobalUserData.s_GoldCount.ToString("N0");
+    }
 
     public void TakeDamage(float a_val)
     {
