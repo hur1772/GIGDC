@@ -23,7 +23,7 @@ public enum PlayerMoveState
     player_fall = 3,
     player_crawl = 4,
     player_climb = 5,
-    player_noMove =6
+    player_noMove =6,
 }
 
 public enum PlayerAttackState

@@ -11,6 +11,8 @@ public class Player_Jump : MonoBehaviour
 
     private float jump_power;
 
+    bool isJumping;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,8 @@ public class Player_Jump : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        jump_power = 350.0f;
+        jump_power = 9.0f;
+        isJumping = false;
     }
 
     // Update is called once per frame
@@ -29,15 +32,39 @@ public class Player_Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetTrigger("JumpTrigger");
-            Player_state.p_state = PlayerState.player_move;
-            Player_state.p_Move_state = PlayerMoveState.player_jump;
-            P_Move_Jump();
+            if(isJumping == false)
+            {
+                isJumping = true;
+                animator.SetBool("IsJump", true);
+                Player_state.p_state = PlayerState.player_move;
+                Player_state.p_Move_state = PlayerMoveState.player_jump;
+                P_Move_Jump();
+            }
+
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // Lending Platform
+        if (rigid.velocity.y < 0)
+        {
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0)); //에디터 상에서만 레이를 그려준다
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            if (rayHit.collider != null) // 바닥 감지를 위해서 레이저를 쏜다! 
+            {
+                if (rayHit.distance < 0.5f)
+                {
+                    animator.SetBool("IsJump", false);
+                    isJumping = false;
+                }
+            }
         }
     }
 
     private void P_Move_Jump()
     {
-        rigid.AddForce(transform.up* jump_power);
+        rigid.AddForce(transform.up* jump_power, ForceMode2D.Impulse);
+
     }
 }
