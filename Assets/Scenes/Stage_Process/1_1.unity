@@ -87105,11 +87105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.33
+      value: -3.45
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.05
+      value: -0.97
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -87150,6 +87150,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
   m_PrefabInstance: {fileID: 256958714}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &256958729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+  m_PrefabInstance: {fileID: 256958714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &256958730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256958715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2e33d8dca31fa45b5f6e182d21c1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &258670689
 GameObject:
   m_ObjectHideFlags: 0
@@ -93872,6 +93889,7 @@ GameObject:
   - component: {fileID: 1373125692}
   - component: {fileID: 1373125691}
   - component: {fileID: 1373125694}
+  - component: {fileID: 1373125695}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -93951,7 +93969,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373125690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35c491f70510fb64ebe5597499bc02fd, type: 3}
   m_Name: 
@@ -93959,6 +93977,23 @@ MonoBehaviour:
   target: {fileID: 256958715}
   moveSpeed: 0.9
   z_move_speed: 2
+--- !u!114 &1373125695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373125690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef79c530741999a499b150c909872bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 256958729}
+  cameraPosition: {x: 0, y: 4, z: -10}
+  center: {x: 226.7, y: 0.78}
+  mapSize: {x: 235, y: 10}
+  cameraMoveSpeed: 4
 --- !u!1 &1394224478
 GameObject:
   m_ObjectHideFlags: 0
