@@ -475,12 +475,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4109632169616997910}
   - component: {fileID: 4109632169616997905}
+  - component: {fileID: 9104536280481052224}
   - component: {fileID: 4109632169616997904}
   - component: {fileID: 4109632169616997907}
   - component: {fileID: 4109632169616997906}
-  - component: {fileID: 4109632169616997901}
   - component: {fileID: 4109632169616997900}
   - component: {fileID: 4109632169616997903}
+  - component: {fileID: 4109632169616997901}
   - component: {fileID: 4109632169616997902}
   - component: {fileID: 4109632169616997897}
   - component: {fileID: 4109632169616997896}
@@ -562,8 +563,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &4109632169616997904
-CapsuleCollider2D:
+--- !u!61 &9104536280481052224
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -575,8 +576,34 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.76, y: 5.3599997}
-  m_Size: {x: 4.69, y: 10.719999}
+  m_Offset: {x: -0.5, y: 0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 6.4776144, y: 10.72}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.8}
+  m_EdgeRadius: 0
+--- !u!70 &4109632169616997904
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109632169616997898}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.76, y: 5.5}
+  m_Size: {x: 4.69, y: 10}
   m_Direction: 0
 --- !u!50 &4109632169616997907
 Rigidbody2D:
@@ -618,21 +645,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4109632169616997901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4109632169616997898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3fbc2b988bfb0245a14d88e5b8bf795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move_speed: 0
-  crawl_speed: 0
-  key: 0
 --- !u!114 &4109632169616997900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +673,21 @@ MonoBehaviour:
   p_state: 0
   p_Move_state: 0
   p_Attack_state: 0
+--- !u!114 &4109632169616997901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109632169616997898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fbc2b988bfb0245a14d88e5b8bf795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move_speed: 0
+  crawl_speed: 0
+  key: 0
 --- !u!114 &4109632169616997902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +759,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4109632169616997898}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669816471d520ea4d8c5eecb36c2498f, type: 3}
   m_Name: 
