@@ -10,6 +10,7 @@ public class Player_Dash : MonoBehaviour
     Player_Walk p_walk;
     bool isDash;
     private float dash_speed;
+    private float dash_Cool;
     Animator animator;
 
     private float dash_time;
@@ -25,8 +26,9 @@ public class Player_Dash : MonoBehaviour
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
-        dash_speed = 300.0f;
+        dash_speed = 350.0f;
         dash_time = 0.4f;
+        dash_Cool = 2.0f;
     }
 
     // Update is called once per frame
@@ -37,13 +39,19 @@ public class Player_Dash : MonoBehaviour
             return;
         }
 
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            if (0.0f <= dash_Cool)
+                return;
+
+
             isDash = true;
             Player_state.p_state = PlayerState.player_move;
             Player_state.p_Move_state = PlayerMoveState.player_dash;
             dash_time = 0.4f;
             animator.SetBool("IsDash", true);
+            dash_Cool = 2.0f;
         }
         else
         {
@@ -51,6 +59,7 @@ public class Player_Dash : MonoBehaviour
             dash_time -= Time.deltaTime;
             animator.SetBool("IsDash", false);
             isDash = false;
+            dash_Cool -= Time.deltaTime;
         }
 
         if (0.0f < dash_time)
