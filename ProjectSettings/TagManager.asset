@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AllyBullet
   - EnemyWeapon
+  - Monster
   layers:
   - Default
   - TransparentFX

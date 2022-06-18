@@ -125,6 +125,8 @@ public class Monster : MonoBehaviour
 
         if (m_Rb == null)
             m_Rb = GetComponent<Rigidbody2D>();
+
+        m_CurHP = m_MaxHP;
     }
 
     protected virtual void CheckDistanceFromPlayer(bool OnlyX = false)
@@ -149,6 +151,7 @@ public class Monster : MonoBehaviour
     {
         m_CurHP = 0;
         Debug.Log("Die");
+        gameObject.SetActive(false);
     }
 
 }
