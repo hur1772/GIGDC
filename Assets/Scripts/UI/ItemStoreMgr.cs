@@ -68,7 +68,7 @@ public class ItemStoreMgr : MonoBehaviour
             if (0 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount) //구입상태
             {
                 m_CrNodeList[ii].SetState(ItemState.Active);
-                Debug.Log("Active" + m_CrNodeList[ii].m_ItemType);
+                //Debug.Log("Active" + m_CrNodeList[ii].m_ItemType);
             }
             //else //if (GlobalUserData.m_ItemDataList[ii].m_Level <= 0)
 
@@ -82,7 +82,7 @@ public class ItemStoreMgr : MonoBehaviour
             //}
             else if (1 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount)
             {
-                Debug.Log(ii + "Lock");
+                //Debug.Log(ii + "Lock");
                 //전부 Lock 표시
                 m_CrNodeList[ii].SetState(ItemState.Lock);
             }

@@ -38,6 +38,7 @@ public class Item_Info  //각 Item 정보
             m_IconSize.y = 1.0f;     //세로를 기준으로 잡을 것이기 때문에 그냥 1.0f = 103 픽셀
 
             m_Price = 500; //기본가격
+            m_CurItemCount = 0;
 
             m_ItemExp = "Hp 30% 회복";
             m_IconImg = Resources.Load("IconImg/탕약v2", typeof(Sprite)) as Sprite;
@@ -50,6 +51,7 @@ public class Item_Info  //각 Item 정보
             m_IconSize.y = 1.0f;     //세로를 기준으로 잡을 것이기 때문에 그냥 1.0f
 
             m_Price = 800; //기본가격
+            m_CurItemCount = 0;
 
             m_ItemExp = "Hp 50% 회복";
             m_IconImg = Resources.Load("IconImg/고약", typeof(Sprite)) as Sprite;
