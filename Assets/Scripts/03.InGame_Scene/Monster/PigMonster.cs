@@ -9,7 +9,7 @@ public class PigMonster : Monster
         CHARGE_BEFORE,
         CHARGE,
         CHARGE_AFTER
-    }    
+    }
 
     float m_DelayTime = 0.0f;
     bool m_IsRight = false;
