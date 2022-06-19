@@ -7,6 +7,7 @@ public class Player_Walk : MonoBehaviour
     private Rigidbody2D rigid;
     private Player_Input p_input;
     private Player_State_Ctrl Player_state;
+    private CapsuleCollider2D collider;
     Animator animator;
 
     public float move_speed;
@@ -20,11 +21,15 @@ public class Player_Walk : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         animator = GetComponent<Animator>();
+        collider = GetComponent<CapsuleCollider2D>();
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
+        Player_state.SwordTier = WeaponSwordTier.Sword_3Tier;
+        Player_state.BowTier = WeaponBowTier.Bow_3Tier;
+
         move_speed = 4.0f;
-        crawl_speed = 2.5f;
+        crawl_speed = 3.0f;
     }
 
     // Update is called once per frame
@@ -48,9 +53,13 @@ public class Player_Walk : MonoBehaviour
             Player_state.p_state = PlayerState.player_move;
             Player_state.p_Move_state = PlayerMoveState.player_crawl;
             P_Move_Crawl();
+            collider.offset = new Vector2(-0.8f, 3.0f);
+            collider.size = new Vector2(4.7f, 6.0f);
         }
         else
         {
+            collider.offset = new Vector2(-0.8f, 5.5f);
+            collider.size = new Vector2(4.7f, 10.0f);
             move_speed = 4.0f;
         }
     }
@@ -87,6 +96,8 @@ public class Player_Walk : MonoBehaviour
         if (Player_state.p_Move_state == PlayerMoveState.player_dash || Player_state.p_Move_state == PlayerMoveState.player_jump)
             return;
 
+        //offset 3으로
+        //size  6으로
         animator.SetBool("IsCrawl", true);
         move_speed = crawl_speed;
     }

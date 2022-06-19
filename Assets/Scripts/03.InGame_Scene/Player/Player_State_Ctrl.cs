@@ -49,6 +49,20 @@ public enum PlayerAttack2   //bow
     player_att1_skill3 = 4
 }
 
+public enum WeaponSwordTier
+{
+    Sword_1Tier,
+    Sword_2Tier,
+    Sword_3Tier
+}
+
+public enum WeaponBowTier
+{
+    Bow_1Tier,
+    Bow_2Tier,
+    Bow_3Tier
+}
+
 #endregion
 
 public class Player_State_Ctrl : MonoBehaviour
@@ -56,6 +70,8 @@ public class Player_State_Ctrl : MonoBehaviour
     public PlayerState p_state;
     public PlayerMoveState p_Move_state;
     public PlayerAttackState p_Attack_state;
+    public WeaponSwordTier SwordTier;
+    public WeaponBowTier BowTier;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +79,8 @@ public class Player_State_Ctrl : MonoBehaviour
         p_state = PlayerState.player_idle;
         p_Move_state = PlayerMoveState.player_noMove;
         p_Attack_state = PlayerAttackState.player_no_att;
+        SwordTier = WeaponSwordTier.Sword_3Tier;
+        BowTier = WeaponBowTier.Bow_3Tier;
     }
 
     // Update is called once per frame
