@@ -22,18 +22,14 @@ public class PigMonster : Monster
     bool goSkill = false;
     ChargeSkill echargeSkill = ChargeSkill.CHARGE_BEFORE;
 
+    public GameObject attackEff;
+
     bool m_SkillTriggerBool = true;
 
     private void Start()
     {
         m_MaxHP = 100;
         m_CurHP = m_MaxHP;
-
-        m_Atk = 5;
-        m_MoveSpeed = 4;
-
-        m_ChaseDistance = 7.0f;
-        m_AttackDistance = 3.0f;
 
         m_SkillCoolTime = 5.0f;
         m_SkillDelayTime = 1.5f;
@@ -45,7 +41,8 @@ public class PigMonster : Monster
 
     private void Update()
     {
-        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
+        if(attackPos != null)
+            originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
 
         CheckDistanceFromPlayer();
         MonAiUpdate();
@@ -150,12 +147,7 @@ public class PigMonster : Monster
                 this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
             }
 
-            if(m_CalcVec.magnitude >= m_ChaseDistance)
-            {
-                m_Monstate = MonsterState.IDLE;
-                m_Animator.SetBool("IsMove", false);
-            }
-            else if(m_CalcVec.magnitude <= m_AttackDistance)
+            if(m_CalcVec.magnitude <= m_AttackDistance)
             {
                 m_Monstate = MonsterState.ATTACK;
                 m_Animator.SetBool("IsAttack", true);
@@ -174,12 +166,21 @@ public class PigMonster : Monster
             }
             else
             {
-                m_Monstate = MonsterState.IDLE;
-                m_IsSkillOn = false;
-                m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
-                m_SkillCoolTime = 5.0f;
-                m_SkillTriggerBool = true;
-                echargeSkill = ChargeSkill.CHARGE_BEFORE;
+                if(m_SkillDelayTime >= 0.0f)
+                {
+                    m_SkillDelayTime -= Time.deltaTime;
+                    if(m_SkillDelayTime <= 0.0f)
+                    {
+                        m_Monstate = MonsterState.CHASE;
+                        m_Animator.SetBool("IsMove", true);
+                        m_IsSkillOn = false;
+                        m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
+                        m_SkillCoolTime = 5.0f;
+                        m_SkillTriggerBool = true;
+                        goSkill = false;
+                        echargeSkill = ChargeSkill.CHARGE_BEFORE;
+                    }
+                }
             }
         }
         else if(m_Monstate == MonsterState.ATTACK)
@@ -189,56 +190,10 @@ public class PigMonster : Monster
 
             if(m_CalcVec.magnitude >= m_AttackDistance)
             {
-                m_Monstate = MonsterState.CHASE;
                 m_Animator.SetBool("IsAttack", false);
             }
         }
         
-    }
-
-    void OldSkill()
-    {
-        if (m_SkillTriggerBool)
-        {
-            if (m_CalcVec.x >= 0.1f)
-            {
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else if (m_CalcVec.x <= -0.1f)
-            {
-                this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
-            }
-
-            m_Animator.SetTrigger("SkillTrigger");
-            m_SkillTriggerBool = false;
-        }
-
-        if (m_SkillDelayTime >= 0.0f)
-        {
-            m_SkillDelayTime -= Time.deltaTime;
-            if (m_SkillDelayTime <= 0.0f)
-            {
-                if (m_CalcVec.x >= 0.1f)
-                {
-                    Debug.Log("right");
-                    //m_Rb.AddForce(Vector2.right * 500.0f);
-                }
-                else if (m_CalcVec.x <= -0.1f)
-                {
-                    Debug.Log("left");
-                    //m_Rb.AddForce(Vector2.left * 500.0f);
-                }
-
-                m_Monstate = MonsterState.IDLE;
-                m_SkillDelayTime = 1.5f;
-                m_SkillCoolTime = 5.0f;
-                m_IsSkillOn = false;
-                m_SkillTriggerBool = true;
-                m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
-            }
-        }
-        else
-            m_Monstate = MonsterState.IDLE;
     }
 
     void NewSkill()
@@ -246,12 +201,12 @@ public class PigMonster : Monster
         if (m_CalcVec.x >= 0.1f)
         {
             this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            SkillPos = this.transform.position + new Vector3(15.0f, 0, 0);
+            SkillPos = this.transform.position + new Vector3(8.0f, 0, 0);
         }
         else if (m_CalcVec.x <= -0.1f)
         {
             this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
-            SkillPos = this.transform.position + new Vector3(-15.0f, 0, 0);
+            SkillPos = this.transform.position + new Vector3(-8.0f, 0, 0);
         }
 
         if(m_SkillTriggerBool)
@@ -264,18 +219,21 @@ public class PigMonster : Monster
     public void GoCharge()
     {
         echargeSkill = ChargeSkill.CHARGE;
-
         Debug.Log(SkillPos);
+        goSkill = true;
     }
 
     public void Charge()
     {
         Vector3 gopos = (SkillPos - this.transform.position);
 
-        this.transform.position += gopos.normalized * Time.deltaTime * m_MoveSpeed * 5;
+        m_Rb.transform.position += gopos.normalized * Time.deltaTime * m_MoveSpeed * 2;
 
         if(gopos.magnitude <= 0.5f)
         {
+            m_SkillDelayTime = 1.5f;
+            m_Animator.SetBool("IsMove", false);
+            m_Animator.SetBool("IsAttack", false);
             echargeSkill = ChargeSkill.CHARGE_AFTER;
         }
     }
@@ -291,6 +249,30 @@ public class PigMonster : Monster
             {
                 playerTakeDmg.P_TakeDamage();
             }
+        }
+    }
+
+    void SpawnEff()
+    {
+        GameObject eff = Instantiate(attackEff);
+
+        Vector3 spawnPos = attackPos.position;
+        spawnPos.y = this.transform.position.y;
+        eff.transform.position = spawnPos;
+        eff.transform.eulerAngles = attackPos.eulerAngles;
+
+        Destroy(eff, 0.2f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!goSkill)
+            return;
+
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            if(collision.gameObject.TryGetComponent(out playerTakeDmg))
+                playerTakeDmg.P_TakeDamage();
         }
     }
 }
