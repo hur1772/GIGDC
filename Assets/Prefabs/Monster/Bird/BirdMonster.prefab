@@ -16,7 +16,11 @@ GameObject:
   - component: {fileID: 4926890595061099000}
   m_Layer: 7
   m_Name: BirdMonster
+<<<<<<< HEAD:Assets/Prefabs/Monster/Bird/BirdMonster.prefab
   m_TagString: Monster
+=======
+  m_TagString: enemy
+>>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/BirdMonster.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +168,11 @@ MonoBehaviour:
   m_Monstate: 0
   playerMask:
     serializedVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Monster/Bird/BirdMonster.prefab
     m_Bits: 64
+=======
+    m_Bits: 0
+>>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/BirdMonster.prefab
   attackPos: {fileID: 0}
   originPos: {x: 0, y: 0, z: 0}
   m_FindDist: 5
@@ -174,8 +182,12 @@ MonoBehaviour:
   m_ChaseDelay: 2
   m_ChaseVec: {x: 0, y: 0, z: 0}
   m_BodyAttackState: 0
+<<<<<<< HEAD:Assets/Prefabs/Monster/Bird/BirdMonster.prefab
   m_AttackImgs:
   - {fileID: 5866787550848399400, guid: 8d848a13be339f24bb7f802d96b782af, type: 3}
   - {fileID: -2287021499012003856, guid: 8d848a13be339f24bb7f802d96b782af, type: 3}
   - {fileID: -1710651063068769449, guid: 8d848a13be339f24bb7f802d96b782af, type: 3}
+=======
+  m_AttackImgs: []
+>>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/BirdMonster.prefab
   m_FlyMonState: 0
