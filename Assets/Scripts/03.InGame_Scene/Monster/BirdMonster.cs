@@ -18,7 +18,8 @@ public class BirdMonster : Monster
     bool m_IsFind = false;  //플레이어 탐지
     float m_IdleTimer = 5.0f;   // Idle 상태로 돌아가기 위한 시간
     public float m_FindDist = 5.0f;
-    bool IsRight = false;   //방향 확인용 변수
+    bool IsRight = false;   //방향 확인용 변수'
+    bool isAttack = false; // 공격중인지?
 
     //날기 벡터 계산
     Vector2 m_FirstVec = Vector2.zero;
@@ -185,7 +186,7 @@ void Update()
             if(m_BodyAttackState == BodyAttack.ATTACK_BEFORE)
             {
                 m_SpRenderer.sprite = m_AttackImgs[0];
-
+                isAttack = true;
                 if(m_AttackDelay >= 0.0f)
                 {
                     if(m_IsRight)
@@ -218,6 +219,7 @@ void Update()
             {
                 m_Animator.enabled = true;
                 m_FlyMonState = FlyMonsterState.FLY;
+                isAttack = false;
                 m_AttackDelay = 5.0f;
             }
         }
@@ -239,6 +241,9 @@ void Update()
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isAttack)
+            return;
+
         if (collision.TryGetComponent(out playerTakeDmg))
             playerTakeDmg.P_TakeDamage();
     }

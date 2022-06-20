@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2596255402657652700
+--- !u!1 &1142941397637392019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2596255402657652707}
-  - component: {fileID: 2596255402657652706}
-  - component: {fileID: 2596255402657652701}
-  - component: {fileID: 2596255402657652704}
-  - component: {fileID: 2596255402657652710}
-  - component: {fileID: 2596255402657652705}
-  m_Layer: 0
-  m_Name: Pig Idle_0.3(B)_0
-  m_TagString: Untagged
+  - component: {fileID: 1142941397637392021}
+  - component: {fileID: 1142941397637392018}
+  - component: {fileID: 1142941397637392020}
+  - component: {fileID: 1142941397637392023}
+  - component: {fileID: 1142941397637392105}
+  - component: {fileID: 1142941397637392022}
+  m_Layer: 7
+  m_Name: Bird(B) Monster
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2596255402657652707
+--- !u!4 &1142941397637392021
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596255402657652700}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.92, y: -4.08, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_GameObject: {fileID: 1142941397637392019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.55, y: -3.87, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!212 &2596255402657652706
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1142941397637392018
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596255402657652700}
+  m_GameObject: {fileID: 1142941397637392019}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,28 +75,28 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7965396206947486964, guid: c2007fa848f03b14f90558a857998de0, type: 3}
+  m_Sprite: {fileID: 1650875088445039163, guid: 6f26c3ae7d808424588f2971673a4044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.8999999, y: 2.366226}
+  m_Size: {x: 3.13, y: 2.1621094}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2596255402657652701
+--- !u!95 &1142941397637392020
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596255402657652700}
+  m_GameObject: {fileID: 1142941397637392019}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d84be1498f0739140be96d082864ee2b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 36593e246fa226848aef3d627b6fe04a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,27 +105,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2596255402657652704
+--- !u!114 &1142941397637392023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596255402657652700}
+  m_GameObject: {fileID: 1142941397637392019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48415567ee433384285ddbe2bb2a9fb2, type: 3}
+  m_Script: {fileID: 11500000, guid: f289533e0f1d0984fac372a1d755e0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MaxHP: 0
+  m_CurHP: 0
+  m_Atk: 0
+  m_MoveSpeed: 0
+  MonRight: 0
+  m_ChaseDistance: 0
+  m_AttackDistance: 0
   m_Monstate: 0
---- !u!50 &2596255402657652710
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  attackPos: {fileID: 0}
+  originPos: {x: 0, y: 0, z: 0}
+  m_FindDist: 5
+  m_FlyHeight: 4.3
+  m_FlySpeed: 4
+  m_IdleDistance: 10
+  m_ChaseDelay: 1.2
+  m_ChaseVec: {x: 0, y: 0, z: 0}
+  m_BodyAttackState: 0
+  m_AttackImgs:
+  - {fileID: -1398370881238174757, guid: 543c67139b4712746a6dbad3e6eae5a7, type: 3}
+  - {fileID: 7975777621057875960, guid: 543c67139b4712746a6dbad3e6eae5a7, type: 3}
+  - {fileID: -3187497326729271426, guid: 543c67139b4712746a6dbad3e6eae5a7, type: 3}
+  m_FlyMonState: 0
+--- !u!50 &1142941397637392105
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596255402657652700}
+  m_GameObject: {fileID: 1142941397637392019}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -133,35 +157,25 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &2596255402657652705
-BoxCollider2D:
+--- !u!58 &1142941397637392022
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596255402657652700}
+  m_GameObject: {fileID: 1142941397637392019}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.183113}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 3.8999999, y: 2.366226}
-    newSize: {x: 3.8999999, y: 2.366226}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.19119787, y: 1.2335656}
   serializedVersion: 2
-  m_Size: {x: 3.8999999, y: 2.366226}
-  m_EdgeRadius: 0
+  m_Radius: 0.8641226
