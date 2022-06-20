@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 30ba38562260ebc4cafc4c32be12b431
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -442237634437572628
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_0"
+  - first:
+      213: 9134098159380126185
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_1"
+  - first:
+      213: 8057088485892643628
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_2"
+  - first:
+      213: -5726036005093079023
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_3"
+  - first:
+      213: -3815967028424901257
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_4"
+  - first:
+      213: -4801566728008078084
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_5"
+  - first:
+      213: -7759937541579510197
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_6"
+  - first:
+      213: 5188000047716667509
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_7"
+  - first:
+      213: 3205797748401080553
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_8"
+  - first:
+      213: -8107079910285313553
+    second: "walk bow 3\uB2E8\uACC4 v.1.1_9"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +71,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +105,231 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 748
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce71a0de63bdcd9f0800000000000000
+      internalID: -442237634437572628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_1"
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 0
+        width: 812
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.68, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9d665a1e5d2ce70800000000000000
+      internalID: 9134098159380126185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_2"
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 0
+        width: 873
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.68, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b55852a4780df60800000000000000
+      internalID: 8057088485892643628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_3"
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 0
+        width: 936
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118845957980980b0800000000000000
+      internalID: -5726036005093079023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_4"
+      rect:
+        serializedVersion: 2
+        x: 3701
+        y: 0
+        width: 931
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.63, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d712c9436fa0bc0800000000000000
+      internalID: -3815967028424901257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_5"
+      rect:
+        serializedVersion: 2
+        x: 4628
+        y: 0
+        width: 845
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.62, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc6ebb20886d5db0800000000000000
+      internalID: -4801566728008078084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_6"
+      rect:
+        serializedVersion: 2
+        x: 5550
+        y: 0
+        width: 769
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e6fea7be92f4490800000000000000
+      internalID: -7759937541579510197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_7"
+      rect:
+        serializedVersion: 2
+        x: 6472
+        y: 0
+        width: 723
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5709cd26e8a7ff740800000000000000
+      internalID: 5188000047716667509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_8"
+      rect:
+        serializedVersion: 2
+        x: 7404
+        y: 0
+        width: 723
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8813f21184d7c20800000000000000
+      internalID: 3205797748401080553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "walk bow 3\uB2E8\uACC4 v.1.1_9"
+      rect:
+        serializedVersion: 2
+        x: 8331
+        y: 0
+        width: 929
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9fcb556cddd7f80800000000000000
+      internalID: -8107079910285313553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

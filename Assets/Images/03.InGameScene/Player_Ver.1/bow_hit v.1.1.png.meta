@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: fba94b1ca1ae0e84ca4a66de4876b2b8
+guid: 5f9a65f0322fbf54bb51f58263eeb7c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1366958520894836970
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_0"
+      213: -3860440298641194510
+    second: hit v.1.1_0
   - first:
-      213: -5221365781974554544
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_1"
+      213: 638815865015470541
+    second: hit v.1.1_3
   - first:
-      213: 8238797742717629152
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_2"
+      213: -1513953754654810323
+    second: hit v.1.1_4
   - first:
-      213: -6810403215219350119
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_3"
-  - first:
-      213: 4318174397753961972
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_4"
-  - first:
-      213: 1069848772085139531
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_5"
-  - first:
-      213: 7156237732246328162
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_6"
-  - first:
-      213: 5787804438293524108
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_7"
-  - first:
-      213: 6346592123662459998
-    second: "jump bow 3\uB2E8\uACC4 v.1.1_8"
+      213: -3549411147674624958
+    second: hit v.1.1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,127 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "jump bow 3\uB2E8\uACC4 v.1.1_0"
+      name: hit v.1.1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 770
+        width: 710
         height: 1080
-      alignment: 9
-      pivot: {x: 0.8, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae051a4488968f210800000000000000
-      internalID: 1366958520894836970
+      spriteID: 2f183ea7006fc6ac0800000000000000
+      internalID: -3860440298641194510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "jump bow 3\uB2E8\uACC4 v.1.1_1"
+      name: hit v.1.1_3
       rect:
         serializedVersion: 2
-        x: 793
+        x: 798
         y: 0
-        width: 717
+        width: 746
         height: 1080
-      alignment: 9
-      pivot: {x: 0.75, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 058e60b3c7bf987b0800000000000000
-      internalID: -5221365781974554544
+      spriteID: dc9812705a78dd800800000000000000
+      internalID: 638815865015470541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "jump bow 3\uB2E8\uACC4 v.1.1_2"
+      name: hit v.1.1_4
       rect:
         serializedVersion: 2
-        x: 1590
+        x: 1603
         y: 0
-        width: 796
+        width: 682
         height: 1080
-      alignment: 9
-      pivot: {x: 0.75, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e279fe55e6165270800000000000000
-      internalID: 8238797742717629152
+      spriteID: d2f5e67d41b5dfae0800000000000000
+      internalID: -1513953754654810323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "jump bow 3\uB2E8\uACC4 v.1.1_3"
+      name: hit v.1.1_5
       rect:
         serializedVersion: 2
-        x: 2382
+        x: 2404
         y: 0
-        width: 796
+        width: 804
         height: 1080
-      alignment: 9
-      pivot: {x: 0.75, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9952cabdb569c71a0800000000000000
-      internalID: -6810403215219350119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "jump bow 3\uB2E8\uACC4 v.1.1_4"
-      rect:
-        serializedVersion: 2
-        x: 3178
-        y: 0
-        width: 794
-        height: 1080
-      alignment: 9
-      pivot: {x: 0.7, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fdaf407cbc3deb30800000000000000
-      internalID: 4318174397753961972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "jump bow 3\uB2E8\uACC4 v.1.1_5"
-      rect:
-        serializedVersion: 2
-        x: 3972
-        y: 0
-        width: 798
-        height: 1080
-      alignment: 9
-      pivot: {x: 0.75, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b48c5873acdd8de00800000000000000
-      internalID: 1069848772085139531
+      spriteID: 24cda05ed55fdbec0800000000000000
+      internalID: -3549411147674624958
       vertices: []
       indices: 
       edges: []

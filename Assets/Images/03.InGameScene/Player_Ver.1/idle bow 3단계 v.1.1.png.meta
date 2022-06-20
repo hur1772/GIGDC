@@ -125,8 +125,8 @@ TextureImporter:
         y: 0
         width: 725
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,8 +146,8 @@ TextureImporter:
         y: 0
         width: 744
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,8 +167,8 @@ TextureImporter:
         y: 0
         width: 734
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,27 +181,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "idle bow 3\uB2E8\uACC4 v.1.1_3"
-      rect:
-        serializedVersion: 2
-        x: 2211
-        y: 478
-        width: 10
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3ef2d49b082e3af0800000000000000
-      internalID: -414850085464900035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "idle bow 3\uB2E8\uACC4 v.1.1_4"
       rect:
         serializedVersion: 2
@@ -209,8 +188,8 @@ TextureImporter:
         y: 0
         width: 733
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,8 +209,8 @@ TextureImporter:
         y: 0
         width: 733
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,27 +223,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "idle bow 3\uB2E8\uACC4 v.1.1_6"
-      rect:
-        serializedVersion: 2
-        x: 3690
-        y: 478
-        width: 11
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34a98ced418936cf0800000000000000
-      internalID: -260197138052900285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "idle bow 3\uB2E8\uACC4 v.1.1_7"
       rect:
         serializedVersion: 2
@@ -272,8 +230,8 @@ TextureImporter:
         y: 0
         width: 743
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,8 +251,8 @@ TextureImporter:
         y: 0
         width: 742
         height: 1070
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
