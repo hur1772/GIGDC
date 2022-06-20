@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 260298716736504483}
   m_Layer: 8
   m_Name: Fox_A
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,6 +156,11 @@ MonoBehaviour:
   m_ChaseDistance: 15
   m_AttackDistance: 8
   m_Monstate: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  attackPos: {fileID: 0}
+  originPos: {x: 0, y: 0, z: 0}
   m_AttackDelay: 2
   weaponPos: {fileID: 260298715897406153}
   attackDealy_2: 1

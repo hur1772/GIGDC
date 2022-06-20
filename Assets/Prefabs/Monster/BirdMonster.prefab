@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4249599871318713091}
   m_Layer: 0
   m_Name: BirdMonster
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,10 +154,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f289533e0f1d0984fac372a1d755e0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MaxHP: 0
+  m_CurHP: 0
+  m_Atk: 0
+  m_MoveSpeed: 0
+  MonRight: 0
+  m_ChaseDistance: 0
+  m_AttackDistance: 0
+  m_Monstate: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  attackPos: {fileID: 0}
+  originPos: {x: 0, y: 0, z: 0}
   m_FindDist: 5
   m_FlyHeight: 4.3
   m_FlySpeed: 3
   m_IdleDistance: 10
   m_ChaseDelay: 2
   m_ChaseVec: {x: 0, y: 0, z: 0}
+  m_BodyAttackState: 0
+  m_AttackImgs: []
   m_FlyMonState: 0
