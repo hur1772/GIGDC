@@ -19,6 +19,8 @@ public class ItemStoreMgr : MonoBehaviour
     int m_SvMyGold = 0;  //서버에 전달하려고 하는 차감된 내 골드가 얼마인지?
     //-- 지금 뭘 구입하려고 시도한 건지?
 
+    public Text GoldTxt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,8 @@ public class ItemStoreMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GoldTxt != null)
+            GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
     void RefreshCrItemList()

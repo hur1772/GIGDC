@@ -10,6 +10,8 @@ public class UIMgr : MonoBehaviour
     public Image UseItemImg2 = null;
     public Image UseItemImg3 = null;
 
+    public Text GoldTxt;
+
     float m_CurHp;
     float m_MaxHp;
     float UseItemCoolTime1 = 5.0f;
@@ -26,6 +28,8 @@ public class UIMgr : MonoBehaviour
 
         Time.timeScale = 1.0f;
         pTakeDamage = GetComponent<Player_TakeDamage>();
+        if (GoldTxt != null)
+            GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
     // Update is called once per frame
@@ -74,6 +78,9 @@ public class UIMgr : MonoBehaviour
         //    UseItemCoolTime3 += Time.deltaTime;
         //    UseItemImg3.fillAmount = UseItemCoolTime3 / 5;
         //}
+
+        if (GoldTxt != null)
+            GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D coll)

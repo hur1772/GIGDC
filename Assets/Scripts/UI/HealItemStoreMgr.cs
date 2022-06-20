@@ -17,6 +17,8 @@ public class HealItemStoreMgr : MonoBehaviour
     ItemType m_BuyCrType;
     int m_SvMyGold = 0;  //서버에 전달하려고 하는 차감된 내 골드가 얼마인지?
 
+    public Text GoldTxt;
+
     int m_CurNum;
     int m_InitNum;
     //-- 지금 뭘 구입하려고 시도한 건지?
@@ -45,11 +47,12 @@ public class HealItemStoreMgr : MonoBehaviour
         RefreshCrItemList();
     } //void Start()
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+        if (GoldTxt != null)
+            GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+    }
     void RefreshCrItemList()
     {  //Count == 0 인 상태가 처음 나오는 아이템만 구매가능으로 표시해 준다.
         if (m_Item_ScrollContent != null)
@@ -168,6 +171,10 @@ public class HealItemStoreMgr : MonoBehaviour
             if (GlobalUserData.s_GoldCount < (a_Cost* m_CurNum))
             {
                 a_Mess = "레벨업에 필요한 보유(누적) 골드가 모자랍니다.";
+            }
+            else if(m_CurNum == 0)
+            {
+                a_Mess = "구매할 아이템수량을 정해주세요.";
             }
             else
             {

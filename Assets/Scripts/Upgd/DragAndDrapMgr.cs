@@ -29,6 +29,9 @@ public class DragAndDrapMgr : MonoBehaviour
     public Button Back_Btn;
     public Button CloseBtn;
 
+    public Text GoldTxt;
+    public Text UpGdGoodsTxt;
+
     bool IsUpGd = false;
 
     [Header("-------- Info Txt --------")]
@@ -66,6 +69,8 @@ public class DragAndDrapMgr : MonoBehaviour
             }
         }
 
+        if (GoldTxt != null)
+            GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
         //GlobalUserData.LoadGameInfo();
 
@@ -127,6 +132,9 @@ public class DragAndDrapMgr : MonoBehaviour
                 BuyDirection();
             }
         }
+
+        if (GoldTxt != null)
+            GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }// void Update()
 
     bool IsCollSlot( GameObject a_CkObj )  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수
