@@ -8,7 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/Monster/Pig/Pig B/PigMonster_B.prefab
   - component: {fileID: 8221793038712482860}
   - component: {fileID: 8221793038712482861}
   - component: {fileID: 8221793038712482834}
@@ -18,17 +17,6 @@ GameObject:
   m_Layer: 7
   m_Name: PigMonster_B
   m_TagString: Monster
-=======
-  - component: {fileID: 2596255402657652707}
-  - component: {fileID: 2596255402657652706}
-  - component: {fileID: 2596255402657652701}
-  - component: {fileID: 2596255402657652704}
-  - component: {fileID: 2596255402657652710}
-  - component: {fileID: 2596255402657652705}
-  m_Layer: 0
-  m_Name: Pig Idle_0.3(B)_0
-  m_TagString: enemy
->>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/Pig/Pig B/Pig Idle_0.3(B)_0.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48415567ee433384285ddbe2bb2a9fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD:Assets/Prefabs/Monster/Pig/Pig B/PigMonster_B.prefab
   m_MaxHP: 230
   m_CurHP: 0
   m_Atk: 20
@@ -147,22 +134,6 @@ MonoBehaviour:
   originPos: {x: 0, y: 0, z: 0}
   attackEff: {fileID: 1874900421175834534, guid: b313792b872082d4d9146a91379255f0, type: 3}
 --- !u!50 &8221793038712482857
-=======
-  m_MaxHP: 0
-  m_CurHP: 0
-  m_Atk: 0
-  m_MoveSpeed: 0
-  MonRight: 0
-  m_ChaseDistance: 0
-  m_AttackDistance: 0
-  m_Monstate: 0
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  attackPos: {fileID: 0}
-  originPos: {x: 0, y: 0, z: 0}
---- !u!50 &2596255402657652710
->>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/Pig/Pig B/Pig Idle_0.3(B)_0.prefab
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

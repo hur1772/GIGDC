@@ -8,7 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/Monster/Bird/Bird(B) Monster.prefab
   - component: {fileID: 1142941397637392021}
   - component: {fileID: 1142941397637392018}
   - component: {fileID: 1142941397637392020}
@@ -18,17 +17,6 @@ GameObject:
   m_Layer: 7
   m_Name: Bird(B) Monster
   m_TagString: Monster
-=======
-  - component: {fileID: 6036428906429080789}
-  - component: {fileID: 6036428906429080788}
-  - component: {fileID: 6036428906429080787}
-  - component: {fileID: 6036428906429080786}
-  - component: {fileID: 6036428906429080790}
-  - component: {fileID: 6036428906429080791}
-  m_Layer: 0
-  m_Name: PigMonster_0.3
-  m_TagString: enemy
->>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/Pig/Pig A/PigMonster_0.3.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +130,6 @@ MonoBehaviour:
     m_Bits: 0
   attackPos: {fileID: 0}
   originPos: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Assets/Prefabs/Monster/Bird/Bird(B) Monster.prefab
   m_FindDist: 5
   m_FlyHeight: 4.3
   m_FlySpeed: 4
@@ -192,5 +179,3 @@ CircleCollider2D:
   m_Offset: {x: -0.19119787, y: 1.2335656}
   serializedVersion: 2
   m_Radius: 0.8641226
-=======
->>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c:Assets/Prefabs/Monster/Pig/Pig A/PigMonster_0.3.prefab

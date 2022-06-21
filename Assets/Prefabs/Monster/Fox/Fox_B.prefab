@@ -16,11 +16,7 @@ GameObject:
   - component: {fileID: 2286494599325972932}
   m_Layer: 7
   m_Name: Fox_B
-<<<<<<< HEAD
   m_TagString: Monster
-=======
-  m_TagString: enemy
->>>>>>> 676f539b2064269bbc2d35b34ba3f472781ca44c
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
