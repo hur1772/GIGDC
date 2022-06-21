@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1277640128327161149}
   - component: {fileID: 1277640128327161145}
   - component: {fileID: 1277640128327161144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PigMonster
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277640128379576871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -235,7 +235,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277640128379576871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -253,11 +253,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -0.34655955, y: 2.1386962}
+      - {x: -1.7679473, y: 1.2001703}
+      - {x: -1.231396, y: 0.05738205}
+      - {x: 0.5382763, y: 0.007873595}
+      - {x: 1.4832729, y: 1.0763992}
 --- !u!1 &1277640128493359389
 GameObject:
   m_ObjectHideFlags: 0

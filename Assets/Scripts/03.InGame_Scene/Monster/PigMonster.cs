@@ -177,7 +177,6 @@ public class PigMonster : Monster
                         m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
                         m_SkillCoolTime = 5.0f;
                         m_SkillTriggerBool = true;
-                        goSkill = false;
                         echargeSkill = ChargeSkill.CHARGE_BEFORE;
                     }
                 }
@@ -226,14 +225,16 @@ public class PigMonster : Monster
     public void Charge()
     {
         Vector3 gopos = (SkillPos - this.transform.position);
+        gopos.y = 0.0f;
 
-        m_Rb.transform.position += gopos.normalized * Time.deltaTime * m_MoveSpeed * 2;
+        m_Rb.transform.position += gopos.normalized * Time.deltaTime * m_MoveSpeed * 4;
 
         if(gopos.magnitude <= 0.5f)
         {
             m_SkillDelayTime = 1.5f;
             m_Animator.SetBool("IsMove", false);
             m_Animator.SetBool("IsAttack", false);
+            goSkill = false;
             echargeSkill = ChargeSkill.CHARGE_AFTER;
         }
     }
