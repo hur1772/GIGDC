@@ -1493,7 +1493,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -4243,6 +4243,14 @@ PrefabInstance:
     - target: {fileID: 4355083288833743906, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_FillAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104536280481052224, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6.4776144
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104536280481052224, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 10.72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
