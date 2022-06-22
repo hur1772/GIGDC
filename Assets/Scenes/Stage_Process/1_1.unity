@@ -46204,6 +46204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crane
       objectReference: {fileID: 0}
+    - target: {fileID: 662305650646308949, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 662305650646308951, guid: 1694413d6c4b07143908ddbb35fd20ac, type: 3}
       propertyPath: m_Constraints
       value: 5
@@ -46264,6 +46268,10 @@ PrefabInstance:
     - target: {fileID: 1277640128327161150, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
       propertyPath: m_Name
       value: PigMonster
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277640128327161150, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1277640128493359389, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
       propertyPath: m_TagString
@@ -47098,6 +47106,10 @@ PrefabInstance:
     - target: {fileID: 2286494599325972928, guid: d9b7069c6c18ce14d82d23aad5d68c0c, type: 3}
       propertyPath: m_Name
       value: Fox_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286494599325972928, guid: d9b7069c6c18ce14d82d23aad5d68c0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2286494599325972931, guid: d9b7069c6c18ce14d82d23aad5d68c0c, type: 3}
       propertyPath: m_RootOrder
@@ -48222,6 +48234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanMan
       objectReference: {fileID: 0}
+    - target: {fileID: 4527390684432505893, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4527390684432505894, guid: ab71603a5989bf74bb65fff67109b5be, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -49344,6 +49360,10 @@ PrefabInstance:
     - target: {fileID: 3314670175295778703, guid: 39969ae1bcd72c94aa4ab32cb4079bbd, type: 3}
       propertyPath: m_Name
       value: Tigier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314670175295778703, guid: 39969ae1bcd72c94aa4ab32cb4079bbd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3314670175295778737, guid: 39969ae1bcd72c94aa4ab32cb4079bbd, type: 3}
       propertyPath: m_RootOrder
