@@ -192,7 +192,19 @@ public class PigMonster : Monster
                 m_Animator.SetBool("IsAttack", false);
             }
         }
-        
+        else if(m_Monstate == MonsterState.DIE)
+        {
+            m_Animator.SetTrigger("DieTrigger");
+            m_Monstate = MonsterState.CORPSE;
+            GameObject m_Gold = null;
+            m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
+            m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
+        }
+        else if(m_Monstate == MonsterState.CORPSE)
+        {
+            //-- 아무것도 안함
+        }
+
     }
 
     void NewSkill()
@@ -272,8 +284,22 @@ public class PigMonster : Monster
 
         if(collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("돌진 데미지");
             if(collision.gameObject.TryGetComponent(out playerTakeDmg))
-                playerTakeDmg.P_TakeDamage();
+                playerTakeDmg.P_TakeDamage(15);
+        }
+    }
+
+    public override void TakeDamage(float a_Value)
+    {
+        if (m_CurHP <= 0.0f)
+            return;
+
+        m_CurHP -= a_Value;
+        if(m_CurHP <= 0.0f)
+        {
+            m_CurHP = 0.0f;
+            m_Monstate = MonsterState.DIE;
         }
     }
 }
