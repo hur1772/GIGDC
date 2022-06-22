@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1909947809118455920}
-  attackRange: 0.5
+  attackRange: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -935,6 +935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80173079017e842a09b8941db5754c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 0
+  curHp: 0
 --- !u!1 &5191718363489347920
 GameObject:
   m_ObjectHideFlags: 0
