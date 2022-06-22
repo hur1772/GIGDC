@@ -28,6 +28,9 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_TakeDamage(float a_Value = 10.0f)
     {
+        if (Player_State.p_Move_state == PlayerMoveState.player_dash)
+            return;
+
         curHp -= a_Value;
         animator.SetTrigger("Hit");
         Debug.Log("플레이어 피격");
