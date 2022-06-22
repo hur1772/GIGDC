@@ -50,6 +50,18 @@ public class CraneMonster_A : Monster
         {
             AttackUpdate();
         }
+        else if (m_Monstate == MonsterState.DIE)
+        {
+            m_Animator.SetTrigger("DieTrigger");
+            m_Monstate = MonsterState.CORPSE;
+            GameObject m_Gold = null;
+            m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
+            m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
+        }
+        else if (m_Monstate == MonsterState.CORPSE)
+        {
+
+        }
     }
 
     public void PatrolUpdate()
@@ -120,6 +132,17 @@ public class CraneMonster_A : Monster
     public void AttackUpdate()
     {
 
+        if (m_CalcVec.x >= 0.1f)
+        { 
+            this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            MoveRight = true;
+        }
+        else if (m_CalcVec.x <= -0.1f)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+            MoveRight = false;
+        }
+
         if (m_CalcVec.magnitude >= m_AttackDistance)
         {
             m_Animator.SetBool("CanAttack", false);
@@ -139,5 +162,14 @@ public class CraneMonster_A : Monster
             }
         }
 
+    }
+
+    public override void TakeDamage(float a_Value)
+    {
+        m_CurHP -= a_Value;
+        if (m_CurHP <= 0.0f)
+        {
+            m_Monstate = MonsterState.DIE;
+        }
     }
 }

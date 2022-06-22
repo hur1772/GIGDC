@@ -93,7 +93,7 @@ public class Player_Attack : MonoBehaviour
             }
             else if(collider.tag == "Monster")
             {
-                collider.GetComponent<Monster>().TakeDamage(10);
+                collider.GetComponent<Monster>().TakeDamage(30);
             }
         }
     }

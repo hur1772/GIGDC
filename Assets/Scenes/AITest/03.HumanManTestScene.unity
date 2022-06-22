@@ -3251,5 +3251,9 @@ PrefabInstance:
       propertyPath: m_Atk
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1792075913736156028, guid: 728984457c7dec9428a241454b87c145, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728984457c7dec9428a241454b87c145, type: 3}
