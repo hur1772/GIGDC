@@ -187,7 +187,7 @@ public class PigMonster : Monster
             if (m_IsSkillOn)
                 m_Monstate = MonsterState.SKILL;
 
-            if(m_CalcVec.magnitude >= m_AttackDistance)
+            if(m_CalcVec.magnitude >= 0.5f)
             {
                 m_Animator.SetBool("IsAttack", false);
             }
