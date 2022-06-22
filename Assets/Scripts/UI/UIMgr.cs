@@ -83,6 +83,10 @@ public class UIMgr : MonoBehaviour
 
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+
+
+        if (m_HpBar != null)
+            m_HpBar.fillAmount = m_CurHp / m_MaxHp;
     }
 
     //void OnCollisionEnter2D(Collision2D coll)
@@ -101,8 +105,6 @@ public class UIMgr : MonoBehaviour
         {
             pTakeDamage.P_TakeDamage(10.0f);
 
-            if (m_HpBar != null)
-                m_HpBar.fillAmount = m_CurHp / m_MaxHp;
         }
     }
 
@@ -121,15 +123,13 @@ public class UIMgr : MonoBehaviour
         //m_GoldTxt.text = "x " + GlobalUserData.s_GoldCount.ToString("N0");
     }
 
-    public void TakeDamage(float a_val)
-    {
-        if (m_CurHp <= 0.0f)
-            return;
-        if (pTakeDamage == null)
-            return;
+    //public void TakeDamage(float a_val)
+    //{
+    //    if (m_CurHp <= 0.0f)
+    //        return;
+    //    if (pTakeDamage == null)
+    //        return;
         
-        m_CurHp -= a_val;
-
-        
-    }
+    //    m_CurHp -= a_val;    
+    //}
 }

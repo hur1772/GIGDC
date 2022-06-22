@@ -46265,6 +46265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PigMonster
       objectReference: {fileID: 0}
+    - target: {fileID: 1277640128493359389, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff74ec1d28f274469ee85fad6ca07ae, type: 3}
 --- !u!1 &1308431121
