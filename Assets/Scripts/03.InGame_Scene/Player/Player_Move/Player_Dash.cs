@@ -44,8 +44,6 @@ public class Player_Dash : MonoBehaviour
         {
             if (0.0f <= dash_Cool)
                 return;
-
-
             isDash = true;
             Player_state.p_state = PlayerState.player_move;
             Player_state.p_Move_state = PlayerMoveState.player_dash;
@@ -65,6 +63,12 @@ public class Player_Dash : MonoBehaviour
         if (0.0f < dash_time)
         {
             P_Move_Dash();
+
+            this.gameObject.layer = 8;
+        }
+        else
+        {
+            this.gameObject.layer = 6;
         }
     }
 
