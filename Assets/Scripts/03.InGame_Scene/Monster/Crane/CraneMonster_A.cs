@@ -131,19 +131,7 @@ public class CraneMonster_A : Monster
 
     public void AttackUpdate()
     {
-
-        if (m_CalcVec.x >= 0.1f)
-        { 
-            this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            MoveRight = true;
-        }
-        else if (m_CalcVec.x <= -0.1f)
-        {
-            this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
-            MoveRight = false;
-        }
-
-        if (m_CalcVec.magnitude >= m_AttackDistance)
+        if (m_CalcVec.magnitude >= 0.5f)
         {
             m_Animator.SetBool("CanAttack", false);
         }
