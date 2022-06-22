@@ -23,13 +23,11 @@ public class UIMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_CurHp = 100.0f;
-        m_MaxHp = m_CurHp;
-
         Time.timeScale = 1.0f;
         pTakeDamage = GetComponent<Player_TakeDamage>();
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+
     }
 
     // Update is called once per frame
@@ -79,18 +77,33 @@ public class UIMgr : MonoBehaviour
         //    UseItemImg3.fillAmount = UseItemCoolTime3 / 5;
         //}
 
+        m_CurHp = pTakeDamage.curHp;
+        m_MaxHp = pTakeDamage.maxHp;
+
+
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if(coll.gameObject.tag == "enemy")
-        {
-            pTakeDamage.P_TakeDamage();
-            TakeDamage(10.0f);
-        }
+    //void OnCollisionEnter2D(Collision2D coll)
+    //{
+    //    if(coll.gameObject.tag == "Monster")
+    //    {
+    //        pTakeDamage.P_TakeDamage();
+    //        TakeDamage(10.0f);
+    //    }
 
+    //}
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Monster")
+        {
+            pTakeDamage.P_TakeDamage(10.0f);
+
+            if (m_HpBar != null)
+                m_HpBar.fillAmount = m_CurHp / m_MaxHp;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -116,17 +129,7 @@ public class UIMgr : MonoBehaviour
             return;
         
         m_CurHp -= a_val;
-        
-        if (m_HpBar != null)
-            m_HpBar.fillAmount = m_CurHp / m_MaxHp;
-        
-        if (m_CurHp <=0.0f)
-        {
-            Debug.Log("Die");
-            // PlayerDie();
 
-            //Time.timeScale = 0.0f;
-        }
         
     }
 }
