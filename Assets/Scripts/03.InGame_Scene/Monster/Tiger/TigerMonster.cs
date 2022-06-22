@@ -395,7 +395,6 @@ public class TigerMonster : Monster
 
     protected override void Die()
     {
-        base.Die();
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
