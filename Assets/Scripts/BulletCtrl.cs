@@ -70,6 +70,13 @@ public class BulletCtrl : MonoBehaviour
         transform.position = new Vector3(a_StartPos.x,
                                          a_StartPos.y, 0.0f);
 
+        if(a_DirTgVec.x <= 0)
+        {
+            Vector3 angle = transform.eulerAngles;
+            angle.y = 180;
+            transform.eulerAngles = angle;
+        }
+
         m_MoveSpeed = a_MvSpeed;
         bullet_Att = att;
     }
