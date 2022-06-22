@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 732df297140fbb94382f7408ac5333c5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6295651222941396134
+    second: New_PigB_Dead_0.5_0
+  - first:
+      213: 5899328853449222938
+    second: New_PigB_Dead_0.5_1
+  - first:
+      213: -2430452183536426572
+    second: New_PigB_Dead_0.5_2
+  - first:
+      213: -2948556444534460884
+    second: New_PigB_Dead_0.5_3
+  - first:
+      213: -9160392754482231170
+    second: New_PigB_Dead_0.5_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +90,126 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: New_PigB_Dead_0.5_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 18
+        width: 398
+        height: 251
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5313da819a51a8a0800000000000000
+      internalID: -6295651222941396134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Dead_0.5_1
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 18
+        width: 363
+        height: 250
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bad031650aed150800000000000000
+      internalID: 5899328853449222938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Dead_0.5_2
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 21
+        width: 409
+        height: 238
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b12dbcbd9c454ed0800000000000000
+      internalID: -2430452183536426572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Dead_0.5_3
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 16
+        width: 454
+        height: 241
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ea55b298f9417d0800000000000000
+      internalID: -2948556444534460884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Dead_0.5_4
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 16
+        width: 466
+        height: 235
+      alignment: 9
+      pivot: {x: 0.33, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78460ad25fbfd080800000000000000
+      internalID: -9160392754482231170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

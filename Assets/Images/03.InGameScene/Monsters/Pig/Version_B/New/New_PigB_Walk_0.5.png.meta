@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 22851ce83a4491c448a654167bf0c0bb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7694114493635246497
+    second: New_PigB_Walk_0.5_0
+  - first:
+      213: 2345373106677813501
+    second: New_PigB_Walk_0.5_1
+  - first:
+      213: 8364088399774328543
+    second: New_PigB_Walk_0.5_2
+  - first:
+      213: 6676691937610494230
+    second: New_PigB_Walk_0.5_3
+  - first:
+      213: 2030542275521191020
+    second: New_PigB_Walk_0.5_4
+  - first:
+      213: 1535097261793639769
+    second: New_PigB_Walk_0.5_5
+  - first:
+      213: -1146370381938697790
+    second: New_PigB_Walk_0.5_6
+  - first:
+      213: -5794918178934925768
+    second: New_PigB_Walk_0.5_7
+  - first:
+      213: 980457568892752535
+    second: New_PigB_Walk_0.5_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +102,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 425
+        height: 231
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a93056ed5cf6ca60800000000000000
+      internalID: 7694114493635246497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_1
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 26
+        width: 392
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df019490a607c8020800000000000000
+      internalID: 2345373106677813501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_2
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 22
+        width: 385
+        height: 262
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6a382b516331470800000000000000
+      internalID: 8364088399774328543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_3
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 22
+        width: 375
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611fcff41ff58ac50800000000000000
+      internalID: 6676691937610494230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_4
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 24
+        width: 398
+        height: 236
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c9ad9f07fed2c10800000000000000
+      internalID: 2030542275521191020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_5
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 22
+        width: 406
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d72e883d2cd4510800000000000000
+      internalID: 1535097261793639769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_6
+      rect:
+        serializedVersion: 2
+        x: 2768
+        y: 22
+        width: 389
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9d38b16364710f0800000000000000
+      internalID: -1146370381938697790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Walk_0.5_7
+      rect:
+        serializedVersion: 2
+        x: 3226
+        y: 22
+        width: 395
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836512a7e90549fa0800000000000000
+      internalID: -5794918178934925768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 7eaca0c6be1e66248b2b13d5ab907880
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6073198721641179305
+    second: New_PigB_Idle_0.5_0
+  - first:
+      213: -605695003679783201
+    second: New_PigB_Idle_0.5_1
+  - first:
+      213: 2068840342210959515
+    second: New_PigB_Idle_0.5_2
+  - first:
+      213: -3178767199305137337
+    second: New_PigB_Idle_0.5_3
+  - first:
+      213: 4376597043606312440
+    second: New_PigB_Idle_0.5_4
+  - first:
+      213: -2972328627477262107
+    second: New_PigB_Idle_0.5_5
+  - first:
+      213: 6239577938685008921
+    second: New_PigB_Idle_0.5_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +96,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 23
+        width: 391
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757983a90f9a7bba0800000000000000
+      internalID: -6073198721641179305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_1
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 23
+        width: 391
+        height: 231
+      alignment: 9
+      pivot: {x: 0.49, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6007f6a932897f0800000000000000
+      internalID: -605695003679783201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_2
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 23
+        width: 402
+        height: 228
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b985b7e745ff5bc10800000000000000
+      internalID: 2068840342210959515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_3
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 23
+        width: 401
+        height: 230
+      alignment: 9
+      pivot: {x: 0.44, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74301c5f210c2e3d0800000000000000
+      internalID: -3178767199305137337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_4
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 23
+        width: 401
+        height: 238
+      alignment: 9
+      pivot: {x: 0.53, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5dd2da2dbccbc30800000000000000
+      internalID: 4376597043606312440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_5
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 23
+        width: 387
+        height: 239
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e05e738cda20c6d0800000000000000
+      internalID: -2972328627477262107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_Idle_0.5_6
+      rect:
+        serializedVersion: 2
+        x: 2787
+        y: 23
+        width: 387
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c1fa7931f679650800000000000000
+      internalID: 6239577938685008921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

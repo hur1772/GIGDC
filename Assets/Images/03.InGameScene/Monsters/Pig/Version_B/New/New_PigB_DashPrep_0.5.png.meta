@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 964987fe1a7e8ea4dafbf167d9771f7b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6996225212172471536
+    second: New_PigB_DashPrep_0.5_0
+  - first:
+      213: -7395189513045571347
+    second: New_PigB_DashPrep_0.5_1
+  - first:
+      213: 4990633644310847266
+    second: New_PigB_DashPrep_0.5_2
+  - first:
+      213: -7306271663434272483
+    second: New_PigB_DashPrep_0.5_3
+  - first:
+      213: 4727141733879205758
+    second: New_PigB_DashPrep_0.5_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +90,126 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: New_PigB_DashPrep_0.5_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 58
+        width: 358
+        height: 247
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013f3d3bc3a68ee90800000000000000
+      internalID: -6996225212172471536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_DashPrep_0.5_1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 58
+        width: 330
+        height: 246
+      alignment: 9
+      pivot: {x: 0.54, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8893cb1520f5990800000000000000
+      internalID: -7395189513045571347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_DashPrep_0.5_2
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 58
+        width: 353
+        height: 244
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fd245abda424540800000000000000
+      internalID: 4990633644310847266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_DashPrep_0.5_3
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 58
+        width: 353
+        height: 241
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d117f74e1a8ea9a90800000000000000
+      internalID: -7306271663434272483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_PigB_DashPrep_0.5_4
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 56
+        width: 366
+        height: 244
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f4bca8c5e2a9140800000000000000
+      internalID: 4727141733879205758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
