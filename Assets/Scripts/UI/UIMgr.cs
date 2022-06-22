@@ -99,14 +99,14 @@ public class UIMgr : MonoBehaviour
 
     //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Monster")
-        {
-            pTakeDamage.P_TakeDamage(10.0f);
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Monster")
+    //    {
+    //        pTakeDamage.P_TakeDamage(10.0f);
 
-        }
-    }
+    //    }
+    //}
 
     void OnTriggerEnter2D(Collider2D coll)
     {

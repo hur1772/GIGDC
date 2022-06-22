@@ -11,7 +11,6 @@ public class HumanManMonster : Monster
     private void StartFunc()
     {
         InitMonster();
-        InitState();
 
     }
 
@@ -34,19 +33,6 @@ public class HumanManMonster : Monster
         {
             m_Monstate = MonsterState.DIE;
         }
-    }
-
-    void InitState()
-    {
-        m_DelayTime = Random.Range(2.0f, 3.0f);
-        m_MaxHP = 100;
-        m_CurHP = m_MaxHP;
-
-        m_Atk = 5;
-        m_MoveSpeed = 4;
-
-        m_ChaseDistance = 7.0f;
-        m_AttackDistance = 3.0f;
     }
 
     void AiUpdate()
@@ -169,8 +155,23 @@ public class HumanManMonster : Monster
         {
             if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
             {
-                playerTakeDmg.P_TakeDamage();
+                Debug.Log("몬스터에 의한 데미지");
+                playerTakeDmg.P_TakeDamage(m_Atk);
             }
         }
     }
+
+    public override void TakeDamage(float a_Value)
+    {
+        if (m_CurHP <= 0.0f)
+            return;
+
+        m_CurHP -= a_Value;
+        if(m_CurHP <= 0.0f)
+        {
+            m_CurHP = 0.0f;
+            m_Monstate = MonsterState.DIE;
+        }
+    }
+
 }
