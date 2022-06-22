@@ -4,7 +4,7 @@ public class HumanManMonster : Monster
 {
     public float m_DelayTime = 0.0f;
     bool m_IsRight = false;
-
+    Vector3 m_Cacy = Vector3.zero;
 
     private void Start() => StartFunc();
 
@@ -134,9 +134,12 @@ public class HumanManMonster : Monster
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
             GameObject m_Gold = null;
+            m_Cacy.y = transform.position.y + 2.0f;
             m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
-            m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
-  
+            m_Gold.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
+
+           
+
         }
         else if(m_Monstate == MonsterState.CORPSE)
         {
