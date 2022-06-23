@@ -5,6 +5,7 @@ public class HumanManMonster : Monster
     public float m_DelayTime = 0.0f;
     bool m_IsRight = false;
     Vector3 m_Cacy = Vector3.zero;
+    Vector2 attackSize = new Vector2(2, 3);
 
     private void Start() => StartFunc();
 
@@ -17,6 +18,7 @@ public class HumanManMonster : Monster
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(originPos, (attackPos.position - originPos));
+        Gizmos.DrawCube(attackPos.position, new Vector2(2, 3));
     }
 
     private void Update() => UpdateFunc();
@@ -133,13 +135,8 @@ public class HumanManMonster : Monster
         {
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-            //GameObject m_Gold = null;
-            //m_Cacy.y = transform.position.y + 2.0f;
-            //m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
-            //m_Gold.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
 
-           
-
+            CoinDrop();
         }
         else if(m_Monstate == MonsterState.CORPSE)
         {
@@ -153,15 +150,27 @@ public class HumanManMonster : Monster
 
         Vector3 attackdir = attackPos.position - originPos;
 
-        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
-        if (attackhit)
+        //attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        //if (attackhit)
+        //{
+        //    if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+        //    {
+        //        Debug.Log("몬스터에 의한 데미지");
+        //        playerTakeDmg.P_TakeDamage(m_Atk);
+        //    }
+        //}
+
+        Collider2D coll = Physics2D.OverlapBox(attackPos.position, attackSize * 0.5f, 0, playerMask);
+        if (coll != null)
         {
-            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            if (coll.gameObject.TryGetComponent(out playerTakeDmg))
             {
                 Debug.Log("몬스터에 의한 데미지");
                 playerTakeDmg.P_TakeDamage(m_Atk);
             }
         }
+        else
+            Debug.Log("검출안됨");
     }
 
     public override void TakeDamage(float a_Value)
