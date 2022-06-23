@@ -24,7 +24,11 @@ public class BossSizeController : MonoBehaviour
             maxScaleX = 1.6f;
             maxScaleY = 1.6f;
         }
-
+        else if(bossType == BossType.Stage_1_2)
+        {
+            maxScaleX = 1.2f;
+            maxScaleY = 1.2f;
+        }
         NowScale = this.transform.localScale;
     }
 

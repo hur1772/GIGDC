@@ -20,6 +20,11 @@ public class BossGirl : Monster
     public float attackDealy_2 = 0.0f;
     public float middleattackDistance = 0.0f;
 
+    //보스소환
+    [Header("--- Boss ---")]
+    public Transform bossSpawnPos;
+    public GameObject bossPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -197,5 +202,23 @@ public class BossGirl : Monster
         GameObject weapon = Instantiate(weaponPrefab);
         weapon.transform.position = weaponPos.position;
         weapon.transform.rotation = this.transform.rotation;
+    }
+
+
+    protected override void Die()
+    {
+        m_Monstate = MonsterState.DIE;
+        m_Animator.SetBool("CanAttack", false);
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
+        m_Animator.SetTrigger("Die");
+    }
+
+    public void SpawnBoss()
+    {
+        GameObject boss = Instantiate(bossPrefab);
+        boss.transform.position = bossSpawnPos.transform.position;
+        boss.transform.eulerAngles = bossSpawnPos.eulerAngles;
+        this.m_Animator.enabled = false;
+        Destroy(this.gameObject);
     }
 }
