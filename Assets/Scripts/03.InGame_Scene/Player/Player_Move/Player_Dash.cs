@@ -68,6 +68,7 @@ public class Player_Dash : MonoBehaviour
         }
         else
         {
+            Player_state.p_Move_state = PlayerMoveState.player_noMove;
             this.gameObject.layer = 6;
         }
     }
