@@ -41,6 +41,7 @@ public class TigerMonster : Monster
 
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
+    public GameObject Protal;
 
     //보스소환
     [Header("--- Boss ---")]
@@ -56,6 +57,11 @@ public class TigerMonster : Monster
         idleDelay = Random.Range(1.0f, 2.0f);
 
         spRend = GetComponent<SpriteRenderer>();
+        
+        if (Protal != null)
+        {
+            Protal.gameObject.SetActive(false);
+        }
     }
 
     private void OnDrawGizmos()
@@ -395,10 +401,12 @@ public class TigerMonster : Monster
 
     protected override void Die()
     {
+        Protal.gameObject.SetActive(true);        
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
+        
     }
 
     public void SpawnBoss()
