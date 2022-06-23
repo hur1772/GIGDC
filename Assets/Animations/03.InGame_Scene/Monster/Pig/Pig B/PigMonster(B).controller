@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1102 &-8611625543586868735
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Pig Idle_B
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: d07f23f98657c8540a8cc82576a78a18, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-7999638092219589585
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -73,7 +99,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 226dc0ce64aba754589ecbaf3d6e003c, type: 2}
+  m_Motion: {fileID: 7400000, guid: a6a11c289e3036148a51ea4e8f0dea22, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -122,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4bcc5a82b99e0124faf50c7f15473cfb, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4c3c3364984a7cb45978693e31235386, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -165,6 +191,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9378fca1055c51a4385bcd9de59df2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1617910994510011436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9430135f4f2c8814fab4e0035aab60e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1102 &-918107475840863103
 AnimatorState:
   serializedVersion: 6
@@ -175,8 +213,10 @@ AnimatorState:
   m_Name: Pig Die
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_Transitions:
+  - {fileID: 7089816049381182759}
+  m_StateMachineBehaviours:
+  - {fileID: -1617910994510011436}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -185,7 +225,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b2b941e2596cbe64590258354226647d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 054c954300b4a804fa7659bf02f69429, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -212,7 +252,33 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7749952ff032bc74f892cbdc9e486d5f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1d0d7c84290f35c4f899dd46a9cd3bd1, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-474792603465620937
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pig Corpse
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 648330b4410686647b4ba09fa06732cc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -263,7 +329,7 @@ AnimatorStateMachine:
     m_Position: {x: 250, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -918107475840863103}
-    m_Position: {x: 20, y: 0, z: 0}
+    m_Position: {x: 20, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4517570260645271239}
     m_Position: {x: 0, y: 240, z: 0}
@@ -273,6 +339,15 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -5795336876896114560}
     m_Position: {x: 285, y: 305, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -474792603465620937}
+    m_Position: {x: 20, y: -90, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8611625543586868735}
+    m_Position: {x: 55, y: -25, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 5186556610197875520}
+    m_Position: {x: 90, y: 40, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -7999638092219589585}
@@ -389,7 +464,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 357432642cb3c82468387c4ce96bf747, type: 2}
+  m_Motion: {fileID: 7400000, guid: d07f23f98657c8540a8cc82576a78a18, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -467,7 +542,33 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 32b5afeb952bd3d418dd485257c903e9, type: 2}
+  m_Motion: {fileID: 7400000, guid: c208fe21da498d24cb6b1a416ae5d5b7, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &5186556610197875520
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Pig Corpse_B
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 648330b4410686647b4ba09fa06732cc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -494,6 +595,28 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.7887324
   m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &7089816049381182759
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -474792603465620937}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.87603307
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

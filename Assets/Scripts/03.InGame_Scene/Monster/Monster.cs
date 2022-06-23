@@ -50,6 +50,7 @@ public class Monster : MonoBehaviour
     public LayerMask playerMask;
     public Transform attackPos;
     public Vector3 originPos;
+    
 
 
     //private void Update()
@@ -127,6 +128,7 @@ public class Monster : MonoBehaviour
             m_Rb = GetComponent<Rigidbody2D>();
 
         m_CurHP = m_MaxHP;
+       
     }
 
     protected virtual void CheckDistanceFromPlayer(bool OnlyX = false)
