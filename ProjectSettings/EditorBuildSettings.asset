@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/04.Stage_1(Palace_In).unity
     guid: d94655bc91037994bb6e1c11209912e0
+  - enabled: 1
+    path: Assets/Scenes/Stage_Process/1_1.unity
+    guid: bf1607d498317fe418b2f9ce63f420f9
+  - enabled: 1
+    path: Assets/Scenes/Stage_Process/Village.unity
+    guid: 2ed23c06fbfe35541a3309429e8553f9
   m_configObjects: {}
