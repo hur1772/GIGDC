@@ -26,6 +26,8 @@ public class PigMonster : Monster
 
     bool m_SkillTriggerBool = true;
 
+    public RuntimeAnimatorController testcon;
+
     private void Start()
     {
         m_MaxHP = 100;
@@ -37,6 +39,8 @@ public class PigMonster : Monster
         m_DelayTime = Random.Range(2.0f, 3.0f);
 
         InitMonster();
+
+
     }
 
     private void Update()
@@ -47,6 +51,9 @@ public class PigMonster : Monster
         CheckDistanceFromPlayer();
         MonAiUpdate();
         SkillCoolUpdate();
+
+        if (Input.GetKeyDown(KeyCode.Return))
+            m_Animator.runtimeAnimatorController = testcon;
     }
 
     void SkillCoolUpdate()
