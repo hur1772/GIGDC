@@ -3348,6 +3348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PigMonster_B_Complete
       objectReference: {fileID: 0}
+    - target: {fileID: 2458591471147968916, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968938, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_Size.x
       value: 4.25
@@ -3356,6 +3360,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.3153577
       objectReference: {fileID: 0}
+    - target: {fileID: 2458591471147968938, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6073198721641179305, guid: 7eaca0c6be1e66248b2b13d5ab907880, type: 3}
     - target: {fileID: 2458591471147968938, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -3366,7 +3374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968939, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.82
+      value: 5.56
       objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968939, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3497,7 +3505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812334401942617405, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
