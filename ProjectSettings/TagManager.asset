@@ -8,6 +8,8 @@ TagManager:
   - EnemyWeapon
   - Monster
   - monster
+  - 04.Stage_1(Palace)
+  - Village
   layers:
   - Default
   - TransparentFX

@@ -105,6 +105,11 @@ public class Interaction : MonoBehaviour
                         SceneManager.LoadScene("01.TutorialMap");
                         m_interactionState = InteractionState.Nomal;
                     }
+                    if (Portal.tag == "Village")
+                    {
+                        SceneManager.LoadScene("Village");
+                        m_interactionState = InteractionState.Nomal;
+                    }
                 }
                 break;
         }
