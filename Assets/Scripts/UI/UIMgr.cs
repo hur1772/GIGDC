@@ -119,7 +119,7 @@ public class UIMgr : MonoBehaviour
 
     public void AddGold(int a_Val = 100)
     {
-        GlobalUserData.s_GoldCount = GlobalUserData.s_GoldCount + a_Val;
+        GlobalUserData.s_GoldCount += a_Val;
         GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
