@@ -112,15 +112,15 @@ public class UIMgr : MonoBehaviour
     {
         if (coll.gameObject.name.Contains("Gold") == true)
         {
-            AddGold();
+            AddGold(100);
             Destroy(coll.gameObject);
         }
     }
 
     public void AddGold(int a_Val = 100)
     {
-        //GlobalUserData.s_GoldCount = GlobalUserData.s_GoldCount + a_Val;
-        //m_GoldTxt.text = "x " + GlobalUserData.s_GoldCount.ToString("N0");
+        GlobalUserData.s_GoldCount = GlobalUserData.s_GoldCount + a_Val;
+        GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
     //public void TakeDamage(float a_val)

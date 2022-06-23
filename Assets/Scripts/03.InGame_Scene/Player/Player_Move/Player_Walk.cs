@@ -10,6 +10,8 @@ public class Player_Walk : MonoBehaviour
     private CapsuleCollider2D collider;
     Animator animator;
 
+    AnimationClip clip;
+
     public float move_speed;
     public float crawl_speed;
     public int key = 0;
@@ -22,6 +24,7 @@ public class Player_Walk : MonoBehaviour
         p_input = GetComponent<Player_Input>();
         animator = GetComponent<Animator>();
         collider = GetComponent<CapsuleCollider2D>();
+
         Player_state.p_state = PlayerState.player_idle;
         Player_state.p_Move_state = PlayerMoveState.player_noMove;
         Player_state.p_Attack_state = PlayerAttackState.player_no_att;
@@ -68,6 +71,11 @@ public class Player_Walk : MonoBehaviour
     {
         if (Player_state.p_Move_state == PlayerMoveState.player_dash)
             return;
+
+        //if(Input.GetKey(KeyCode.J))
+        //{
+        //    animator.Play("player_hit");
+        //}
 
         animator.SetBool("IsWalk", true);
         Vector2 p_vector = new Vector2(p_input.horizontal, .0f);

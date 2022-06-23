@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5867603898069142504}
   - component: {fileID: 5867603898069142511}
   - component: {fileID: 7870057035506221312}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: FoxMarble
   m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
