@@ -156,4 +156,12 @@ public class Monster : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public virtual void CoinDrop()
+    {
+        Vector3 m_Cacy = Vector3.zero;
+        m_Cacy.y = transform.position.y + 2.0f;
+        GameObject m_Gold = null;        
+        m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
+        m_Gold.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
+    }
 }
