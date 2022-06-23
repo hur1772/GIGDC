@@ -88,6 +88,9 @@ public class Player_Walk : MonoBehaviour
         if (0 < p_input.horizontal)
             key = 1;
 
+        if (p_input.horizontal == 0)
+            Player_state.p_Move_state = PlayerMoveState.player_noMove;
+
         if (Player_state.p_Move_state != PlayerMoveState.player_noMove)
         {
             if (p_input.horizontal != 0)

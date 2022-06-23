@@ -42,6 +42,9 @@ public class Player_Dash : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            if (Player_state.p_Move_state == PlayerMoveState.player_noMove)
+                return;
+
             if (0.0f <= dash_Cool)
                 return;
             isDash = true;
@@ -68,6 +71,7 @@ public class Player_Dash : MonoBehaviour
         }
         else
         {
+            Player_state.p_Move_state = PlayerMoveState.player_noMove;
             this.gameObject.layer = 6;
         }
     }
