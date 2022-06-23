@@ -14,6 +14,8 @@ public class BossSizeController : MonoBehaviour
     float maxScaleX = 0.0f, maxScaleY = 0.0f;
     Vector3 NowScale;
 
+    bool SizeXok = false, sizeYok = false;
+
 
     private void Start() => StartFunc();
 
@@ -36,20 +38,28 @@ public class BossSizeController : MonoBehaviour
 
     private void UpdateFunc()
     {
-        SizeUpdate();
+        if(sizeYok == false && sizeYok == false)
+            SizeUpdate();
     }
 
     void SizeUpdate()
     {
-        if(NowScale.x <= maxScaleX)
+        if (NowScale.x <= maxScaleX)
         {
             NowScale.x += Time.deltaTime * 0.75f;
         }
+        else
+            SizeXok = true;
 
         if (NowScale.y <= maxScaleY)
         {
             NowScale.y += Time.deltaTime * 0.75f;
         }
+        else
+            sizeYok = true;
+
+        if (SizeXok && sizeYok)
+            Time.timeScale = 1.0f;
 
         this.transform.localScale = NowScale;
     }

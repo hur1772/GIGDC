@@ -207,6 +207,7 @@ public class BossGirl : Monster
 
     protected override void Die()
     {
+        Time.timeScale = 0.3f;
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
