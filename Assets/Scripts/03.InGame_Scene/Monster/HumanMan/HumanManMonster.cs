@@ -133,10 +133,10 @@ public class HumanManMonster : Monster
         {
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-            GameObject m_Gold = null;
-            m_Cacy.y = transform.position.y + 2.0f;
-            m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
-            m_Gold.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
+            //GameObject m_Gold = null;
+            //m_Cacy.y = transform.position.y + 2.0f;
+            //m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
+            //m_Gold.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
 
            
 
