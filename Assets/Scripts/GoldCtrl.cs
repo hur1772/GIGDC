@@ -5,6 +5,7 @@ using UnityEngine;
 public class GoldCtrl : MonoBehaviour
 {    
     float m_Speed = 100.0f;
+    [HideInInspector] public bool isGet = true;
     // Start is called before the first frame update
     void Start()
     {

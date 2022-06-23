@@ -112,8 +112,15 @@ public class UIMgr : MonoBehaviour
     {
         if (coll.gameObject.name.Contains("Gold") == true)
         {
-            AddGold(100);
-            Destroy(coll.gameObject);
+            GoldCtrl ctrl = coll.gameObject.GetComponent<GoldCtrl>();
+            
+            if(ctrl.isGet == true)
+            {
+                AddGold(100);
+                ctrl.isGet = false;
+                Destroy(coll.gameObject);
+            }
+
         }
     }
 
