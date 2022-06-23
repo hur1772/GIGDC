@@ -2509,13 +2509,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2812334401942617402, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d84be1498f0739140be96d082864ee2b, type: 2}
+    - target: {fileID: 2812334401942617403, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
+      propertyPath: change
+      value: 
+      objectReference: {fileID: 22100000, guid: b1d97608433c82d4387047486d6dcae8, type: 2}
     - target: {fileID: 2812334401942617405, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_Name
       value: PigMonster_Complete
       objectReference: {fileID: 0}
     - target: {fileID: 2812334401942617405, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
