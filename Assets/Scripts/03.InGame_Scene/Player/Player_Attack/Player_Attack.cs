@@ -11,7 +11,7 @@ public class Player_Attack : MonoBehaviour
     Animator animator;
 
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public float attackRange = 1.0f;
     public LayerMask enemyLayers;
 
     private void Start() => StartFunc();

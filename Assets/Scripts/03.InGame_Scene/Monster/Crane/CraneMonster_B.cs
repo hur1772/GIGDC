@@ -7,6 +7,16 @@ public class CraneMonster_B : Monster
     float MoveTime = 3.0f;
     bool MoveRight = false;
 
+    public GameObject attackEff;
+    public Transform effSpawnPos;
+
+    Vector2 attackSize = new Vector2(3, 3);
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
+    }
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -38,6 +48,16 @@ public class CraneMonster_B : Monster
         else if(m_Monstate == MonsterState.ATTACK)
         {
             AttackUpdate();
+        }
+        else if (m_Monstate == MonsterState.DIE)
+        {
+            m_Animator.SetTrigger("DieTrigger");
+            m_Monstate = MonsterState.CORPSE;
+            CoinDrop();
+        }
+        else if (m_Monstate == MonsterState.CORPSE)
+        {
+            //-- 아무것도 안함
         }
     }
 
@@ -79,6 +99,28 @@ public class CraneMonster_B : Monster
         }
     }
 
+    void SpawnEff()
+    {
+        Vector3 spawnInterval = effSpawnPos.position;
+        for(int i = 0; i < 3; i++)
+        {
+            GameObject eff = Instantiate(attackEff);
+
+            spawnInterval = effSpawnPos.position;
+            if(!MoveRight)
+                spawnInterval.x += i * 0.75f;
+            else
+                spawnInterval.x -= i * 0.75f;
+
+            Debug.Log(spawnInterval.x);
+            eff.transform.position = spawnInterval;
+            eff.transform.eulerAngles = effSpawnPos.eulerAngles;
+
+            Destroy(eff, 0.2f);
+        }
+
+    }
+
     public void ChaseUpdate()
     {
         if (m_CalcVec.x >= 0.1f)
@@ -99,11 +141,6 @@ public class CraneMonster_B : Monster
             m_Monstate = MonsterState.ATTACK;
             m_Animator.SetBool("CanAttack", true);
         }
-
-        if (m_ChaseDistance * 1.5f < m_CalcVec.magnitude)
-        {
-            m_Monstate = MonsterState.PATROL;
-        }
     }
 
     public void AttackUpdate()
@@ -112,7 +149,10 @@ public class CraneMonster_B : Monster
         {
             m_Animator.SetBool("CanAttack", false);
         }
+    }
 
+    public void ChangeRotate()
+    {
         if (m_CalcVec.x >= 0.1f)
         {
             this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
@@ -122,6 +162,38 @@ public class CraneMonster_B : Monster
         {
             this.transform.rotation = Quaternion.Euler(0, 0.0f, 0);
             MoveRight = false;
+        }
+    }
+
+
+    void Attack()
+    {
+        Vector3 attackdir = attackPos.position - originPos;
+
+        Collider2D coll = Physics2D.OverlapBox(attackPos.position, attackSize * 0.5f, 0, playerMask);
+        if (coll != null)
+        {
+            if (coll.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                Debug.Log("몬스터에 의한 데미지");
+                playerTakeDmg.P_TakeDamage(m_Atk);
+            }
+        }
+        else
+            Debug.Log("검출안됨");
+    }
+
+    public override void TakeDamage(float a_Value)
+    {
+        if (m_CurHP <= 0.0f)
+            return; 
+
+        m_CurHP -= a_Value;
+        if (m_CurHP <= 0.0f)
+        {
+            m_CurHP = 0.0f; 
+            m_Monstate = MonsterState.DIE;
+            m_Rb.gravityScale = 1.5f;
         }
     }
 }

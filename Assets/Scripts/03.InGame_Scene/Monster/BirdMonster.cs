@@ -223,6 +223,17 @@ void Update()
                 m_AttackDelay = 5.0f;
             }
         }
+        else if (m_FlyMonState == FlyMonsterState.DIE)
+        {
+            m_Animator.SetTrigger("DieTrigger");
+            m_FlyMonState = FlyMonsterState.CORPSE;
+
+            CoinDrop();
+        }
+        else if (m_FlyMonState == FlyMonsterState.CORPSE)
+        {
+            //-- 아무것도 안함
+        }
     }
 
     void ChangeRotate()
@@ -246,5 +257,19 @@ void Update()
 
         if (collision.TryGetComponent(out playerTakeDmg))
             playerTakeDmg.P_TakeDamage();
+    }
+
+    public override void TakeDamage(float a_Value)
+    {
+        if (m_CurHP <= 0.0f)
+            return;
+
+        m_CurHP -= a_Value;
+        if (m_CurHP <= 0.0f)
+        {
+            m_CurHP = 0.0f;
+            m_FlyMonState = FlyMonsterState.DIE;
+            m_Rb.gravityScale = 1.5f;
+        }
     }
 }

@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 7540623ad1a829a4caba8b4142eb2352
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6783334610041876118
+    second: NewCrane(B) Die_0
+  - first:
+      213: -8851965395081870119
+    second: NewCrane(B) Die_1
+  - first:
+      213: 3485191358112994327
+    second: NewCrane(B) Die_2
+  - first:
+      213: 4776260200673314913
+    second: NewCrane(B) Die_3
+  - first:
+      213: 5226157714035302217
+    second: NewCrane(B) Die_4
+  - first:
+      213: 938149712470985556
+    second: NewCrane(B) Die_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +119,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NewCrane(B) Die_0
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 140
+        width: 390
+        height: 392
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ea82063ee332e50800000000000000
+      internalID: 6783334610041876118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCrane(B) Die_1
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 294
+        width: 422
+        height: 461
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d448167f50872580800000000000000
+      internalID: -8851965395081870119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCrane(B) Die_2
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 167
+        width: 488
+        height: 557
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714169a2313ed5030800000000000000
+      internalID: 3485191358112994327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCrane(B) Die_3
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 119
+        width: 436
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16808f7c85fa84240800000000000000
+      internalID: 4776260200673314913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCrane(B) Die_4
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 68
+        width: 471
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fdd3560ca078840800000000000000
+      internalID: 5226157714035302217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

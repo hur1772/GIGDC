@@ -22,6 +22,7 @@ public enum FlyMonsterState
     ATTACK,
     CHASE,
     DIE,
+    CORPSE
 }
 
 public class Monster : MonoBehaviour
