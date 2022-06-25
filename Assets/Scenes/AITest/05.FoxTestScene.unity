@@ -2819,6 +2819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fox_A_complete
       objectReference: {fileID: 0}
+    - target: {fileID: 2925999849401489817, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
 --- !u!1001 &8183614916651426892
@@ -2878,7 +2882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183614914989227594, guid: e6533de4fc563f44992da47b51864444, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6533de4fc563f44992da47b51864444, type: 3}

@@ -23,10 +23,16 @@ public class PigMonster : Monster
     ChargeSkill echargeSkill = ChargeSkill.CHARGE_BEFORE;
 
     public GameObject attackEff;
+    public Transform effSpawnPos;
 
     bool m_SkillTriggerBool = true;
 
-    public RuntimeAnimatorController testcon;
+    Vector2 attackSize = new Vector2(3, 3);
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
+    }
 
     private void Start()
     {
@@ -51,9 +57,6 @@ public class PigMonster : Monster
         CheckDistanceFromPlayer();
         MonAiUpdate();
         SkillCoolUpdate();
-
-        if (Input.GetKeyDown(KeyCode.Return))
-            m_Animator.runtimeAnimatorController = testcon;
     }
 
     void SkillCoolUpdate()
@@ -260,23 +263,25 @@ public class PigMonster : Monster
     {
         Vector3 attackdir = attackPos.position - originPos;
 
-        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
-        if (attackhit)
+        Collider2D coll = Physics2D.OverlapBox(attackPos.position, attackSize * 0.5f, 0, playerMask);
+        if (coll != null)
         {
-            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            if (coll.gameObject.TryGetComponent(out playerTakeDmg))
             {
-                playerTakeDmg.P_TakeDamage();
+                Debug.Log("몬스터에 의한 데미지");
+                playerTakeDmg.P_TakeDamage(m_Atk);
             }
         }
+        else
+            Debug.Log("검출안됨");
     }
 
     void SpawnEff()
     {
         GameObject eff = Instantiate(attackEff);
 
-        Vector3 spawnPos = attackPos.position;
-        spawnPos.y = this.transform.position.y;
-        eff.transform.position = spawnPos;
+
+        eff.transform.position = effSpawnPos.position;
         eff.transform.eulerAngles = attackPos.eulerAngles;
 
         Destroy(eff, 0.2f);

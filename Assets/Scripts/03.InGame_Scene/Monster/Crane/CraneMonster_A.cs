@@ -9,7 +9,7 @@ public class CraneMonster_A : Monster
 
     //공격 관련 변수
     public float m_AttackDelay = 1.5f;
-
+    Vector2 attackSize = new Vector2(3, 3);
     float effTimer = 0.3f;
 
     private void Start() => StartFunc();
@@ -23,6 +23,7 @@ public class CraneMonster_A : Monster
 
     private void OnDrawGizmos()
     {
+        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3)); 
         Gizmos.DrawRay(originPos, (attackPos.position - originPos));
     }
 
@@ -141,14 +142,17 @@ public class CraneMonster_A : Monster
     {
         Vector3 attackdir = attackPos.position - originPos;
 
-        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
-        if(attackhit)
+        Collider2D coll = Physics2D.OverlapBox(attackPos.position, attackSize * 0.5f, 0, playerMask);
+        if (coll != null)
         {
-            if(attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            if (coll.gameObject.TryGetComponent(out playerTakeDmg))
             {
-                playerTakeDmg.P_TakeDamage();
+                Debug.Log("몬스터에 의한 데미지");
+                playerTakeDmg.P_TakeDamage(m_Atk);
             }
         }
+        else
+            Debug.Log("검출안됨");
 
     }
 

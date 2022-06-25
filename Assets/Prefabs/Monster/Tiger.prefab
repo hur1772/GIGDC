@@ -184,6 +184,7 @@ MonoBehaviour:
   sprites:
   - {fileID: -4568249833774140809, guid: 20ada98e24dcab541ad7d3abb48a5878, type: 3}
   - {fileID: 21300000, guid: fe774579959684e4fb95fae665e09795, type: 3}
+  Protal: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
   bossSpawnPos: {fileID: 6448571185795891496}
   bossPrefab: {fileID: 21038246127183603, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
 --- !u!1 &6448571185520773390

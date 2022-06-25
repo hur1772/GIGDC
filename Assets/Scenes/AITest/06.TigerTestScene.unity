@@ -1820,7 +1820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 21038246127183603, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8841705287674686771, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
       propertyPath: m_RootOrder
@@ -2835,6 +2835,10 @@ PrefabInstance:
     - target: {fileID: 6448571185378166652, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_Name
       value: Tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
+      propertyPath: m_MaxHP
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6448571186312362291, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_RootOrder
