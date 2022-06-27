@@ -15,6 +15,8 @@ public enum InteractionState
     Fight,
     NPC_talkEnd,
     Shop,
+    HealItemShop,
+    UpGdNPC,
     Portal
 }
 
@@ -36,10 +38,13 @@ public class Interaction : MonoBehaviour
     [HideInInspector] public float NPCDistance = 5.1f;
     [HideInInspector] public float ShopDistance = 5.1f;
     [HideInInspector] public float PortalDistance =5.1f;
+    [HideInInspector] public float HealItemShopDistance = 5.1f;
 
     public Image GKey;
 
     public GameObject UpGdPanel = null;
+    public GameObject HealItemShopPanel = null;
+    public GameObject ItemShopPanel = null;
 
     private void Awake()
     {
@@ -76,6 +81,28 @@ public class Interaction : MonoBehaviour
                 break;
 
             case InteractionState.Shop:
+                if (Input.GetKey(KeyCode.G))
+                {
+                    if (ItemShopPanel != null)
+                    {
+                        Time.timeScale = 0.0f;
+                        ItemShopPanel.SetActive(true);
+                    }
+                }
+                break;
+
+            case InteractionState.HealItemShop:
+                if (Input.GetKey(KeyCode.G))
+                {
+                    if (HealItemShopPanel != null)
+                    {
+                        Time.timeScale = 0.0f;
+                        HealItemShopPanel.SetActive(true);
+                    }
+                }
+                break;
+
+            case InteractionState.UpGdNPC:
                 if (Input.GetKey(KeyCode.G))
                 {
                     if (UpGdPanel != null)

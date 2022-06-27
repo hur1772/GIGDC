@@ -403,6 +403,14 @@ PrefabInstance:
       propertyPath: UpGdPanel
       value: 
       objectReference: {fileID: 1334774657}
+    - target: {fileID: 4109632169616997899, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: ItemShopPanel
+      value: 
+      objectReference: {fileID: 939556489}
+    - target: {fileID: 4109632169616997899, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: HealItemShopPanel
+      value: 
+      objectReference: {fileID: 999479224}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8486,6 +8494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795920699}
   - component: {fileID: 795920701}
+  - component: {fileID: 795920700}
   m_Layer: 0
   m_Name: "\uC8FC\uBAA8\uBC30\uACBDx"
   m_TagString: Untagged
@@ -8507,6 +8516,18 @@ Transform:
   m_Father: {fileID: 1847756294}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &795920700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795920698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44abfe9e4c2035949ad096277a6a052f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &795920701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9567,7 +9588,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1307302427}
   - component: {fileID: 1307302429}
-  - component: {fileID: 1307302428}
   m_Layer: 0
   m_Name: "\uB300\uC7A5\uC7A5\uC774\uBC30\uACBDx"
   m_TagString: Untagged
@@ -9589,18 +9609,6 @@ Transform:
   m_Father: {fileID: 1847756294}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1307302428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307302426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44abfe9e4c2035949ad096277a6a052f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1307302429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10106,7 +10114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1477156783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498525b3df6938842a26be31de9a7ade, type: 3}
+  m_Script: {fileID: 11500000, guid: d7625503ab6d70c4b81f9be991752705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1537477822
