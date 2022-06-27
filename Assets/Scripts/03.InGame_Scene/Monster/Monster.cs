@@ -155,6 +155,7 @@ public class Monster : MonoBehaviour
                 HittedTIme = 1.0f;
             }
             Debug.Log("crit!");
+            //연출 추가는 여기서
         }
         else
         {
