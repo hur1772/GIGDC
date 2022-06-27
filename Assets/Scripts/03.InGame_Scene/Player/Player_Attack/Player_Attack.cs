@@ -14,6 +14,9 @@ public class Player_Attack : MonoBehaviour
     public float attackRange = 1.0f;
     public LayerMask enemyLayers;
 
+    float playerAttackDamage;
+    float playerCriticalValue;
+
     private void Start() => StartFunc();
     private void StartFunc()
     {
@@ -25,6 +28,9 @@ public class Player_Attack : MonoBehaviour
         GlobalUserData.Player_Att_State = PlayerAttackState.player_no_att;
         // 공격'상태'State = no_att으로 초기화 해둠
         // 추후 무기 입력에 따라 state 추가할 예정
+
+        playerAttackDamage = 30.0f;
+        playerCriticalValue = 20.0f;
     }
 
     private void Update() => UpdateFunc();
@@ -93,7 +99,7 @@ public class Player_Attack : MonoBehaviour
             }
             else if(collider.tag == "Monster")
             {
-                collider.GetComponent<Monster>().TakeDamage(30);
+                collider.GetComponent<Monster>().TakeDamage(playerAttackDamage, playerCriticalValue);
             }
         }
     }

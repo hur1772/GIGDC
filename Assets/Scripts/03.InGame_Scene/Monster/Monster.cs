@@ -140,10 +140,20 @@ public class Monster : MonoBehaviour
         m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
     }
 
-    public virtual void TakeDamage(float a_Value)
+    public virtual void TakeDamage(float a_DamVal, float a_CritVal = 0.0f)
     {
-        m_CurHP -= a_Value;
-        Debug.Log("몬스터피격");
+        int crit = Random.Range(0, 100);
+        if(crit < a_CritVal)
+        {
+            m_CurHP -= a_DamVal * 2;
+            Debug.Log("crit!");
+        }
+        else
+        {
+            m_CurHP -= a_DamVal;
+            Debug.Log("몬스터피격");
+        }
+
         if (m_CurHP <= 0)
         {
             Die();
@@ -153,8 +163,7 @@ public class Monster : MonoBehaviour
     protected virtual void Die()
     {
         m_CurHP = 0;
-        Debug.Log("Die");
-        gameObject.SetActive(false);
+        m_Monstate = MonsterState.DIE;
     }
 
     public virtual void CoinDrop()

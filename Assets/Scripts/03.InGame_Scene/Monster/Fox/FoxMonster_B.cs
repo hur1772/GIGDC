@@ -200,13 +200,4 @@ public class FoxMonster_B : Monster
         }
     }
 
-    public override void TakeDamage(float a_Value)
-    {
-        m_CurHP -= a_Value;
-        if (m_CurHP <= 0.0f)
-        {
-            m_Monstate = MonsterState.DIE;
-        }
-    }
-
 }

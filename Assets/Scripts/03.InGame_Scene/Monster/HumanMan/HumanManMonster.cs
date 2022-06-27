@@ -173,17 +173,4 @@ public class HumanManMonster : Monster
             Debug.Log("∞À√‚æ»µ ");
     }
 
-    public override void TakeDamage(float a_Value)
-    {
-        if (m_CurHP <= 0.0f)
-            return;
-
-        m_CurHP -= a_Value;
-        if(m_CurHP <= 0.0f)
-        {
-            m_CurHP = 0.0f;
-            m_Monstate = MonsterState.DIE;
-        }
-    }
-
 }

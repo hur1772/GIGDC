@@ -36,9 +36,6 @@ public class PigMonster : Monster
 
     private void Start()
     {
-        m_MaxHP = 100;
-        m_CurHP = m_MaxHP;
-
         m_SkillCoolTime = 5.0f;
         m_SkillDelayTime = 1.5f;
 
@@ -299,17 +296,5 @@ public class PigMonster : Monster
                 playerTakeDmg.P_TakeDamage(15);
         }
     }
-
-    public override void TakeDamage(float a_Value)
-    {
-        if (m_CurHP <= 0.0f)
-            return;
-
-        m_CurHP -= a_Value;
-        if(m_CurHP <= 0.0f)
-        {
-            m_CurHP = 0.0f;
-            m_Monstate = MonsterState.DIE;
-        }
-    }
+    
 }
