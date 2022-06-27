@@ -147,6 +147,7 @@ public class Monster : MonoBehaviour
         {
             m_CurHP -= a_DamVal * 2;
             Debug.Log("crit!");
+            //연출 추가는 여기서
         }
         else
         {
