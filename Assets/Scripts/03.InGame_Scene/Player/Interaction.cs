@@ -39,6 +39,7 @@ public class Interaction : MonoBehaviour
     [HideInInspector] public float ShopDistance = 5.1f;
     [HideInInspector] public float PortalDistance =5.1f;
     [HideInInspector] public float HealItemShopDistance = 5.1f;
+    [HideInInspector] public float UpgdNPCDistance = 5.1f;
 
     public Image GKey;
 
@@ -148,6 +149,8 @@ public class Interaction : MonoBehaviour
         NPCDistance = Pos;
         ShopDistance = Pos;
         PortalDistance = Pos;
+        HealItemShopDistance = Pos;
+        UpgdNPCDistance = Pos;
         IsInteraction = false;
     }
 }

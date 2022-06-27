@@ -21,30 +21,33 @@ public class HealItemShopInteraction : MonoBehaviour
     {
         if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.HealItemShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.HealItemShopDistance < Interaction.Inst.NPCDistance || Interaction.Inst.HealItemShopDistance < Interaction.Inst.KingDistance)
+            if (Interaction.Inst.HealItemShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.HealItemShopDistance < Interaction.Inst.ShopDistance || Interaction.Inst.HealItemShopDistance <Interaction.Inst.UpgdNPCDistance)
             {
                 if (Interaction.Inst.HealItemShopDistance < 5.0f)
                 {
-                    if (Interaction.Inst.GKey != null)
+                    if (Interaction.Inst.GKey != null)  
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(true);
-                        Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.HealItemShopDistance);
+                        Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.HealItemShopDistance);
                         Interaction.Inst.m_interactionState = InteractionState.HealItemShop;
                         Interaction.Inst.IsInteraction = true;
+
+                        Debug.Log(Interaction.Inst.UpgdNPCDistance);
                     }
                 }
             }
         }
-        if (Interaction.Inst.IsInteraction == false)
+        if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+            if (Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.HealItemShopDistance > 5.0f)
                 {
                     if (Interaction.Inst.GKey != null)
                     {
                         Interaction.Inst.GKey.gameObject.SetActive(false);
-                        Interaction.Inst.animator.SetFloat("ShopInteraction", Interaction.Inst.HealItemShopDistance);
+                        Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.HealItemShopDistance);
+                        Interaction.Inst.IsInteraction = false;
                     }
                 }
             }

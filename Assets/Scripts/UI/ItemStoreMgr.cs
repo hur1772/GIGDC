@@ -21,10 +21,16 @@ public class ItemStoreMgr : MonoBehaviour
 
     public Text GoldTxt;
 
+    public GameObject ThisPanel;
+    public Button CloseBtn;
+
     // Start is called before the first frame update
     void Start()
     {
         GlobalUserData.InitData();
+
+        if (CloseBtn != null)
+            CloseBtn.onClick.AddListener(CloseBtnFunc);
 
         //----------------- 아이템 목록 추가
         GameObject a_ItemObj = null;
@@ -295,7 +301,14 @@ public class ItemStoreMgr : MonoBehaviour
 
         RefreshCrItemList();
     }
-
-
     ////void RefreshCrItemList()
+    
+    void CloseBtnFunc()
+    {
+        if (ThisPanel != null)
+        {
+            ThisPanel.SetActive(false);
+            Time.timeScale = 1.0f;
+        }
+    }
 }

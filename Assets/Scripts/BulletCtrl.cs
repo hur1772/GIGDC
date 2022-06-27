@@ -81,6 +81,18 @@ public class BulletCtrl : MonoBehaviour
         bullet_Att = att;
     }
 
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        Debug.Log("hit");
+        if (coll.gameObject.tag == "Monster")
+        {
+            Debug.Log("Hit");
+            coll.gameObject.GetComponent<Monster>().TakeDamage(bullet_Att, 100.0f);
+            Destroy(gameObject);
+        }
+    }
+
+
     //void FindEnemy()
     //{
     //    GameObject[] a_EnemyList = GameObject.FindGameObjectsWithTag("Monster");
