@@ -43,7 +43,6 @@ public class PigMonster : Monster
 
         InitMonster();
 
-
     }
 
     private void Update()
@@ -209,7 +208,23 @@ public class PigMonster : Monster
         {
             //-- 아무것도 안함
         }
-
+        else if(m_Monstate == MonsterState.Hitted)
+        {
+            if(HittedTIme >= 0.0f)
+            {
+                HittedTIme -= Time.deltaTime;
+                if(HittedTIme <= 0.0f)
+                {
+                    m_Monstate = MonsterState.CHASE;
+                    m_Animator.SetBool("IsMove", true);
+                    m_IsSkillOn = false;
+                    m_Animator.SetBool("IsSkillOn", m_IsSkillOn);
+                    m_SkillCoolTime = 5.0f;
+                    m_SkillTriggerBool = true;
+                    echargeSkill = ChargeSkill.CHARGE_BEFORE;
+                }
+            }
+        }
     }
 
     void NewSkill()

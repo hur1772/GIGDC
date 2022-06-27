@@ -19,7 +19,8 @@ public class CraneAttackState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<CraneMonster_A>().m_Monstate = MonsterState.CHASE;
+        if(animator.GetComponent<CraneMonster_A>().m_Monstate != MonsterState.CORPSE && animator.GetComponent<CraneMonster_A>().m_Monstate != MonsterState.Hitted)
+            animator.GetComponent<CraneMonster_A>().m_Monstate = MonsterState.CHASE;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

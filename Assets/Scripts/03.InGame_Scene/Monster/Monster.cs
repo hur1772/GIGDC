@@ -11,6 +11,7 @@ public enum MonsterState
     SKILL3,
     STAY,
     DIE,
+    Hitted,
     CORPSE
 }
 
@@ -51,8 +52,9 @@ public class Monster : MonoBehaviour
     public LayerMask playerMask;
     public Transform attackPos;
     public Vector3 originPos;
-    
 
+    // °æÁ÷
+    protected float HittedTIme;
 
     //private void Update()
     //{
@@ -146,6 +148,12 @@ public class Monster : MonoBehaviour
         if(crit < a_CritVal)
         {
             m_CurHP -= a_DamVal * 2;
+            if(m_CurHP > 0.0f)
+            {
+                m_Animator.SetTrigger("Hitted");
+                m_Monstate = MonsterState.Hitted;
+                HittedTIme = 1.0f;
+            }
             Debug.Log("crit!");
         }
         else

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: b7c7fc367009e164b90f2471e66c3285
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8269079297497690464
+    second: NewCrane Hit_0
+  - first:
+      213: -1314073504545629133
+    second: NewCrane Hit_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +107,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NewCrane Hit_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 32
+        width: 276
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061f2e24fcba1c270800000000000000
+      internalID: 8269079297497690464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCrane Hit_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 80
+        width: 289
+        height: 283
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c1ec02c1973cde0800000000000000
+      internalID: -1314073504545629133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

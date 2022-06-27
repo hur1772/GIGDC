@@ -63,6 +63,18 @@ public class CraneMonster_A : Monster
         {
 
         }
+        else if (m_Monstate == MonsterState.Hitted)
+        {
+            if (HittedTIme >= 0.0f)
+            {
+                HittedTIme -= Time.deltaTime;
+                if (HittedTIme <= 0.0f)
+                {
+                    m_Monstate = MonsterState.CHASE;
+                    m_Animator.SetBool("IsMove", true);
+                }
+            }
+        }
     }
 
     public void PatrolUpdate()

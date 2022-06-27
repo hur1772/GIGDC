@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: f16483fcdc639c84fae56a658cb1d084
+guid: d704c55c306ca1e47ac676bdb627e35b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6502585764097544657
-    second: NewFox_hitted_0
+      213: 8269079297497690464
+    second: NewCrane Hit_0
   - first:
-      213: -7655921163731226496
-    second: NewFox_hitted_1
-  - first:
-      213: 5045980445718380394
-    second: NewFox_hitted_2
-  - first:
-      213: 1834178050460109973
-    second: NewFox_hitted_3
+      213: -1314073504545629133
+    second: NewCrane Hit_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewFox_hitted_0
+      name: NewCrane Hit_0
       rect:
         serializedVersion: 2
-        x: 75
-        y: 50
-        width: 326
-        height: 165
+        x: 35
+        y: 32
+        width: 276
+        height: 331
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d1db8edc43dd3a50800000000000000
-      internalID: 6502585764097544657
+      spriteID: 061f2e24fcba1c270800000000000000
+      internalID: 8269079297497690464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewFox_hitted_1
+      name: NewCrane Hit_1
       rect:
         serializedVersion: 2
-        x: 438
-        y: 50
-        width: 349
-        height: 265
+        x: 426
+        y: 80
+        width: 289
+        height: 283
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,50 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 080b76fa344b0c590800000000000000
-      internalID: -7655921163731226496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewFox_hitted_2
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 49
-        width: 345
-        height: 266
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6f7c9a0b7ce60640800000000000000
-      internalID: 5045980445718380394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewFox_hitted_3
-      rect:
-        serializedVersion: 2
-        x: 1207
-        y: 50
-        width: 348
-        height: 265
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59c4e70183f447910800000000000000
-      internalID: 1834178050460109973
+      spriteID: 33c1ec02c1973cde0800000000000000
+      internalID: -1314073504545629133
       vertices: []
       indices: 
       edges: []

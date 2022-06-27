@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 4d08cc75d26340047a96dd1a7b0ea5ee
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3703398543871398838
+    second: NewFox(B)_Hit_0
+  - first:
+      213: 1063938480543945478
+    second: NewFox(B)_Hit_1
+  - first:
+      213: 925945630144563459
+    second: NewFox(B)_Hit_2
+  - first:
+      213: -5738375676338055517
+    second: NewFox(B)_Hit_3
+  - first:
+      213: 6212355798206426266
+    second: NewFox(B)_Hit_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 110
+  spritePixelsToUnits: 120
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,7 +116,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NewFox(B)_Hit_0
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 47
+        width: 318
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ca8d255a2ea9cc0800000000000000
+      internalID: -3703398543871398838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFox(B)_Hit_1
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 48
+        width: 370
+        height: 284
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603d0bb396ed3ce00800000000000000
+      internalID: 1063938480543945478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFox(B)_Hit_2
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 47
+        width: 341
+        height: 271
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309871e05ae99dc00800000000000000
+      internalID: 925945630144563459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFox(B)_Hit_3
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 48
+        width: 371
+        height: 284
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6d020c9b13d50b0800000000000000
+      internalID: -5738375676338055517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFox(B)_Hit_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 47
+        width: 319
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cae6a1fa8b63650800000000000000
+      internalID: 6212355798206426266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

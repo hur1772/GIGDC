@@ -2812,7 +2812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692019282679677161, guid: 8ab66c9d0786dbe4d806092fcdfc1c78, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ab66c9d0786dbe4d806092fcdfc1c78, type: 3}
@@ -2826,6 +2826,10 @@ PrefabInstance:
     - target: {fileID: 5084920858080965936, guid: 4a68a08a95aca4944886810ef1b9c947, type: 3}
       propertyPath: m_Name
       value: Crane(B)_Complelte
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084920858080965936, guid: 4a68a08a95aca4944886810ef1b9c947, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5084920858080965941, guid: 4a68a08a95aca4944886810ef1b9c947, type: 3}
       propertyPath: m_RootOrder
