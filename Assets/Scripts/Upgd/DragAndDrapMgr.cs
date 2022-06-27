@@ -368,6 +368,7 @@ public class DragAndDrapMgr : MonoBehaviour
         if (ThisPanel != null)
         {
             ThisPanel.SetActive(false);
+            Time.timeScale = 1.0f;
         }
     }
 }
