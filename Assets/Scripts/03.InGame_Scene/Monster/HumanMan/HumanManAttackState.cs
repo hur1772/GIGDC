@@ -19,7 +19,7 @@ public class HumanManAttackState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(animator.GetComponent<HumanManMonster>().m_Monstate != MonsterState.CORPSE)
+        if(animator.GetComponent<HumanManMonster>().m_Monstate != MonsterState.CORPSE && animator.GetComponent<HumanManMonster>().m_Monstate != MonsterState.Hitted)
             animator.GetComponent<HumanManMonster>().m_Monstate = MonsterState.CHASE;
     }
 

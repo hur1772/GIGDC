@@ -74,6 +74,19 @@ public class FoxMonster_B : Monster
         {
 
         }
+        else if (m_Monstate == MonsterState.Hitted)
+        {
+            if (HittedTIme >= 0.0f)
+            {
+                HittedTIme -= Time.deltaTime;
+                if (HittedTIme <= 0.0f)
+                {
+                    m_Monstate = MonsterState.CHASE;
+                    m_Animator.SetBool("IsMove", true);
+                    m_CurattackDelay = m_AttackDelay;
+                }
+            }
+        }
     }
 
     public void IdleUpdate()
@@ -154,11 +167,6 @@ public class FoxMonster_B : Monster
             m_Monstate = MonsterState.ATTACK;
             m_Animator.SetBool("CanAttack", true);
             m_Animator.SetBool("IsMove", false);
-        }
-
-        if (m_ChaseDistance * 1.5f < m_CalcVec.magnitude)
-        {
-            m_Monstate = MonsterState.PATROL;
         }
     }
 
