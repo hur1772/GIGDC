@@ -22,7 +22,7 @@ public class BulletCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 10.0f); //안전장치
+        Destroy(gameObject, 1.5f); //안전장치
     }
 
     // Update is called once per frame
