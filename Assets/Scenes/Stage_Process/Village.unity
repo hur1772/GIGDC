@@ -395,6 +395,34 @@ PrefabInstance:
       propertyPath: attackRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.data[0]
+      value: 
+      objectReference: {fileID: 22100000, guid: ce8b31c37f6443446aecdcc0db3c56bb, type: 2}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.data[1]
+      value: 
+      objectReference: {fileID: 22100000, guid: ddf0311efd5e3d64a97c56bb23577272, type: 2}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.data[2]
+      value: 
+      objectReference: {fileID: 22100000, guid: ce8b31c37f6443446aecdcc0db3c56bb, type: 2}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.data[3]
+      value: 
+      objectReference: {fileID: 22100000, guid: ddf0311efd5e3d64a97c56bb23577272, type: 2}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.data[4]
+      value: 
+      objectReference: {fileID: 22100000, guid: ce8b31c37f6443446aecdcc0db3c56bb, type: 2}
+    - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: runtimeAnimatorControllers.Array.data[5]
+      value: 
+      objectReference: {fileID: 22100000, guid: ddf0311efd5e3d64a97c56bb23577272, type: 2}
     - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Name
       value: Player
