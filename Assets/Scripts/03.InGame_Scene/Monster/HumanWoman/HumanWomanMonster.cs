@@ -5,6 +5,7 @@ public class HumanWomanMonster : Monster
     //대기 관련 변수
     float m_IdleTime = 0.0f;
 
+    public bool isAType = true;
 
     //이동 관련 변수
     float MoveTime = 3.0f;
@@ -13,13 +14,16 @@ public class HumanWomanMonster : Monster
     //공격 관련 변수
     public float m_AttackDelay = 1.5f;
     float m_CurattackDelay;
-    GameObject marblePrefab;
+    GameObject WeaponPrefab;
     public Transform weaponPos;
     public float attackDealy_2 = 0.0f;
 
     private void Awake()
     {
-        marblePrefab = (GameObject)Resources.Load("HumanWoman_Stone");
+        if(isAType)
+            WeaponPrefab = (GameObject)Resources.Load("HumanWoman_Stone");
+        else
+            WeaponPrefab = (GameObject)Resources.Load("HumanWoman_Spit");
     }
 
     private void Start() => StartFunc();
@@ -196,7 +200,7 @@ public class HumanWomanMonster : Monster
                 if (m_CurattackDelay <= 0.0f)
                 {
                     m_CurattackDelay = m_AttackDelay;
-                    GameObject marble = Instantiate(marblePrefab);
+                    GameObject marble = Instantiate(WeaponPrefab);
                     marble.transform.position = weaponPos.position;
                     marble.transform.eulerAngles = this.transform.eulerAngles;
                     marble.GetComponent<FoxMarble>().SetRightBool(MonRight);
