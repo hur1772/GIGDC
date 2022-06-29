@@ -145,14 +145,15 @@ public class Monster : MonoBehaviour
     public virtual void TakeDamage(float a_DamVal, float a_CritVal = 0.0f)
     {
         int crit = Random.Range(0, 100);
+        Debug.Log(crit);
         if(crit < a_CritVal)
         {
-            m_CurHP -= a_DamVal * 2;
+            m_CurHP -= a_DamVal * 1.5f;
             if(m_CurHP > 0.0f)
             {
                 m_Animator.SetTrigger("Hitted");
                 m_Monstate = MonsterState.Hitted;
-                HittedTIme = 1.0f;
+                HittedTIme = 0.5f;
             }
             Debug.Log("crit!");
             //연출 추가는 여기서

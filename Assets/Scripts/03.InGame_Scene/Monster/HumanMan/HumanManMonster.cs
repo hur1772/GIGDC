@@ -108,12 +108,7 @@ public class HumanManMonster : Monster
                 this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
             }
 
-            if (m_CalcVec.magnitude >= m_ChaseDistance)
-            {
-                m_Monstate = MonsterState.IDLE;
-                m_Animator.SetBool("IsMove", false);
-            }
-            else if (m_CalcVec.magnitude <= m_AttackDistance)
+            if (m_CalcVec.magnitude <= m_AttackDistance)
             {
                 m_Monstate = MonsterState.ATTACK;
                 m_Animator.SetBool("IsAttack", true);

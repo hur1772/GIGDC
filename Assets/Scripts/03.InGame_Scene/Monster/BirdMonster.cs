@@ -261,6 +261,9 @@ void Update()
 
     public override void TakeDamage(float a_DamVal, float a_CritVal)
     {
+        if (m_CurHP <= 0)
+            return;
+
         int crit = Random.Range(0, 100);
         if (crit < a_CritVal)
         {

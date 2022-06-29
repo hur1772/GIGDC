@@ -30,7 +30,7 @@ public class Player_Attack : MonoBehaviour
         // 추후 무기 입력에 따라 state 추가할 예정
 
         playerAttackDamage = 30.0f;
-        playerCriticalValue = 100.0f;
+        playerCriticalValue = 20.0f;
     }
 
     private void Update() => UpdateFunc();
@@ -105,7 +105,7 @@ public class Player_Attack : MonoBehaviour
     }
 
     private void OnDrawGizmosSelected()
-    {
+    {   
         if (attackPoint == null)
             return;
 

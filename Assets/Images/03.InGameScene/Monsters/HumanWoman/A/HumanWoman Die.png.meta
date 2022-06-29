@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 2fae4011d16fa9e4a9fdcac67947b5f7
+guid: 74d756fcd22d7ff4dad5da2a1d60331c
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4864252364961999183
-    second: HumanWoman Hit_0
-  - first:
-      213: -6317418073271060532
-    second: HumanWoman Hit_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,16 +87,28 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanWoman Hit_0
+      name: HumanWoman Die_0
       rect:
         serializedVersion: 2
-        x: 148
-        y: 58
-        width: 414
+        x: 147
+        y: 57
+        width: 448
         height: 1013
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -111,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b61698fe34be7cb0800000000000000
-      internalID: -4864252364961999183
+      spriteID: e78295381e8d5fb30800000000000000
+      internalID: 4320597880614758526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanWoman Hit_1
+      name: HumanWoman Die_1
       rect:
         serializedVersion: 2
-        x: 957
-        y: 49
-        width: 539
-        height: 1033
+        x: 1118
+        y: 63
+        width: 463
+        height: 989
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +138,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7bb05cbb50458a0800000000000000
-      internalID: -6317418073271060532
+      spriteID: 316d18a3c5d227fe0800000000000000
+      internalID: -1192841077157931501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Die_2
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 24
+        width: 544
+        height: 886
+      alignment: 9
+      pivot: {x: 0.2, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb4b5da8deeb11a0800000000000000
+      internalID: -6837608994843178046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Die_3
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 24
+        width: 595
+        height: 874
+      alignment: 9
+      pivot: {x: 0.2, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a3925a7abbd26d0800000000000000
+      internalID: -3013546246936118744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanWoman Die_4
+      rect:
+        serializedVersion: 2
+        x: 4496
+        y: 3
+        width: 1058
+        height: 373
+      alignment: 9
+      pivot: {x: 0.1, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d033fe61ee31120800000000000000
+      internalID: 2383510410078915907
       vertices: []
       indices: 
       edges: []
