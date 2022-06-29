@@ -5,7 +5,7 @@ public class HumanManMonster : Monster
     public float m_DelayTime = 0.0f;
     bool m_IsRight = false;
     Vector3 m_Cacy = Vector3.zero;
-    Vector2 attackSize = new Vector2(2, 3);
+    Vector2 attackSize = new Vector2(3, 3);
 
     private void Start() => StartFunc();
 
@@ -18,7 +18,7 @@ public class HumanManMonster : Monster
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(originPos, (attackPos.position - originPos));
-        Gizmos.DrawCube(attackPos.position, new Vector2(2, 3));
+        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
     }
 
     private void Update() => UpdateFunc();
@@ -97,6 +97,7 @@ public class HumanManMonster : Monster
         }
         else if (m_Monstate == MonsterState.CHASE)
         {
+
             if (m_CalcVec.x >= 0.1f)
             {
                 m_Rb.transform.position += Vector3.right * m_MoveSpeed * Time.deltaTime;
@@ -120,7 +121,7 @@ public class HumanManMonster : Monster
         }
         else if (m_Monstate == MonsterState.ATTACK)
         {
-            if(m_CalcVec.magnitude >= m_AttackDistance)
+            if(m_CalcVec.magnitude >= .5f)
             {
                 //m_Monstate = MonsterState.CHASE;
                 m_Animator.SetBool("IsAttack", false);

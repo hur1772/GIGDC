@@ -7,6 +7,7 @@ public class FoxMarble : MonoBehaviour
     public float moveSpeed = 0.0f;
     public float rotateSpeed = 0.0f;
 
+    public float Damage = 10.0f;
     public float shotDelay = 0.0f;
     bool shootRight = false;
 
@@ -48,7 +49,7 @@ public class FoxMarble : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out playerdmg))
         {
-            playerdmg.P_TakeDamage();
+            playerdmg.P_TakeDamage(Damage);
             Destroy(this.gameObject);
         }
     }

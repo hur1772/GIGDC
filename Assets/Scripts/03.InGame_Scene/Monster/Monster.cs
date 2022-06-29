@@ -144,6 +144,9 @@ public class Monster : MonoBehaviour
 
     public virtual void TakeDamage(float a_DamVal, float a_CritVal = 0.0f)
     {
+        if (m_CurHP <= 0.0f)
+            return;
+
         int crit = Random.Range(0, 100);
         Debug.Log(crit);
         if(crit < a_CritVal)

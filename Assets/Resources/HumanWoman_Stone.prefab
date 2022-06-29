@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   rotateSpeed: -2
+  Damage: 30
   shotDelay: 0.4
 --- !u!58 &2150140638166794996
 CircleCollider2D:
