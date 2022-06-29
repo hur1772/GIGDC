@@ -1,0 +1,300 @@
+fileFormatVersion: 2
+guid: 6bd6e6df5f6fc9344ae23cc228942079
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8115586902409951027
+    second: dead 2_0
+  - first:
+      213: 4231318670794067697
+    second: dead 2_2
+  - first:
+      213: 5225508892420284245
+    second: dead 2_4
+  - first:
+      213: 184608902451896106
+    second: dead 2_5
+  - first:
+      213: 4863203760477224568
+    second: dead 2_6
+  - first:
+      213: 6742041890795483046
+    second: dead 2_7
+  - first:
+      213: -7070227303398140625
+    second: dead 2_8
+  - first:
+      213: 955715886349749803
+    second: dead 2_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dead 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 829
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8ca02e5b4af5f80800000000000000
+      internalID: -8115586902409951027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_2
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 67
+        width: 1323
+        height: 938
+      alignment: 9
+      pivot: {x: 0.68, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe8820a9e9a8ba30800000000000000
+      internalID: 4231318670794067697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_4
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 73
+        width: 1281
+        height: 811
+      alignment: 9
+      pivot: {x: 0.6, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f1b57d6acb48840800000000000000
+      internalID: 5225508892420284245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_5
+      rect:
+        serializedVersion: 2
+        x: 5418
+        y: 88
+        width: 1348
+        height: 776
+      alignment: 9
+      pivot: {x: 0.55, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f150591dcdf8200800000000000000
+      internalID: 184608902451896106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_6
+      rect:
+        serializedVersion: 2
+        x: 7225
+        y: 88
+        width: 1439
+        height: 726
+      alignment: 9
+      pivot: {x: 0.52, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87eb695cd029d7340800000000000000
+      internalID: 4863203760477224568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_7
+      rect:
+        serializedVersion: 2
+        x: 9031
+        y: 74
+        width: 1821
+        height: 261
+      alignment: 9
+      pivot: {x: 0.4, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afeaa9f06b809d50800000000000000
+      internalID: 6742041890795483046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_8
+      rect:
+        serializedVersion: 2
+        x: 10838
+        y: 74
+        width: 1821
+        height: 261
+      alignment: 9
+      pivot: {x: 0.4, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f259fab2ab181ed90800000000000000
+      internalID: -7070227303398140625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead 2_9
+      rect:
+        serializedVersion: 2
+        x: 12645
+        y: 74
+        width: 1811
+        height: 1026
+      alignment: 9
+      pivot: {x: 0.4, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e0318f882634d00800000000000000
+      internalID: 955715886349749803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

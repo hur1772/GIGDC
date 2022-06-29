@@ -6,6 +6,6 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bow Animator Override Controller
-  m_Controller: {fileID: 9100000, guid: 23055b6c846f0d243b8055d5a3733c7a, type: 2}
+  m_Name: Player Bow1Tier
+  m_Controller: {fileID: 0}
   m_Clips: []
