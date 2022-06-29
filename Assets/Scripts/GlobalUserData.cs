@@ -179,9 +179,9 @@ public class GlobalUserData
         }
     }
 
-        void Start()
+    void Start()
     {
-        Player_Att_State = PlayerAttackState.player_no_att;
+        Player_Att_State = PlayerAttackState.player_sword;
     }
 
     public static void LoadGameInfo()

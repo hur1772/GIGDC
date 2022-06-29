@@ -369,6 +369,13 @@ public class DragAndDrapMgr : MonoBehaviour
         {
             ThisPanel.SetActive(false);
             Interaction.Inst.IsUpdate = false;
+
+            if(GlobalUserData.Player_Att_State == PlayerAttackState.player_sword)
+                Player_Attack.Inst.animator.runtimeAnimatorController = Player_Attack.Inst.runtimeAnimatorControllers[0 + GlobalUserData.SwordTier * 2];
+
+            if (GlobalUserData.Player_Att_State == PlayerAttackState.player_bow)
+                Player_Attack.Inst.animator.runtimeAnimatorController = Player_Attack.Inst.runtimeAnimatorControllers[1 + GlobalUserData.BowTier * 2];
+
         }
     }
 }

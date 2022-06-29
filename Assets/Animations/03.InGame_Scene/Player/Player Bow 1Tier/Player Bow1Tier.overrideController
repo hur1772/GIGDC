@@ -7,5 +7,19 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Player Bow1Tier
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 23055b6c846f0d243b8055d5a3733c7a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 93b9b60d07837854892b8982b8232dca, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c1810d4f343297d448de725d7406835c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c4fcbcec7cb6252439160b0a4117a963, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c256223507d2554989c9176e8bbe576, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 32ecb70b51e7ff24e955da46a5c2d2e8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 82742cc89f6082748845bc6ab8eb95c4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bf464c2c2bcac9e4fb86910f7fcb26a6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 55d8bfd1b4f5fd44b9bd7c5070afc903, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3255d3cd9872761428de00f057bad1af, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 520415503dee9764a8fb5f7007c0ec63, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 481f9a5cc6006c24e94e98e992a8849a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3a19e7c9ee5ee854ebcaf4246b6344fe, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4259c089b6cb08f44a38443aa01b1638, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8673bffa2509be1428c622c635b2eae2, type: 2}

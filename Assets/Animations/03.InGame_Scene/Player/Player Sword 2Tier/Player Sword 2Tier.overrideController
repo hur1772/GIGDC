@@ -8,4 +8,22 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Player Sword 2Tier
   m_Controller: {fileID: 9100000, guid: 26a0cf1a3096cbf46a1a1dc0791a70e8, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c0e947f9b61d3634f8d9a46c86764acc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 40f14b50d330b4042859e2b8d9059f32, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3afa8e09bc6147e41a492e64b4e414fd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7a5981e32b5807e40b9e96413a2208c2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6f8563a31b9ef2d4294e7ed0700d007a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9775025684d9c18459ef922883a08bd1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 19aa80f4fc80baa4f8d961efdc566724, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9775025684d9c18459ef922883a08bd1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e4659ffd09667234890d2b6a0eb13c8a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 15a32eb3dabfd7c43a699fdb3dc99519, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 71ecaade7885a374abd0f1edcbb1ea1c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 125daa08306f900459b6d42adbc12b54, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2e3a3800b4430cf4a958fbc19372ca27, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8d93e7443b3045e4d93d9805a1d7324e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 887676e13b20f5547a7309d5d16eb9c1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8d3c4070fcdf94f4a840b44a87151e57, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e3571f62b6344874b90b17920e0e8a77, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c4971cdb6cf92845bf249b02998a933, type: 2}

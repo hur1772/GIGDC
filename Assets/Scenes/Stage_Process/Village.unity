@@ -402,11 +402,11 @@ PrefabInstance:
     - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: runtimeAnimatorControllers.Array.data[0]
       value: 
-      objectReference: {fileID: 22100000, guid: ce8b31c37f6443446aecdcc0db3c56bb, type: 2}
+      objectReference: {fileID: 9100000, guid: 26a0cf1a3096cbf46a1a1dc0791a70e8, type: 2}
     - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: runtimeAnimatorControllers.Array.data[1]
       value: 
-      objectReference: {fileID: 22100000, guid: ddf0311efd5e3d64a97c56bb23577272, type: 2}
+      objectReference: {fileID: 9100000, guid: 23055b6c846f0d243b8055d5a3733c7a, type: 2}
     - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: runtimeAnimatorControllers.Array.data[2]
       value: 
@@ -418,11 +418,11 @@ PrefabInstance:
     - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: runtimeAnimatorControllers.Array.data[4]
       value: 
-      objectReference: {fileID: 22100000, guid: ce8b31c37f6443446aecdcc0db3c56bb, type: 2}
+      objectReference: {fileID: 22100000, guid: 3246243caca4d0442bba978267c20939, type: 2}
     - target: {fileID: 4109632169616997896, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: runtimeAnimatorControllers.Array.data[5]
       value: 
-      objectReference: {fileID: 22100000, guid: ddf0311efd5e3d64a97c56bb23577272, type: 2}
+      objectReference: {fileID: 22100000, guid: a44b2af07e5994440911f9707d2af4de, type: 2}
     - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Name
       value: Player
@@ -443,6 +443,18 @@ PrefabInstance:
       propertyPath: HealItemShopPanel
       value: 
       objectReference: {fileID: 999479224}
+    - target: {fileID: 4109632169616997905, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_Size.x
+      value: 6.4776144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997905, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_Size.y
+      value: 10.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997906, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 26a0cf1a3096cbf46a1a1dc0791a70e8, type: 2}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -490,6 +502,14 @@ PrefabInstance:
     - target: {fileID: 6399917808000530825, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -161.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104536280481052224, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6.4776144
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104536280481052224, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 10.72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
 {
+    public static Player_Attack Inst;
     //rigid body가 필요할지는 모르겠는데 일단 받아둠
     private Rigidbody2D rigid;
     private Player_Input p_input;
     private Player_State_Ctrl Player_State;
-    Animator animator;
+    public Animator animator;
 
     public Transform attackPoint;
     public float attackRange = 1.0f;
@@ -19,15 +20,21 @@ public class Player_Attack : MonoBehaviour
 
     public RuntimeAnimatorController[] runtimeAnimatorControllers;
 
+    void Awake()
+    {
+        Inst = this;
+        animator = GetComponent<Animator>();
+    }
+
     private void Start() => StartFunc();
     private void StartFunc()
     {
         rigid = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        
         Player_State = GetComponent<Player_State_Ctrl>();
         p_input = GetComponent<Player_Input>();
         Player_State.p_state = PlayerState.player_attack;
-        GlobalUserData.Player_Att_State = PlayerAttackState.player_no_att;
+        GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
         // 공격'상태'State = no_att으로 초기화 해둠
         // 추후 무기 입력에 따라 state 추가할 예정
 
