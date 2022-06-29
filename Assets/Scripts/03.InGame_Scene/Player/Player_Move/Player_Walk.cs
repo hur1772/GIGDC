@@ -41,9 +41,12 @@ public class Player_Walk : MonoBehaviour
 
         if (p_input.horizontal != 0)
         {
-            Player_state.p_state = PlayerState.player_move;
-            Player_state.p_Move_state = PlayerMoveState.player_walk;
-            P_Move_Walk();
+            if (Interaction.Inst.IsUpdate == false)
+            {
+                Player_state.p_state = PlayerState.player_move;
+                Player_state.p_Move_state = PlayerMoveState.player_walk;
+                P_Move_Walk();
+            }
         }
         else
         {

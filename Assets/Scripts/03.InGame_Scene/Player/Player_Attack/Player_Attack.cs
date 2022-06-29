@@ -17,6 +17,8 @@ public class Player_Attack : MonoBehaviour
     float playerAttackDamage;
     float playerCriticalValue;
 
+    public RuntimeAnimatorController[] runtimeAnimatorControllers;
+
     private void Start() => StartFunc();
     private void StartFunc()
     {
@@ -36,21 +38,28 @@ public class Player_Attack : MonoBehaviour
     private void Update() => UpdateFunc();
     private void UpdateFunc()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Interaction.Inst.IsUpdate == false)
         {
-            Player_State.p_state = PlayerState.player_attack;
-            Player_State.p_Attack_state = PlayerAttackState.player_sword;
-            GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
-            animator.SetInteger("WeaponState", (int)PlayerAttackState.player_sword);
-        }
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Debug.Log((0 + GlobalUserData.SwordTier * 2));
+                animator.runtimeAnimatorController = runtimeAnimatorControllers[0 + GlobalUserData.SwordTier * 2];
+                Player_State.p_state = PlayerState.player_attack;
+                Player_State.p_Attack_state = PlayerAttackState.player_sword;
+                GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
+                //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_sword);
+            }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
-            Player_State.p_state = PlayerState.player_attack;
-            Player_State.p_Attack_state = PlayerAttackState.player_bow;
-            GlobalUserData.Player_Att_State = PlayerAttackState.player_bow;
-            //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Debug.Log((1 + GlobalUserData.BowTier * 2));
+                animator.runtimeAnimatorController = runtimeAnimatorControllers[1 + GlobalUserData.BowTier * 2];
+                //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
+                Player_State.p_state = PlayerState.player_attack;
+                Player_State.p_Attack_state = PlayerAttackState.player_bow;
+                GlobalUserData.Player_Att_State = PlayerAttackState.player_bow;
+                //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
+            }
         }
     }
 

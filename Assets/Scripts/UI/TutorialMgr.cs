@@ -39,12 +39,12 @@ public class TutorialMgr : MonoBehaviour
         {
             if (StageLv == 1)
             {
-                m_TutorialState = TutorialState.TargetStage;
+                m_TutorialState = TutorialState.ScarecrowStage;
             }
 
             else if (StageLv == 3)
             {
-                m_TutorialState = TutorialState.ScarecrowStage;
+                m_TutorialState = TutorialState.TargetStage;
             }
             else if (StageLv == 5)
             {

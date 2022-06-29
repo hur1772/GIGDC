@@ -42,17 +42,20 @@ public class Player_Dash : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (Player_state.p_Move_state == PlayerMoveState.player_noMove)
-                return;
+            if (Interaction.Inst.IsUpdate == false)
+            {
+                if (Player_state.p_Move_state == PlayerMoveState.player_noMove)
+                    return;
 
-            if (0.0f <= dash_Cool)
-                return;
-            isDash = true;
-            Player_state.p_state = PlayerState.player_move;
-            Player_state.p_Move_state = PlayerMoveState.player_dash;
-            dash_time = 0.4f;
-            animator.SetBool("IsDash", true);
-            dash_Cool = 2.0f;
+                if (0.0f <= dash_Cool)
+                    return;
+                isDash = true;
+                Player_state.p_state = PlayerState.player_move;
+                Player_state.p_Move_state = PlayerMoveState.player_dash;
+                dash_time = 0.4f;
+                animator.SetBool("IsDash", true);
+                dash_Cool = 2.0f;
+            }
         }
         else
         {

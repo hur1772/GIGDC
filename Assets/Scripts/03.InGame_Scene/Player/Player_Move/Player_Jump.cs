@@ -32,14 +32,16 @@ public class Player_Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(isJumping == false)
+            if (Interaction.Inst.IsUpdate == false)
             {
-                isJumping = true;
-                Player_state.p_state = PlayerState.player_move;
-                Player_state.p_Move_state = PlayerMoveState.player_jump;
-                P_Move_Jump();
+                if (isJumping == false)
+                {
+                    isJumping = true;
+                    Player_state.p_state = PlayerState.player_move;
+                    Player_state.p_Move_state = PlayerMoveState.player_jump;
+                    P_Move_Jump();
+                }
             }
-
         }
     }
 

@@ -10,6 +10,8 @@ TagManager:
   - monster
   - 04.Stage_1(Palace)
   - Village
+  - target
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Player
   - Monster
   - PlayerDASH
-  - 
+  - Gold
   - 
   - 
   - 

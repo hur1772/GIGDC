@@ -92,7 +92,14 @@ public class BulletCtrl : MonoBehaviour
         }
     }
 
-
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "target")
+        {
+            coll.gameObject.GetComponent<TargetCtrl>().TakeDamage(bullet_Att);
+            Destroy(gameObject);
+        }
+    }
     //void FindEnemy()
     //{
     //    GameObject[] a_EnemyList = GameObject.FindGameObjectsWithTag("Monster");

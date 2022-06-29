@@ -58,11 +58,13 @@ public class Player_Input : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            if (GlobalUserData.Player_Att_State == PlayerAttackState.player_no_att || GlobalUserData.Player_Att_State == PlayerAttackState.player_sword)
+            if (Interaction.Inst.IsUpdate == false)
             {
-                animator.SetTrigger("Sword_Attack_Start");
+                if (GlobalUserData.Player_Att_State == PlayerAttackState.player_no_att || GlobalUserData.Player_Att_State == PlayerAttackState.player_sword)
+                {
+                    animator.SetTrigger("Sword_Attack_Start");
+                }
             }
-
             if (BowAttCurTimer <= 0)
             {
                 if (GlobalUserData.Player_Att_State == PlayerAttackState.player_bow)

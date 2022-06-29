@@ -47,6 +47,8 @@ public class Interaction : MonoBehaviour
     public GameObject HealItemShopPanel = null;
     public GameObject ItemShopPanel = null;
 
+    public bool IsUpdate = false;
+
     private void Awake()
     {
         Inst = this;
@@ -86,7 +88,7 @@ public class Interaction : MonoBehaviour
                 {
                     if (ItemShopPanel != null)
                     {
-                        Time.timeScale = 0.0f;
+                        IsUpdate = true;
                         ItemShopPanel.SetActive(true);
                     }
                 }
@@ -97,7 +99,7 @@ public class Interaction : MonoBehaviour
                 {
                     if (HealItemShopPanel != null)
                     {
-                        Time.timeScale = 0.0f;
+                        IsUpdate = true;
                         HealItemShopPanel.SetActive(true);
                     }
                 }
@@ -108,7 +110,7 @@ public class Interaction : MonoBehaviour
                 {
                     if (UpGdPanel != null)
                     {
-                        Time.timeScale = 0.0f;
+                        IsUpdate = true;
                         UpGdPanel.SetActive(true);
                     }
                 }
