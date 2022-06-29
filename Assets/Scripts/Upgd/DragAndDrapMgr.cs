@@ -274,11 +274,21 @@ public class DragAndDrapMgr : MonoBehaviour
                 Debug.Log("m_DrtIndex" + m_DrtIndex);
                 break;
             }
+            else
+            {
+                for (int i = 0; i < m_SlotSc[2].ItemResultImg.Length; i++)
+                {
+                    m_SlotSc[2].ItemResultImg[i].gameObject.SetActive(false);
+                }
+
+                m_SlotSc[m_SaveIndex].ItemImg[m_SaveTier].gameObject.SetActive(true);
+            }
         }//for(int ii = 0; ii < m_SlotSc.Length; ii++)
 
 		if(m_DrtIndex == -1)
 		{
             m_SlotSc[ m_SaveIndex ].ItemImg[ m_SaveTier ].gameObject.SetActive( true );
+          
         }
 
 		if( 0 <= m_SaveIndex)
@@ -286,6 +296,7 @@ public class DragAndDrapMgr : MonoBehaviour
             //m_SlotSc[m_SaveIndex].ItemImg[m_SaveTier].gameObject.SetActive(true);
             m_IsPick = false;
             a_MsObj[ m_SaveIndex + m_SaveTier * 2 ].gameObject.SetActive(false);
+
         }
     }//void BuyMouseBtnUp()
 
