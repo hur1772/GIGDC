@@ -39,7 +39,7 @@ public class HealItemShopInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+            if (Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
             {
                 if (Interaction.Inst.HealItemShopDistance > 5.0f)
                 {
