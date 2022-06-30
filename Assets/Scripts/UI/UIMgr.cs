@@ -8,15 +8,14 @@ public class UIMgr : MonoBehaviour
     public Image m_HpBar = null;
     public Image UseItemImg1 = null;
     public Image UseItemImg2 = null;
-    public Image UseItemImg3 = null;
+
+    public Image HealItemPanel1 = null;
+    public Image HealItemPanel2 = null;
 
     public Text GoldTxt;
 
     float m_CurHp;
     float m_MaxHp;
-    float UseItemCoolTime1 = 5.0f;
-    float UseItemCoolTime2 = 5.0f;
-    float UseItemCoolTime3 = 5.0f;
 
     Player_TakeDamage pTakeDamage = null;
 
@@ -28,6 +27,7 @@ public class UIMgr : MonoBehaviour
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
+        GlobalUserData.InitData();
     }
 
     // Update is called once per frame
@@ -35,21 +35,57 @@ public class UIMgr : MonoBehaviour
     {
         //TakeDamage();
 
-        //if (Input.GetKey(KeyCode.Alpha1) && UseItemCoolTime1 >= 5.0f)
-        //{
-        //    if (UseItemImg1 != null)
-        //    {
-        //        UseItemCoolTime1 = 0.0f;
-        //    }
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (UseItemImg1 != null)
+            {
+                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0)
+                    return;                   
 
-        //if (Input.GetKey(KeyCode.Alpha2) && UseItemCoolTime2 >= 5.0f)
-        //{
-        //    if (UseItemImg2 != null)
-        //    {
-        //        UseItemCoolTime2 = 0.0f;
-        //    }
-        //}
+                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount>0)
+                {
+                    if(m_CurHp > m_MaxHp)
+                    {
+                        GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
+                        m_CurHp += 30;
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (UseItemImg2 != null)
+            {
+                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0)
+                    return;
+
+                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
+                {
+                    if (m_CurHp > m_MaxHp)
+                    {
+                        GlobalUserData.m_ItemDataList[1].m_CurItemCount--;
+                        m_CurHp += 50;
+                    }
+                }
+            }
+        }
+
+        if (UseItemImg1 != null)
+        {
+            if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0 && HealItemPanel1 != null)
+                HealItemPanel1.gameObject.SetActive(true);
+            if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
+                HealItemPanel1.gameObject.SetActive(false);
+        }
+        if (UseItemImg2 != null)
+        {
+            if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0 && HealItemPanel2 != null)
+                HealItemPanel2.gameObject.SetActive(true);
+            if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
+                HealItemPanel2.gameObject.SetActive(false);
+        }
+
 
         //if (Input.GetKey(KeyCode.Alpha3) && UseItemCoolTime3 >= 5.0f)
         //{
