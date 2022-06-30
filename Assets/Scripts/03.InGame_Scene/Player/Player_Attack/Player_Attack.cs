@@ -117,6 +117,10 @@ public class Player_Attack : MonoBehaviour
             {
                 collider.GetComponent<Monster>().TakeDamage(playerAttackDamage, playerCriticalValue);
             }
+            else
+            {
+                //허공 가르는 사운드용 공간
+            }
         }
     }
 
