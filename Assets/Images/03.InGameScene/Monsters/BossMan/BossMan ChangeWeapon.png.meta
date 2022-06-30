@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: cb308adb8d6ee3e4c810c80f8149f374
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6583973561179057501
+    second: BossMan ChangeWeapon_0
+  - first:
+      213: 6953460299916065361
+    second: BossMan ChangeWeapon_1
+  - first:
+      213: 3317444978101155475
+    second: BossMan ChangeWeapon_2
+  - first:
+      213: -5477565646682413590
+    second: BossMan ChangeWeapon_3
+  - first:
+      213: -5838328812303778389
+    second: BossMan ChangeWeapon_4
+  - first:
+      213: -8213970247983617136
+    second: BossMan ChangeWeapon_5
+  - first:
+      213: -5638571629962597278
+    second: BossMan ChangeWeapon_6
+  - first:
+      213: -7252390500965946432
+    second: BossMan ChangeWeapon_7
+  - first:
+      213: 2808910564667344813
+    second: BossMan ChangeWeapon_8
+  - first:
+      213: 5866260643964112053
+    second: BossMan ChangeWeapon_9
+  - first:
+      213: -8963799941872232997
+    second: BossMan ChangeWeapon_10
+  - first:
+      213: -301787540156046368
+    second: BossMan ChangeWeapon_11
+  - first:
+      213: -5658596701902094579
+    second: BossMan ChangeWeapon_12
+  - first:
+      213: 1876885641155394344
+    second: BossMan ChangeWeapon_13
+  - first:
+      213: 4359246907389488773
+    second: BossMan ChangeWeapon_14
+  - first:
+      213: -1145758118015111418
+    second: BossMan ChangeWeapon_15
+  - first:
+      213: 8758815490622724649
+    second: BossMan ChangeWeapon_16
+  - first:
+      213: -912203133306327849
+    second: BossMan ChangeWeapon_17
+  - first:
+      213: -6622784003456160884
+    second: BossMan ChangeWeapon_18
+  - first:
+      213: 2528320026827753096
+    second: BossMan ChangeWeapon_19
+  - first:
+      213: 1654160559436655367
+    second: BossMan ChangeWeapon_20
+  - first:
+      213: 9020078359335662401
+    second: BossMan ChangeWeapon_21
+  - first:
+      213: 8734994756940999058
+    second: BossMan ChangeWeapon_22
+  - first:
+      213: 6461442221079434840
+    second: BossMan ChangeWeapon_23
+  - first:
+      213: 4711294412967390583
+    second: BossMan ChangeWeapon_24
+  - first:
+      213: -676466940588662295
+    second: BossMan ChangeWeapon_25
+  - first:
+      213: 5834572980621721604
+    second: BossMan ChangeWeapon_26
+  - first:
+      213: 5576259744134950240
+    second: BossMan ChangeWeapon_27
+  - first:
+      213: -8961545166625846553
+    second: BossMan ChangeWeapon_28
+  - first:
+      213: -3881709596645707913
+    second: BossMan ChangeWeapon_29
+  - first:
+      213: -3791777714643927951
+    second: BossMan ChangeWeapon_30
+  - first:
+      213: 749355630601866732
+    second: BossMan ChangeWeapon_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_0
+      rect:
+        serializedVersion: 2
+        x: 5505
+        y: 76
+        width: 614
+        height: 1055
+      alignment: 9
+      pivot: {x: 0.43, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d24ac0219fe5b50800000000000000
+      internalID: 6583973561179057501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 76
+        width: 629
+        height: 955
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3967f9981aee90e20800000000000000
+      internalID: 3317444978101155475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_3
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 76
+        width: 523
+        height: 951
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5ac93d017cbf3b0800000000000000
+      internalID: -5477565646682413590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 76
+        width: 460
+        height: 951
+      alignment: 9
+      pivot: {x: 0.56, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad74b4c0e61afea0800000000000000
+      internalID: -5838328812303778389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 2690
+        y: 76
+        width: 463
+        height: 947
+      alignment: 9
+      pivot: {x: 0.57, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b2f45349d120e80800000000000000
+      internalID: -8213970247983617136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_7
+      rect:
+        serializedVersion: 2
+        x: 3555
+        y: 76
+        width: 489
+        height: 945
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbe181a3455a5b90800000000000000
+      internalID: -7252390500965946432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_8
+      rect:
+        serializedVersion: 2
+        x: 4482
+        y: 76
+        width: 533
+        height: 948
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7c6dcb6414bf620800000000000000
+      internalID: 2808910564667344813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan ChangeWeapon_9
+      rect:
+        serializedVersion: 2
+        x: 6531
+        y: 76
+        width: 744
+        height: 947
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcc55399f4296150800000000000000
+      internalID: 5866260643964112053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

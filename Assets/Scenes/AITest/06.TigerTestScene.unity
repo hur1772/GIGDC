@@ -2832,7 +2832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &21038245113363287
 Rigidbody2D:
   serializedVersion: 4
@@ -2925,7 +2925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448571185378166652, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_MaxHP
