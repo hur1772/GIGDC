@@ -12,12 +12,15 @@ public class FoxMarble : MonoBehaviour
     bool shootRight = false;
 
     SpriteRenderer _spriteRenderer;
+    Collider2D _collider;
     Player_TakeDamage playerdmg;
 
     private void Start()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _spriteRenderer.enabled = false;
+        _collider = GetComponent<Collider2D>();
+        _collider.enabled = false;
     }
 
     private void Update()
@@ -26,8 +29,11 @@ public class FoxMarble : MonoBehaviour
         {
             shotDelay -= Time.deltaTime;
             if (shotDelay <= 0.0f)
+            {
                 _spriteRenderer.enabled = true;
-            
+                _collider.enabled = true;
+            }
+
         }
         else
         {
@@ -47,7 +53,7 @@ public class FoxMarble : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out playerdmg))
+        if (collision.gameObject.TryGetComponent(out playerdmg) && shotDelay <= 0.0f)
         {
             playerdmg.P_TakeDamage(Damage);
             Destroy(this.gameObject);
