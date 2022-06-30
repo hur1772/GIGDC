@@ -38,10 +38,12 @@ public class TigerMonster : Monster
     float StayTime = 2.5f;
     RushEnum rushEnum = RushEnum.BACKSTEP;
     JumpEnum jumpEnum = JumpEnum.BACKSTEP;
+    bool goSkill = false;
 
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
     public GameObject Protal;
+
 
     //보스소환
     [Header("--- Boss ---")]
@@ -117,6 +119,10 @@ public class TigerMonster : Monster
         {
             JumpSkill();
         }
+        else if(m_Monstate == MonsterState.Hitted)
+        {
+            m_Monstate = MonsterState.CHASE;
+        }
     }
 
     public void JumpSkill()
@@ -141,6 +147,7 @@ public class TigerMonster : Monster
                     m_Animator.enabled = true;
                     m_Rb.AddForce(Vector2.up * 700.0f);
                     m_Animator.SetTrigger("Jump");
+                    goSkill = true;
                 }
             }
         }
@@ -164,6 +171,7 @@ public class TigerMonster : Monster
         }
         else if (jumpEnum == JumpEnum.JUMP_AFTER)
         {
+            goSkill = false;
             MonStay();
         }
     }
@@ -416,5 +424,18 @@ public class TigerMonster : Monster
         boss.transform.eulerAngles = bossSpawnPos.eulerAngles;
         this.m_Animator.enabled = false;
         this.spRend.sprite = sprites[1];
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!goSkill)
+            return;
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("돌진 데미지");
+            if (collision.gameObject.TryGetComponent(out playerTakeDmg))
+                playerTakeDmg.P_TakeDamage(45);
+        }
     }
 }
