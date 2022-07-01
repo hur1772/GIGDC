@@ -144,9 +144,9 @@ public class BossMan : Monster
         woman.transform.position = womanSpawnPos.position;
     }
 
-    public override void TakeDamage(float a_DamVal, float a_CritVal = 0)
+    public override void TakeDamage(int WeaponState)
     {
-        base.TakeDamage(a_DamVal, a_CritVal);
+        base.TakeDamage(WeaponState);
 
         if (m_CurHP <= m_MaxHP * 0.7f && !firstSpawn)
         {
