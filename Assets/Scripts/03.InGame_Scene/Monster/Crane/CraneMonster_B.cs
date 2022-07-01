@@ -196,13 +196,6 @@ public class CraneMonster_B : Monster
 
         int crit = Random.Range(0, 100);
 
-        // 무기 티어 크리티컬 확률 받아오고
-        //a_CritVal => 무기.crit + 크리티컬 아이템 먹은 개수
-
-        //string 무기종류 
-        //무기 데미지, 크리데미지계수 + 아이템 먹은 개수
-
-
         if (crit < a_CritVal)
         {
             m_CurHP -= a_CritDmg;
