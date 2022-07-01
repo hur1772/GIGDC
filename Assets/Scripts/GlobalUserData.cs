@@ -157,6 +157,7 @@ public class GlobalUserData
     public static string s_NickName = "User";
     public static int BowTier = 0;
     public static int SwordTier = 0;
+    public static float s_PlayerCriticalDmg = 1.5f;
     public static PlayerAttackState Player_Att_State;
 
     public static ulong UniqueCount = 0; //임시 Item 고유키 발급기...

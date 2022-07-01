@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: c18bd4f2a1d53d54d828ce1009e480e0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1879963855042641233
+    second: BossMan Hit_0
+  - first:
+      213: -5177919265497685204
+    second: BossMan Hit_3
+  - first:
+      213: -7674632756421059482
+    second: BossMan Hit_1
+  - first:
+      213: -599349304383555577
+    second: BossMan Hit_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +113,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BossMan Hit_0
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 80
+        width: 845
+        height: 1010
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa20c9595d609e5e0800000000000000
+      internalID: -1879963855042641233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Hit_3
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 76
+        width: 832
+        height: 1012
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23eb50acd55428b0800000000000000
+      internalID: -5177919265497685204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Hit_1
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 76
+        width: 847
+        height: 940
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c12f38b2a3e7590800000000000000
+      internalID: -7674632756421059482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Hit_2
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 76
+        width: 832
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70837dfabfeaea7f0800000000000000
+      internalID: -599349304383555577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -148,10 +148,19 @@ public class Monster : MonoBehaviour
             return;
 
         int crit = Random.Range(0, 100);
-        Debug.Log(crit);
+
+        // 무기 티어 크리티컬 확률 받아오고
+        //a_CritVal => 무기.crit + 크리티컬 아이템 먹은 개수
+
+        //string 무기종류 
+        //무기 데미지, 크리데미지계수 + 아이템 먹은 개수
+
+
         if(crit < a_CritVal)
         {
-            m_CurHP -= a_DamVal * 1.5f;
+            //m_CurHP -=  * GlobalUserData.s_PlayerCriticalDmg;
+
+            m_CurHP -= a_DamVal * GlobalUserData.s_PlayerCriticalDmg;
             if(m_CurHP > 0.0f)
             {
                 m_Animator.SetTrigger("Hitted");
