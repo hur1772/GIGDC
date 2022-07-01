@@ -22,7 +22,7 @@ public class HealItemShopInteraction : MonoBehaviour
     {
         if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.HealItemShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.HealItemShopDistance < Interaction.Inst.ShopDistance || Interaction.Inst.HealItemShopDistance <Interaction.Inst.UpgdNPCDistance)
+            if (Interaction.Inst.HealItemShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.HealItemShopDistance < Interaction.Inst.ShopDistance || Interaction.Inst.HealItemShopDistance <Interaction.Inst.UpgdNPCDistance || Interaction.Inst.HealItemShopDistance < Interaction.Inst.BeaconDistance)
             {
                 if (Interaction.Inst.HealItemShopDistance < 5.0f)
                 {
@@ -33,15 +33,13 @@ public class HealItemShopInteraction : MonoBehaviour
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.HealItemShopDistance);
                         Interaction.Inst.m_interactionState = InteractionState.HealItemShop;
                         Interaction.Inst.IsInteraction = true;
-
-                        Debug.Log(Interaction.Inst.UpgdNPCDistance);
                     }
                 }
             }
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+            if (Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f && Interaction.Inst.BeaconDistance > 5.0f)
             {
                 if (Interaction.Inst.HealItemShopDistance > 5.0f)
                 {

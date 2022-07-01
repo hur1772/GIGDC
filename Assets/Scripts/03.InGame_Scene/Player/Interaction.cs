@@ -17,6 +17,7 @@ public enum InteractionState
     Shop,
     HealItemShop,
     UpGdNPC,
+    Beacon,
     Portal
 }
 
@@ -40,6 +41,7 @@ public class Interaction : MonoBehaviour
     [HideInInspector] public float PortalDistance =5.1f;
     [HideInInspector] public float HealItemShopDistance = 5.1f;
     [HideInInspector] public float UpgdNPCDistance = 5.1f;
+    [HideInInspector] public float BeaconDistance = 5.1f;
 
     public Image GKey;
 
@@ -116,6 +118,13 @@ public class Interaction : MonoBehaviour
                 }
                 break;
 
+            case InteractionState.Beacon:
+                if(Input.GetKey(KeyCode.G))
+                {
+                    
+                }
+                break;
+
             case InteractionState.Portal:
                 Portal = GameObject.Find("Protal");
                 if (Input.GetKey(KeyCode.G))
@@ -173,6 +182,7 @@ public class Interaction : MonoBehaviour
         PortalDistance = Pos;
         HealItemShopDistance = Pos;
         UpgdNPCDistance = Pos;
+        BeaconDistance = Pos;
         IsInteraction = false;
     }
 }

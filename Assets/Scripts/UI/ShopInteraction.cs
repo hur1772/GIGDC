@@ -21,7 +21,7 @@ public class ShopInteraction : MonoBehaviour
     {
         if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.ShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.ShopDistance < Interaction.Inst.UpgdNPCDistance || Interaction.Inst.ShopDistance < Interaction.Inst.HealItemShopDistance)
+            if (Interaction.Inst.ShopDistance < Interaction.Inst.PortalDistance || Interaction.Inst.ShopDistance < Interaction.Inst.UpgdNPCDistance || Interaction.Inst.ShopDistance < Interaction.Inst.HealItemShopDistance || Interaction.Inst.ShopDistance < Interaction.Inst.BeaconDistance)
             {
                 if (Interaction.Inst.ShopDistance < 5.0f)
                 {
@@ -38,7 +38,7 @@ public class ShopInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.HealItemShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f && Interaction.Inst.UpgdNPCDistance > 5.0f)
+            if (Interaction.Inst.HealItemShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f && Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.BeaconDistance > 5.0f)
             {
                 if (Interaction.Inst.ShopDistance > 5.0f)
                 {

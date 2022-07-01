@@ -20,7 +20,7 @@ public class UpGdNPCInteraction : MonoBehaviour
     {
         if (Interaction.Inst.IsInteraction == false)
         {
-            if (Interaction.Inst.UpgdNPCDistance < Interaction.Inst.PortalDistance || Interaction.Inst.UpgdNPCDistance < Interaction.Inst.ShopDistance || Interaction.Inst.UpgdNPCDistance < Interaction.Inst.HealItemShopDistance)
+            if (Interaction.Inst.UpgdNPCDistance < Interaction.Inst.PortalDistance || Interaction.Inst.UpgdNPCDistance < Interaction.Inst.ShopDistance || Interaction.Inst.UpgdNPCDistance < Interaction.Inst.HealItemShopDistance || Interaction.Inst.UpgdNPCDistance < Interaction.Inst.BeaconDistance)
             {
                 if (Interaction.Inst.UpgdNPCDistance < 5.0f)
                 {
@@ -37,7 +37,7 @@ public class UpGdNPCInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if (Interaction.Inst.HealItemShopDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f)
+            if (Interaction.Inst.HealItemShopDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f && Interaction.Inst.PortalDistance > 5.0f&& Interaction.Inst.BeaconDistance > 5.0f)
             {
                 if (Interaction.Inst.UpgdNPCDistance > 5.0f)
                 {

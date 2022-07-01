@@ -21,7 +21,7 @@ public class PortalInteraction : MonoBehaviour
         if (Interaction.Inst.IsInteraction == false)
         {
             if ( Interaction.Inst.PortalDistance < Interaction.Inst.NPCDistance || Interaction.Inst.PortalDistance < Interaction.Inst.ShopDistance || Interaction.Inst.PortalDistance < Interaction.Inst.KingDistance||
-                Interaction.Inst.PortalDistance < Interaction.Inst.HealItemShopDistance || Interaction.Inst.PortalDistance < Interaction.Inst.UpgdNPCDistance)
+                Interaction.Inst.PortalDistance < Interaction.Inst.HealItemShopDistance || Interaction.Inst.PortalDistance < Interaction.Inst.UpgdNPCDistance || Interaction.Inst.PortalDistance < Interaction.Inst.BeaconDistance)
             {
                 if (Interaction.Inst.PortalDistance < 5.0f)
                 {
@@ -39,7 +39,7 @@ public class PortalInteraction : MonoBehaviour
         }
         if (Interaction.Inst.IsInteraction == true)
         {
-            if ( Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f&& Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.HealItemShopDistance > 5.0f)
+            if ( Interaction.Inst.NPCDistance > 5.0f && Interaction.Inst.KingDistance > 5.0f && Interaction.Inst.ShopDistance > 5.0f&& Interaction.Inst.UpgdNPCDistance > 5.0f && Interaction.Inst.HealItemShopDistance > 5.0f && Interaction.Inst.BeaconDistance > 5.0f)
             {
                 if (Interaction.Inst.PortalDistance > 5.0f)
                 {
