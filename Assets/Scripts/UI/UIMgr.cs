@@ -14,6 +14,9 @@ public class UIMgr : MonoBehaviour
 
     public Text GoldTxt;
 
+    public Image ESC_Menu_panel = null;
+    bool menuOn;
+
     float m_CurHp;
     float m_MaxHp;
 
@@ -28,6 +31,7 @@ public class UIMgr : MonoBehaviour
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
         GlobalUserData.InitData();
+        menuOn = false;
     }
 
     // Update is called once per frame
@@ -82,6 +86,23 @@ public class UIMgr : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (menuOn == false)
+            {
+                ESC_Menu_panel.gameObject.SetActive(true);
+                menuOn = true;
+                Time.timeScale = 0.0f;
+            }
+            else
+            {
+                ESC_Menu_panel.gameObject.SetActive(false);
+                menuOn = false;
+                Time.timeScale = 1.0f;
+            }
+
         }
 
         if (Input.GetKeyDown(KeyCode.R))

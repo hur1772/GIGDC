@@ -145,10 +145,14 @@ public class Monster : MonoBehaviour
         m_Animator.SetFloat("DistanceFromPlayer", m_CalcVec.magnitude);
     }
 
-    public virtual void TakeDamage(float a_DamVal, float a_CritVal = 0.0f)
+    public virtual void TakeDamage(int WeaponState)
     {
         if (m_CurHP <= 0.0f)
             return;
+
+        float a_DamVal = GlobalUserData.m_weaponDataList[WeaponState].m_WeaponDamage;
+        float a_CritVal = GlobalUserData.m_weaponDataList[WeaponState].m_Critical;
+        float a_CritDmg = a_DamVal + (a_DamVal * GlobalUserData.m_weaponDataList[WeaponState].m_CriticalDmg);
 
         int crit = Random.Range(0, 100);
 
@@ -163,7 +167,7 @@ public class Monster : MonoBehaviour
         {
             //m_CurHP -=  * GlobalUserData.s_PlayerCriticalDmg;
 
-            m_CurHP -= a_DamVal * GlobalUserData.s_PlayerCriticalDmg;
+            m_CurHP -= a_CritDmg;
             if(m_CurHP > 0.0f)
             {
                 m_Animator.SetTrigger("Hitted");

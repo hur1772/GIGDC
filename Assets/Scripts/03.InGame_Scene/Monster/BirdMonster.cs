@@ -259,15 +259,29 @@ void Update()
             playerTakeDmg.P_TakeDamage();
     }
 
-    public override void TakeDamage(float a_DamVal, float a_CritVal)
+    public override void TakeDamage(int WeaponState)
     {
-        if (m_CurHP <= 0)
+        if (m_CurHP <= 0.0f)
             return;
 
+        float a_DamVal = GlobalUserData.m_weaponDataList[WeaponState].m_WeaponDamage;
+        float a_CritVal = GlobalUserData.m_weaponDataList[WeaponState].m_Critical;
+        float a_CritDmg = a_DamVal + (a_DamVal * GlobalUserData.m_weaponDataList[WeaponState].m_CriticalDmg);
+
+        Debug.Log(a_CritDmg);
+
         int crit = Random.Range(0, 100);
+
+        // 무기 티어 크리티컬 확률 받아오고
+        //a_CritVal => 무기.crit + 크리티컬 아이템 먹은 개수
+
+        //string 무기종류 
+        //무기 데미지, 크리데미지계수 + 아이템 먹은 개수
+
+
         if (crit < a_CritVal)
         {
-            m_CurHP -= a_DamVal * 2;
+            m_CurHP -= a_CritDmg;
             Debug.Log("crit!");
         }
         else
@@ -276,11 +290,12 @@ void Update()
             Debug.Log("몬스터피격");
         }
 
-        if (m_CurHP <= 0.0f)
+        if (m_CurHP <= 0)
         {
             m_CurHP = 0.0f;
             m_FlyMonState = FlyMonsterState.DIE;
             m_Rb.gravityScale = 1.5f;
         }
     }
+
 }

@@ -39993,6 +39993,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -162.18
       objectReference: {fileID: 0}
+    - target: {fileID: 6619514968280421588, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9104536280481052224, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_Size.y
       value: 2.3
@@ -50227,6 +50231,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Village
       objectReference: {fileID: 0}
+    - target: {fileID: 2269875320446877071, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b181d5cf336c29e45bfee47e5a57aa4e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
 --- !u!1 &1900336594

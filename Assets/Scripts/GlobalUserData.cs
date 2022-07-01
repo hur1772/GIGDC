@@ -16,6 +16,66 @@ public enum ItemType
     ItemCount
 }
 
+public enum WeaponType
+{ 
+    Sword3Tier,
+    Bow3Tier,
+    Sword2Tier,
+    Bow2Tier,
+    Sword1Tier,
+    Bow1Tier,
+    WeaponCount
+}
+
+public class WeaponState_Info
+{
+    public WeaponType m_WpType = WeaponType.Sword3Tier;
+    public float m_WeaponDamage = 30;
+    public float m_Critical = 10.0f;
+    public float m_CriticalDmg = 0.5f;
+
+    public void SetType(WeaponType a_WpType)
+    {
+        m_WpType = a_WpType;
+        if (a_WpType == WeaponType.Sword3Tier)
+        {
+            m_WeaponDamage = 30;
+            m_Critical = 10.0f;
+            m_CriticalDmg = 0.5f;
+        }
+        else if (a_WpType == WeaponType.Bow3Tier)
+        {
+            m_WeaponDamage = 25;
+            m_Critical = 15.0f;
+            m_CriticalDmg = 0.45f;
+        }
+        else if (a_WpType == WeaponType.Sword2Tier)
+        {
+            m_WeaponDamage = 38;
+            m_Critical = 15.0f;
+            m_CriticalDmg = 0.55f;
+        }
+        else if (a_WpType == WeaponType.Bow2Tier)
+        {
+            m_WeaponDamage = 33;
+            m_Critical = 20.0f;
+            m_CriticalDmg = 0.5f;
+        }
+        else if (a_WpType == WeaponType.Sword1Tier)
+        {
+            m_WeaponDamage = 45;
+            m_Critical = 25.0f;
+            m_CriticalDmg = 0.65f;
+        }
+        else if (a_WpType == WeaponType.Bow1Tier)
+        {
+            m_WeaponDamage = 40;
+            m_Critical = 29.0f;
+            m_CriticalDmg = 0.6f;
+        }
+    }
+}
+
 public class Item_Info  //각 Item 정보
 {
     public string m_Name = "";              //아이템 이름
@@ -157,13 +217,14 @@ public class GlobalUserData
     public static string s_NickName = "User";
     public static int BowTier = 0;
     public static int SwordTier = 0;
-    public static float s_PlayerCriticalDmg = 1.5f;
     public static PlayerAttackState Player_Att_State;
 
     public static ulong UniqueCount = 0; //임시 Item 고유키 발급기...
                                          //public static List<ItemValue> g_ItemList = new List<ItemValue>();
 
     public static List<Item_Info> m_ItemDataList = new List<Item_Info>();
+
+    public static List<WeaponState_Info> m_weaponDataList = new List<WeaponState_Info>();
 
     public static void InitData()
     {
@@ -174,8 +235,21 @@ public class GlobalUserData
             {
                 a_SkItemNd = new Item_Info();
                 a_SkItemNd.SetType((ItemType)ii);
-                a_SkItemNd.m_CurItemCount = 0;
                 m_ItemDataList.Add(a_SkItemNd);
+            }
+        }
+    }
+
+    public static void InitWeaponData()
+    {
+        if (m_weaponDataList.Count <= 0)
+        {
+            WeaponState_Info a_WeaponStateNd;
+            for (int ii = 0; ii < (int)WeaponType.WeaponCount; ii++)
+            {
+                a_WeaponStateNd = new WeaponState_Info();
+                a_WeaponStateNd.SetType((WeaponType)ii);
+                m_weaponDataList.Add(a_WeaponStateNd);
             }
         }
     }
