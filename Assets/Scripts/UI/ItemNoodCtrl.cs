@@ -46,7 +46,6 @@ public class ItemNoodCtrl : MonoBehaviour
     {
         if (m_StoreMgr != null)
         {
-            Debug.Log(m_ItemType);
             if (IsCollSlot(m_ItemIconImg.gameObject) == true)
             {
                 m_StoreMgr.ShowToolTip((int)m_ItemType, transform.position);

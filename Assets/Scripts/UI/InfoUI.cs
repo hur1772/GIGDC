@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class InfoUI : MonoBehaviour
 {
-    [SerializeField] private Text GuideTxt;
-        public GameObject HStore;
-        public GameObject WPStore;
-        public GameObject STStore;
-        private float GuideTimer = 4.0f;
+    public Text GuideTxt;
+    public GameObject HStore;
+    public GameObject WPStore;
+    public GameObject STStore;
+    public float GuideTimer = 4.0f;
 
     public static InfoUI Inst = null;
 
@@ -21,12 +21,12 @@ public class InfoUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
 
         if (0.0f < GuideTimer)
         {
@@ -43,6 +43,6 @@ public class InfoUI : MonoBehaviour
                 GuideTxt.gameObject.SetActive(false);
             }
         }
-        
+
     }
 }

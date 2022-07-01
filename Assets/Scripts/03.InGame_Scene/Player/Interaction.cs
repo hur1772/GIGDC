@@ -51,6 +51,7 @@ public class Interaction : MonoBehaviour
 
     public bool IsUpdate = false;
 
+
     private void Awake()
     {
         Inst = this;
@@ -121,7 +122,12 @@ public class Interaction : MonoBehaviour
             case InteractionState.Beacon:
                 if(Input.GetKey(KeyCode.G))
                 {
-                    
+                    GlobalUserData.Save();
+                    if (InfoUI.Inst.GuideTxt != null)
+                    {
+                        InfoUI.Inst.GuideTxt.text = "저장되었습니다";
+                        InfoUI.Inst.GuideTimer = 4.0f;
+                    }
                 }
                 break;
 

@@ -216,8 +216,6 @@ public class Item_Info  //각 Item 정보
 public class GlobalUserData 
 {
     public static int s_GoldCount = 5000;
-    public static int s_ItemCount = 0;
-    public static string s_NickName = "User";
     public static int BowTier = 0;
     public static int SwordTier = 0;
     public static PlayerAttackState Player_Att_State;
@@ -263,64 +261,37 @@ public class GlobalUserData
         Player_Att_State = PlayerAttackState.player_sword;
     }
 
-    public static void LoadGameInfo()
-    {
-
-        //Player_Att_State = PlayerAttackState.player_no_att;
-        s_GoldCount = PlayerPrefs.GetInt("GoldCount", 0);
-        s_ItemCount = PlayerPrefs.GetInt("ItemCount", 0);
-        s_NickName = PlayerPrefs.GetString("UserNick", "User");
-        //BowTier= PlayerPrefs.GetInt( "BowTier", 0 );
-        //SwordTier= PlayerPrefs.GetInt( "SwordTier", 0);
-
-        ReflashItemLoad();
-    }
-
     //------------ Item Reflash
     public static void ReflashItemLoad()  //<---- g_ItemList  갱신
     {
-        //g_ItemList.Clear();
+        m_ItemDataList.Clear();
 
-        //ItemValue a_LdNode;
-        //string a_KeyBuff = "";
-        //int a_ItmCount = PlayerPrefs.GetInt("Item_Count", 0);
-        //for (int a_ii = 0; a_ii < a_ItmCount; a_ii++)
-        //{
-        //    a_LdNode = new ItemValue();
-        //    a_KeyBuff = string.Format("IT_{0}_stUniqueID", a_ii);
-        //    string stUniqueID = PlayerPrefs.GetString(a_KeyBuff, "");
-        //    if (stUniqueID != "")
-        //        a_LdNode.UniqueID = ulong.Parse(stUniqueID);
-        //    a_KeyBuff = string.Format("IT_{0}_Item_Type", a_ii);
-        //    a_LdNode.m_Item_Type = (Item_Type)PlayerPrefs.GetInt(a_KeyBuff, 0);
-        //    a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
-        //    a_LdNode.m_ItemName = PlayerPrefs.GetString(a_KeyBuff, "");
-        //    a_KeyBuff = string.Format("IT_{0}_ItemLevel", a_ii);
-        //    a_LdNode.m_ItemLevel = PlayerPrefs.GetInt(a_KeyBuff, 0);
-        //    a_KeyBuff = string.Format("IT_{0}_ItemStar", a_ii);
-        //    a_LdNode.m_ItemStar = PlayerPrefs.GetInt(a_KeyBuff, 0);
+        Item_Info a_ItemNode;
+        string a_KeyBuff = "";
+        int a_ItmCount = PlayerPrefs.GetInt("Item_Count", 0);
+        for (int a_ii = 0; a_ii < a_ItmCount; a_ii++)
+        {
+            a_ItemNode = new Item_Info();
+            a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
+            a_ItemNode.m_Name = PlayerPrefs.GetString(a_KeyBuff, "");
+            a_KeyBuff = string.Format("IT_{0}_CurItemCount", a_ii);
+            a_ItemNode.m_CurItemCount = PlayerPrefs.GetInt(a_KeyBuff, 0);
 
-        //    g_ItemList.Add(a_LdNode);
-        //}
+            m_ItemDataList.Add(a_ItemNode);
+        }
     }
 
     public static void ReflashItemSave()  //<-- 리스트 다시 저장
     {
         //---------기존에 저장되어 있었던 아이템 목록 제거
-        //ItemValue a_SvNode;
+        Item_Info a_ItemNode;
         string a_KeyBuff = "";
         int a_ItmCount = PlayerPrefs.GetInt("Item_Count", 0);
         for (int a_ii = 0; a_ii < a_ItmCount + 10; a_ii++)
         {
-            a_KeyBuff = string.Format("IT_{0}_stUniqueID", a_ii);
-            PlayerPrefs.DeleteKey(a_KeyBuff);
-            a_KeyBuff = string.Format("IT_{0}_Item_Type", a_ii);
-            PlayerPrefs.DeleteKey(a_KeyBuff);
             a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
             PlayerPrefs.DeleteKey(a_KeyBuff);
-            a_KeyBuff = string.Format("IT_{0}_ItemLevel", a_ii);
-            PlayerPrefs.DeleteKey(a_KeyBuff);
-            a_KeyBuff = string.Format("IT_{0}_ItemStar", a_ii);
+            a_KeyBuff = string.Format("IT_{0}_CurItemCount", a_ii);
             PlayerPrefs.DeleteKey(a_KeyBuff);
         }
         PlayerPrefs.DeleteKey("Item_Count");  //아이템 수 제거
@@ -328,31 +299,38 @@ public class GlobalUserData
         //---------기존에 저장되어 있었던 아이템 목록 제거
 
         //---------- 새로운 리스트 저장
-        //PlayerPrefs.SetInt("Item_Count", g_ItemList.Count);
-        //for (int a_ii = 0; a_ii < g_ItemList.Count; a_ii++)
-        //{
-        //    a_SvNode = g_ItemList[a_ii];
-        //    a_KeyBuff = string.Format("IT_{0}_stUniqueID", a_ii);
-        //    PlayerPrefs.SetString(a_KeyBuff, a_SvNode.UniqueID.ToString());
-        //    a_KeyBuff = string.Format("IT_{0}_Item_Type", a_ii);
-        //    PlayerPrefs.SetInt(a_KeyBuff, (int)a_SvNode.m_Item_Type);
-        //    a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
-        //    PlayerPrefs.SetString(a_KeyBuff, a_SvNode.m_ItemName);
-        //    a_KeyBuff = string.Format("IT_{0}_ItemLevel", a_ii);
-        //    PlayerPrefs.SetInt(a_KeyBuff, a_SvNode.m_ItemLevel);
-        //    a_KeyBuff = string.Format("IT_{0}_ItemStar", a_ii);
-        //    PlayerPrefs.SetInt(a_KeyBuff, a_SvNode.m_ItemStar);
-        //}
-        //PlayerPrefs.Save(); //폰에서 마지막 저장상태를 확실히 저장하게 하기 위하여...
-        ////---------- 새로운 리스트 저장
+        PlayerPrefs.SetInt("Item_Count", m_ItemDataList.Count);
+        for (int a_ii = 0; a_ii < m_ItemDataList.Count; a_ii++)
+        {
+            a_ItemNode = m_ItemDataList[a_ii];
+            a_KeyBuff = string.Format("IT_{0}_ItemLevel", a_ii);
+            PlayerPrefs.SetString(a_KeyBuff, a_ItemNode.m_Name);
+            a_KeyBuff = string.Format("IT_{0}_ItemStar", a_ii);
+            PlayerPrefs.SetInt(a_KeyBuff, a_ItemNode.m_CurItemCount);
+        }
+        PlayerPrefs.Save(); //폰에서 마지막 저장상태를 확실히 저장하게 하기 위하여...
+        //---------- 새로운 리스트 저장
     }
     //------------ Item Reflash
 
-    public static void ClearGameInfo()
+    public static void Save()
     {
-        PlayerPrefs.DeleteAll();
-        LoadGameInfo();
+        ReflashItemSave();
+        PlayerPrefs.SetInt("s_GoldCount", s_GoldCount);
+        PlayerPrefs.SetInt("BowTier", BowTier);
+        PlayerPrefs.SetInt("SwordTier", SwordTier);
+        PlayerPrefs.SetInt("CurStageNum", CurStageNum);
     }
+
+    public static void Load()
+    {
+        ReflashItemLoad();
+        s_GoldCount = PlayerPrefs.GetInt("GoldCount", 0);
+        BowTier = PlayerPrefs.GetInt("BowTier", 0);
+        SwordTier = PlayerPrefs.GetInt("SwordTier", 0);
+        CurStageNum = PlayerPrefs.GetInt("CurStageNum", 0);
+    }
+
 
     //프로젝트 전체에서 변수나 함수 이름 검색 : < Ctrl > + < < >
    // public static ulong GetUnique() //임시 고유키 발급기...
