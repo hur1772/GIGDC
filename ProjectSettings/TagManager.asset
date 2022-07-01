@@ -12,6 +12,7 @@ TagManager:
   - Village
   - target
   - NPC
+  - Platform
   layers:
   - Default
   - TransparentFX
