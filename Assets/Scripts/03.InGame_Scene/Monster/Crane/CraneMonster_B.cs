@@ -183,5 +183,35 @@ public class CraneMonster_B : Monster
             Debug.Log("검출안됨");
     }
 
+    public override void TakeDamage(int WeaponState)
+    {
+        if (m_CurHP <= 0.0f)
+            return;
 
+        float a_DamVal = GlobalUserData.m_weaponDataList[WeaponState].m_WeaponDamage;
+        float a_CritVal = GlobalUserData.m_weaponDataList[WeaponState].m_Critical;
+        float a_CritDmg = a_DamVal + (a_DamVal * GlobalUserData.m_weaponDataList[WeaponState].m_CriticalDmg);
+
+        Debug.Log(a_CritDmg);
+
+        int crit = Random.Range(0, 100);
+
+        if (crit < a_CritVal)
+        {
+            m_CurHP -= a_CritDmg;
+            Debug.Log("crit!");
+        }
+        else
+        {
+            m_CurHP -= a_DamVal;
+            Debug.Log("몬스터피격");
+        }
+
+        if (m_CurHP <= 0)
+        {
+            m_CurHP = 0.0f;
+            m_Monstate = MonsterState.DIE;
+            m_Rb.gravityScale = 1.5f;
+        }
+    }
 }
