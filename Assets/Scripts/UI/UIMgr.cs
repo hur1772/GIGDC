@@ -34,59 +34,6 @@ public class UIMgr : MonoBehaviour
     void Update()
     {
         //TakeDamage();
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (UseItemImg1 != null)
-            {
-                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0)
-                    return;                   
-
-                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount>0)
-                {
-                    if(m_CurHp > m_MaxHp)
-                    {
-                        GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
-                        m_CurHp += 30;
-                    }
-                }
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (UseItemImg2 != null)
-            {
-                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0)
-                    return;
-
-                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
-                {
-                    if (m_CurHp > m_MaxHp)
-                    {
-                        GlobalUserData.m_ItemDataList[1].m_CurItemCount--;
-                        m_CurHp += 50;
-                    }
-                }
-            }
-        }
-
-        if (UseItemImg1 != null)
-        {
-            if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0 && HealItemPanel1 != null)
-                HealItemPanel1.gameObject.SetActive(true);
-            if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
-                HealItemPanel1.gameObject.SetActive(false);
-        }
-        if (UseItemImg2 != null)
-        {
-            if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0 && HealItemPanel2 != null)
-                HealItemPanel2.gameObject.SetActive(true);
-            if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
-                HealItemPanel2.gameObject.SetActive(false);
-        }
-
-
         //if (Input.GetKey(KeyCode.Alpha3) && UseItemCoolTime3 >= 5.0f)
         //{
         //    if (UseItemImg3 != null)
@@ -115,6 +62,61 @@ public class UIMgr : MonoBehaviour
 
         m_CurHp = pTakeDamage.curHp;
         m_MaxHp = pTakeDamage.maxHp;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (UseItemImg1 != null)
+            {
+                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0)
+                {
+                    return;
+                }
+
+                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
+                {
+                    if (m_CurHp < m_MaxHp)
+                    {
+                        GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
+                        pTakeDamage.curHp += 30;
+                        m_CurHp += 30; 
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (UseItemImg2 != null)
+            {
+                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0)
+                    return;
+
+                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
+                {
+                    if (m_CurHp < m_MaxHp)
+                    {
+                        GlobalUserData.m_ItemDataList[1].m_CurItemCount--;
+                        pTakeDamage.curHp += 50;
+                        m_CurHp += 50;
+                    }
+                }
+            }
+        }
+
+        if (UseItemImg1 != null)
+        {
+            if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0 && HealItemPanel1 != null)
+                HealItemPanel1.gameObject.SetActive(true);
+            if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
+                HealItemPanel1.gameObject.SetActive(false);
+        }
+        if (UseItemImg2 != null)
+        {
+            if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0 && HealItemPanel2 != null)
+                HealItemPanel2.gameObject.SetActive(true);
+            if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
+                HealItemPanel2.gameObject.SetActive(false);
+        }
 
 
         if (GoldTxt != null)
