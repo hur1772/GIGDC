@@ -51,6 +51,47 @@ public class VillageLimit : MonoBehaviour
 
             tr.position = m_Pos;
         }
-        
+        else if(nowscene.name == "1_1")
+        {
+            m_Pos = tr.position;
+            if (tr.position.x < -7.8f)
+            {
+                m_Pos.x = -7.8f;
+            }
+            if (461.0f < tr.position.x)
+            {
+                m_Pos.x = 461.0f;
+            }
+
+            tr.position = m_Pos;
+        }
+        else if (nowscene.name == "1_2")
+        {
+            m_Pos = tr.position;
+            if (tr.position.x < -0.15f)
+            {
+                m_Pos.x = -0.15f;
+            }
+            if (485.9f < tr.position.x)
+            {
+                m_Pos.x = 485.9f;
+            }
+
+            tr.position = m_Pos;
+        }
+        else if (nowscene.name == "1_3")
+        {
+            m_Pos = tr.position;
+            if (tr.position.x < -8.4f)
+            {
+                m_Pos.x = -8.4f;
+            }
+            if (24.5f < tr.position.x)
+            {
+                m_Pos.x = 24.5f;
+            }
+
+            tr.position = m_Pos;
+        }
     }
 }

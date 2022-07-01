@@ -140,6 +140,26 @@ public class Interaction : MonoBehaviour
                         SceneManager.LoadScene("Village");
                         m_interactionState = InteractionState.Nomal;
                     }
+                    if (Portal.tag == "Stage")
+                    {
+                        if(GlobalUserData.CurStageNum == 0)
+                        {
+                            GlobalUserData.CurStageNum++;
+                            SceneManager.LoadScene("1_1");
+                        }
+                        else if(GlobalUserData.CurStageNum == 1)
+                        {
+                            GlobalUserData.CurStageNum++;
+                            SceneManager.LoadScene("1_2");
+                        }
+                        else if (GlobalUserData.CurStageNum == 2)
+                        {
+                            GlobalUserData.CurStageNum++;
+                            SceneManager.LoadScene("1_3");
+                        }
+
+                        m_interactionState = InteractionState.Nomal;
+                    }
                 }
                 break;
         }
