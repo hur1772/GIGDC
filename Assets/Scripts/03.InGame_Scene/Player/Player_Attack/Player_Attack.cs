@@ -29,6 +29,8 @@ public class Player_Attack : MonoBehaviour
     private void Start() => StartFunc();
     private void StartFunc()
     {
+        GlobalUserData.InitWeaponData();
+
         rigid = GetComponent<Rigidbody2D>();
         
         Player_State = GetComponent<Player_State_Ctrl>();
@@ -115,7 +117,7 @@ public class Player_Attack : MonoBehaviour
             }
             else if(collider.tag == "Monster")
             {
-                collider.GetComponent<Monster>().TakeDamage(playerAttackDamage, playerCriticalValue);
+                collider.GetComponent<Monster>().TakeDamage(0 + GlobalUserData.SwordTier * 2);
             }
             else
             {

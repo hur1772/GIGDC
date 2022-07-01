@@ -86,7 +86,7 @@ public class BulletCtrl : MonoBehaviour
         if (coll.gameObject.tag == "Monster")
         {
             Debug.Log("Hit");
-            coll.gameObject.GetComponent<Monster>().TakeDamage(bullet_Att, 15.0f);
+            coll.gameObject.GetComponent<Monster>().TakeDamage(1 + GlobalUserData.BowTier * 2);
             Destroy(gameObject);
         }
     }
