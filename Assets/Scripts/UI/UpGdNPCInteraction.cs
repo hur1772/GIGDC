@@ -26,6 +26,7 @@ public class UpGdNPCInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        InfoUI.Inst.WPStore.gameObject.SetActive(true);
                         Interaction.Inst.GKey.gameObject.SetActive(true);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.UpgdNPCDistance);
                         Interaction.Inst.m_interactionState = InteractionState.UpGdNPC;
@@ -42,6 +43,7 @@ public class UpGdNPCInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        InfoUI.Inst.WPStore.gameObject.SetActive(false);
                         Interaction.Inst.GKey.gameObject.SetActive(false);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.UpgdNPCDistance);
                         Interaction.Inst.IsInteraction = false;

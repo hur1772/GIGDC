@@ -9287,7 +9287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &727292165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9941,7 +9941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816746992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11117,7 +11117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1239147808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12858,9 +12858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuideTxt: {fileID: 169588907}
-  HSTxt: {fileID: 1174514000}
-  WPTxt: {fileID: 0}
-  STTxt: {fileID: 0}
+  HStore: {fileID: 816746991}
+  WPStore: {fileID: 727292164}
+  STStore: {fileID: 1239147807}
 --- !u!4 &1772387598
 Transform:
   m_ObjectHideFlags: 0

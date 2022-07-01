@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealItemShopInteraction : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class HealItemShopInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)  
                     {
+                        InfoUI.Inst.HStore.gameObject.SetActive(true);
                         Interaction.Inst.GKey.gameObject.SetActive(true);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.HealItemShopDistance);
                         Interaction.Inst.m_interactionState = InteractionState.HealItemShop;
@@ -45,6 +47,7 @@ public class HealItemShopInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        InfoUI.Inst.HStore.gameObject.SetActive(false);
                         Interaction.Inst.GKey.gameObject.SetActive(false);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.HealItemShopDistance);
                         Interaction.Inst.IsInteraction = false;

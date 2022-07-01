@@ -27,6 +27,7 @@ public class ShopInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        InfoUI.Inst.STStore.gameObject.SetActive(true);
                         Interaction.Inst.GKey.gameObject.SetActive(true);
                         Interaction.Inst.animator.SetFloat("Interaction",    Interaction.Inst.ShopDistance);
                         Interaction.Inst.m_interactionState = InteractionState.Shop;
@@ -43,6 +44,7 @@ public class ShopInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        InfoUI.Inst.STStore.gameObject.SetActive(false);
                         Interaction.Inst.GKey.gameObject.SetActive(false);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.ShopDistance);
                         Interaction.Inst.IsInteraction = false;
