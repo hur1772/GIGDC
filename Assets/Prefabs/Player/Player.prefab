@@ -1035,7 +1035,13 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
-  runtimeAnimatorControllers: []
+  runtimeAnimatorControllers:
+  - {fileID: 9100000, guid: 26a0cf1a3096cbf46a1a1dc0791a70e8, type: 2}
+  - {fileID: 9100000, guid: 23055b6c846f0d243b8055d5a3733c7a, type: 2}
+  - {fileID: 22100000, guid: ce8b31c37f6443446aecdcc0db3c56bb, type: 2}
+  - {fileID: 22100000, guid: ddf0311efd5e3d64a97c56bb23577272, type: 2}
+  - {fileID: 22100000, guid: 3246243caca4d0442bba978267c20939, type: 2}
+  - {fileID: 22100000, guid: a44b2af07e5994440911f9707d2af4de, type: 2}
 --- !u!114 &4109632169616997899
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -83,7 +83,6 @@ public class BulletCtrl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("hit");
         if (coll.gameObject.tag == "Monster")
         {
             Debug.Log("Hit");
@@ -97,6 +96,11 @@ public class BulletCtrl : MonoBehaviour
         if (coll.gameObject.tag == "target")
         {
             coll.gameObject.GetComponent<TargetCtrl>().TakeDamage(bullet_Att);
+            Destroy(gameObject);
+        }
+
+        if (coll.gameObject.tag == "Platform")
+        {
             Destroy(gameObject);
         }
     }
