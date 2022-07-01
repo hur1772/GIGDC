@@ -8,12 +8,17 @@ public class BossMan : Monster
 
     float changeWeaponTime = 3.0f;
 
+    //공격
+    bool attackEnd = false;
+
     //소환 몬스터
     [Header("--- SpawnMonster ---")]
     [SerializeField] GameObject humanManMon;
     [SerializeField] GameObject humanWomanMon;
     [SerializeField] Transform manSpawnPos;
     [SerializeField] Transform womanSpawnPos;
+    [SerializeField] GameObject monsterPotal;
+    [SerializeField] Transform potalPos;
 
     bool firstSpawn = false, secondSpawn = false;
 
@@ -99,9 +104,19 @@ public class BossMan : Monster
         }
         else if (m_Monstate == MonsterState.ATTACK)
         {
-            if (m_CalcVec.magnitude >= .5f)
+            if (m_DelayTime >= 0.0f)
             {
-                m_Animator.SetBool("IsAttack", false);
+                m_DelayTime -= Time.deltaTime;
+                if (m_DelayTime <= 0.0f)
+                {
+                    ChangeRotate2();
+                    if (m_CalcVec.magnitude >= m_AttackDistance)
+                    {
+                        m_Monstate = MonsterState.CHASE;
+                        m_Animator.SetBool("IsAttack", false);
+
+                    }
+                }
             }
         }
         else if (m_Monstate == MonsterState.DIE)
@@ -137,6 +152,10 @@ public class BossMan : Monster
     /// </summary>
     void SpawnMonster()
     {
+        GameObject potal = Instantiate(monsterPotal);
+        potal.transform.position = potalPos.position;
+        Destroy(potal, 2.0f);
+
         GameObject man = Instantiate(humanManMon);
         man.transform.position = manSpawnPos.position;
 
@@ -159,8 +178,11 @@ public class BossMan : Monster
             m_Animator.SetTrigger("SpawnMonster");
             secondSpawn = true;
         }
+    }
 
-
+    void Attackend()
+    {
+        m_DelayTime = 1.0f;
     }
 
     public void BossManAttackEff()

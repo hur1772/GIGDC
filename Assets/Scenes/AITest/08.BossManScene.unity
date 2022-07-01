@@ -1619,6 +1619,36 @@ MonoBehaviour:
   target: {fileID: 1060828839}
   moveSpeed: 0.9
   z_move_speed: 2
+--- !u!1 &633582404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633582405}
+  m_Layer: 7
+  m_Name: PotalPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &633582405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633582404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.14, y: 1.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1070132762}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &650440256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,7 +1917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803606846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -4.48, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1070132762}
@@ -1978,13 +2008,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070132760}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 7.14, y: -3.73, z: 0}
+  m_LocalPosition: {x: 6.99, y: -3.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 333403503}
   - {fileID: 1675058760}
   - {fileID: 803606847}
   - {fileID: 1257705289}
+  - {fileID: 633582405}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -2021,11 +2052,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxHP: 400
   m_CurHP: 0
-  m_Atk: 40
+  m_Atk: 30
   m_MoveSpeed: 4
   MonRight: 0
   m_ChaseDistance: 10
-  m_AttackDistance: 2
+  m_AttackDistance: 2.5
   m_Monstate: 0
   playerMask:
     serializedVersion: 2
@@ -2037,6 +2068,8 @@ MonoBehaviour:
   humanWomanMon: {fileID: 8349136447485055008, guid: 3436b422d59d7a842853cbbb06bbb12f, type: 3}
   manSpawnPos: {fileID: 1675058760}
   womanSpawnPos: {fileID: 803606847}
+  monsterPotal: {fileID: 575873984780154884, guid: 8ada8739416bd26488a5424e0ce92e51, type: 3}
+  potalPos: {fileID: 633582405}
 --- !u!61 &1070132765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2387,7 +2420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675058759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: -3.77, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1070132762}
