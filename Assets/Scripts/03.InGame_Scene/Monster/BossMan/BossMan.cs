@@ -8,6 +8,15 @@ public class BossMan : Monster
 
     float changeWeaponTime = 3.0f;
 
+    //소환 몬스터
+    [Header("--- SpawnMonster ---")]
+    [SerializeField] GameObject humanManMon;
+    [SerializeField] GameObject humanWomanMon;
+    [SerializeField] Transform manSpawnPos;
+    [SerializeField] Transform womanSpawnPos;
+
+    bool firstSpawn = false, secondSpawn = false;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -17,8 +26,8 @@ public class BossMan : Monster
 
     private void OnDrawGizmos()
     {
-        //Gizmos.DrawRay(originPos, (attackPos.position - originPos));
-        //Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
+        Gizmos.DrawRay(originPos, (attackPos.position - originPos));
+        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
     }
 
     private void Update() => UpdateFunc();
@@ -54,7 +63,10 @@ public class BossMan : Monster
             {
                 changeWeaponTime -= Time.deltaTime;
                 if (changeWeaponTime <= 0.0f)
+                {
+                    m_Animator.SetBool("IsMove", true);
                     m_Monstate = MonsterState.CHASE;
+                }
             }
             else
             {
@@ -89,7 +101,6 @@ public class BossMan : Monster
         {
             if (m_CalcVec.magnitude >= .5f)
             {
-                //m_Monstate = MonsterState.CHASE;
                 m_Animator.SetBool("IsAttack", false);
             }
         }
@@ -115,10 +126,41 @@ public class BossMan : Monster
                 if (HittedTIme <= 0.0f)
                 {
                     m_Monstate = MonsterState.CHASE;
-                    m_Animator.SetBool("IsMove", true);
                 }
             }
         }
+    }
+
+
+    /// <summary>
+    /// 몬스터 소환 스킬 애니메이터 이벤트 함수 호출
+    /// </summary>
+    void SpawnMonster()
+    {
+        GameObject man = Instantiate(humanManMon);
+        man.transform.position = manSpawnPos.position;
+
+        GameObject woman = Instantiate(humanWomanMon);
+        woman.transform.position = womanSpawnPos.position;
+    }
+
+    public override void TakeDamage(float a_DamVal, float a_CritVal = 0)
+    {
+        base.TakeDamage(a_DamVal, a_CritVal);
+
+        if (m_CurHP <= m_MaxHP * 0.7f && !firstSpawn)
+        {
+            m_Animator.SetTrigger("SpawnMonster");
+            firstSpawn = true;
+        }
+        
+        if(m_CurHP <= m_MaxHP * 0.4f && !secondSpawn)
+        {
+            m_Animator.SetTrigger("SpawnMonster");
+            secondSpawn = true;
+        }
+
+
     }
 
     public void BossManAttackEff()

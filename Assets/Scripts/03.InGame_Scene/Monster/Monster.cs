@@ -56,6 +56,9 @@ public class Monster : MonoBehaviour
     // °æÁ÷
     protected float HittedTIme;
 
+
+    
+
     //private void Update()
     //{
         
