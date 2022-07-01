@@ -51,7 +51,6 @@ public class ItemNoodCtrl : MonoBehaviour
                 m_StoreMgr.ShowToolTip((int)m_ItemType, transform.position);
             }
         }
-
     }
 
     bool IsCollSlot(GameObject a_CkObj)  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수

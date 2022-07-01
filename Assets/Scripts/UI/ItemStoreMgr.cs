@@ -102,7 +102,7 @@ public class ItemStoreMgr : MonoBehaviour
             //if (m_CrNodeList[ii].m_ItemType != GlobalUserData.m_ItemDataList[ii].m_SkType)
             //    continue;
 
-            if (0 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount) //구입상태
+            if (GlobalUserData.CurStageNum == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount) //구입상태
             {
                 m_CrNodeList[ii].SetState(ItemState.Active);
                 //Debug.Log("Active" + m_CrNodeList[ii].m_ItemType);
@@ -117,7 +117,7 @@ public class ItemStoreMgr : MonoBehaviour
 
             //    a_FindAv = ii;
             //}
-            else if (1 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount)
+            else if (GlobalUserData.CurStageNum+1 == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount)
             {
                 //Debug.Log(ii + "Lock");
                 //전부 Lock 표시
@@ -193,7 +193,7 @@ public class ItemStoreMgr : MonoBehaviour
 
         if (a_ItemState == ItemState.Lock) //잠긴 상태
         {
-            a_Mess = "이 아이템은 Lock 상태로 구입할 수 없습니다.";
+            a_Mess = "이 아이템은 구입가능한 수량을 초과했습니다.";
         }
         else if (a_ItemState == ItemState.Active) //활성화(업그레이드가능) 상태
         {

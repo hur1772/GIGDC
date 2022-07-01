@@ -25,6 +25,7 @@ public class UIMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GlobalUserData.Load();
         Time.timeScale = 1.0f;
         pTakeDamage = GetComponent<Player_TakeDamage>();
         if (GoldTxt != null)

@@ -196,7 +196,7 @@ public class HealItemStoreMgr : MonoBehaviour
 
         if (a_ItemState == HealItemState.Lock) //잠긴 상태
         {
-            a_Mess = "이 아이템은 Lock 상태로 구입할 수 없습니다.";
+            a_Mess = "이 아이템은 구입가능한 수량을 초과했습니다.";
         }
         else if (a_ItemState == HealItemState.Active) //활성화(업그레이드가능) 상태
         {

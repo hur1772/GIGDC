@@ -215,7 +215,7 @@ public class Item_Info  //각 Item 정보
 
 public class GlobalUserData 
 {
-    public static int s_GoldCount = 5000;
+    public static int s_GoldCount = 20000;
     public static int BowTier = 0;
     public static int SwordTier = 0;
     public static PlayerAttackState Player_Att_State;
@@ -264,20 +264,18 @@ public class GlobalUserData
     //------------ Item Reflash
     public static void ReflashItemLoad()  //<---- g_ItemList  갱신
     {
-        m_ItemDataList.Clear();
+        InitData();
 
-        Item_Info a_ItemNode;
         string a_KeyBuff = "";
         int a_ItmCount = PlayerPrefs.GetInt("Item_Count", 0);
         for (int a_ii = 0; a_ii < a_ItmCount; a_ii++)
         {
-            a_ItemNode = new Item_Info();
             a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
-            a_ItemNode.m_Name = PlayerPrefs.GetString(a_KeyBuff, "");
+            m_ItemDataList[a_ii].m_Name = PlayerPrefs.GetString(a_KeyBuff, "");
             a_KeyBuff = string.Format("IT_{0}_CurItemCount", a_ii);
-            a_ItemNode.m_CurItemCount = PlayerPrefs.GetInt(a_KeyBuff, 0);
+            m_ItemDataList[a_ii].m_CurItemCount = PlayerPrefs.GetInt(a_KeyBuff, 0);
 
-            m_ItemDataList.Add(a_ItemNode);
+            //m_ItemDataList.Add(a_ItemNode);
         }
     }
 
@@ -287,7 +285,7 @@ public class GlobalUserData
         Item_Info a_ItemNode;
         string a_KeyBuff = "";
         int a_ItmCount = PlayerPrefs.GetInt("Item_Count", 0);
-        for (int a_ii = 0; a_ii < a_ItmCount + 10; a_ii++)
+        for (int a_ii = 0; a_ii < a_ItmCount + 20; a_ii++)
         {
             a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
             PlayerPrefs.DeleteKey(a_KeyBuff);
@@ -303,9 +301,9 @@ public class GlobalUserData
         for (int a_ii = 0; a_ii < m_ItemDataList.Count; a_ii++)
         {
             a_ItemNode = m_ItemDataList[a_ii];
-            a_KeyBuff = string.Format("IT_{0}_ItemLevel", a_ii);
+            a_KeyBuff = string.Format("IT_{0}_ItemName", a_ii);
             PlayerPrefs.SetString(a_KeyBuff, a_ItemNode.m_Name);
-            a_KeyBuff = string.Format("IT_{0}_ItemStar", a_ii);
+            a_KeyBuff = string.Format("IT_{0}_CurItemCount", a_ii);
             PlayerPrefs.SetInt(a_KeyBuff, a_ItemNode.m_CurItemCount);
         }
         PlayerPrefs.Save(); //폰에서 마지막 저장상태를 확실히 저장하게 하기 위하여...
@@ -325,7 +323,7 @@ public class GlobalUserData
     public static void Load()
     {
         ReflashItemLoad();
-        s_GoldCount = PlayerPrefs.GetInt("GoldCount", 0);
+        s_GoldCount = PlayerPrefs.GetInt("s_GoldCount", 0);
         BowTier = PlayerPrefs.GetInt("BowTier", 0);
         SwordTier = PlayerPrefs.GetInt("SwordTier", 0);
         CurStageNum = PlayerPrefs.GetInt("CurStageNum", 0);
