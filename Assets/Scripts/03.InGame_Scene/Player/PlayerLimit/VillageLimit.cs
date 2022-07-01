@@ -26,7 +26,6 @@ public class VillageLimit : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         nowscene = SceneManager.GetActiveScene();
-        Debug.Log(nowscene);
     }
 
     void OnDisable()

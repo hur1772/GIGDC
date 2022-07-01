@@ -539,4 +539,5 @@ MonoBehaviour:
   m_HealItemNumTxt: {fileID: 5425316015640450520}
   m_LBtn: {fileID: 8912655412445498409}
   m_RBtn: {fileID: 2844335499635828739}
+  m_CurNum: 0
   m_BuyBtn: {fileID: 6009958462007627220}

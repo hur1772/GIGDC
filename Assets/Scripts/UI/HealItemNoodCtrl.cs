@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum HealItemState
@@ -15,6 +16,8 @@ public class HealItemNoodCtrl : MonoBehaviour
 
     [HideInInspector] public HealItemState m_HealItemState = HealItemState.Lock;
 
+    HealItemStoreMgr m_StoreMgr = null;
+
     public Image m_HealIconImg;
     public Text m_HealItemNumTxt;
     public Button m_LBtn = null;
@@ -28,16 +31,17 @@ public class HealItemNoodCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_StoreMgr = null;
+        GameObject a_StoreObj = GameObject.Find("Store_Mgr");
+        if (a_StoreObj != null)
+            m_StoreMgr = a_StoreObj.GetComponent<HealItemStoreMgr>();
+
         if (m_BuyBtn != null)
         {
             m_BuyBtn.onClick.AddListener(() =>
             {
-                HealItemStoreMgr a_StoreMgr = null;
-                GameObject a_StoreObj = GameObject.Find("Store_Mgr");
-                if (a_StoreObj != null)
-                    a_StoreMgr = a_StoreObj.GetComponent<HealItemStoreMgr>();
-                if (a_StoreMgr != null)
-                    a_StoreMgr.BuySkItem(m_ItemType, m_CurNum , m_InitNum);
+                if (m_StoreMgr != null)
+                    m_StoreMgr.BuySkItem(m_ItemType, m_CurNum , m_InitNum);
                 //Debug.Log(m_InitNum);
                 //Debug.Log(m_CurNum);
                 m_CurNum = 0;
@@ -58,6 +62,29 @@ public class HealItemNoodCtrl : MonoBehaviour
     {
         m_InitNum = GlobalUserData.m_ItemDataList[(int)m_ItemType].m_CurItemCount;
         m_HealItemNumTxt.text = m_CurNum + "/" + (m_MaxNum - m_InitNum);
+
+        if (m_StoreMgr != null)
+        {
+            if (IsCollSlot(m_HealIconImg.gameObject) == true)
+            {
+                m_StoreMgr.ShowToolTip((int)m_ItemType, transform.position);
+            }
+        }
+    }
+
+
+
+    bool IsCollSlot(GameObject a_CkObj)  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수
+    {
+        Vector3[] v = new Vector3[4];
+        a_CkObj.GetComponent<RectTransform>().GetWorldCorners(v);
+        if (v[0].x <= Input.mousePosition.x && Input.mousePosition.x <= v[2].x &&
+           v[0].y <= Input.mousePosition.y && Input.mousePosition.y <= v[2].y)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public void InitData(ItemType a_ItemType)

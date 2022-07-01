@@ -87,6 +87,7 @@ public class Item_Info  //각 Item 정보
     public string m_ItemExp = "";    //스킬 효과 설명
     public Sprite m_IconImg = null;   //캐릭터 아이템에 사용될 이미지
     public Sprite m_ShopIconImg = null;
+    public string m_Help = "";
 
     public void SetType(ItemType a_CrType)
     {
@@ -103,6 +104,7 @@ public class Item_Info  //각 Item 정보
             m_ItemExp = "Hp 30% 회복";
             m_IconImg = Resources.Load("IconImg/탕약v2", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("탕약", typeof(Sprite)) as Sprite;
+            m_Help = "< E >를 눌러 사용 가능";
         }
         else if (a_CrType == ItemType.Item_1)
         {
@@ -116,6 +118,7 @@ public class Item_Info  //각 Item 정보
             m_ItemExp = "Hp 50% 회복";
             m_IconImg = Resources.Load("IconImg/고약", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("보약", typeof(Sprite)) as Sprite;
+            m_Help = "< R >을 눌러 사용 가능";
         }
         else if (a_CrType == ItemType.Item_2)
         {
@@ -162,7 +165,7 @@ public class Item_Info  //각 Item 정보
             m_Price = 2000; //기본가격
             m_CurItemCount = 0;
 
-            m_ItemExp = "공격력 +5";
+            m_ItemExp = "공격력 + 5";
             m_IconImg = Resources.Load("IconImg/추어탕v2", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("추어탕", typeof(Sprite)) as Sprite;
         }

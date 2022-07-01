@@ -14,22 +14,25 @@ public class ItemNoodCtrl : MonoBehaviour
     [HideInInspector] public ItemType m_ItemType = ItemType.ItemCount;  //초기화
     [HideInInspector] public ItemState m_ItemState = ItemState.Lock;
 
+    ItemStoreMgr m_StoreMgr = null;
+
     public Image m_ItemIconImg;
     public Button m_BuyBtn = null;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_StoreMgr = null;
+        GameObject a_StoreObj = GameObject.Find("Store_Mgr");
+        if (a_StoreObj != null)
+            m_StoreMgr = a_StoreObj.GetComponent<ItemStoreMgr>();
+
         if (m_BuyBtn != null)
         {
             m_BuyBtn.onClick.AddListener(() =>
             {
-                ItemStoreMgr a_StoreMgr = null;
-                GameObject a_StoreObj = GameObject.Find("Store_Mgr");
-                if (a_StoreObj != null)
-                    a_StoreMgr = a_StoreObj.GetComponent<ItemStoreMgr>();
-                if (a_StoreMgr != null)
-                    a_StoreMgr.BuySkItem(m_ItemType);
+                if (m_StoreMgr != null)
+                    m_StoreMgr.BuySkItem(m_ItemType);
             });
         }//if (m_BtnCom != null)       
 
@@ -41,6 +44,28 @@ public class ItemNoodCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (m_StoreMgr != null)
+        {
+            Debug.Log(m_ItemType);
+            if (IsCollSlot(m_ItemIconImg.gameObject) == true)
+            {
+                m_StoreMgr.ShowToolTip((int)m_ItemType, transform.position);
+            }
+        }
+
+    }
+
+    bool IsCollSlot(GameObject a_CkObj)  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수
+    {
+        Vector3[] v = new Vector3[4];
+        a_CkObj.GetComponent<RectTransform>().GetWorldCorners(v);
+        if (v[0].x <= Input.mousePosition.x && Input.mousePosition.x <= v[2].x &&
+           v[0].y <= Input.mousePosition.y && Input.mousePosition.y <= v[2].y)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public void InitData(ItemType a_ItemType)

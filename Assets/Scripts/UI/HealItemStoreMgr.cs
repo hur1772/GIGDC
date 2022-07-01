@@ -26,6 +26,10 @@ public class HealItemStoreMgr : MonoBehaviour
     public GameObject ThisPanel;
     public Button CloseBtn;
 
+    public HlepBoxCtrl m_HelpBox;
+
+    float m_HelpBoxTime = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +62,13 @@ public class HealItemStoreMgr : MonoBehaviour
     {
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+
+        m_HelpBoxTime -= Time.deltaTime;
+
+        if(m_HelpBoxTime < 0.0f)
+        {
+            HideToolTip();
+        }
     }
     void RefreshCrItemList()
     {  //Count == 0 인 상태가 처음 나오는 아이템만 구매가능으로 표시해 준다.
@@ -98,6 +109,23 @@ public class HealItemStoreMgr : MonoBehaviour
             }
 
         }//for (int ii = 0; ii < GlobalUserData.m_ItemDataList.Count; ii++)
+    }
+
+    public void ShowToolTip(int a_itemType, Vector3 pos)
+    {
+        m_HelpBoxTime = 0.1f;
+        if (m_HelpBox != null)
+        {
+            m_HelpBox.ShowToolTip(a_itemType, pos);
+        }
+    }
+
+    public void HideToolTip()
+    {
+        if (m_HelpBox != null)
+        {
+            m_HelpBox.HideToolTip();
+        }
     }
 
     public void BuySkItem(ItemType a_ItemType, int a_CurNum, int a_InitNum)
@@ -176,7 +204,7 @@ public class HealItemStoreMgr : MonoBehaviour
 
             if (GlobalUserData.s_GoldCount < (a_Cost* m_CurNum))
             {
-                a_Mess = "레벨업에 필요한 보유(누적) 골드가 모자랍니다.";
+                a_Mess = "레벨업에 필요한 보유 골드가 모자랍니다.";
             }
             else if(m_CurNum == 0)
             {
@@ -184,7 +212,7 @@ public class HealItemStoreMgr : MonoBehaviour
             }
             else
             {
-                a_Mess = "정말 업그레이드하시겠습니까?";
+                a_Mess = "정말 구매하시겠습니까?";
                 m_CurNum = m_CurNum;
                 //-----> 이 조건일 때 업그레이드
                 a_NeedDelegate = true; //-----> 이 조건일 때 구매
