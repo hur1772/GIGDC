@@ -183,25 +183,5 @@ public class CraneMonster_B : Monster
             Debug.Log("검출안됨");
     }
 
-    public override void TakeDamage(float a_DamVal, float a_CritVal)
-    {
-        int crit = Random.Range(0, 100);
-        if (crit < a_CritVal)
-        {
-            m_CurHP -= a_DamVal * 2;
-            Debug.Log("crit!");
-        }
-        else
-        {
-            m_CurHP -= a_DamVal;
-            Debug.Log("몬스터피격");
-        }
 
-        if (m_CurHP <= 0.0f)
-        {
-            m_CurHP = 0.0f; 
-            m_Monstate = MonsterState.DIE;
-            m_Rb.gravityScale = 1.5f;
-        }
-    }
 }
