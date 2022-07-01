@@ -122,17 +122,17 @@ public class Interaction : MonoBehaviour
                 {
                     if (Portal.tag == "04.Stage_1(Palace)")
                     {
-                        SceneManager.LoadScene("04.Stage_1(Palace)");
+                        SceneManager.LoadScene("02.Stage_1(Palace)");
                         m_interactionState = InteractionState.Nomal;
                     }
                     if(Portal.tag == "04.Stage_1(Palace_In)")
                     {
-                        SceneManager.LoadScene("04.Stage_1(Palace_In)");
+                        SceneManager.LoadScene("03.Stage_1(Palace_In)");
                         m_interactionState = InteractionState.Nomal;
                     }
                     if (Portal.tag == "01.TutorialMap")
                     {
-                        SceneManager.LoadScene("01.TutorialMap");
+                        SceneManager.LoadScene("04.TutorialMap");
                         m_interactionState = InteractionState.Nomal;
                     }
                     if (Portal.tag == "Village")

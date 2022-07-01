@@ -49,7 +49,7 @@ public class PadeOutMgr : MonoBehaviour
 
             if (m_PadeOutTimer >= 2.0f)
             {
-                SceneManager.LoadScene("01.TutorialMap");
+                SceneManager.LoadScene("04.TutorialMap");
                 Interaction.Inst.m_interactionState = InteractionState.Nomal;
                 //PadeOutPanel.gameObject.SetActive(false);
             }
