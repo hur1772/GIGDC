@@ -7,8 +7,7 @@ public class BossCtrl1_1 : Monster
     Vector2 attackSize = new Vector2(7, 4);
     public GameObject Protal;
 
-    //변환 및 사망
-    bool isChange = false;   
+    //변환 및 사망    
     bool isDisappear = false;
     float dieAlpha = 1.0f;
     Color dieColor = Color.white;
@@ -29,7 +28,7 @@ public class BossCtrl1_1 : Monster
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(originPos, (attackPos.position - originPos));
-        Gizmos.DrawCube(attackPos.position, new Vector2(7, 4));
+        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
     }
 
     private void Update() => UpdateFunc();
@@ -135,10 +134,9 @@ public class BossCtrl1_1 : Monster
 
         base.TakeDamage(WeaponState);
 
-        if (isChange == false && m_CurHP <= m_MaxHP * 0.5f)
+        if (false && m_CurHP <= m_MaxHP * 0.5f)
         {
-            isChange = true;
-            m_Animator.SetTrigger("Change");
+               m_Animator.SetTrigger("Change");
         }
     }
 
@@ -172,4 +170,8 @@ public class BossCtrl1_1 : Monster
     /// 애니메이션 이벤트로 호출 이게 호출되면 시체가 사라진다..
     /// </summary>
 
+    void CorpseEff()
+    {
+        isDisappear = true;
+    }
 }

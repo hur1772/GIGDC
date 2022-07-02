@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 8116624462806722261}
   - component: {fileID: 7483869091267364718}
   - component: {fileID: 3561742905520233242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stage1 Boss
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Monstate: 0
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   attackPos: {fileID: 7745475987599886101}
   originPos: {x: 0, y: 0, z: 0}
   m_DelayTime: 0
