@@ -4,7 +4,7 @@ public class BossMan : Monster
 {
     public float m_DelayTime = 0.0f;
     bool m_IsRight = false;
-    Vector2 attackSize = new Vector2(3, 3);
+    Vector2 attackSize = new Vector2(4, 3);
 
     float changeWeaponTime = 3.0f;
 
@@ -32,14 +32,14 @@ public class BossMan : Monster
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(originPos, (attackPos.position - originPos));
-        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
+        Gizmos.DrawCube(attackPos.position, new Vector2(4, 3));
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
-        //originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
 
         CheckDistanceFromPlayer();
         AiUpdate();
@@ -95,7 +95,11 @@ public class BossMan : Monster
             if (m_CalcVec.magnitude <= m_AttackDistance)
             {
                 m_Monstate = MonsterState.ATTACK;
-                m_Animator.SetBool("IsAttack", true);
+                int randMotion = Random.Range(0, 2);
+                if (randMotion == 0)
+                    m_Animator.SetBool("IsAttack", true);
+                else
+                    m_Animator.SetBool("IsAttack2", true);
             }
         }
         else if (m_Monstate == MonsterState.SKILL)
@@ -113,11 +117,13 @@ public class BossMan : Monster
                     if (m_CalcVec.magnitude >= m_AttackDistance)
                     {
                         m_Monstate = MonsterState.CHASE;
+                        m_Animator.SetBool("IsAttack2", false);
                         m_Animator.SetBool("IsAttack", false);
-
                     }
                 }
             }
+            else if (m_DelayTime <= 0.0f && m_Animator.GetBool("IsAttack") == false && m_Animator.GetBool("IsAttack2") == false)
+                m_Monstate = MonsterState.CHASE;
         }
         else if (m_Monstate == MonsterState.DIE)
         {
@@ -158,9 +164,12 @@ public class BossMan : Monster
 
         GameObject man = Instantiate(humanManMon);
         man.transform.position = manSpawnPos.position;
+        man.GetComponent<HumanManMonster>().SpawnFunc();
 
         GameObject woman = Instantiate(humanWomanMon);
         woman.transform.position = womanSpawnPos.position;
+        woman.GetComponent<HumanWomanMonster>().SpawnFunc();
+
     }
 
     public override void TakeDamage(int WeaponState)

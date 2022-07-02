@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 3ddb42a7bec80a647801e86eefabdce7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4462150529124345065
+    second: BossMan Die2_0
+  - first:
+      213: 3043298040285292587
+    second: BossMan Die2_1
+  - first:
+      213: -6292763800774101117
+    second: BossMan Die2_2
+  - first:
+      213: 14116919101239743
+    second: BossMan Die2_3
+  - first:
+      213: 2968232859470104288
+    second: BossMan Die2_4
+  - first:
+      213: -2321365477681057735
+    second: BossMan Die2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +119,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BossMan Die2_0
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 63
+        width: 930
+        height: 714
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bd8393cb14312c0800000000000000
+      internalID: -4462150529124345065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Die2_1
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 70
+        width: 1196
+        height: 1050
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28e8dc8177fb3a20800000000000000
+      internalID: 3043298040285292587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Die2_2
+      rect:
+        serializedVersion: 2
+        x: 3211
+        y: 70
+        width: 2085
+        height: 1218
+      alignment: 9
+      pivot: {x: 0.44, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3873c67e9ac9ba8a0800000000000000
+      internalID: -6292763800774101117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Die2_3
+      rect:
+        serializedVersion: 2
+        x: 5975
+        y: 70
+        width: 2224
+        height: 1393
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb13a5c5347223000800000000000000
+      internalID: 14116919101239743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Die2_4
+      rect:
+        serializedVersion: 2
+        x: 8689
+        y: 70
+        width: 2225
+        height: 1393
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e68b5f2f08413920800000000000000
+      internalID: 2968232859470104288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMan Die2_5
+      rect:
+        serializedVersion: 2
+        x: 11299
+        y: 77
+        width: 2469
+        height: 1533
+      alignment: 9
+      pivot: {x: 0.445, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93037fca56ad8cfd0800000000000000
+      internalID: -2321365477681057735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

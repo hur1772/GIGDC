@@ -7,12 +7,16 @@ public class HumanManMonster : Monster
     Vector3 m_Cacy = Vector3.zero;
     Vector2 attackSize = new Vector2(3, 3);
 
+    private void Awake()
+    {
+        m_Animator = GetComponent<Animator>();
+    }
+
     private void Start() => StartFunc();
 
     private void StartFunc()
     {
         InitMonster();
-
     }
 
     private void OnDrawGizmos()
@@ -97,7 +101,6 @@ public class HumanManMonster : Monster
         }
         else if (m_Monstate == MonsterState.CHASE)
         {
-
             if (m_CalcVec.x >= 0.1f)
             {
                 m_Rb.transform.position += Vector3.right * m_MoveSpeed * Time.deltaTime;
@@ -121,11 +124,13 @@ public class HumanManMonster : Monster
         }
         else if (m_Monstate == MonsterState.ATTACK)
         {
-            if(m_CalcVec.magnitude >= .5f)
+            if (m_CalcVec.magnitude >= .5f)
             {
-                //m_Monstate = MonsterState.CHASE;
                 m_Animator.SetBool("IsAttack", false);
             }
+
+            if (m_Animator.GetBool("IsAttack") == false && m_CalcVec.magnitude <= m_AttackDistance)
+                m_Animator.SetBool("IsAttack", true);
         }
         else if(m_Monstate == MonsterState.DIE)
         {
@@ -153,6 +158,18 @@ public class HumanManMonster : Monster
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// 사또가 몬스터 소환시 호출할것
+    /// </summary>
+    public void SpawnFunc()
+    {
+        m_Monstate = MonsterState.CHASE;
+        if (m_Animator != null)
+            m_Animator.SetBool("IsMove", true);
+        else
+            Debug.Log("NullAnimator");
     }
 
     public void HumanManAttackEff()

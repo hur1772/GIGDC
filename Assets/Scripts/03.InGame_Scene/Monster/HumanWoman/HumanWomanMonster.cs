@@ -176,6 +176,14 @@ public class HumanWomanMonster : Monster
         }
     }
 
+    /// <summary>
+    /// 사또가 몬스터 소환시 호출할것
+    /// </summary>
+    public void SpawnFunc()
+    {
+        m_Monstate = MonsterState.CHASE;
+    }
+
     public void AttackUpdate()
     {
         if (attackDealy_2 >= 0.0f)
