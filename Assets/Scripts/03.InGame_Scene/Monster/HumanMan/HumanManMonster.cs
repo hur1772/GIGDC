@@ -35,10 +35,10 @@ public class HumanManMonster : Monster
         AiUpdate();
 
 
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            m_Monstate = MonsterState.DIE;
-        }
+        //if(Input.GetKeyDown(KeyCode.P))
+        //{
+        //    m_Monstate = MonsterState.DIE;
+        //}
     }
 
     void AiUpdate()

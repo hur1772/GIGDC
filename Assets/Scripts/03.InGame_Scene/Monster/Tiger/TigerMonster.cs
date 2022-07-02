@@ -42,7 +42,7 @@ public class TigerMonster : Monster
 
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
-    public GameObject Protal;
+  
 
 
     //보스소환
@@ -60,10 +60,6 @@ public class TigerMonster : Monster
 
         spRend = GetComponent<SpriteRenderer>();
         
-        if (Protal != null)
-        {
-            Protal.gameObject.SetActive(false);
-        }
     }
 
     private void OnDrawGizmos()
@@ -82,15 +78,6 @@ public class TigerMonster : Monster
         MonUpdate();
         SkillCoolUpdate();
 
-        //삭제하셈
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            m_Monstate = MonsterState.SKILL;
-        }
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            m_Monstate = MonsterState.SKILL2;
-        }
     }
 
     public void MonUpdate()
@@ -408,8 +395,7 @@ public class TigerMonster : Monster
     }
 
     protected override void Die()
-    {
-        Protal.gameObject.SetActive(true);        
+    {  
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
