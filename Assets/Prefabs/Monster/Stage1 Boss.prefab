@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8495069623374741665}
   - component: {fileID: 1258959741303668063}
   - component: {fileID: -3241710848038846662}
-  - component: {fileID: 6270143197842777836}
   - component: {fileID: 3460390991078203283}
   - component: {fileID: 8116624462806722261}
   - component: {fileID: 7483869091267364718}
+  - component: {fileID: 3561742905520233242}
   m_Layer: 0
   m_Name: Stage1 Boss
   m_TagString: Untagged
@@ -121,33 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossType: 0
---- !u!114 &6270143197842777836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21038246127183603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde6eb494d7fd954db858da54134c7ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxHP: 0
-  m_CurHP: 0
-  m_Atk: 0
-  m_MoveSpeed: 0
-  MonRight: 0
-  m_ChaseDistance: 0
-  m_AttackDistance: 0
-  m_Monstate: 0
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  attackPos: {fileID: 7745475987599886101}
-  originPos: {x: 0, y: 0, z: 0}
-  m_AttackDelay: 1.5
-  Protal: {fileID: 0}
 --- !u!50 &3460390991078203283
 Rigidbody2D:
   serializedVersion: 4
@@ -211,6 +184,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 2.67}
   m_Size: {x: 5.58, y: 2.21}
   m_Direction: 0
+--- !u!114 &3561742905520233242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21038246127183603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05139da509d89447b2ac54fb8e63d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHP: 1000
+  m_CurHP: 1000
+  m_Atk: 25
+  m_MoveSpeed: 2.5
+  MonRight: 0
+  m_ChaseDistance: 0
+  m_AttackDistance: 2
+  m_Monstate: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  attackPos: {fileID: 7745475987599886101}
+  originPos: {x: 0, y: 0, z: 0}
+  m_DelayTime: 0
+  Protal: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
 --- !u!1 &4807698563273197555
 GameObject:
   m_ObjectHideFlags: 0
