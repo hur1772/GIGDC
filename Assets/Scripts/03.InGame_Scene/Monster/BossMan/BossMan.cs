@@ -167,6 +167,11 @@ public class BossMan : Monster
         potal.transform.position = potalPos.position;
         Destroy(potal, 2.0f);
 
+        SpawnMob();
+    }
+
+    void SpawnMob()
+    {
         GameObject man = Instantiate(humanManMon);
         man.transform.position = manSpawnPos.position;
         man.GetComponent<HumanManMonster>().SpawnFunc();
@@ -174,7 +179,6 @@ public class BossMan : Monster
         GameObject woman = Instantiate(humanWomanMon);
         woman.transform.position = womanSpawnPos.position;
         woman.GetComponent<HumanWomanMonster>().SpawnFunc();
-
     }
 
     public void SpawnBoss()

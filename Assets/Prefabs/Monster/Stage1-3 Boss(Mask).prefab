@@ -274,10 +274,10 @@ MonoBehaviour:
   m_MaxHP: 1000
   m_CurHP: 0
   m_Atk: 25
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 3.5
   MonRight: 0
   m_ChaseDistance: 0
-  m_AttackDistance: 2
+  m_AttackDistance: 3.5
   m_Monstate: 0
   playerMask:
     serializedVersion: 2

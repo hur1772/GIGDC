@@ -7,7 +7,8 @@ public class BossSizeController : MonoBehaviour
     {
         Stage_1_1,
         Stage_1_2,
-        Stage_1_3
+        Stage_1_3,
+        SpwanPotal
     }
 
     public BossType bossType;
@@ -30,6 +31,11 @@ public class BossSizeController : MonoBehaviour
         {
             maxScaleX = 1.2f;
             maxScaleY = 1.2f;
+        }
+        else if(bossType == BossType.SpwanPotal)
+        {
+            maxScaleX = 0.5f;
+            maxScaleY = 0.5f;
         }
         NowScale = this.transform.localScale;
     }
