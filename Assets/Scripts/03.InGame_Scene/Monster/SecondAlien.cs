@@ -21,7 +21,7 @@ public class SecondAlien : Monster
     private void StartFunc()
     {
         InitMonster();
-
+        
         m_Monstate = MonsterState.CHASE;
         m_Animator.SetBool("IsMove", true);
 

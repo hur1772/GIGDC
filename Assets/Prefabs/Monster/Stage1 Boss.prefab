@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8116624462806722261}
   - component: {fileID: 7483869091267364718}
   - component: {fileID: 3561742905520233242}
+  - component: {fileID: -7219638521157435423}
   m_Layer: 7
   m_Name: Stage1 Boss
   m_TagString: Monster
@@ -211,6 +212,18 @@ MonoBehaviour:
   originPos: {x: 0, y: 0, z: 0}
   m_DelayTime: 0
   Protal: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
+--- !u!114 &-7219638521157435423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21038246127183603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ac66ccac3640f4a866dec5d753a3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4807698563273197555
 GameObject:
   m_ObjectHideFlags: 0

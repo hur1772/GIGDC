@@ -12,18 +12,21 @@ public class BossCtrl1_1 : Monster
     float dieAlpha = 1.0f;
     Color dieColor = Color.white;
     SpriteRenderer _spRenderer;
-
+    Boss1HP BossUI;
     private void Start() => StartFunc();
 
     private void StartFunc()
     {
         InitMonster();
-
+        BossUI = GetComponent<Boss1HP>();
+        BossUI.BossHpBack.gameObject.SetActive(true);
+        BossUI.BossHpbar.gameObject.SetActive(true);
+        BossUI.BossIConImg.gameObject.SetActive(true);
         m_Monstate = MonsterState.CHASE;
         m_Animator.SetBool("IsMove", true);
 
         _spRenderer = GetComponent<SpriteRenderer>();
-
+        
         if(Protal != null)
         {
             Protal.gameObject.SetActive(false);
@@ -40,10 +43,8 @@ public class BossCtrl1_1 : Monster
 
     private void UpdateFunc()
     {
-        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f);
-
-        CheckDistanceFromPlayer();
-        AiUpdate();
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f); CheckDistanceFromPlayer();
+            AiUpdate();
     }
 
     void AiUpdate()
@@ -121,6 +122,9 @@ public class BossCtrl1_1 : Monster
 
                 if (dieAlpha <= 0.05f)
                     Destroy(this.gameObject);
+                BossUI.BossHpBack.gameObject.SetActive(false);
+                BossUI.BossHpbar.gameObject.SetActive(false);
+                BossUI.BossIConImg.gameObject.SetActive(false);
             }
         }
         else if (m_Monstate == MonsterState.Hitted)
@@ -141,7 +145,7 @@ public class BossCtrl1_1 : Monster
 
     public override void TakeDamage(int WeaponState)
     {
-
+        BossUI.BossHpbar.fillAmount = m_CurHP / m_MaxHP;
         base.TakeDamage(WeaponState);
 
         if (false && m_CurHP <= m_MaxHP * 0.5f)
