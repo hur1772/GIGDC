@@ -13,6 +13,9 @@ public class BossCtrl1_1 : Monster
     Color dieColor = Color.white;
     SpriteRenderer _spRenderer;
     Boss1HP BossUI;
+
+    public float m_SizeUpDelay = 4.0f;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -43,8 +46,15 @@ public class BossCtrl1_1 : Monster
 
     private void UpdateFunc()
     {
-        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f); CheckDistanceFromPlayer();
-            AiUpdate();
+        originPos = new Vector3(this.transform.position.x, attackPos.position.y, 0.0f); 
+        CheckDistanceFromPlayer();
+            
+        AiUpdate();
+
+        if(m_SizeUpDelay > 0.0f)
+        {
+            m_SizeUpDelay -= Time.deltaTime;
+        }
     }
 
     void AiUpdate()
@@ -55,108 +65,153 @@ public class BossCtrl1_1 : Monster
             return;
         }
 
-        if (m_Monstate == MonsterState.CHASE)
+        if (m_SizeUpDelay <= 0.0f)
         {
-            if (m_CalcVec.x >= 0.1f)
+            if (m_Monstate == MonsterState.CHASE)
             {
-                m_Rb.transform.position += Vector3.right * m_MoveSpeed * Time.deltaTime;
-                this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+                ChaseState();
             }
-            else if (m_CalcVec.x <= -0.1f)
+            else if (m_Monstate == MonsterState.ATTACK)
             {
-                m_Rb.transform.position += Vector3.left * m_MoveSpeed * Time.deltaTime;
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                AttackState();
             }
-
-            if (m_CalcVec.magnitude <= m_AttackDistance)
+            else if (m_Monstate == MonsterState.DIE)
             {
-                m_Monstate = MonsterState.ATTACK;
-                int randMotion = Random.Range(0, 3);
-                if (randMotion == 0)
-                    m_Animator.SetBool("IsAttack", true);
-                else if (randMotion == 1)
-                    m_Animator.SetBool("IsAttack2", true);
-                else
-                    m_Animator.SetBool("IsAttack3", true);
+                DieState();
             }
-        }
-        else if (m_Monstate == MonsterState.ATTACK)
-        {
-            if (m_DelayTime >= 0.0f)
+            else if (m_Monstate == MonsterState.CORPSE)
             {
-                m_DelayTime -= Time.deltaTime;
-                if (m_DelayTime <= 0.0f)
-                {
-                    ChangeRotate2();
-                    if (m_CalcVec.magnitude >= m_AttackDistance)
-                    {
-                        m_Monstate = MonsterState.CHASE;
-                        m_Animator.SetBool("IsAttack2", false);
-                        m_Animator.SetBool("IsAttack3", false);
-                        m_Animator.SetBool("IsAttack", false);
-                    }
-                }
+                CorpseState();
             }
-            else if (m_DelayTime <= 0.0f && m_Animator.GetBool("IsAttack") == false && m_Animator.GetBool("IsAttack2") == false)
-                m_Monstate = MonsterState.CHASE;
-        }
-        else if (m_Monstate == MonsterState.DIE)
-        {
-            m_Animator.SetTrigger("DieTrigger");
-            m_Monstate = MonsterState.CORPSE;
-
-            CoinDrop();
-
-            if (Protal != null)
+            else if (m_Monstate == MonsterState.Hitted)
             {
-                Protal.gameObject.SetActive(true);
-            }
-        }
-        else if (m_Monstate == MonsterState.CORPSE)
-        {
-            if (isDisappear)
-            {
-                dieAlpha -= Time.deltaTime;
-                dieColor = new Color(1, 1, 1, dieAlpha);
-                _spRenderer.color = dieColor;
-
-                if (dieAlpha <= 0.05f)
-                    Destroy(this.gameObject);
-                BossUI.BossHpBack.gameObject.SetActive(false);
-                BossUI.BossHpbar.gameObject.SetActive(false);
-                BossUI.BossIConImg.gameObject.SetActive(false);
-            }
-        }
-        else if (m_Monstate == MonsterState.Hitted)
-        {
-            m_Animator.SetBool("IsAttack", false);
-
-            if (HittedTIme >= 0.0f)
-            {
-                HittedTIme -= Time.deltaTime;
-                if (HittedTIme <= 0.0f)
-                {
-                    m_Monstate = MonsterState.CHASE;
-                }
+                HittedState();
             }
         }
     }
 
 
+    void ChaseState()
+    {
+        if (m_CalcVec.x >= 0.1f)
+        {
+            m_Rb.transform.position += Vector3.right * m_MoveSpeed * Time.deltaTime;
+            this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+        }
+        else if (m_CalcVec.x <= -0.1f)
+        {
+            m_Rb.transform.position += Vector3.left * m_MoveSpeed * Time.deltaTime;
+            this.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        if (m_CalcVec.magnitude <= m_AttackDistance)
+        {
+            m_Monstate = MonsterState.ATTACK;
+            int randMotion = Random.Range(0, 3);
+            if (randMotion == 0)
+                m_Animator.SetBool("IsAttack", true);
+            else if (randMotion == 1)
+                m_Animator.SetBool("IsAttack2", true);
+            else
+                m_Animator.SetBool("IsAttack3", true);
+        }
+    }
+
+    void AttackState()
+    {
+        if (m_DelayTime >= 0.0f)
+        {
+            m_DelayTime -= Time.deltaTime;
+            if (m_DelayTime <= 0.0f)
+            {
+                ChangeRotate2();
+                if (m_CalcVec.magnitude >= m_AttackDistance)
+                {
+                    m_Monstate = MonsterState.CHASE;
+                    m_Animator.SetBool("IsAttack2", false);
+                    m_Animator.SetBool("IsAttack3", false);
+                    m_Animator.SetBool("IsAttack", false);
+                }
+            }
+        }
+        else if (m_DelayTime <= 0.0f && m_Animator.GetBool("IsAttack") == false && m_Animator.GetBool("IsAttack2") == false)
+            m_Monstate = MonsterState.CHASE;
+    }
+
+    void DieState()
+    {
+        m_Animator.SetTrigger("DieTrigger");
+        m_Monstate = MonsterState.CORPSE;
+
+        CoinDrop();
+
+        if (Protal != null)
+        {
+            Protal.gameObject.SetActive(true);
+        }
+    }
+
+    void CorpseState()
+    {
+        if (isDisappear)
+        {
+            dieAlpha -= Time.deltaTime;
+            dieColor = new Color(1, 1, 1, dieAlpha);
+            _spRenderer.color = dieColor;
+
+            if (dieAlpha <= 0.05f)
+                Destroy(this.gameObject);
+            BossUI.BossHpBack.gameObject.SetActive(false);
+            BossUI.BossHpbar.gameObject.SetActive(false);
+            BossUI.BossIConImg.gameObject.SetActive(false);
+        }
+    }
+
+    void HittedState()
+    {
+        m_Animator.SetBool("IsAttack", false);
+
+        if (HittedTIme >= 0.0f)
+        {
+            HittedTIme -= Time.deltaTime;
+            if (HittedTIme <= 0.0f)
+            {
+                m_Monstate = MonsterState.CHASE;
+            }
+        }
+    }
+
     public override void TakeDamage(int WeaponState)
     {
-        BossUI.BossHpbar.fillAmount = m_CurHP / m_MaxHP;
-        base.TakeDamage(WeaponState);
-
-        if (false && m_CurHP <= m_MaxHP * 0.5f)
+        if (m_SizeUpDelay <= 0.0f)
         {
-               m_Animator.SetTrigger("Change");
+            BossUI.BossHpbar.fillAmount = m_CurHP / m_MaxHP;
+            base.TakeDamage(WeaponState);
+
+            if (false && m_CurHP <= m_MaxHP * 0.5f)
+            {
+                m_Animator.SetTrigger("Change");
+            }
         }
     }
 
     void Attackend()
     {
         m_DelayTime = 1.0f;
+    }
+
+    public void BossAttack()
+    {
+        Vector3 attackdir = attackPos.position - originPos;
+
+        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
+        if (attackhit)
+        {
+            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
+            {
+                playerTakeDmg.P_TakeDamage();
+            }
+        }
     }
 
     public void SecondAlienAttackEff()
