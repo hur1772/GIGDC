@@ -23,6 +23,11 @@ public class BossCtrl1_1 : Monster
         m_Animator.SetBool("IsMove", true);
 
         _spRenderer = GetComponent<SpriteRenderer>();
+
+        if(Protal != null)
+        {
+            Protal.gameObject.SetActive(false);
+        }
     }
 
     private void OnDrawGizmos()
@@ -100,6 +105,11 @@ public class BossCtrl1_1 : Monster
             m_Monstate = MonsterState.CORPSE;
 
             CoinDrop();
+
+            if (Protal != null)
+            {
+                Protal.gameObject.SetActive(true);
+            }
         }
         else if (m_Monstate == MonsterState.CORPSE)
         {
