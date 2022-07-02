@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2192551642765764280
+--- !u!1 &6639529832721246968
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2192551642765764282}
-  - component: {fileID: 2192551642765764281}
-  - component: {fileID: 2192551642765764283}
-  - component: {fileID: 1817221837084072655}
+  - component: {fileID: 6639529832721246970}
+  - component: {fileID: 6639529832721246969}
+  - component: {fileID: 6639529832721246971}
+  - component: {fileID: 6589270446511707791}
   m_Layer: 0
-  m_Name: Stage1-2 Boss
+  m_Name: Stage1-3 Boss(Mask)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2192551642765764282
+--- !u!4 &6639529832721246970
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192551642765764280}
+  m_GameObject: {fileID: 6639529832721246968}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.11, y: -4.09, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!212 &2192551642765764281
+--- !u!212 &6639529832721246969
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192551642765764280}
+  m_GameObject: {fileID: 6639529832721246968}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,27 +84,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2192551642765764283
+--- !u!114 &6639529832721246971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192551642765764280}
+  m_GameObject: {fileID: 6639529832721246968}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de5621adcc9e2e8438a739b48494c038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bossType: 1
---- !u!95 &1817221837084072655
+--- !u!95 &6589270446511707791
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192551642765764280}
+  m_GameObject: {fileID: 6639529832721246968}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d4f51217c1f8f4f40bde56cb09ff5917, type: 2}

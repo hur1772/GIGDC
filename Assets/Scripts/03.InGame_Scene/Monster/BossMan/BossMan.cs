@@ -22,6 +22,11 @@ public class BossMan : Monster
 
     bool firstSpawn = false, secondSpawn = false;
 
+    //보스소환
+    [Header("--- Boss ---")]
+    public Transform bossSpawnPos;
+    public GameObject bossPrefab;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -172,6 +177,18 @@ public class BossMan : Monster
 
     }
 
+    public void SpawnBoss()
+    {
+        GameObject boss = Instantiate(bossPrefab);
+        boss.transform.position = bossSpawnPos.transform.position;
+        if (this.transform.eulerAngles.y == 180)
+            boss.transform.eulerAngles = new Vector3(0, 0, 0);
+        else
+            boss.transform.eulerAngles = new Vector3(0, 180.0f, 0);
+        this.m_Animator.enabled = false;
+        Destroy(this.gameObject);
+    }
+
     public override void TakeDamage(int WeaponState)
     {
         base.TakeDamage(WeaponState);
@@ -221,5 +238,7 @@ public class BossMan : Monster
         else
             Debug.Log("검출안됨");
     }
+
+
 
 }
