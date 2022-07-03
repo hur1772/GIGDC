@@ -121,7 +121,9 @@ public class Player_Attack : MonoBehaviour
             {
                 TargetCtrl targetCtrl = collider.GetComponent<TargetCtrl>();
 
-                if (targetCtrl.ThisGameObject.name.ToString() == "TtargetObj")
+                Debug.Log(targetCtrl.ThisGameObject.name.ToString());
+
+                if (targetCtrl.ThisGameObject.name.ToString() == "TtargetObj(Clone)")
                     return;
                 collider.GetComponent<TargetCtrl>().TakeDamage(playerAttackDamage);
             }
