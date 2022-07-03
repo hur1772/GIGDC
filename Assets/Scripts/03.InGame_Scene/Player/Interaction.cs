@@ -122,7 +122,7 @@ public class Interaction : MonoBehaviour
             case InteractionState.Beacon:
                 if(Input.GetKey(KeyCode.G))
                 {
-                    SoundMgr.Instance.PlayEffSound("Beacon", 1.0f);
+                    SoundMgr.Instance.PlayEffSound("Beacon", 0.5f);
                     GlobalUserData.Save();
                     if (InfoUI.Inst.GuideTxt != null)
                     {
