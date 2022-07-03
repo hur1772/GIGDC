@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2269875320446877065}
   m_Layer: 0
   m_Name: Protal
-  m_TagString: 04.Stage_1(Palace)
+  m_TagString: Village
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2269875320446877070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33, y: -2, z: 0}
+  m_LocalPosition: {x: 457.8, y: -0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
