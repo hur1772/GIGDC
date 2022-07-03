@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SecondAlien : Monster
 {
@@ -15,6 +16,9 @@ public class SecondAlien : Monster
     float dieAlpha = 1.0f;
     Color dieColor = Color.white;
     SpriteRenderer _spRenderer;
+
+    //HpBar
+    [SerializeField] Image HPBar = null;
 
     private void Start() => StartFunc();
 
@@ -137,6 +141,8 @@ public class SecondAlien : Monster
             return;
 
         base.TakeDamage(WeaponState);
+
+        HPBar.fillAmount = m_CurHP / m_MaxHP;
 
         if(isChange == false && m_CurHP <= m_MaxHP * 0.5f)
         {
