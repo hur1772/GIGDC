@@ -28,6 +28,7 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_TakeDamage(float a_Value = 10.0f)
     {
+        SoundMgr.Instance.PlayEffSound("Player_Hit", 0.6f);
         if (Player_State.p_Move_state == PlayerMoveState.player_dash)
         {
             Debug.Log("대쉬상태 무적");
@@ -46,6 +47,7 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_Die()
     {
+        SoundMgr.Instance.PlayEffSound("Player_Die", 0.8f);
         curHp = 0;
         Debug.Log("Die");
         Time.timeScale = 0.0f;

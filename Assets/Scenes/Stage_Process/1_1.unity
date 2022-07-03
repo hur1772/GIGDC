@@ -40377,6 +40377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309958129}
   - component: {fileID: 309958130}
+  - component: {fileID: 309958131}
   m_Layer: 0
   m_Name: Stage1_1Mgr
   m_TagString: Untagged
@@ -40416,6 +40417,18 @@ MonoBehaviour:
   Volume_Btn: {fileID: 670568390}
   CreditScene_Btn: {fileID: 1348894565}
   ExitGame_Btn: {fileID: 1388771896}
+--- !u!114 &309958131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309958128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134a76a1ab78ca44aa25b9943cfd67ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &319238444
 GameObject:
   m_ObjectHideFlags: 0
