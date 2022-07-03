@@ -121,7 +121,7 @@ public class BossCtrl1_1 : Monster
             m_DelayTime -= Time.deltaTime;
             if (m_DelayTime <= 0.0f)
             {
-                ChangeRotate2();
+                ChangeRotate1();
                 if (m_CalcVec.magnitude >= m_AttackDistance)
                 {
                     m_Monstate = MonsterState.CHASE;
