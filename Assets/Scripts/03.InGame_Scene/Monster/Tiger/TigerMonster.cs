@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TigerMonster : Monster
 {
@@ -42,7 +43,7 @@ public class TigerMonster : Monster
 
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
-  
+    [SerializeField] Image HPBar = null;
 
 
     //보스소환
@@ -423,5 +424,12 @@ public class TigerMonster : Monster
             if (collision.gameObject.TryGetComponent(out playerTakeDmg))
                 playerTakeDmg.P_TakeDamage(45);
         }
+    }
+
+    public override void TakeDamage(int WeaponState)
+    {
+        
+        base.TakeDamage(WeaponState);
+        HPBar.fillAmount = m_CurHP / m_MaxHP;
     }
 }
