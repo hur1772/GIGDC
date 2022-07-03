@@ -122,6 +122,7 @@ public class Interaction : MonoBehaviour
             case InteractionState.Beacon:
                 if(Input.GetKey(KeyCode.G))
                 {
+                    SoundMgr.Instance.PlayEffSound("Beacon", 1.0f);
                     GlobalUserData.Save();
                     if (InfoUI.Inst.GuideTxt != null)
                     {
@@ -135,6 +136,7 @@ public class Interaction : MonoBehaviour
                 Portal = GameObject.Find("Protal");
                 if (Input.GetKey(KeyCode.G))
                 {
+                    SoundMgr.Instance.PlayEffSound("Portal", 1.0f);
                     if (Portal.tag == "04.Stage_1(Palace)")
                     {
                         SceneManager.LoadScene("02.Stage_1(Palace)");
