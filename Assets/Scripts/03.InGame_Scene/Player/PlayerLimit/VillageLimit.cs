@@ -13,6 +13,8 @@ public class VillageLimit : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(GlobalUserData.SwordTier);
+
         tr = GetComponent<Transform>();
     }
 

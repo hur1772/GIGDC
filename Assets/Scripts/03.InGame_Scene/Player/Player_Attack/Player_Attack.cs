@@ -20,6 +20,8 @@ public class Player_Attack : MonoBehaviour
 
     public RuntimeAnimatorController[] runtimeAnimatorControllers;
 
+    bool State = true;
+
     void Awake()
     {
         Inst = this;
@@ -29,7 +31,7 @@ public class Player_Attack : MonoBehaviour
     private void Start() => StartFunc();
     private void StartFunc()
     {
-        GlobalUserData.InitWeaponData();
+        //GlobalUserData.InitWeaponData();
 
         rigid = GetComponent<Rigidbody2D>();
         
@@ -42,6 +44,8 @@ public class Player_Attack : MonoBehaviour
 
         playerAttackDamage = 30.0f;
         playerCriticalValue = 20.0f;
+
+        animator.runtimeAnimatorController = runtimeAnimatorControllers[0 + GlobalUserData.SwordTier * 2];
     }
 
     private void Update() => UpdateFunc();
@@ -56,6 +60,7 @@ public class Player_Attack : MonoBehaviour
                 Player_State.p_state = PlayerState.player_attack;
                 Player_State.p_Attack_state = PlayerAttackState.player_sword;
                 GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
+                State = true;
                 //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_sword);
             }
 
@@ -67,6 +72,7 @@ public class Player_Attack : MonoBehaviour
                 Player_State.p_state = PlayerState.player_attack;
                 Player_State.p_Attack_state = PlayerAttackState.player_bow;
                 GlobalUserData.Player_Att_State = PlayerAttackState.player_bow;
+                State = true;
                 //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
             }
         }

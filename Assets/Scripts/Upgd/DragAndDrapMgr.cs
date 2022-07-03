@@ -42,6 +42,8 @@ public class DragAndDrapMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GlobalUserData.Load();
+
         if (Ok_Btn != null)
             Ok_Btn.onClick.AddListener( OkBtnFunc );
 
@@ -323,13 +325,13 @@ public class DragAndDrapMgr : MonoBehaviour
 					{
                         GlobalUserData.BowTier++;
                         m_BowIndex = GlobalUserData.BowTier;
-                        Debug.Log( m_BowIndex );
+                        Debug.Log(GlobalUserData.BowTier);
 					}
                     if( m_SaveIndex == 1 )
                     {
                         GlobalUserData.SwordTier++;
                         m_SwordIndex = GlobalUserData.SwordTier;
-                        Debug.Log( m_SwordIndex );
+                        Debug.Log(GlobalUserData.SwordTier);
                     }
                     m_SlotSc[ m_SaveIndex ].ItemImg[ m_SaveTier ].gameObject.SetActive( true );
 

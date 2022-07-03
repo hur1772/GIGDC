@@ -20,6 +20,8 @@ public class StageMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //GlobalUserData.Load();
+
         menuOn = false;
         if (BacktoGame_Btn != null)
             BacktoGame_Btn.onClick.AddListener(BackGameFunc);
