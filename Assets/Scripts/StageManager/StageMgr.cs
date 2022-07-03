@@ -20,11 +20,6 @@ public class StageMgr : MonoBehaviour
     void Start()
     {
         menuOn = false;
-
-        //public Button Volume_Btn = null;
-        //public Button CreditScene_Btn = null;
-        //public Button ExitGame_Btn = null;
-
         if (BacktoGame_Btn != null)
             BacktoGame_Btn.onClick.AddListener(BackGameFunc);
 
