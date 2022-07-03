@@ -2009,7 +2009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1070132761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2951,21 +2951,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1936131045, guid: a7fd0a28dad66174c9bd4b8219f4c0c3, type: 3}
-      propertyPath: m_MaxHP
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 6639529832721246968, guid: a7fd0a28dad66174c9bd4b8219f4c0c3, type: 3}
       propertyPath: m_Name
       value: Stage1-3 Boss(Mask)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639529832721246968, guid: a7fd0a28dad66174c9bd4b8219f4c0c3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639529832721246969, guid: a7fd0a28dad66174c9bd4b8219f4c0c3, type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6639529832721246970, guid: a7fd0a28dad66174c9bd4b8219f4c0c3, type: 3}
       propertyPath: m_RootOrder

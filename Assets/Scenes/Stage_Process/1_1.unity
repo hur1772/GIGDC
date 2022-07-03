@@ -50842,9 +50842,17 @@ PrefabInstance:
       propertyPath: BossIConImg
       value: 
       objectReference: {fileID: 1680489088}
+    - target: {fileID: 1462276094, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 21038246127183603, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
       propertyPath: m_Name
       value: Stage1 Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 21038246127183603, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3561742905520233242, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
       propertyPath: Protal

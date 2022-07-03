@@ -1874,6 +1874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4109632169616997898, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2832,7 +2836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &21038245113363287
 Rigidbody2D:
   serializedVersion: 4
@@ -2870,7 +2874,7 @@ BoxCollider2D:
   m_Offset: {x: 0.32971597, y: 2.0002465}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6, y: 0.05}
     oldSize: {x: 5.7, y: 6.93}
     newSize: {x: 5.7, y: 6.93}
     adaptiveTilingThreshold: 0.5
@@ -2925,11 +2929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448571185378166652, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
-      propertyPath: m_MaxHP
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448571186312362291, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_RootOrder
@@ -3036,7 +3036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21038245113363286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.91, y: -4.27, z: 0}
+  m_LocalPosition: {x: 2.75, y: -4.47, z: 0}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children:
   - {fileID: 934507078}
