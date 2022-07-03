@@ -15,7 +15,7 @@ public class BossCtrl1_1 : Monster
     SpriteRenderer _spRenderer;
     [SerializeField] Image HPBar = null;
 
-    public float m_SizeUpDelay = 4.0f;
+    //public float m_SizeUpDelay = 4.0f;
 
     private void Start() => StartFunc();
 
@@ -36,7 +36,7 @@ public class BossCtrl1_1 : Monster
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(originPos, (attackPos.position - originPos));
-        Gizmos.DrawCube(attackPos.position, new Vector2(3, 3));
+        Gizmos.DrawCube(attackPos.position, new Vector2(7, 4));
     }
 
     private void Update() => UpdateFunc();
@@ -47,11 +47,6 @@ public class BossCtrl1_1 : Monster
         CheckDistanceFromPlayer();
             
         AiUpdate();
-
-        if(m_SizeUpDelay > 0.0f)
-        {
-            m_SizeUpDelay -= Time.deltaTime;
-        }
     }
 
     void AiUpdate()
@@ -61,9 +56,6 @@ public class BossCtrl1_1 : Monster
             Debug.Log("Player Null");
             return;
         }
-
-        if (m_SizeUpDelay <= 0.0f)
-        {
             if (m_Monstate == MonsterState.CHASE)
             {
                 ChaseState();
@@ -83,8 +75,7 @@ public class BossCtrl1_1 : Monster
             else if (m_Monstate == MonsterState.Hitted)
             {
                 HittedState();
-            }
-        }
+            }       
     }
 
 
@@ -178,16 +169,9 @@ public class BossCtrl1_1 : Monster
 
     public override void TakeDamage(int WeaponState)
     {
-        if (m_SizeUpDelay <= 0.0f)
-        {
             HPBar.fillAmount = m_CurHP / m_MaxHP;
             base.TakeDamage(WeaponState);
-
-            if (false && m_CurHP <= m_MaxHP * 0.5f)
-            {
-                m_Animator.SetTrigger("Change");
-            }
-        }
+        
     }
 
     void Attackend()

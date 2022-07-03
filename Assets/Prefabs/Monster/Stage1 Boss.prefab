@@ -187,7 +187,6 @@ MonoBehaviour:
   m_DelayTime: 0
   Protal: {fileID: 0}
   HPBar: {fileID: 276243228733359301}
-  m_SizeUpDelay: 4
 --- !u!1 &276243227895984841
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +306,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.59, y: 0.54}
+  m_Offset: {x: 0.1, y: 0.23}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
