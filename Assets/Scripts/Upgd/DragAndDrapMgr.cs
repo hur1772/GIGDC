@@ -106,6 +106,7 @@ public class DragAndDrapMgr : MonoBehaviour
             //    {
             //        m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
             //    }
+
                 BuyMouseBtnDown();
             //}
         }//if (Input.GetMouseButtonDown(0))

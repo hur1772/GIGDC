@@ -134,6 +134,7 @@ public class Interaction : MonoBehaviour
 
             case InteractionState.Portal:
                 Portal = GameObject.Find("Protal");
+
                 if (Input.GetKey(KeyCode.G))
                 {
                     SoundMgr.Instance.PlayEffSound("Portal", 1.0f);

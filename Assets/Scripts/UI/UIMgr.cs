@@ -13,6 +13,9 @@ public class UIMgr : MonoBehaviour
     public Image HealItemPanel1 = null;
     public Image HealItemPanel2 = null;
 
+    public Text CurNum1Txt = null;
+    public Text CurNum2Txt = null;
+
     public Text GoldTxt;
 
 
@@ -63,6 +66,16 @@ public class UIMgr : MonoBehaviour
         //    UseItemCoolTime3 += Time.deltaTime;
         //    UseItemImg3.fillAmount = UseItemCoolTime3 / 5;
         //}
+
+        if(CurNum1Txt != null)
+        {
+            CurNum1Txt.text = GlobalUserData.m_ItemDataList[0].m_CurItemCount.ToString();
+        }
+
+        if (CurNum2Txt != null)
+        {
+            CurNum2Txt.text = GlobalUserData.m_ItemDataList[1].m_CurItemCount.ToString();
+        }
 
         m_CurHp = pTakeDamage.curHp;
         m_MaxHp = pTakeDamage.maxHp;
