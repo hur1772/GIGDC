@@ -430,6 +430,9 @@ public class TigerMonster : Monster
     {
         
         base.TakeDamage(WeaponState);
+
+        if (m_CurHP <= 0.0f && m_Animator.enabled == false)
+            m_Animator.enabled = true;
         HPBar.fillAmount = m_CurHP / m_MaxHP;
     }
 }
