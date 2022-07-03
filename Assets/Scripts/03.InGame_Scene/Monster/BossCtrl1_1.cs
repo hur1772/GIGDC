@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossCtrl1_1 : Monster
 {
@@ -12,7 +13,7 @@ public class BossCtrl1_1 : Monster
     float dieAlpha = 1.0f;
     Color dieColor = Color.white;
     SpriteRenderer _spRenderer;
-    Boss1HP BossUI;
+    [SerializeField] Image HPBar = null;
 
     public float m_SizeUpDelay = 4.0f;
 
@@ -20,11 +21,7 @@ public class BossCtrl1_1 : Monster
 
     private void StartFunc()
     {
-        InitMonster();
-        BossUI = GetComponent<Boss1HP>();
-        BossUI.BossHpBack.gameObject.SetActive(true);
-        BossUI.BossHpbar.gameObject.SetActive(true);
-        BossUI.BossIConImg.gameObject.SetActive(true);
+        InitMonster(); 
         m_Monstate = MonsterState.CHASE;
         m_Animator.SetBool("IsMove", true);
 
@@ -161,9 +158,7 @@ public class BossCtrl1_1 : Monster
 
             if (dieAlpha <= 0.05f)
                 Destroy(this.gameObject);
-            BossUI.BossHpBack.gameObject.SetActive(false);
-            BossUI.BossHpbar.gameObject.SetActive(false);
-            BossUI.BossIConImg.gameObject.SetActive(false);
+
         }
     }
 
@@ -185,7 +180,7 @@ public class BossCtrl1_1 : Monster
     {
         if (m_SizeUpDelay <= 0.0f)
         {
-            BossUI.BossHpbar.fillAmount = m_CurHP / m_MaxHP;
+            HPBar.fillAmount = m_CurHP / m_MaxHP;
             base.TakeDamage(WeaponState);
 
             if (false && m_CurHP <= m_MaxHP * 0.5f)
