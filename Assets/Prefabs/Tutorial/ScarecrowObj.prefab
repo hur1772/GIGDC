@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5893034436838709157}
   - component: {fileID: 8953651487430065154}
   - component: {fileID: 5814545156648553215}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ScarecrowObj
   m_TagString: target
   m_Icon: {fileID: 0}
