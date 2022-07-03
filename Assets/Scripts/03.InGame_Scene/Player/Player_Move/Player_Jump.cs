@@ -65,6 +65,7 @@ public class Player_Jump : MonoBehaviour
 
     private void P_Move_Jump()
     {
+        SoundMgr.Instance.PlayEffSound("Player_Dash", 0.5f);
         animator.SetBool("IsJump", true);
         rigid.AddForce(transform.up* jump_power, ForceMode2D.Impulse);
 

@@ -91,6 +91,7 @@ public class UIMgr : MonoBehaviour
 
                 if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
                 {
+                    SoundMgr.Instance.PlayEffSound("Potion", 0.3f);
                     if (m_CurHp < m_MaxHp)
                     {
                         GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
@@ -112,6 +113,7 @@ public class UIMgr : MonoBehaviour
 
                 if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
                 {
+                    SoundMgr.Instance.PlayEffSound("Potion", 0.5f);
                     if (m_CurHp < m_MaxHp)
                     {
                         GlobalUserData.m_ItemDataList[1].m_CurItemCount--;
@@ -170,7 +172,7 @@ public class UIMgr : MonoBehaviour
         if (coll.gameObject.name.Contains("Gold") == true)
         {
             GoldCtrl ctrl = coll.gameObject.GetComponent<GoldCtrl>();
-
+            SoundMgr.Instance.PlayEffSound("Coin", 0.2f);
             if (ctrl.isGet == true)
             {
                 AddGold(100);

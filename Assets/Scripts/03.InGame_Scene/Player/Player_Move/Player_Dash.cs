@@ -68,6 +68,7 @@ public class Player_Dash : MonoBehaviour
 
         if (0.0f < dash_time)
         {
+            SoundMgr.Instance.PlayEffSound("Player_Dash", 0.5f);
             P_Move_Dash();
 
             this.gameObject.layer = 8;
