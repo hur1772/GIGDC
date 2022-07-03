@@ -728,7 +728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1530}
+  m_AnchoredPosition: {x: 0, y: -1700}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400658151
@@ -769,7 +769,8 @@ MonoBehaviour:
     UI\n\uC724\uC815\uBBFC\n\n\uB3D9\uBB3C\uD615 \uBAAC\uC2A4\uD130\n\uD615\uC900\uC601\n\n\n<color=blue>---\uAC1C\uBC1C---</color>\n\n\uD50C\uB808\uC774\uC5B4
     / \uB9F5 \uB514\uC790\uC778\n\uC870\uC131\uC7AC\n\n\uBAAC\uC2A4\uD130 AI\n\uCD5C\uC740\uBC94\n\nUI
     / \uCE74\uBA54\uB77C\n\uAE40\uC885\uCC2C\n\n\uC0C1\uD638\uC791\uC6A9 / \uC720\uC800
-    \uB370\uC774\uD130 / \uC0C1\uC810\n\uD5C8\uB3C4\uD6C8\n\n\uC74C\uC545\n\uC870\uC131\uC7AC\n"
+    \uB370\uC774\uD130 / \uC0C1\uC810\n\uD5C8\uB3C4\uD6C8\n\n\uC74C\uC545\n\uC870\uC131\uC7AC\n\n\uC0AC\uC6B4\uB4DC
+    \uC18C\uC2A4\nzapsplat\nTrollCrawlBeat\n\n"
 --- !u!222 &1400658152
 CanvasRenderer:
   m_ObjectHideFlags: 0
