@@ -179,20 +179,6 @@ public class BossCtrl1_1 : Monster
         m_DelayTime = 1.0f;
     }
 
-    public void BossAttack()
-    {
-        Vector3 attackdir = attackPos.position - originPos;
-
-        attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
-        if (attackhit)
-        {
-            if (attackhit.collider.gameObject.TryGetComponent(out playerTakeDmg))
-            {
-                playerTakeDmg.P_TakeDamage();
-            }
-        }
-    }
-
     public void SecondAlienAttackEff()
     {
         Vector3 attackdir = attackPos.position - originPos;
