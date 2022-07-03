@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backTitleBtn: {fileID: 1124392804}
+  CreditTxt: {fileID: 1400658151}
 --- !u!1 &644543919
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1400658150
 RectTransform:
   m_ObjectHideFlags: 0
