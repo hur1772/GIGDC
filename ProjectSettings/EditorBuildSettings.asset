@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage_Process/Village.unity
     guid: 2ed23c06fbfe35541a3309429e8553f9
+  - enabled: 1
+    path: Assets/Scenes/Credit_Scene/CreditScene.unity
+    guid: de49650b2b7acaa41a10217a991ba5a3
   m_configObjects: {}

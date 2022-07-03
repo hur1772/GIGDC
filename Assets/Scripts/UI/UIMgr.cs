@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIMgr : MonoBehaviour
 {
@@ -14,8 +15,6 @@ public class UIMgr : MonoBehaviour
 
     public Text GoldTxt;
 
-    public Image ESC_Menu_panel = null;
-    bool menuOn;
 
     float m_CurHp;
     float m_MaxHp;
@@ -32,7 +31,7 @@ public class UIMgr : MonoBehaviour
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
         GlobalUserData.InitData();
-        menuOn = false;
+
     }
 
     // Update is called once per frame
@@ -83,28 +82,13 @@ public class UIMgr : MonoBehaviour
                     {
                         GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
                         pTakeDamage.curHp += 30;
-                        m_CurHp += 30; 
+                        m_CurHp += 30;
                     }
                 }
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (menuOn == false)
-            {
-                ESC_Menu_panel.gameObject.SetActive(true);
-                menuOn = true;
-                Time.timeScale = 0.0f;
-            }
-            else
-            {
-                ESC_Menu_panel.gameObject.SetActive(false);
-                menuOn = false;
-                Time.timeScale = 1.0f;
-            }
 
-        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -173,8 +157,8 @@ public class UIMgr : MonoBehaviour
         if (coll.gameObject.name.Contains("Gold") == true)
         {
             GoldCtrl ctrl = coll.gameObject.GetComponent<GoldCtrl>();
-            
-            if(ctrl.isGet == true)
+
+            if (ctrl.isGet == true)
             {
                 AddGold(100);
                 ctrl.isGet = false;
@@ -196,7 +180,8 @@ public class UIMgr : MonoBehaviour
     //        return;
     //    if (pTakeDamage == null)
     //        return;
-        
+
     //    m_CurHp -= a_val;    
     //}
+
 }
