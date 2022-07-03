@@ -362,6 +362,7 @@ public class DragAndDrapMgr : MonoBehaviour
 
     void OkBtnFunc()
     {
+        SoundMgr.Instance.PlayEffSound("Blacksmith", 0.1f);
         IsUpGd = true;
     }
 

@@ -31,6 +31,7 @@ public class ItemNoodCtrl : MonoBehaviour
         {
             m_BuyBtn.onClick.AddListener(() =>
             {
+                SoundMgr.Instance.PlayEffSound("Soup", 0.3f);
                 if (m_StoreMgr != null)
                     m_StoreMgr.BuySkItem(m_ItemType);
             });

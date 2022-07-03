@@ -40,6 +40,7 @@ public class HealItemNoodCtrl : MonoBehaviour
         {
             m_BuyBtn.onClick.AddListener(() =>
             {
+                SoundMgr.Instance.PlayEffSound("Potion", 0.3f);
                 if (m_StoreMgr != null)
                     m_StoreMgr.BuySkItem(m_ItemType, m_CurNum , m_InitNum);
                 //Debug.Log(m_InitNum);
