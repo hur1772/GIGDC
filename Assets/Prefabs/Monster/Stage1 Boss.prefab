@@ -185,7 +185,7 @@ MonoBehaviour:
   attackPos: {fileID: 7541309046823924334}
   originPos: {x: 0, y: 0, z: 0}
   m_DelayTime: 0
-  Protal: {fileID: 0}
+  Protal: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
   HPBar: {fileID: 276243228733359301}
 --- !u!1 &276243227895984841
 GameObject:

@@ -16,6 +16,7 @@ public class StageMgr : MonoBehaviour
     public Button CreditScene_Btn = null;
     public Button ExitGame_Btn = null;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,4 +76,5 @@ public class StageMgr : MonoBehaviour
     {
         Debug.Log("ExitGame");
     }
+
 }
