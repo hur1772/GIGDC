@@ -31,7 +31,7 @@ public class Player_Attack : MonoBehaviour
     private void Start() => StartFunc();
     private void StartFunc()
     {
-        //GlobalUserData.InitWeaponData();
+        GlobalUserData.InitWeaponData();
 
         rigid = GetComponent<Rigidbody2D>();
         
@@ -119,12 +119,16 @@ public class Player_Attack : MonoBehaviour
             Debug.Log("hit");
             if (collider.tag == "target")
             {
+                TargetCtrl targetCtrl = collider.GetComponent<TargetCtrl>();
+
+                if (targetCtrl.ThisGameObject.name.ToString() == "TtargetObj")
+                    return;
                 collider.GetComponent<TargetCtrl>().TakeDamage(playerAttackDamage);
             }
             else if(collider.tag == "Monster")
             {
                 Debug.Log(0 + GlobalUserData.SwordTier);
-                collider.GetComponent<Monster>().TakeDamage(0 + GlobalUserData.SwordTier);
+                collider.GetComponent<Monster>().TakeDamage(0 + GlobalUserData.SwordTier * 2);
                 
             }
             else
