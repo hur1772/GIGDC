@@ -168,6 +168,7 @@ public class NPCDialogue : MonoBehaviour
             {
                 if( Input.GetKeyDown( KeyCode.G ) )
                 {
+                    SoundMgr.Instance.PlayEffSound("PopUp",1.0f);
                     if( count < dialogue.Length )
                     {
                         

@@ -81,13 +81,13 @@ public class VillageLimit : MonoBehaviour
         else if (nowscene.name == "1_3")
         {
             m_Pos = tr.position;
-            if (tr.position.x < -8.4f)
+            if (tr.position.x < -3.3f)
             {
-                m_Pos.x = -8.4f;
+                m_Pos.x = -3.3f;
             }
-            if (24.5f < tr.position.x)
+            if (365.0f < tr.position.x)
             {
-                m_Pos.x = 24.5f;
+                m_Pos.x = 365.0f;
             }
 
             tr.position = m_Pos;
