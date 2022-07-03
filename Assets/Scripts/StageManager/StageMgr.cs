@@ -48,11 +48,13 @@ public class StageMgr : MonoBehaviour
             {
                 ESC_Panel.gameObject.SetActive(true);
                 menuOn = true;
+                Time.timeScale = 0.0f;
             }
             else
             {
                 ESC_Panel.gameObject.SetActive(false);
                 menuOn = false;
+                Time.timeScale = 1.0f;
             }
 
         }
@@ -64,8 +66,9 @@ public class StageMgr : MonoBehaviour
 
     public void BackGameFunc()
     {
-        ESC_Menu_panel.gameObject.SetActive(false);
+        ESC_Panel.gameObject.SetActive(false);
         menuOn = false;
+        Time.timeScale = 1.0f;
     }
 
     public void CreditSceneFunc()
