@@ -123,7 +123,9 @@ public class Player_Attack : MonoBehaviour
             }
             else if(collider.tag == "Monster")
             {
-                collider.GetComponent<Monster>().TakeDamage(0 + GlobalUserData.SwordTier * 2);
+                Debug.Log(0 + GlobalUserData.SwordTier);
+                collider.GetComponent<Monster>().TakeDamage(0 + GlobalUserData.SwordTier);
+                
             }
             else
             {

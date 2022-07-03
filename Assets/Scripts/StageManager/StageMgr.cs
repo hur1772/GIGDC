@@ -21,7 +21,7 @@ public class StageMgr : MonoBehaviour
     void Start()
     {
         //GlobalUserData.Load();
-
+        GlobalUserData.InitData();
         menuOn = false;
         if (BacktoGame_Btn != null)
             BacktoGame_Btn.onClick.AddListener(BackGameFunc);

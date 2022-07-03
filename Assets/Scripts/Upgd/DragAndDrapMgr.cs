@@ -42,7 +42,7 @@ public class DragAndDrapMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GlobalUserData.Load();
+        //GlobalUserData.Load();
 
         if (Ok_Btn != null)
             Ok_Btn.onClick.AddListener( OkBtnFunc );
