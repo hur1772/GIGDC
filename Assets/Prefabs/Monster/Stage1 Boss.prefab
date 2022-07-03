@@ -187,7 +187,6 @@ MonoBehaviour:
   m_DelayTime: 0
   Protal: {fileID: 0}
   HPBar: {fileID: 276243228733359301}
-  m_SizeUpDelay: 4
 --- !u!1 &276243227895984841
 GameObject:
   m_ObjectHideFlags: 0
