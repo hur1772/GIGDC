@@ -11,7 +11,7 @@ public class Title_Mgr : MonoBehaviour
 
     private void StartFunc()
     {
-
+        SoundMgr.Instance.PlayBGM("Title_BGM", 1.0f);
     }
 
     private void Update() => UpdateFunc();

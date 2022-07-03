@@ -44,6 +44,8 @@ public class TigerMonster : Monster
     SpriteRenderer spRend;
     public Sprite[] sprites = null;
     [SerializeField] Image HPBar = null;
+    [SerializeField] Image HPBack = null;
+    [SerializeField] Image Icon = null;
 
 
     //보스소환
@@ -401,7 +403,10 @@ public class TigerMonster : Monster
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
-        
+        HPBar.gameObject.SetActive(false);
+        HPBack.gameObject.SetActive(false);
+        Icon.gameObject.SetActive(false);
+
     }
 
     public void SpawnBoss()

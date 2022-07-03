@@ -770,7 +770,7 @@ MonoBehaviour:
     / \uB9F5 \uB514\uC790\uC778\n\uC870\uC131\uC7AC\n\n\uBAAC\uC2A4\uD130 AI\n\uCD5C\uC740\uBC94\n\nUI
     / \uCE74\uBA54\uB77C\n\uAE40\uC885\uCC2C\n\n\uC0C1\uD638\uC791\uC6A9 / \uC720\uC800
     \uB370\uC774\uD130 / \uC0C1\uC810\n\uD5C8\uB3C4\uD6C8\n\n\uC74C\uC545\n\uC870\uC131\uC7AC\n\n\uC0AC\uC6B4\uB4DC
-    \uC18C\uC2A4\nzapsplat\nTrollCrawlBeat\n\n"
+    \uC18C\uC2A4\nzapsplat\nTrollCrawlBeat\n\uB208\uC194\uC758 \uC74C\uC545\uC800\uC7A5\uC18C\n\n"
 --- !u!222 &1400658152
 CanvasRenderer:
   m_ObjectHideFlags: 0
