@@ -2155,6 +2155,96 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1001 &1395191444
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2192551642765764280, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_Name
+      value: Stage1-2 Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192551642765764282, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+--- !u!1 &1395191445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2192551642765764280, guid: 5c5e55ed568d26f4ab12d3f01664e63c, type: 3}
+  m_PrefabInstance: {fileID: 1395191444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395191446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395191445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7431c301435c4f45afeed0459eb72bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHP: 0
+  m_CurHP: 0
+  m_Atk: 0
+  m_MoveSpeed: 0
+  MonRight: 0
+  m_ChaseDistance: 0
+  m_AttackDistance: 0
+  m_Monstate: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  attackPos: {fileID: 0}
+  originPos: {x: 0, y: 0, z: 0}
+  bossStage: 0
+  m_DelayTime: 0
+  HPBar: {fileID: 0}
 --- !u!114 &1514056528
 MonoBehaviour:
   m_ObjectHideFlags: 0

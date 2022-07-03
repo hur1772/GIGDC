@@ -3,6 +3,14 @@ using UnityEngine.UI;
 
 public class SecondAlien : Monster
 {
+    public enum BossStage
+    {
+        Stage1_2,
+        Stage1_3
+    }
+
+    public BossStage bossStage = BossStage.Stage1_2;
+
     public float m_DelayTime = 0.0f;
     bool m_IsRight = false;
     Vector2 attackSize = new Vector2(7, 4);
@@ -122,16 +130,18 @@ public class SecondAlien : Monster
         }
         else if (m_Monstate == MonsterState.Hitted)
         {
-            m_Animator.SetBool("IsAttack", false);
+            m_Monstate = MonsterState.CHASE;
 
-            if (HittedTIme >= 0.0f)
-            {
-                HittedTIme -= Time.deltaTime;
-                if (HittedTIme <= 0.0f)
-                {
-                    m_Monstate = MonsterState.CHASE;
-                }
-            }
+            //m_Animator.SetBool("IsAttack", false);
+
+            //if (HittedTIme >= 0.0f)
+            //{
+            //    HittedTIme -= Time.deltaTime;
+            //    if (HittedTIme <= 0.0f)
+            //    {
+            //        m_Monstate = MonsterState.CHASE;
+            //    }
+            //}
         }
     }
 
@@ -144,10 +154,17 @@ public class SecondAlien : Monster
 
         HPBar.fillAmount = m_CurHP / m_MaxHP;
 
-        if(isChange == false && m_CurHP <= m_MaxHP * 0.5f)
+        if(bossStage == BossStage.Stage1_3)
         {
-            isChange = true;
-            m_Animator.SetTrigger("Change");
+            if (isChange == false && m_CurHP <= m_MaxHP * 0.5f)
+            {
+                isChange = true;
+                m_Animator.SetTrigger("Change");
+            }
+        }
+        else if(bossStage == BossStage.Stage1_2)
+        {
+
         }
     }
 
