@@ -227,6 +227,7 @@ public class BossGirl : Monster
 
     public void SpawnBoss()
     {
+        SoundMgr.Instance.PlayGUISound("WZombie_CHNG", 1.0f);
         GameObject boss = Instantiate(bossPrefab);
         boss.transform.position = bossSpawnPos.transform.position;
         boss.transform.eulerAngles = bossSpawnPos.eulerAngles;
