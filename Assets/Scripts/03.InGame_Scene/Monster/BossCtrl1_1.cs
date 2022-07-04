@@ -136,7 +136,7 @@ public class BossCtrl1_1 : Monster
         if (Protal != null)
         {
             Protal.gameObject.SetActive(true);
-            Vector3 ProtalPos = new Vector3(427.0f, -1.3f, 0.0f);
+            Vector3 ProtalPos = new Vector3(408.0f, 1.0f, 0.0f);
             Protal.transform.position = ProtalPos;
             Instantiate(Protal);
         }
