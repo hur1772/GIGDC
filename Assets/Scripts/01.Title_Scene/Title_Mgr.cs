@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class Title_Mgr : MonoBehaviour
 {
+    public Image FadeIn = null;
 
     private void Start() => StartFunc();
 
+    private void Awake()
+    {
+        FadeIn.gameObject.SetActive(true);
+    }
     private void StartFunc()
     {
-        
+
         SoundMgr.Instance.PlayBGM("Title_BGM", 1.0f);
     }
 
