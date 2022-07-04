@@ -42,6 +42,10 @@ public class DragAndDrapMgr : MonoBehaviour
     private float m_InfoDuring = 1.5f;  //페이드아웃 연출을 시간 설정
     private float m_InfoAddTimer = 0.0f;
 
+    public WeaponHlepBoxCtrl m_HelpBox;
+
+    float m_HelpBoxTime = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,6 +105,13 @@ public class DragAndDrapMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_HelpBoxTime -= Time.deltaTime;
+
+        if (m_HelpBoxTime < 0.0f)
+        {
+            HideToolTip();
+        }
+
         if (Input.GetMouseButtonDown(0)) //왼쪽 마우스 버튼을 클릭한 순간
         {
             //if (m_SlotSc[2].ItemResultImg[0].gameObject.activeSelf == false && m_SlotSc[2].ItemResultImg[1].gameObject.activeSelf == false)
@@ -142,6 +153,30 @@ public class DragAndDrapMgr : MonoBehaviour
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }// void Update()
+
+    public void ShowToolTip(int a_itemType, Vector3 pos)
+    {
+        m_HelpBoxTime = 0.1f;
+        if (m_HelpBox != null)
+        {
+            if(a_itemType == 1)
+            {
+                m_HelpBox.ShowToolTip(0 + GlobalUserData.SwordTier * 2, pos);
+            }
+            if (a_itemType == 0)
+            {
+                m_HelpBox.ShowToolTip(1 + GlobalUserData.BowTier * 2, pos);
+            }
+        }
+    }
+
+    public void HideToolTip()
+    {
+        if (m_HelpBox != null)
+        {
+            m_HelpBox.HideToolTip();
+        }
+    }
 
     bool IsCollSlot( GameObject a_CkObj )  //마우스가 UI 슬롯 오브젝트 위에 있느냐? 판단하는 함수
     {
