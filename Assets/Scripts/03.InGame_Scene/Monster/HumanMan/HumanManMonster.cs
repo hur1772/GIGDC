@@ -140,7 +140,7 @@ public class HumanManMonster : Monster
         {
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-
+            SoundMgr.Instance.PlayEffSound("WZombie_Die", 1.0f);
             CoinDrop();
         }
         else if(m_Monstate == MonsterState.CORPSE)
