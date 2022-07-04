@@ -111,21 +111,46 @@ public class SecondAlien : Monster
         }
         else if (m_Monstate == MonsterState.DIE)
         {
-            m_Animator.SetTrigger("DieTrigger");
-            m_Monstate = MonsterState.CORPSE;
+            if(bossStage == BossStage.Stage1_3)
+            {
+                m_Animator.SetTrigger("DieTrigger");
+                m_Monstate = MonsterState.CORPSE;
 
-            CoinDrop();
+                CoinDrop();
+            }
+            else if(bossStage == BossStage.Stage1_2)
+            {
+                m_Animator.SetTrigger("EscapeTrigger");
+                m_Animator.SetBool("IsAttack2", false);
+                m_Animator.SetBool("IsAttack3", false);
+                m_Animator.SetBool("IsAttack", false);
+                m_Monstate = MonsterState.CORPSE;
+                CoinDrop();
+                Destroy(this.gameObject, 5.0f);
+            }
+
         }
         else if (m_Monstate == MonsterState.CORPSE)
         {
-            if(isDisappear)
+            if(bossStage == BossStage.Stage1_2)
             {
-                dieAlpha -= Time.deltaTime;
-                dieColor = new Color(1, 1, 1, dieAlpha);
-                _spRenderer.color = dieColor;
+                if(isDisappear)
+                {
+                    m_Rb.transform.position += Vector3.right * m_MoveSpeed * 5 * Time.deltaTime;
+                    this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
+                }
+            }
+            else if(bossStage == BossStage.Stage1_3)
+            {
+                if (isDisappear)
+                {
+                    dieAlpha -= Time.deltaTime;
+                    dieColor = new Color(1, 1, 1, dieAlpha);
+                    _spRenderer.color = dieColor;
 
-                if (dieAlpha <= 0.05f)
-                    Destroy(this.gameObject);
+                    if (dieAlpha <= 0.05f)
+                        Destroy(this.gameObject);
+                }
             }
         }
         else if (m_Monstate == MonsterState.Hitted)

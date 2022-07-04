@@ -45092,6 +45092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PigMonster_Complete (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2812334401942617405, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
 --- !u!1 &938430115

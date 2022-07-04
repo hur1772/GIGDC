@@ -33,7 +33,7 @@ public class UIMgr : MonoBehaviour
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
-        //GlobalUserData.InitData();
+        GlobalUserData.InitData();
 
     }
 

@@ -612,5 +612,6 @@ MonoBehaviour:
     m_Bits: 64
   attackPos: {fileID: 1387994700}
   originPos: {x: 0, y: 0, z: 0}
+  bossStage: 1
   m_DelayTime: 0
   HPBar: {fileID: 1178871083}
