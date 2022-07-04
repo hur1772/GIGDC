@@ -181,12 +181,28 @@ public class UIMgr : MonoBehaviour
             }
 
         }
+        else if(coll.gameObject.name.Contains("BossDrop")== true)
+        {
+            AddBoss();
+            Destroy(coll.gameObject);
+            
+        }
     }
 
     public void AddGold(int a_Val = 100)
     {
         GlobalUserData.s_GoldCount += a_Val;
         GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+    }
+
+    public void AddBoss()
+    {
+        if (StageMgr.Inst.InfoText != null)
+        {
+            StageMgr.Inst.InfoText.gameObject.SetActive(true);
+            StageMgr.Inst.InfoTimer = 5.0f;
+            StageMgr.Inst.InfoText.text = "무기도감을 획득했습니다.\n" + "마을로 가서 무기를 강화하십시오";
+        }
     }
 
     //public void TakeDamage(float a_val)

@@ -17,9 +17,14 @@ public class StageMgr : MonoBehaviour
     public Button ExitGame_Btn = null;
     public GameObject CreditCanvas = null;
     public Text InfoText;
-    float InfoTimer = 4.0f;
+    [HideInInspector] public float InfoTimer = 5.0f;
 
+    public static StageMgr Inst = null;
 
+    void Awake()
+    {
+        Inst = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +64,7 @@ public class StageMgr : MonoBehaviour
             {
                 InfoTimer = 0.0f;
                 InfoText.gameObject.SetActive(false);
+                InfoText.text = "";
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))

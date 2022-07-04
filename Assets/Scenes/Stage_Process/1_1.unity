@@ -37992,6 +37992,7 @@ MonoBehaviour:
   ExitGame_Btn: {fileID: 1388771896}
   CreditCanvas: {fileID: 1526575327}
   InfoText: {fileID: 1385087334}
+  InfoTimer: 4
 --- !u!114 &309958131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50929,3 +50930,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &8459606596082338913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447681, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606596738447741, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
+      propertyPath: m_Name
+      value: BossDrop
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32dad915e9cfc524a8deab4adad3fb70, type: 3}
