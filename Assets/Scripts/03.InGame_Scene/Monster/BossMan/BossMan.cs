@@ -167,7 +167,7 @@ public class BossMan : Monster
         GameObject potal = Instantiate(monsterPotal);
         potal.transform.position = potalPos.position;
         Destroy(potal, 2.0f);
-
+        SoundMgr.Instance.PlayEffSound("BossManPortal", 1.0f);
         SpawnMob();
     }
 
