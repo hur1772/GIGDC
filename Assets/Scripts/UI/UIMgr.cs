@@ -111,45 +111,46 @@ public class UIMgr : MonoBehaviour
         m_CurHp = pTakeDamage.curHp;
         m_MaxHp = pTakeDamage.maxHp;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (pTakeDamage.Player_State.p_state != PlayerState.player_die)
         {
-            if (UseItemImg1 != null)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0)
+                if (UseItemImg1 != null)
                 {
-                    return;
-                }
-
-                if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
-                {
-                    SoundMgr.Instance.PlayEffSound("Potion", 0.3f);
-                    if (m_CurHp < m_MaxHp)
+                    if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0)
                     {
-                        GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
-                        pTakeDamage.curHp += 30;
-                        m_CurHp += 30;
+                        return;
+                    }
+
+                    if (GlobalUserData.m_ItemDataList[0].m_CurItemCount > 0)
+                    {
+                        SoundMgr.Instance.PlayEffSound("Potion", 0.3f);
+                        if (m_CurHp < m_MaxHp)
+                        {
+                            GlobalUserData.m_ItemDataList[0].m_CurItemCount--;
+                            pTakeDamage.curHp += 30;
+                            m_CurHp += 30;
+                        }
                     }
                 }
             }
-        }
 
-
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (UseItemImg2 != null)
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0)
-                    return;
-
-                if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
+                if (UseItemImg2 != null)
                 {
-                    SoundMgr.Instance.PlayEffSound("Potion", 0.5f);
-                    if (m_CurHp < m_MaxHp)
+                    if (GlobalUserData.m_ItemDataList[1].m_CurItemCount == 0)
+                        return;
+
+                    if (GlobalUserData.m_ItemDataList[1].m_CurItemCount > 0)
                     {
-                        GlobalUserData.m_ItemDataList[1].m_CurItemCount--;
-                        pTakeDamage.curHp += 50;
-                        m_CurHp += 50;
+                        SoundMgr.Instance.PlayEffSound("Potion", 0.5f);
+                        if (m_CurHp < m_MaxHp)
+                        {
+                            GlobalUserData.m_ItemDataList[1].m_CurItemCount--;
+                            pTakeDamage.curHp += 50;
+                            m_CurHp += 50;
+                        }
                     }
                 }
             }
