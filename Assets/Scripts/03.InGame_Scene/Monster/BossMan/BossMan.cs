@@ -103,9 +103,15 @@ public class BossMan : Monster
                 m_Monstate = MonsterState.ATTACK;
                 int randMotion = Random.Range(0, 2);
                 if (randMotion == 0)
+                {
                     m_Animator.SetBool("IsAttack", true);
+                    SoundMgr.Instance.PlayEffSound("BossManAtt1", 1.0f);
+                }
                 else
+                {
                     m_Animator.SetBool("IsAttack2", true);
+                    SoundMgr.Instance.PlayEffSound("BossManAtt2", 1.0f);
+                }
             }
         }
         else if (m_Monstate == MonsterState.SKILL)
@@ -133,6 +139,7 @@ public class BossMan : Monster
         }
         else if (m_Monstate == MonsterState.DIE)
         {
+            SoundMgr.Instance.PlayEffSound("BossManDie", 1.0f);
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
 
