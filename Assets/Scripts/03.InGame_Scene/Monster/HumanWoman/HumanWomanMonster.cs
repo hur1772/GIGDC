@@ -166,6 +166,7 @@ public class HumanWomanMonster : Monster
         if (m_CalcVec.magnitude <= m_AttackDistance)
         {
             m_Monstate = MonsterState.ATTACK;
+            SoundMgr.Instance.PlayGUISound("WZombie_Idle", 0.3f);
             m_Animator.SetBool("CanAttack", true);
             m_Animator.SetBool("IsMove", false);
         }
