@@ -123,6 +123,7 @@ public class Player_Attack : MonoBehaviour
             Debug.Log("hit");
             if (collider.tag == "target")
             {
+                SoundMgr.Instance.PlayEffSound("SwordMon_1", 0.8f);
                 TargetCtrl targetCtrl = collider.GetComponent<TargetCtrl>();
 
                 Debug.Log(targetCtrl.ThisGameObject.name.ToString());
