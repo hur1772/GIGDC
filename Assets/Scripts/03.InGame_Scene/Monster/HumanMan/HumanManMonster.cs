@@ -115,6 +115,7 @@ public class HumanManMonster : Monster
             if (m_CalcVec.magnitude <= m_AttackDistance)
             {
                 m_Monstate = MonsterState.ATTACK;
+                SoundMgr.Instance.PlayGUISound("MZombie_att", 0.3f);
                 m_Animator.SetBool("IsAttack", true);
             }
         }

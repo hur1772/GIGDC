@@ -37,6 +37,8 @@ public class BossGirl : Monster
         m_IdleTime = Random.Range(2.0f, 3.0f);
 
         weaponPrefab = Resources.Load("BossGirl Weapon") as GameObject;
+
+        SoundMgr.Instance.PlayGUISound("WZombie_Idle", 0.3f);
     }
 
     // Update is called once per frame
@@ -74,7 +76,6 @@ public class BossGirl : Monster
 
     public void IdleUpdate()
     {
-        SoundMgr.Instance.PlayEffSound("WZombie_Idle", 0.3f);
         if (m_IdleTime >= 0.0f)
         {
             m_IdleTime -= Time.deltaTime;
@@ -82,6 +83,7 @@ public class BossGirl : Monster
             {
                 m_IdleTime = Random.Range(2.0f, 3.0f);
                 m_Monstate = MonsterState.PATROL;
+
                 m_Animator.SetBool("IsMove", true);
 
                 if (MoveRight)
@@ -120,6 +122,7 @@ public class BossGirl : Monster
 
                 m_Animator.SetBool("IsMove", false);
                 m_Monstate = MonsterState.IDLE;
+
             }
         }
 
@@ -148,6 +151,7 @@ public class BossGirl : Monster
         if (m_CalcVec.magnitude <= m_AttackDistance)
         {
             m_Monstate = MonsterState.ATTACK;
+            SoundMgr.Instance.PlayGUISound("WZombie_Idle", 0.3f);
             m_Animator.SetBool("IsMove", false);
         }
     }
