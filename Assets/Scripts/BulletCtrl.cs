@@ -85,6 +85,7 @@ public class BulletCtrl : MonoBehaviour
     {
         if (coll.gameObject.tag == "Monster")
         {
+            SoundMgr.Instance.PlayEffSound("ArrowImpact", 1.5f);
             Debug.Log("Hit");
             coll.gameObject.GetComponent<Monster>().TakeDamage(1 + GlobalUserData.BowTier * 2);
             Destroy(gameObject);
@@ -95,6 +96,7 @@ public class BulletCtrl : MonoBehaviour
     {
         if (coll.gameObject.tag == "target")
         {
+            SoundMgr.Instance.PlayEffSound("ArrowImpact", 1.5f);
             coll.gameObject.GetComponent<TargetCtrl>().TakeDamage(bullet_Att);
             Destroy(gameObject);
         }

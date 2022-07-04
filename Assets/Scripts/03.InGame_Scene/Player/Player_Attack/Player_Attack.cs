@@ -83,6 +83,7 @@ public class Player_Attack : MonoBehaviour
     public void Bow_Attack()
     {
         animator.SetTrigger("Bow_Attack");
+
     }
 
     public void Sword_Attack(int a)
