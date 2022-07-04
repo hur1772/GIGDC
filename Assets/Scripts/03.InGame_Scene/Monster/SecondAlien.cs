@@ -82,11 +82,20 @@ public class SecondAlien : Monster
                 m_Monstate = MonsterState.ATTACK;
                 int randMotion = Random.Range(0, 3);
                 if (randMotion == 0)
+                {
                     m_Animator.SetBool("IsAttack", true);
+                    SoundMgr.Instance.PlayEffSound("Alien_Att1", 0.8f);
+                }
                 else if (randMotion == 1)
+                {
                     m_Animator.SetBool("IsAttack2", true);
+                    SoundMgr.Instance.PlayEffSound("Alien_Att2", 0.8f);
+                }
                 else
+                {
                     m_Animator.SetBool("IsAttack3", true);
+                    SoundMgr.Instance.PlayEffSound("Alien_Att3", 0.8f);
+                }
             }
         }
         else if (m_Monstate == MonsterState.ATTACK)
@@ -113,6 +122,7 @@ public class SecondAlien : Monster
         {
             if(bossStage == BossStage.Stage1_3)
             {
+                SoundMgr.Instance.PlayEffSound("Alien_Die", 1.0f);
                 m_Animator.SetTrigger("DieTrigger");
                 m_Monstate = MonsterState.CORPSE;
 
@@ -120,6 +130,7 @@ public class SecondAlien : Monster
             }
             else if(bossStage == BossStage.Stage1_2)
             {
+                SoundMgr.Instance.PlayEffSound("Alien_Flee", 1.0f);
                 m_Animator.SetTrigger("EscapeTrigger");
                 m_Animator.SetBool("IsAttack2", false);
                 m_Animator.SetBool("IsAttack3", false);
@@ -185,6 +196,7 @@ public class SecondAlien : Monster
             {
                 isChange = true;
                 m_Animator.SetTrigger("Change");
+                SoundMgr.Instance.PlayEffSound("Alien_CHNG", 1.0f);
             }
         }
         else if(bossStage == BossStage.Stage1_2)
