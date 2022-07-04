@@ -1904,6 +1904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanMan_Complete
       objectReference: {fileID: 0}
+    - target: {fileID: 1086061064531630305, guid: ee6ba2d1d0e122849872348aae55b43d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1086061064531630306, guid: ee6ba2d1d0e122849872348aae55b43d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2882,7 +2886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349136447485055008, guid: 3436b422d59d7a842853cbbb06bbb12f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8349136447485055011, guid: 3436b422d59d7a842853cbbb06bbb12f, type: 3}
       propertyPath: m_RootOrder

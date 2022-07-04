@@ -69,6 +69,7 @@ public class HumanWomanMonster : Monster
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
             GameObject m_Gold = null;
+            SoundMgr.Instance.PlayEffSound("WZombie_Die", 1.0f);
             m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
             m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
         }
@@ -210,6 +211,7 @@ public class HumanWomanMonster : Monster
                 {
                     m_CurattackDelay = m_AttackDelay;
                     GameObject marble = Instantiate(WeaponPrefab);
+                    SoundMgr.Instance.PlayGUISound("WZombie_Spit", 0.7f);
                     marble.transform.position = weaponPos.position;
                     marble.transform.eulerAngles = this.transform.eulerAngles;
                     marble.GetComponent<FoxMarble>().SetRightBool(MonRight);
