@@ -152,6 +152,9 @@ public class DragAndDrapMgr : MonoBehaviour
 
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+
+        if (UpGdGoodsTxt != null)
+            UpGdGoodsTxt.text = "X "+ GlobalUserData.m_ItemDataList[8].m_CurItemCount;
     }// void Update()
 
     public void ShowToolTip(int a_itemType, Vector3 pos)
@@ -415,6 +418,12 @@ public class DragAndDrapMgr : MonoBehaviour
             {
                 SoundMgr.Instance.PlayEffSound("Blacksmith", 0.1f);
                 IsUpGd = true;
+                GlobalUserData.m_ItemDataList[8].m_CurItemCount -= (m_SaveTier + 1);
+
+                if (UseItem_Txt != null)
+                {
+                    UseItem_Txt.text = "X 0";
+                }
             }
             else
             {

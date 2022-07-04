@@ -206,6 +206,7 @@ public class Item_Info  //각 Item 정보
 
             m_Price = 0; //기본가격
             m_DropMobType = "Boss";
+            m_CurItemCount = 0;
 
             m_ItemExp = "무기 티어업 재료";
             m_IconImg = Resources.Load("IconImg/6_ice_o", typeof(Sprite)) as Sprite;
