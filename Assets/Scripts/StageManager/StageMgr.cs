@@ -43,6 +43,7 @@ public class StageMgr : MonoBehaviour
         if (ExitGame_Btn != null)
             ExitGame_Btn.onClick.AddListener(ExitGameFunc);
 
+        if(InfoText != null)
         InfoText.gameObject.SetActive(false);
 
         CreditCanvas.gameObject.SetActive(false);
@@ -51,20 +52,25 @@ public class StageMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (0.0f < InfoTimer)
         {
-            InfoTimer -= Time.deltaTime;
-
-            if (InfoTimer <= 4.0f)
+            if (InfoText != null)
             {
-                InfoText.gameObject.SetActive(true);
-            }
+                InfoTimer -= Time.deltaTime;
 
-            if (InfoTimer < 0.0f)
-            {
-                InfoTimer = 0.0f;
-                InfoText.gameObject.SetActive(false);
-                InfoText.text = "";
+                if (InfoTimer <= 4.0f)
+                {
+                    InfoText.gameObject.SetActive(true);
+                }
+
+                if (InfoTimer < 0.0f)
+                {
+
+                    InfoTimer = 0.0f;
+                    InfoText.gameObject.SetActive(false);
+                    InfoText.text = "";
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -84,6 +90,7 @@ public class StageMgr : MonoBehaviour
 
         }
     }
+    
     public void VolumeFunc()
     {
         Debug.Log("Volume");
