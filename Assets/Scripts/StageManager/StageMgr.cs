@@ -16,6 +16,8 @@ public class StageMgr : MonoBehaviour
     public Button CreditScene_Btn = null;
     public Button ExitGame_Btn = null;
     public GameObject CreditCanvas = null;
+    public Text InfoText;
+    float InfoTimer = 4.0f;
 
 
     // Start is called before the first frame update
@@ -36,13 +38,29 @@ public class StageMgr : MonoBehaviour
         if (ExitGame_Btn != null)
             ExitGame_Btn.onClick.AddListener(ExitGameFunc);
 
+        InfoText.gameObject.SetActive(false);
+
         CreditCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (0.0f < InfoTimer)
+        {
+            InfoTimer -= Time.deltaTime;
 
+            if (InfoTimer <= 4.0f)
+            {
+                InfoText.gameObject.SetActive(true);
+            }
+
+            if (InfoTimer < 0.0f)
+            {
+                InfoTimer = 0.0f;
+                InfoText.gameObject.SetActive(false);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (menuOn == false)
