@@ -131,11 +131,17 @@ public class BossCtrl1_1 : Monster
         m_Animator.SetTrigger("DieTrigger");
         m_Monstate = MonsterState.CORPSE;
 
-        CoinDrop();
+        BossDrop();
 
         if (Protal != null)
         {
-            Protal.gameObject.SetActive(true);
+            if(StageMgr.Inst.InfoText != null)
+            {
+                StageMgr.Inst.InfoText.gameObject.SetActive(true);
+                StageMgr.Inst.InfoTimer = 4.0f;
+                StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
+            }
+            Protal.gameObject.SetActive(true);           
             Vector3 ProtalPos = new Vector3(408.0f, 1.0f, 0.0f);
             Protal.transform.position = ProtalPos;
             Instantiate(Protal);
