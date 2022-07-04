@@ -68,14 +68,13 @@ public class HumanWomanMonster : Monster
         {
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-            GameObject m_Gold = null;
-            SoundMgr.Instance.PlayEffSound("WZombie_Die", 1.0f);
-            m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
-            m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
+            CoinDrop();
         }
         else if (m_Monstate == MonsterState.CORPSE)
         {
-
+            Collider2D collider = this.GetComponent<BoxCollider2D>();
+            if (collider != null)
+                collider.enabled = false;
         }
         else if (m_Monstate == MonsterState.Hitted)
         {
