@@ -28,15 +28,24 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_TakeDamage(float a_Value = 10.0f)
     {
-        SoundMgr.Instance.PlayEffSound("Player_Hit", 0.6f);
+
+        if (Player_State.p_state != PlayerState.player_die)
+            SoundMgr.Instance.PlayEffSound("Player_Hit", 0.6f);
+
         if (Player_State.p_Move_state == PlayerMoveState.player_dash)
         {
             Debug.Log("대쉬상태 무적");
             return;
         }
 
+        if (Player_State.p_state == PlayerState.player_die)
+            return;
+
         curHp -= a_Value;
-        animator.SetTrigger("Hit");
+        if(Player_State.p_state != PlayerState.player_die)
+        {
+            animator.SetTrigger("Hit");
+        }
         Debug.Log("플레이어 피격");
 
         if(curHp <= 0.0f)
@@ -47,9 +56,12 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_Die()
     {
-        SoundMgr.Instance.PlayEffSound("Player_Die", 0.8f);
+        Player_State.p_state = PlayerState.player_die;
+        animator.SetTrigger("DieTrigger");
+        SoundMgr.Instance.PlayGUISound("Player_Die", 0.8f);
+        //Time.timeScale = 0.5f;
+        this.gameObject.layer = 10;
         curHp = 0;
         Debug.Log("Die");
-        Time.timeScale = 0.0f;
     }
 }
