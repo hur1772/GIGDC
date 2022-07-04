@@ -26,7 +26,7 @@ public class BirdMonster : Monster
     Vector2 m_FirstVec = Vector2.zero;
     float m_CurHeight = 0.0f;
     float m_MaxHeight = 0.0f;
-    public float m_FlyHeight = 4.3f;
+    public float m_FlyHeight = 3.5f;
     public float m_FlySpeed = 0.0f;
     public float m_IdleDistance = 0.0f;
 
@@ -140,10 +140,13 @@ void Update()
                     m_ChaseVec = m_Player.transform.position;
 
                     RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, Mathf.Infinity, platformmask);
-                    if(hit)
+                    if (hit)
                     {
-                        m_MaxHeight = hit.point.y + m_CurHeight;
+                        Debug.Log("hit");
+                        m_MaxHeight = hit.point.y + m_FlyHeight;
                     }
+                    else
+                        Debug.Log("nohit");
 
                     m_ChaseDelay = 2.0f;
                 }
@@ -280,6 +283,7 @@ void Update()
         {
             m_CurHP = 0.0f;
             m_FlyMonState = FlyMonsterState.DIE;
+            this.GetComponent<CircleCollider2D>().enabled = false;
             m_Rb.gravityScale = 1.5f;
         }
     }

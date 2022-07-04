@@ -186,6 +186,7 @@ public class Monster : MonoBehaviour
     {
         m_CurHP = 0;
         m_Monstate = MonsterState.DIE;
+        this.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public virtual void CoinDrop()

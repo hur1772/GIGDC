@@ -197,7 +197,7 @@ public class PigMonster : Monster
             {
                 m_Animator.SetBool("IsAttack", false);
 
-                if (m_Animator.GetBool("isAttack") == false && m_Monstate == MonsterState.ATTACK)
+                if (m_Animator.GetBool("IsAttack") == false && m_Monstate == MonsterState.ATTACK)
                     m_Monstate = MonsterState.CHASE;
             }
 
