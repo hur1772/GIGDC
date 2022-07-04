@@ -233,6 +233,9 @@ public class TigerMonster : Monster
 
     public void SkillCoolUpdate()
     {
+        if (m_Monstate == MonsterState.CORPSE)
+            return;
+
         if(SkillCoolTime >= 0.0f && IsSkillOn == false)
         {
             SkillCoolTime -= Time.deltaTime;
@@ -442,8 +445,8 @@ public class TigerMonster : Monster
         
         base.TakeDamage(WeaponState);
 
-        //if (m_CurHP <= 0.0f && m_Animator.enabled == false)
-        //    m_Animator.enabled = true;
+        if (m_CurHP <= 0.0f && m_Animator.enabled == false)
+            m_Animator.enabled = true;
         HPBar.fillAmount = m_CurHP / m_MaxHP;
     }
 }

@@ -3198,6 +3198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird(B) Monster_Complete
       objectReference: {fileID: 0}
+    - target: {fileID: 1142941397637392019, guid: a3ec6bc3e8070044ba18b4b31f673ff3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1142941397637392021, guid: a3ec6bc3e8070044ba18b4b31f673ff3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3298,6 +3302,10 @@ PrefabInstance:
     - target: {fileID: 4926890595061099006, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_Name
       value: BirdMonster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926890595061099006, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}

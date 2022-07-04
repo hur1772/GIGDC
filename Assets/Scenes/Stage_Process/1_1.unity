@@ -37675,11 +37675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.98
+      value: 267.4
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38773,6 +38773,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6448571185378166652, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: Icon
       value: 
@@ -38788,6 +38792,14 @@ PrefabInstance:
     - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_MaxHP
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448571185378166653, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
+      propertyPath: m_ChaseDistance
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6448571186312362291, guid: 0f78f84be26016c4e8acddde76af56ab, type: 3}
       propertyPath: m_RootOrder
