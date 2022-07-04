@@ -131,7 +131,7 @@ public class BossCtrl1_1 : Monster
         m_Animator.SetTrigger("DieTrigger");
         m_Monstate = MonsterState.CORPSE;
 
-        BossDrop();
+        CoinDrop();
 
         if (Protal != null)
         {

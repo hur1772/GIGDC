@@ -196,13 +196,4 @@ public class Monster : MonoBehaviour
         m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
         m_Gold.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
     }
-
-    public virtual void BossDrop()
-    {
-        Vector3 m_Cacy = Vector3.zero;
-        m_Cacy.y = transform.position.y + 2.0f;
-        GameObject m_Boss = null;
-        m_Boss = (GameObject)Instantiate(Resources.Load("BossDrop"));
-        m_Boss.transform.position = new Vector3(transform.position.x, m_Cacy.y, transform.position.z);
-    }
 }
