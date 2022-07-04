@@ -82,12 +82,19 @@ public class Player_Attack : MonoBehaviour
 
     public void Bow_Attack()
     {
+
+        if (Player_State.p_state == PlayerState.player_die)
+            return;
+
         animator.SetTrigger("Bow_Attack");
 
     }
 
     public void Sword_Attack(int a)
     {
+        if (Player_State.p_state == PlayerState.player_die)
+            return;
+
         //Attack animation play
         if (a == 0)
         {

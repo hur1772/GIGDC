@@ -34,6 +34,11 @@ public class Player_Jump : MonoBehaviour
         {
             if (Interaction.Inst.IsUpdate == false)
             {
+
+                if (Player_state.p_state == PlayerState.player_die)
+
+                    return;
+
                 if (isJumping == false)
                 {
                     isJumping = true;
