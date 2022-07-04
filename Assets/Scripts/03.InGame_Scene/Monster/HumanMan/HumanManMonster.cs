@@ -131,13 +131,16 @@ public class HumanManMonster : Monster
             }
 
             if (m_Animator.GetBool("IsAttack") == false && m_CalcVec.magnitude <= m_AttackDistance)
+            {
                 m_Animator.SetBool("IsAttack", true);
+                //SoundMgr.Instance.PlayEffSound("MZombie_Knife", 1.0f);
+            }
         }
         else if(m_Monstate == MonsterState.DIE)
         {
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-
+            SoundMgr.Instance.PlayEffSound("WZombie_Die", 1.0f);
             CoinDrop();
         }
         else if(m_Monstate == MonsterState.CORPSE)

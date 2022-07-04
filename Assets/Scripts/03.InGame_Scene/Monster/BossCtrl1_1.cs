@@ -130,15 +130,13 @@ public class BossCtrl1_1 : Monster
     {
         m_Animator.SetTrigger("DieTrigger");
         m_Monstate = MonsterState.CORPSE;
-
         BossDrop();
-
         if (Protal != null)
         {
             if(StageMgr.Inst.InfoText != null)
             {
                 StageMgr.Inst.InfoText.gameObject.SetActive(true);
-                StageMgr.Inst.InfoTimer = 4.0f;
+                StageMgr.Inst.InfoTimer = 3.0f;
                 StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
             }
             Protal.gameObject.SetActive(true);           
@@ -157,8 +155,7 @@ public class BossCtrl1_1 : Monster
             _spRenderer.color = dieColor;
 
             if (dieAlpha <= 0.05f)
-                Destroy(this.gameObject);
-
+                Destroy(this.gameObject);            
         }
     }
 

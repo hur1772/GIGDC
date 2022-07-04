@@ -37,8 +37,6 @@ public class BossGirl : Monster
         m_IdleTime = Random.Range(2.0f, 3.0f);
 
         weaponPrefab = Resources.Load("BossGirl Weapon") as GameObject;
-
-        SoundMgr.Instance.PlayGUISound("WZombie_Idle", 0.3f);
     }
 
     // Update is called once per frame
@@ -183,7 +181,10 @@ public class BossGirl : Monster
                     if(middleattackDistance > m_CalcVec.magnitude)
                         m_Animator.SetTrigger("Attack");
                     else
+                    {
                         m_Animator.SetTrigger("ShotAttack");
+                        SoundMgr.Instance.PlayGUISound("WZombie_Shot", 0.6f);
+                    }
                     attackDealy_2 = 1.0f;
 
                 }
@@ -218,6 +219,7 @@ public class BossGirl : Monster
     {
         Time.timeScale = 0.3f;
         m_Monstate = MonsterState.DIE;
+        SoundMgr.Instance.PlayGUISound("WZombie_Corpse", 1.0f);
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
@@ -225,6 +227,7 @@ public class BossGirl : Monster
 
     public void SpawnBoss()
     {
+        SoundMgr.Instance.PlayGUISound("WZombie_CHNG", 1.0f);
         GameObject boss = Instantiate(bossPrefab);
         boss.transform.position = bossSpawnPos.transform.position;
         boss.transform.eulerAngles = bossSpawnPos.eulerAngles;
