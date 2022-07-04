@@ -18,9 +18,12 @@ public class UIMgr : MonoBehaviour
 
     public Text GoldTxt;
 
+    float m_Delay = 2.0f;
 
     float m_CurHp;
     float m_MaxHp;
+
+    BossCtrl1_1 Boss = null;
 
     Player_TakeDamage pTakeDamage = null;
 
@@ -33,6 +36,8 @@ public class UIMgr : MonoBehaviour
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
+
+
         GlobalUserData.InitData();
 
     }
@@ -40,6 +45,25 @@ public class UIMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Boss == null && GameObject.Find("Stage1 Boss(Clone)") == true)
+        {
+            GameObject boss = GameObject.Find("Stage1 Boss(Clone)");
+            Boss = boss.GetComponent<BossCtrl1_1>();
+        }
+
+        if(Boss!= null)
+        {
+            if(Boss.m_Monstate == MonsterState.DIE)
+            {                
+                m_Delay = 2.0f;
+                
+            }
+        }
+
+        m_Delay -= Time.deltaTime;
+        if (0.0f >= m_Delay)
+            m_Delay = 0.0f;
+
         //TakeDamage();
         //if (Input.GetKey(KeyCode.Alpha3) && UseItemCoolTime3 >= 5.0f)
         //{
@@ -67,7 +91,7 @@ public class UIMgr : MonoBehaviour
         //    UseItemImg3.fillAmount = UseItemCoolTime3 / 5;
         //}
 
-        if(CurNum1Txt != null)
+        if (CurNum1Txt != null)
         {
             CurNum1Txt.text = GlobalUserData.m_ItemDataList[0].m_CurItemCount.ToString();
         }
@@ -186,9 +210,12 @@ public class UIMgr : MonoBehaviour
             BossDropCtrl ctrl = coll.gameObject.GetComponent<BossDropCtrl>();
             if (ctrl.isGet == true)
             {
-                AddBoss();
-                ctrl.isGet = false;
-                Destroy(coll.gameObject);
+                if (m_Delay <= 0.0f)
+                {
+                    AddBoss();
+                    ctrl.isGet = false;
+                    Destroy(coll.gameObject);
+                }
             }
             
         }
