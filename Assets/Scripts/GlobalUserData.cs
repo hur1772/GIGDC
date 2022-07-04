@@ -323,6 +323,7 @@ public class GlobalUserData
     public static void Load()
     {
         ReflashItemLoad();
+        InitWeaponData();
         s_GoldCount = PlayerPrefs.GetInt("s_GoldCount", 0);
         BowTier = PlayerPrefs.GetInt("BowTier", 0);
         SwordTier = PlayerPrefs.GetInt("SwordTier", 0);

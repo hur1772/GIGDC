@@ -47,11 +47,14 @@ public class PadeOutMgr : MonoBehaviour
             m_Color.a = m_CacTime;
             PadeOutPanel.color = m_Color;
 
-            if (m_PadeOutTimer >= 2.0f)
+            if (Interaction.Inst.m_interactionState == InteractionState.king_talkEnd)
             {
-                SceneManager.LoadScene("04.TutorialMap");
-                Interaction.Inst.m_interactionState = InteractionState.Nomal;
-                //PadeOutPanel.gameObject.SetActive(false);
+                if (m_PadeOutTimer >= 2.0f)
+                {
+                    SceneManager.LoadScene("04.TutorialMap");
+                    Interaction.Inst.m_interactionState = InteractionState.Nomal;
+                    //PadeOutPanel.gameObject.SetActive(false);
+                }
             }
         }
     }

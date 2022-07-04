@@ -8,6 +8,11 @@ public class Title_Mgr : MonoBehaviour
 {
     public Image FadeIn = null;
 
+    public Text SpaceTxt = null;
+    public Button NewGameBtn = null;
+    public Button LoadGameBtn = null;
+    public Button CloseBtn = null;
+
     private void Start() => StartFunc();
 
     private void Awake()
@@ -16,6 +21,15 @@ public class Title_Mgr : MonoBehaviour
     }
     private void StartFunc()
     {
+        if (NewGameBtn != null)
+            NewGameBtn.onClick.AddListener(NewGameBtnFunc);
+
+        if (LoadGameBtn != null)
+            LoadGameBtn.onClick.AddListener(LoadGameBtnFunc);
+
+        if (CloseBtn != null)
+            CloseBtn.onClick.AddListener(CloseBtnFunc);
+
 
         SoundMgr.Instance.PlayBGM("Title_BGM", 1.0f);
     }
@@ -26,7 +40,38 @@ public class Title_Mgr : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("01.Stage_1");
+            SpaceTxt.gameObject.SetActive(false);
+            NewGameBtn.gameObject.SetActive(true);
+            LoadGameBtn.gameObject.SetActive(true);
+            CloseBtn.gameObject.SetActive(true);
+            //SceneManager.LoadScene("01.Stage_1");
         }
+    }
+
+    void NewGameBtnFunc()
+    {
+        GlobalUserData.InitData();
+        GlobalUserData.InitWeaponData();
+
+        SceneManager.LoadScene("01.Stage_1");
+    }
+
+    void LoadGameBtnFunc()
+    {
+        if(PlayerPrefs.HasKey("s_GoldCount") == true)
+        {
+            GlobalUserData.Load();
+
+            SceneManager.LoadScene("Village");
+        }
+        if(PlayerPrefs.HasKey("s_GoldCount") == false)
+        {
+            return;
+        }
+    }
+
+    void CloseBtnFunc()
+    {
+        Application.Quit();
     }
 }
