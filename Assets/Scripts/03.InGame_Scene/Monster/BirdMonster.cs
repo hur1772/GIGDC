@@ -83,6 +83,7 @@ void Update()
         {
             if(m_DistanceFromPlayer <= m_FindDist)    // 플레이어가 사정거리 안으로 들어올시 FLY상태로 변환
             {
+                SoundMgr.Instance.PlayGUISound("Bird_Find", 0.8f);
                 m_FlyMonState = FlyMonsterState.FLY;
                 m_IsFind = true;
                 m_Animator.SetBool("IsFind", m_IsFind);
@@ -221,7 +222,7 @@ void Update()
             m_Animator.enabled = true;
             isAttack = false;
             m_Animator.SetTrigger("DieTrigger");
-            
+            SoundMgr.Instance.PlayGUISound("Bird_Die", 0.6f);
             m_FlyMonState = FlyMonsterState.CORPSE;
 
             CoinDrop();
