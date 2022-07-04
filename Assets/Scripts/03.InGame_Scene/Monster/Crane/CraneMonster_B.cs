@@ -63,6 +63,7 @@ public class CraneMonster_B : Monster
 
     public void PatrolUpdate()
     {
+
         if (MoveTime >= 0.0f)
         {
             MoveTime -= Time.deltaTime;

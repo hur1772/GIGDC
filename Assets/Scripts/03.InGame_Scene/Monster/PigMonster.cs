@@ -90,6 +90,7 @@ public class PigMonster : Monster
                 if(m_DelayTime <= 0.0f)
                 {
                     m_Monstate = MonsterState.PATROL;
+                    SoundMgr.Instance.PlayGUISound("Pig_Patrol", 0.5f);
                     m_DelayTime = Random.Range(1.0f, 2.0f);
                     m_Animator.SetBool("IsMove", true);
                 }
@@ -98,6 +99,7 @@ public class PigMonster : Monster
             if (m_CalcVec.magnitude <= m_ChaseDistance) // 체이스 거리 안에 들어올 시
             {
                 m_Monstate = MonsterState.CHASE;
+                //SoundMgr.Instance.PlayGUISound("Pig_Chase", 0.8f);
                 m_Animator.SetBool("IsMove", true);
 
             }
@@ -110,7 +112,9 @@ public class PigMonster : Monster
                 if (m_IsSkillOn)
                     m_Monstate = MonsterState.SKILL;
                 else
+                {
                     m_Monstate = MonsterState.CHASE;
+                }
             }
 
             if(m_DelayTime >= 0.0f)

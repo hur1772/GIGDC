@@ -29,6 +29,19 @@ public class UIMgr : MonoBehaviour
 
     Player_TakeDamage pTakeDamage = null;
 
+    public Text GameEndTxt = null;
+
+    [Header("--- GameEndObject ---")]
+    public GameObject UseItem = null;
+    public GameObject HpBack = null;
+    public GameObject HpBar = null;
+    public GameObject PIcon = null;
+    public GameObject GoldImg = null;
+    float m_PadeOutDelay = 2.0f;
+
+    public Button TitleBtn = null;
+    public Button SaveLoadBtn = null;
+
     private void Awake()
     {
         Inst = this;
@@ -43,9 +56,11 @@ public class UIMgr : MonoBehaviour
         if (GoldTxt != null)
             GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
 
+        if (TitleBtn != null)
+            TitleBtn.onClick.AddListener(TitleBtnFunc);
 
-
-        GlobalUserData.InitData();
+        if (SaveLoadBtn != null)
+            SaveLoadBtn.onClick.AddListener(SaveLoadBtnFunc);
 
     }
 
@@ -156,6 +171,30 @@ public class UIMgr : MonoBehaviour
             }
         }
 
+        if(pTakeDamage.Player_State.p_state == PlayerState.player_die)
+        {
+            PadeOutMgr.Inst.PadeOut();
+            UseItem.SetActive(false);
+            HpBar.SetActive(false);
+            HpBack.SetActive(false);
+            PIcon.SetActive(false);
+            GoldImg.SetActive(false);
+
+            m_PadeOutDelay -= Time.deltaTime;
+
+            if (m_PadeOutDelay <= 0.0f)
+            {
+                if (GameEndTxt != null)
+                {
+                    GameEndTxt.gameObject.SetActive(true);
+                    TitleBtn.gameObject.SetActive(true);
+                    SaveLoadBtn.gameObject.SetActive(true);
+                }
+            }
+
+            //SceneManager.LoadScene("00.TitleScene");
+        }
+
         if (UseItemImg1 != null)
         {
             if (GlobalUserData.m_ItemDataList[0].m_CurItemCount == 0 && HealItemPanel1 != null)
@@ -254,5 +293,22 @@ public class UIMgr : MonoBehaviour
 
     //    m_CurHp -= a_val;    
     //}
+
+    void TitleBtnFunc()
+    {
+        GlobalUserData.s_GoldCount = 0;
+        GlobalUserData.SwordTier = 0;
+        GlobalUserData.BowTier = 0;
+        GlobalUserData.CurStageNum = 0;
+
+        SceneManager.LoadScene("00.TitleScene");
+    }
+
+    void SaveLoadBtnFunc()
+    {
+        GlobalUserData.Load();
+
+        SceneManager.LoadScene("Village");
+    }
 
 }

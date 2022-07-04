@@ -3379,6 +3379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 199207004, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968916, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_Name
       value: PigMonster_B_Complete
@@ -3433,11 +3437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968939, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.56
+      value: 20.51
       objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968939, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.03
+      value: -1.68
       objectReference: {fileID: 0}
     - target: {fileID: 2458591471147968939, guid: 5a10be5325ae38249ba7424143c07ecf, type: 3}
       propertyPath: m_LocalPosition.z

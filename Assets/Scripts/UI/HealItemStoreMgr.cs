@@ -33,7 +33,6 @@ public class HealItemStoreMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GlobalUserData.InitData();
 
         if (CloseBtn != null)
             CloseBtn.onClick.AddListener(CloseBtnFunc);

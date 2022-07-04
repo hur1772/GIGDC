@@ -62,6 +62,7 @@ public class TigerMonster : Monster
         idleDelay = Random.Range(1.0f, 2.0f);
 
         spRend = GetComponent<SpriteRenderer>();
+        SoundMgr.Instance.PlayGUISound("Tiger_Chase", 1.5f);
         
     }
 
@@ -406,7 +407,8 @@ public class TigerMonster : Monster
     }
 
     protected override void Die()
-    {  
+    {
+        SoundMgr.Instance.PlayGUISound("Tiger_CHNG", 0.8f);
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
         goSkill = false;

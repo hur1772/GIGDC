@@ -21,6 +21,7 @@ public class TigerPos : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
+            SoundMgr.Instance.PlayGUISound("Tiger_Gen", 1.5f);
             Tiger.SetActive(true);
         }
     }
