@@ -26,7 +26,7 @@ public class BirdMonster : Monster
     Vector2 m_FirstVec = Vector2.zero;
     float m_CurHeight = 0.0f;
     float m_MaxHeight = 0.0f;
-    public float m_FlyHeight = 3.5f;
+    public float m_FlyHeight = 2.5f;
     public float m_FlySpeed = 0.0f;
     public float m_IdleDistance = 0.0f;
 

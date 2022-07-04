@@ -87,7 +87,7 @@ public class BulletCtrl : MonoBehaviour
         {
             Monster monster = coll.gameObject.GetComponent<Monster>();
             if (monster != null && monster.m_Monstate != MonsterState.CORPSE)
-                monster.m_Monstate = MonsterState.CHASE;
+                monster.m_ChaseDistance = 1000.0f;
             
 
             SoundMgr.Instance.PlayEffSound("ArrowImpact", 1.5f);
