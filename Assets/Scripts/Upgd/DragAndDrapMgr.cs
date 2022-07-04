@@ -34,6 +34,9 @@ public class DragAndDrapMgr : MonoBehaviour
 
     bool IsUpGd = false;
 
+    public Text UseItem_Txt;
+    public Text Help_Txt;
+
     [Header("-------- Info Txt --------")]
     //public Text m_InfoTxt;
     private float m_InfoDuring = 1.5f;  //페이드아웃 연출을 시간 설정
@@ -234,7 +237,11 @@ public class DragAndDrapMgr : MonoBehaviour
             if (ii == 2)
                 continue;
 
-            if( ( m_SlotSc[ ii ].ItemImg[ 0 ].gameObject.activeSelf == true || m_SlotSc[ ii ].ItemImg[ 1 ].gameObject.activeSelf == true )&&
+            if ((m_SlotSc[0].ItemImg[0].gameObject.activeSelf == false && m_SlotSc[0].ItemImg[1].gameObject.activeSelf == false && m_SlotSc[0].ItemImg[2].gameObject.activeSelf == false)
+                || (m_SlotSc[1].ItemImg[0].gameObject.activeSelf == false && m_SlotSc[1].ItemImg[1].gameObject.activeSelf == false && m_SlotSc[1].ItemImg[2].gameObject.activeSelf == false))
+                return;
+
+            if ((m_SlotSc[ii].ItemImg[0].gameObject.activeSelf == true || m_SlotSc[ii].ItemImg[1].gameObject.activeSelf == true )&&
               IsCollSlot( m_SlotSc[ ii ].gameObject ) == true )
             {
                 if( ii == 0 )
@@ -274,6 +281,10 @@ public class DragAndDrapMgr : MonoBehaviour
                 m_AddTimer = AniDuring;
                 m_IsPick = false;
                 a_MsObj[ m_SaveIndex + m_SaveTier * 2 ].gameObject.SetActive( false );
+
+                if (UseItem_Txt != null)
+                    UseItem_Txt.text = "X "+(m_SaveTier + 1) ;
+
                 Debug.Log("m_DrtIndex" + m_DrtIndex);
                 break;
             }
@@ -363,8 +374,21 @@ public class DragAndDrapMgr : MonoBehaviour
 
     void OkBtnFunc()
     {
-        SoundMgr.Instance.PlayEffSound("Blacksmith", 0.1f);
-        IsUpGd = true;
+        if (m_SlotSc[m_DrtIndex].ItemResultImg[m_SaveIndex + m_SaveTier * 2].gameObject.activeSelf == true)
+        {
+            if (m_SaveTier+1 <= GlobalUserData.m_ItemDataList[8].m_CurItemCount)
+            {
+                SoundMgr.Instance.PlayEffSound("Blacksmith", 0.1f);
+                IsUpGd = true;
+            }
+            else
+            {
+                if(Help_Txt!= null)
+                {
+                    Help_Txt.text = "강화 재료가 부족합니다";
+                }
+            }
+        }
     }
 
     void ResetPos()
@@ -372,6 +396,16 @@ public class DragAndDrapMgr : MonoBehaviour
         for (int ii = 0; ii < m_SlotSc[2].ItemResultImg.Length; ii++)
         {
             m_SlotSc[2].ItemResultImg[ii].gameObject.SetActive(false);
+        }
+
+        if(UseItem_Txt != null)
+        {
+            UseItem_Txt.text = "X 0";
+        }
+
+        if (Help_Txt != null)
+        {
+            Help_Txt.text = "강화시킬 아이템을 밑으로 끌어다 놓으세요.";
         }
 
         m_SlotSc[m_SaveIndex].ItemImg[m_SaveTier].gameObject.SetActive(true);
