@@ -85,6 +85,11 @@ public class BulletCtrl : MonoBehaviour
     {
         if (coll.gameObject.tag == "Monster")
         {
+            Monster monster = coll.gameObject.GetComponent<Monster>();
+            if (monster != null)
+                monster.m_Monstate = MonsterState.CHASE;
+            
+
             SoundMgr.Instance.PlayEffSound("ArrowImpact", 1.5f);
             Debug.Log("Hit");
             coll.gameObject.GetComponent<Monster>().TakeDamage(1 + GlobalUserData.BowTier * 2);

@@ -196,7 +196,11 @@ public class PigMonster : Monster
             if(m_CalcVec.magnitude >= 0.5f)
             {
                 m_Animator.SetBool("IsAttack", false);
+
+                if (m_Animator.GetBool("isAttack") == false && m_Monstate == MonsterState.ATTACK)
+                    m_Monstate = MonsterState.CHASE;
             }
+
         }
         else if(m_Monstate == MonsterState.DIE)
         {

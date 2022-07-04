@@ -401,6 +401,7 @@ public class TigerMonster : Monster
     {  
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
+        goSkill = false;
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
         HPBar.gameObject.SetActive(false);
@@ -427,7 +428,7 @@ public class TigerMonster : Monster
         {
             Debug.Log("돌진 데미지");
             if (collision.gameObject.TryGetComponent(out playerTakeDmg))
-                playerTakeDmg.P_TakeDamage(45);
+                playerTakeDmg.P_TakeDamage(20);
         }
     }
 

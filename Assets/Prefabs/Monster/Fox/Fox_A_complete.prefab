@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2925999849401489815
 Transform:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2925999850324680553}
-  - component: {fileID: 2925999850324680552}
+  - component: {fileID: 8365365177739983440}
   m_Layer: 31
   m_Name: BottomColl
   m_TagString: Untagged
@@ -243,8 +243,8 @@ Transform:
   m_Father: {fileID: 2925999849401489815}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2925999850324680552
-CircleCollider2D:
+--- !u!60 &8365365177739983440
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -256,6 +256,20 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4, y: 0.25}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.15061498, y: 0.25851178}
+      - {x: -0.92788464, y: 0.21633103}
+      - {x: -0.36765593, y: -0.20655811}
+      - {x: 0.8310863, y: -0.20655823}
+      - {x: 1.1364286, y: 0.20474547}

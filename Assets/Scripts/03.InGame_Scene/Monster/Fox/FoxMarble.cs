@@ -58,5 +58,10 @@ public class FoxMarble : MonoBehaviour
             playerdmg.P_TakeDamage(Damage);
             Destroy(this.gameObject);
         }
+        
+        if(collision.CompareTag("Platform"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

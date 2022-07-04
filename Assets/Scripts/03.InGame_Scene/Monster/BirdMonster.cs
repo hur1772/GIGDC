@@ -21,6 +21,7 @@ public class BirdMonster : Monster
     bool IsRight = false;   //방향 확인용 변수'
     bool isAttack = false; // 공격중인지?
 
+    public LayerMask platformmask;
     //날기 벡터 계산
     Vector2 m_FirstVec = Vector2.zero;
     float m_CurHeight = 0.0f;
@@ -121,24 +122,6 @@ void Update()
             {
                 m_FlyMonState = FlyMonsterState.CHASE;
             }
-
-            if(m_DistanceFromPlayer >= m_IdleDistance)  //사정거리 밖으로 나갔을 시
-            {
-                if(m_IdleTimer >= 0.0f)
-                {
-                    m_IdleTimer -= Time.deltaTime;
-                    if(m_IdleTimer <= 0.0f)
-                    {
-                        m_FlyMonState = FlyMonsterState.IDLE;
-                        m_IdleTimer = 5.0f;
-                        m_IsFind = false;
-                    }
-                }
-            }
-            else    //사정거리 다시 안으로 들어오면 타이머 초기화
-            {
-                m_IdleTimer = 5.0f;
-            }
         }
         else if (m_FlyMonState == FlyMonsterState.PATROL)
         {
@@ -155,6 +138,13 @@ void Update()
                 if(m_ChaseDelay <= 0.0f)
                 {
                     m_ChaseVec = m_Player.transform.position;
+
+                    RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, Mathf.Infinity, platformmask);
+                    if(hit)
+                    {
+                        m_MaxHeight = hit.point.y + m_CurHeight;
+                    }
+
                     m_ChaseDelay = 2.0f;
                 }
             }
@@ -225,7 +215,10 @@ void Update()
         }
         else if (m_FlyMonState == FlyMonsterState.DIE)
         {
+            m_Animator.enabled = true;
+            isAttack = false;
             m_Animator.SetTrigger("DieTrigger");
+            
             m_FlyMonState = FlyMonsterState.CORPSE;
 
             CoinDrop();
