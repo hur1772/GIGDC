@@ -71,7 +71,6 @@ public class BossGirl : Monster
 
     public void IdleUpdate()
     {
-        SoundMgr.Instance.PlayEffSound("WomanZombie_Idle", 1.0f);
         if (m_IdleTime >= 0.0f)
         {
             m_IdleTime -= Time.deltaTime;
@@ -98,7 +97,6 @@ public class BossGirl : Monster
 
     public void PatrolUpdate()
     {
-        SoundMgr.Instance.PlayEffSound("WomanZombie_Idle", 1.0f);
         if (MoveTime >= 0.0f)
         {
             MoveTime -= Time.deltaTime;
@@ -186,7 +184,6 @@ public class BossGirl : Monster
 
     public void MiddleAttack()
     {
-        SoundMgr.Instance.PlayEffSound("WomanZombie_Att", 1.0f);
         Vector3 attackdir = attackPos.position - originPos;
 
         attackhit = Physics2D.Raycast(originPos, attackdir, attackdir.magnitude, playerMask);
