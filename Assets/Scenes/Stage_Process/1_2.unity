@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- Stage 2 -\n\n\uAC10\uC5FC\uB41C \uC591\uBC18\uC5EC\uC790\uB97C \uCC98\uCE58\uD558\uC2ED\uC2DC\uC624."
+  m_Text: "- Stage 2 -\n\n\uAC10\uC5FC\uB41C \uC591\uBC18\uC5EC\uC790\uB97C \uCC98\uCE58\uD558\uB77C."
 --- !u!222 &346708733
 CanvasRenderer:
   m_ObjectHideFlags: 0
