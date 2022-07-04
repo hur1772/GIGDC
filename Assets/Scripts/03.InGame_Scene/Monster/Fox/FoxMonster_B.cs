@@ -66,9 +66,10 @@ public class FoxMonster_B : Monster
         {
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-            GameObject m_Gold = null;
-            m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
-            m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
+            //GameObject m_Gold = null;
+            //m_Gold = (GameObject)Instantiate(Resources.Load("Gold"));
+            //m_Gold.transform.position = new Vector3(transform.position.x, -2.5f, transform.position.z);
+            CoinDrop();
         }
         else if (m_Monstate == MonsterState.CORPSE)
         {
