@@ -173,6 +173,8 @@ MonoBehaviour:
   CreditScene_Btn: {fileID: 1087644762}
   ExitGame_Btn: {fileID: 1694845072}
   CreditCanvas: {fileID: 364008161}
+  InfoText: {fileID: 0}
+  InfoTimer: 5
 --- !u!1 &26316687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4716,6 +4718,11 @@ MonoBehaviour:
     name: "\uD638\uC704\uBB34\uC0AC"
   - dialogue: "\uC798\uD558\uC168\uC2B5\uB2C8\uB2E4.\n\uC810\uD504\uB294 Space \uB300\uC26C\uB294
       Shift\uD0A4\uB97C \uB20C\uB7EC \uC801\uC758 \uACF5\uACA9\uC5D0 \uB300\uBE44\uD558\uC2ED\uC2DC\uC624."
+    cg: {fileID: 21300000, guid: 0ceef8ee82b686449907f8ba1cd38bb6, type: 3}
+    PlayerCg: {fileID: 0}
+    name: "\uD638\uC704\uBB34\uC0AC"
+  - dialogue: "\uCCB4\uB825\uC774 \uB5A8\uC5B4\uC9C0\uBA74 < E > , < R >\uD0A4\uB97C\n\uB20C\uB7EC
+      \uCCB4\uB825\uC744 \uBCF4\uCDA9\uD558\uC2ED\uC2DC\uC624."
     cg: {fileID: 21300000, guid: 0ceef8ee82b686449907f8ba1cd38bb6, type: 3}
     PlayerCg: {fileID: 0}
     name: "\uD638\uC704\uBB34\uC0AC"
