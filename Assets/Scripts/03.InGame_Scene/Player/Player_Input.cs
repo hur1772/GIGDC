@@ -40,6 +40,16 @@ public class Player_Input : MonoBehaviour
         {
             if (ArrowNum == 0)
             {
+                int b_att = Random.Range(0, 2);
+                if (b_att == 0)
+                {
+                    SoundMgr.Instance.PlayEffSound("Arrow1", 1.0f);
+                }
+                else if (b_att == 1)
+                {
+                    SoundMgr.Instance.PlayEffSound("Arrow2", 1.0f);
+                }
+
                 a_NewObj = (GameObject)Instantiate(m_BulletObj);
                 //오브젝트의 클론(복사체) 생성 함수   
                 a_BulletSC = a_NewObj.GetComponent<BulletCtrl>();
@@ -67,6 +77,7 @@ public class Player_Input : MonoBehaviour
             }
             if (BowAttCurTimer <= 0)
             {
+
                 if (GlobalUserData.Player_Att_State == PlayerAttackState.player_bow)
                 {
                     animator.SetTrigger("Bow_Attack");
