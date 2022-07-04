@@ -196,7 +196,7 @@ public class SecondAlien : Monster
             {
                 isChange = true;
                 m_Animator.SetTrigger("Change");
-                SoundMgr.Instance.PlayEffSound("Alien_CHNG", 1.0f);
+                SoundMgr.Instance.PlayGUISound("Alien_CHNG", 1.0f);
             }
         }
         else if(bossStage == BossStage.Stage1_2)
