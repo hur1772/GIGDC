@@ -23,9 +23,16 @@ public class UIMgr : MonoBehaviour
     float m_CurHp;
     float m_MaxHp;
 
+    public static UIMgr Inst;
+
     BossCtrl1_1 Boss = null;
 
     Player_TakeDamage pTakeDamage = null;
+
+    private void Awake()
+    {
+        Inst = this;
+    }
 
     // Start is called before the first frame update
     void Start()

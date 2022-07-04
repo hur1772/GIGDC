@@ -66,6 +66,7 @@ public class BossCtrl1_1 : Monster
             }
             else if (m_Monstate == MonsterState.DIE)
             {
+                UIMgr.Inst.AddGold(5000);
                 DieState();
             }
             else if (m_Monstate == MonsterState.CORPSE)
