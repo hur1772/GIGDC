@@ -64,6 +64,7 @@ public class BossMan : Monster
             if (m_CalcVec.magnitude <= m_ChaseDistance) // 일정거리 안에 들어올 시 변신
             {
                 m_Monstate = MonsterState.PATROL;
+                SoundMgr.Instance.PlayGUISound("BossMan_Chng", 1.0f);
                 m_Animator.SetBool("IsChange", true);
             }
         }
