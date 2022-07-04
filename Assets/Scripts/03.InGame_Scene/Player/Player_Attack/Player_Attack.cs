@@ -55,6 +55,7 @@ public class Player_Attack : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
+                SoundMgr.Instance.PlayEffSound("SwordCHNG", 0.5f);
                 Debug.Log((0 + GlobalUserData.SwordTier * 2));
                 animator.runtimeAnimatorController = runtimeAnimatorControllers[0 + GlobalUserData.SwordTier * 2];
                 Player_State.p_state = PlayerState.player_attack;
@@ -66,6 +67,7 @@ public class Player_Attack : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
+                SoundMgr.Instance.PlayEffSound("BowCHNG", 0.5f);
                 Debug.Log((1 + GlobalUserData.BowTier * 2));
                 animator.runtimeAnimatorController = runtimeAnimatorControllers[1 + GlobalUserData.BowTier * 2];
                 //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
@@ -123,6 +125,7 @@ public class Player_Attack : MonoBehaviour
             Debug.Log("hit");
             if (collider.tag == "target")
             {
+                SoundMgr.Instance.PlayEffSound("SwordMon_1", 0.8f);
                 TargetCtrl targetCtrl = collider.GetComponent<TargetCtrl>();
 
                 Debug.Log(targetCtrl.ThisGameObject.name.ToString());
