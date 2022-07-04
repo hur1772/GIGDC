@@ -489,7 +489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b163939873eb784bb44c7d517409098, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98ac1a3fce733794c801d6b29075e703, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -738,4 +738,14 @@ MonoBehaviour:
   UseItemImg2: {fileID: 0}
   HealItemPanel1: {fileID: 0}
   HealItemPanel2: {fileID: 0}
+  CurNum1Txt: {fileID: 0}
+  CurNum2Txt: {fileID: 0}
   GoldTxt: {fileID: 0}
+  GameEndTxt: {fileID: 0}
+  UseItem: {fileID: 0}
+  HpBack: {fileID: 0}
+  HpBar: {fileID: 0}
+  PIcon: {fileID: 0}
+  GoldImg: {fileID: 0}
+  TitleBtn: {fileID: 0}
+  SaveLoadBtn: {fileID: 0}
