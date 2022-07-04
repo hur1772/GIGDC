@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_TakeDamage : MonoBehaviour
 {
     private Rigidbody2D rigid;
-    private Player_State_Ctrl Player_State;
+    public Player_State_Ctrl Player_State;
     Animator animator;
     [HideInInspector] public float maxHp;
     public float curHp;

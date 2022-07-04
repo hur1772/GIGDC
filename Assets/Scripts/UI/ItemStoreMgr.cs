@@ -102,7 +102,7 @@ public class ItemStoreMgr : MonoBehaviour
             //if (m_CrNodeList[ii].m_ItemType != GlobalUserData.m_ItemDataList[ii].m_SkType)
             //    continue;
 
-            if (GlobalUserData.CurStageNum == GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount) //구입상태
+            if (GlobalUserData.CurStageNum >= GlobalUserData.m_ItemDataList[ii+5].m_CurItemCount) //구입상태
             {
                 m_CrNodeList[ii].SetState(ItemState.Active);
                 //Debug.Log("Active" + m_CrNodeList[ii].m_ItemType);
