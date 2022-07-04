@@ -757,6 +757,10 @@ PrefabInstance:
       propertyPath: HealItemShopPanel
       value: 
       objectReference: {fileID: 999479224}
+    - target: {fileID: 4109632169616997906, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 23055b6c846f0d243b8055d5a3733c7a, type: 2}
     - target: {fileID: 4109632169616997910, guid: d33333cb2b01e8c4ca9b6e8a74a6ac90, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9286,7 +9290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618275768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.6, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12870,7 +12874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1334774658
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12960,6 +12964,7 @@ MonoBehaviour:
   UpGdGoodsTxt: {fileID: 1843388007}
   UseItem_Txt: {fileID: 769615505}
   Help_Txt: {fileID: 1271196920}
+  m_HelpBox: {fileID: 1545869081}
 --- !u!1 &1351224346
 GameObject:
   m_ObjectHideFlags: 0
@@ -13913,13 +13918,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545869079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82607c77acc7bb4b80027215a8be742, type: 3}
+  m_Script: {fileID: 11500000, guid: 85ffefc20b030014ca656836803e0810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   go_Base: {fileID: 1545869079}
   txt_ItemName: {fileID: 346670161}
   txt_ItemDesc: {fileID: 349734359}
-  txt_ItemHowtoUsed: {fileID: 0}
 --- !u!114 &1545869082
 MonoBehaviour:
   m_ObjectHideFlags: 0
