@@ -62,6 +62,7 @@ public class TigerMonster : Monster
         idleDelay = Random.Range(1.0f, 2.0f);
 
         spRend = GetComponent<SpriteRenderer>();
+        SoundMgr.Instance.PlayGUISound("Tiger_Chase", 1.5f);
         
     }
 
