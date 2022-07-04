@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CreditScene_Mgr : MonoBehaviour
 {
+    public GameObject creditPanel = null;
     public Button backTitleBtn = null;
     public Text CreditTxt = null;
 
@@ -31,6 +32,6 @@ public class CreditScene_Mgr : MonoBehaviour
 
     public void BackTitleFunc()
     {
-        SceneManager.LoadScene("00.TitleScene");
+        creditPanel.gameObject.SetActive(false);
     }
 }

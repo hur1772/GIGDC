@@ -15,6 +15,7 @@ public class StageMgr : MonoBehaviour
     public Button Volume_Btn = null;
     public Button CreditScene_Btn = null;
     public Button ExitGame_Btn = null;
+    public GameObject CreditCanvas = null;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,8 @@ public class StageMgr : MonoBehaviour
 
         if (ExitGame_Btn != null)
             ExitGame_Btn.onClick.AddListener(ExitGameFunc);
+
+        CreditCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -71,7 +74,7 @@ public class StageMgr : MonoBehaviour
 
     public void CreditSceneFunc()
     {
-        SceneManager.LoadScene("CreditScene");
+        CreditCanvas.gameObject.SetActive(true);
     }
 
     public void ExitGameFunc()
