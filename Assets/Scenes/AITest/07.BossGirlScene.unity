@@ -1530,6 +1530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage1-2 Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 6639529832721246968, guid: 77de52c3842e82e4b901768721834037, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6639529832721246970, guid: 77de52c3842e82e4b901768721834037, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1596,7 +1600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &455923200
 Animator:
   serializedVersion: 3
@@ -1675,7 +1679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455923199}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.19, y: -4.07, z: 0}
+  m_LocalPosition: {x: 13.81, y: -4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4722494}

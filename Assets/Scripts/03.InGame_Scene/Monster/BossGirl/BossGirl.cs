@@ -57,20 +57,24 @@ public class BossGirl : Monster
         }
         else if (m_Monstate == MonsterState.PATROL)
         {
+            //SoundMgr.Instance.PlayEffSound("WZombie_Idle", 0.3f);
             PatrolUpdate();
         }
         else if (m_Monstate == MonsterState.CHASE)
         {
+            //SoundMgr.Instance.PlayEffSound("WZombie_Idle", 0.3f);
             ChaseUpdate();
         }
         else if (m_Monstate == MonsterState.ATTACK)
         {
+            //SoundMgr.Instance.PlayEffSound("WZombie_Idle", 0.3f);
             AttackUpdate();
         }
     }
 
     public void IdleUpdate()
     {
+        SoundMgr.Instance.PlayEffSound("WZombie_Idle", 0.3f);
         if (m_IdleTime >= 0.0f)
         {
             m_IdleTime -= Time.deltaTime;
