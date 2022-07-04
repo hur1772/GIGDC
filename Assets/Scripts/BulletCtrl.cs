@@ -86,7 +86,7 @@ public class BulletCtrl : MonoBehaviour
         if (coll.gameObject.tag == "Monster")
         {
             Monster monster = coll.gameObject.GetComponent<Monster>();
-            if (monster != null)
+            if (monster != null && monster.m_Monstate != MonsterState.CORPSE)
                 monster.m_Monstate = MonsterState.CHASE;
             
 

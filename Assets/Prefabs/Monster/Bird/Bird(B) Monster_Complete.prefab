@@ -179,6 +179,9 @@ MonoBehaviour:
   attackPos: {fileID: 0}
   originPos: {x: 0, y: 0, z: 0}
   m_FindDist: 5
+  platformmask:
+    serializedVersion: 2
+    m_Bits: 8
   m_FlyHeight: 4.3
   m_FlySpeed: 4
   m_IdleDistance: 10

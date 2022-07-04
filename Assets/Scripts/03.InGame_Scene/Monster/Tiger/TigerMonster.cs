@@ -111,7 +111,12 @@ public class TigerMonster : Monster
         }
         else if(m_Monstate == MonsterState.Hitted)
         {
+            IsSkillOn = false;
             m_Monstate = MonsterState.CHASE;
+            StayTime = 2.5f;
+            rushEnum = RushEnum.BACKSTEP;
+            jumpEnum = JumpEnum.BACKSTEP;
+            m_Animator.SetBool("FindPlayer", true);
         }
     }
 
@@ -437,8 +442,8 @@ public class TigerMonster : Monster
         
         base.TakeDamage(WeaponState);
 
-        if (m_CurHP <= 0.0f && m_Animator.enabled == false)
-            m_Animator.enabled = true;
+        //if (m_CurHP <= 0.0f && m_Animator.enabled == false)
+        //    m_Animator.enabled = true;
         HPBar.fillAmount = m_CurHP / m_MaxHP;
     }
 }
