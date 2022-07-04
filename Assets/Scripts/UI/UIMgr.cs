@@ -181,12 +181,23 @@ public class UIMgr : MonoBehaviour
             }
 
         }
+        else if(coll.gameObject.name.Contains("BossDrop")==true)
+        {
+            AddBoss();
+            Destroy(coll.gameObject);
+        }
     }
 
     public void AddGold(int a_Val = 100)
     {
         GlobalUserData.s_GoldCount += a_Val;
         GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
+    }
+
+    public void AddBoss(int a_Val = 100)
+    {
+        //GlobalUserData.s_GoldCount += a_Val;
+        //GoldTxt.text = GlobalUserData.s_GoldCount.ToString();
     }
 
     //public void TakeDamage(float a_val)
