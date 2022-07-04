@@ -129,8 +129,8 @@ public class BossCtrl1_1 : Monster
     void DieState()
     {
         m_Animator.SetTrigger("DieTrigger");
-        m_Monstate = MonsterState.CORPSE;        
-
+        m_Monstate = MonsterState.CORPSE;
+        BossDrop();
         if (Protal != null)
         {
             if(StageMgr.Inst.InfoText != null)
@@ -155,8 +155,7 @@ public class BossCtrl1_1 : Monster
             _spRenderer.color = dieColor;
 
             if (dieAlpha <= 0.05f)
-                Destroy(this.gameObject);
-            BossDrop();
+                Destroy(this.gameObject);            
         }
     }
 

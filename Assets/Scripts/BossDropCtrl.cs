@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossDropCtrl : MonoBehaviour
 {
     private float m_Speed = 50.0f;
+    [HideInInspector] public bool isGet = true;
     // Start is called before the first frame update
     void Start()
     {

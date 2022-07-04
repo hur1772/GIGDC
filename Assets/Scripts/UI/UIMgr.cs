@@ -183,8 +183,13 @@ public class UIMgr : MonoBehaviour
         }
         else if(coll.gameObject.name.Contains("BossDrop")== true)
         {
-            AddBoss();
-            Destroy(coll.gameObject);
+            BossDropCtrl ctrl = coll.gameObject.GetComponent<BossDropCtrl>();
+            if (ctrl.isGet == true)
+            {
+                AddBoss();
+                ctrl.isGet = false;
+                Destroy(coll.gameObject);
+            }
             
         }
     }
