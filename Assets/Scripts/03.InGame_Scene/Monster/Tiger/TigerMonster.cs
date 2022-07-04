@@ -407,7 +407,8 @@ public class TigerMonster : Monster
     }
 
     protected override void Die()
-    {  
+    {
+        SoundMgr.Instance.PlayGUISound("Tiger_CHNG", 0.8f);
         m_Monstate = MonsterState.DIE;
         m_Animator.SetBool("CanAttack", false);
         goSkill = false;
