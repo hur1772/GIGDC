@@ -88,18 +88,22 @@ public class Player_Attack : MonoBehaviour
         //Attack animation play
         if (a == 0)
         {
+            SoundMgr.Instance.PlayEffSound("SowrdAtt_1", 0.5f);
             animator.SetTrigger("Sword_Attack_1");
         }
         if (a == 1)
         {
+            SoundMgr.Instance.PlayEffSound("SowrdAtt_2", 0.5f);
             animator.SetTrigger("Sword_Attack_2");
         }
         if (a == 2)
         {
+            SoundMgr.Instance.PlayEffSound("SowrdAtt_3", 0.5f);
             animator.SetTrigger("Sword_Attack_3");
         }
         if (a == 3)
         {
+            SoundMgr.Instance.PlayEffSound("SowrdAtt_1", 0.5f);
             animator.SetTrigger("Sword_Attack_4");
         }
 
@@ -129,6 +133,20 @@ public class Player_Attack : MonoBehaviour
             }
             else if(collider.tag == "Monster")
             {
+                int att = Random.Range(0, 3);
+                if(att == 0)
+                {
+                    SoundMgr.Instance.PlayEffSound("SwordMon_1", 1.0f);
+                }
+                else if(att == 1)
+                {
+                    SoundMgr.Instance.PlayEffSound("SwordMon_2", 1.0f);
+                }
+                else
+                {
+                    SoundMgr.Instance.PlayEffSound("SwordMon_3", 1.0f);
+                }
+                //SoundMgr.Instance.PlayEffSound("SwordMon_1", 1.0f);
                 Debug.Log(0 + GlobalUserData.SwordTier);
                 collider.GetComponent<Monster>().TakeDamage(0 + GlobalUserData.SwordTier * 2);
                 
