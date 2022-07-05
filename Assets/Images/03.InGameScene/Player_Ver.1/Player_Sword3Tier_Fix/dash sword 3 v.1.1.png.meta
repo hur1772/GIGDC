@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 3c378043e1501bf4594a12a730a6ae73
+guid: e8584359def770449b8b272aed1bf3ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7891364446392788140
-    second: sneaking v.1.3_0
+      213: -7430415101472933488
+    second: dash sword 3 v.1.1_0
   - first:
-      213: -3953176010534208484
-    second: sneaking v.1.3_2
-  - first:
-      213: 4794135695875456595
-    second: sneaking v.1.3_4
-  - first:
-      213: -6945979164239436896
-    second: sneaking v.1.3_6
-  - first:
-      213: -4196820340161014193
-    second: sneaking v.1.3_8
+      213: 537826391621453459
+    second: dash sword 3 v.1.1_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -142,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sneaking v.1.3_0
+      name: dash sword 3 v.1.1_0
       rect:
         serializedVersion: 2
-        x: 273
-        y: 14
-        width: 1122
-        height: 686
+        x: 124
+        y: 0
+        width: 654
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca4a36c5722c38d60800000000000000
-      internalID: 7891364446392788140
+      spriteID: 099f10f45dcd1e890800000000000000
+      internalID: -7430415101472933488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneaking v.1.3_2
+      name: dash sword 3 v.1.1_1
       rect:
         serializedVersion: 2
-        x: 1771
-        y: 6
-        width: 1170
-        height: 694
+        x: 788
+        y: 0
+        width: 794
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,71 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1c338dfc5f7329c0800000000000000
-      internalID: -3953176010534208484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sneaking v.1.3_4
-      rect:
-        serializedVersion: 2
-        x: 3194
-        y: 24
-        width: 1218
-        height: 676
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35e3da5d301388240800000000000000
-      internalID: 4794135695875456595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sneaking v.1.3_6
-      rect:
-        serializedVersion: 2
-        x: 4614
-        y: 2
-        width: 1174
-        height: 698
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a36e3260ccea9f90800000000000000
-      internalID: -6945979164239436896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sneaking v.1.3_8
-      rect:
-        serializedVersion: 2
-        x: 5961
-        y: 14
-        width: 1149
-        height: 686
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f469196e226e1c5c0800000000000000
-      internalID: -4196820340161014193
+      spriteID: 3964d6fe04eb67700800000000000000
+      internalID: 537826391621453459
       vertices: []
       indices: 
       edges: []
