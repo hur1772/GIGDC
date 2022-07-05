@@ -5,9 +5,6 @@ using UnityEngine;
 public class TigerPos : MonoBehaviour
 {
     public GameObject Tiger;
-    public GameObject monsters;
-    public GameObject Wall1;
-    public GameObject Wall2;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +24,6 @@ public class TigerPos : MonoBehaviour
         {
             SoundMgr.Instance.PlayGUISound("Tiger_Gen", 1.5f);
             Tiger.SetActive(true);
-            monsters.SetActive(false);
-            Wall1.SetActive(true);
-            Wall2.SetActive(true);
 
         }
     }
