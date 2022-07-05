@@ -20,7 +20,8 @@ public class BossgirlSpawn : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Player"))
-        {            
+        {
+            SoundMgr.Instance.PlayEffSound("BossGirlSpawn", 1.0f);
             Bossgirl.SetActive(true);
         }
     }
