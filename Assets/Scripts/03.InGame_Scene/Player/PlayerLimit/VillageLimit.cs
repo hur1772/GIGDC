@@ -66,6 +66,20 @@ public class VillageLimit : MonoBehaviour
 
             tr.position = m_Pos;
         }
+        else if (nowscene.name == "04.TutorialMap")
+        {
+            m_Pos = tr.position;
+            if (tr.position.x < -8.4f)
+            {
+                m_Pos.x = -8.4f;
+            }
+            if (25.9f < tr.position.x)
+            {
+                m_Pos.x = 25.9f;
+            }
+
+            tr.position = m_Pos;
+        }
         else if (nowscene.name == "1_2")
         {
             m_Pos = tr.position;
