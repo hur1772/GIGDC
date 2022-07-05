@@ -9,13 +9,16 @@ public class VillageLimit : MonoBehaviour
 
     private Transform tr;
     private Vector2 m_Pos = Vector2.zero;
-    // Start is called before the first frame update
+    // Start is called before the first frame update    
+    
+
 
     private void Start()
     {
         Debug.Log(GlobalUserData.SwordTier);
 
         tr = GetComponent<Transform>();
+        
     }
 
     void OnEnable()
@@ -109,4 +112,5 @@ public class VillageLimit : MonoBehaviour
             tr.position = m_Pos;
         }
     }
+
 }

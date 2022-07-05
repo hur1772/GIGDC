@@ -30,6 +30,7 @@ public class TigerPos : MonoBehaviour
             monsters.SetActive(false);
             Wall1.SetActive(true);
             Wall2.SetActive(true);
+
         }
     }
  
