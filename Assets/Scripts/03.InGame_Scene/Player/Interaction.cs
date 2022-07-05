@@ -181,6 +181,12 @@ public class Interaction : MonoBehaviour
 
                         m_interactionState = InteractionState.Nomal;
                     }
+                    if(Portal.tag == "Credit")
+                        {
+                            SceneManager.LoadScene("CreditScene");
+                            m_interactionState = InteractionState.Nomal;
+                        }
+
                 }
                 break;
         }

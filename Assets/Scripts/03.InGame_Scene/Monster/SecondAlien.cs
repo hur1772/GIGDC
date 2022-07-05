@@ -24,6 +24,7 @@ public class SecondAlien : Monster
     float dieAlpha = 1.0f;
     Color dieColor = Color.white;
     SpriteRenderer _spRenderer;
+    public GameObject Protal;
 
     //HpBar
     [SerializeField] Image HPBar = null;
@@ -126,7 +127,20 @@ public class SecondAlien : Monster
                 m_Animator.SetTrigger("DieTrigger");
                 m_Monstate = MonsterState.CORPSE;
 
-                CoinDrop();
+                //CoinDrop();
+                if (Protal != null)
+                {
+                    if (StageMgr.Inst.InfoText != null)
+                    {
+                        StageMgr.Inst.InfoText.gameObject.SetActive(true);
+                        StageMgr.Inst.InfoTimer = 3.0f;
+                        StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
+                    }
+                    Protal.gameObject.SetActive(true);
+                    Vector3 ProtalPos = new Vector3(361.5f, 1.93f, 0.0f);
+                    Protal.transform.position = ProtalPos;
+                    Instantiate(Protal);
+                }
             }
             else if(bossStage == BossStage.Stage1_2)
             {
@@ -135,8 +149,21 @@ public class SecondAlien : Monster
                 m_Animator.SetBool("IsAttack2", false);
                 m_Animator.SetBool("IsAttack3", false);
                 m_Animator.SetBool("IsAttack", false);
+                if (Protal != null)
+                {
+                    if (StageMgr.Inst.InfoText != null)
+                    {
+                        StageMgr.Inst.InfoText.gameObject.SetActive(true);
+                        StageMgr.Inst.InfoTimer = 3.0f;
+                        StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
+                    }
+                    Protal.gameObject.SetActive(true);
+                    Vector3 ProtalPos = new Vector3(483.45f, 7.4f, 0.0f);
+                    Protal.transform.position = ProtalPos;
+                    Instantiate(Protal);
+                }
                 m_Monstate = MonsterState.CORPSE;
-                CoinDrop();
+                BossDrop();
                 Destroy(this.gameObject, 5.0f);
             }
 
@@ -150,6 +177,7 @@ public class SecondAlien : Monster
                     m_Rb.transform.position += Vector3.right * m_MoveSpeed * 5 * Time.deltaTime;
                     this.transform.rotation = Quaternion.Euler(0, 180.0f, 0);
                 }
+
             }
             else if(bossStage == BossStage.Stage1_3)
             {
