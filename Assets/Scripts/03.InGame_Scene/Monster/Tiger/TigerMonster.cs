@@ -55,6 +55,9 @@ public class TigerMonster : Monster
     public GameObject Wall1;
     public GameObject Wall2;
 
+
+    float m_EndDelay = 1.0f;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -140,7 +143,7 @@ public class TigerMonster : Monster
                     jumpEnum = JumpEnum.JUMP;
                     m_MoveSpeed = 3.0f;
                     RushVec = m_Player.transform.position;
-                    RushVec.y = this.transform.position.y;
+                    RushVec.y = this.transform.position.y+1.0f;
                     RushVec.z = 0.0f;
                     m_Animator.enabled = true;
                     m_Rb.AddForce(Vector2.up * 700.0f);
@@ -204,7 +207,10 @@ public class TigerMonster : Monster
 
             m_Rb.transform.position += RushCurVec * Time.deltaTime * m_MoveSpeed;
 
-            if (RushCurVec.magnitude <= 1.0f)
+            m_EndDelay -= Time.deltaTime;
+            Debug.Log(m_EndDelay);
+
+            if (RushCurVec.magnitude <= 1.0f || m_EndDelay <= 0.0f)
             {
                 RushDelay = 2.0f;
                 m_MoveSpeed = 2.0f;
@@ -213,6 +219,7 @@ public class TigerMonster : Monster
                 m_Animator.SetBool("IsMove", false);
                 m_Animator.SetBool("CanAttack", false);
                 m_Animator.SetBool("FindPlayer", false);
+                m_EndDelay = 1.0f;
             }
         }
         else if(rushEnum == RushEnum.RUSH_AFTER)
