@@ -218,6 +218,12 @@ public class BossGirl : Monster
         weapon.transform.rotation = this.transform.rotation;
     }
 
+    public override void TakeDamage(int WeaponState)
+    {
+        base.TakeDamage(WeaponState);
+
+        HPBar.fillAmount = m_CurHP / m_MaxHP;
+    }
 
     protected override void Die()
     {
