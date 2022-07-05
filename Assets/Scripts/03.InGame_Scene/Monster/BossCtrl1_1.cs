@@ -142,7 +142,7 @@ public class BossCtrl1_1 : Monster
                 StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
             }
             Protal.gameObject.SetActive(true);           
-            Vector3 ProtalPos = new Vector3(408.0f, 1.0f, 0.0f);
+            Vector3 ProtalPos = new Vector3(426.1f,0.7f, 0.0f);
             Protal.transform.position = ProtalPos;
             Instantiate(Protal);
         }
