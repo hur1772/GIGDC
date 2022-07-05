@@ -90,7 +90,7 @@ public class PigMonster : Monster
                 if(m_DelayTime <= 0.0f)
                 {
                     m_Monstate = MonsterState.PATROL;
-                    SoundMgr.Instance.PlayGUISound("Pig_Patrol", 0.5f);
+                    //SoundMgr.Instance.PlayGUISound("Pig_Patrol", 0.5f);
                     m_DelayTime = Random.Range(1.0f, 2.0f);
                     m_Animator.SetBool("IsMove", true);
                 }

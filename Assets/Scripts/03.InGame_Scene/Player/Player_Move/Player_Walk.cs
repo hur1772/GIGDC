@@ -54,6 +54,10 @@ public class Player_Walk : MonoBehaviour
         }
         else
         {
+
+            if (Player_state.p_state == PlayerState.player_die)
+                return;
+
             animator.SetBool("IsWalk", false);
         }
 

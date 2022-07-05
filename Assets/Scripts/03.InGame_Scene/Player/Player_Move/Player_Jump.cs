@@ -36,7 +36,6 @@ public class Player_Jump : MonoBehaviour
             {
 
                 if (Player_state.p_state == PlayerState.player_die)
-
                     return;
 
                 if (isJumping == false)
