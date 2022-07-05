@@ -57100,7 +57100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7908536678946823181, guid: 4ed241d14cb3a024f8ede391c0959c63, type: 3}
       propertyPath: m_MaxHP
-      value: 10
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7908536678946823181, guid: 4ed241d14cb3a024f8ede391c0959c63, type: 3}
       propertyPath: bossPrefab

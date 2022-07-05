@@ -66,6 +66,7 @@ public class BossCtrl1_1 : Monster
             }
             else if (m_Monstate == MonsterState.DIE)
             {
+                SoundMgr.Instance.PlayEffSound("Coin", 0.2f);
                 UIMgr.Inst.AddGold(5000);
                 DieState();
             }

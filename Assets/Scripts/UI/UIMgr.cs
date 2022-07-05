@@ -26,7 +26,7 @@ public class UIMgr : MonoBehaviour
     public static UIMgr Inst;
 
     BossCtrl1_1 Boss = null;
-
+    SecondAlien Boss2 = null;
     Player_TakeDamage pTakeDamage = null;
 
     public Text GameEndTxt = null;
@@ -79,6 +79,21 @@ public class UIMgr : MonoBehaviour
             {                
                 m_Delay = 2.0f;
                 
+            }
+        }
+
+        if (Boss2 == null && GameObject.Find("Stage1-2 Boss(Clone)") == true)
+        {
+            GameObject boss = GameObject.Find("Stage1-2 Boss(Clone)");
+            Boss = boss.GetComponent<BossCtrl1_1>();
+        }
+
+        if (Boss2 != null)
+        {
+            if (Boss2.m_Monstate == MonsterState.DIE)
+            {
+                m_Delay = 2.0f;
+
             }
         }
 

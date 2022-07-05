@@ -130,6 +130,7 @@ public class SecondAlien : Monster
                 //CoinDrop();
                 if (Protal != null)
                 {
+                    gameObject.tag = "Credit";
                     if (StageMgr.Inst.InfoText != null)
                     {
                         StageMgr.Inst.InfoText.gameObject.SetActive(true);
@@ -163,6 +164,8 @@ public class SecondAlien : Monster
                     Instantiate(Protal);
                 }
                 m_Monstate = MonsterState.CORPSE;
+                SoundMgr.Instance.PlayEffSound("Coin", 0.2f);
+                UIMgr.Inst.AddGold(10000);
                 BossDrop();
                 Destroy(this.gameObject, 5.0f);
             }
