@@ -130,7 +130,7 @@ public class SecondAlien : Monster
                 //CoinDrop();
                 if (Protal != null)
                 {
-                    gameObject.tag = "Credit";
+                    Protal.gameObject.tag = "Credit";
                     if (StageMgr.Inst.InfoText != null)
                     {
                         StageMgr.Inst.InfoText.gameObject.SetActive(true);
