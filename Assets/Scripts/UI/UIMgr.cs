@@ -296,6 +296,9 @@ public class UIMgr : MonoBehaviour
         {
             StageMgr.Inst.InfoText.gameObject.SetActive(true);
             StageMgr.Inst.InfoTimer = 5.0f;
+
+            GlobalUserData.m_ItemDataList[8].m_CurItemCount += GlobalUserData.CurStageNum * 2;
+            Debug.Log(GlobalUserData.m_ItemDataList[8].m_CurItemCount);
             StageMgr.Inst.InfoText.text = "무기도감을 획득했습니다.\n" + "마을로 가서 무기를 강화하십시오";
         }
     }

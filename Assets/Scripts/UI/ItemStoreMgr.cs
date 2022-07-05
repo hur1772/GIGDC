@@ -240,7 +240,7 @@ public class ItemStoreMgr : MonoBehaviour
             a_ItemInfo = GlobalUserData.m_ItemDataList[ii];
             a_SetLevel.Add(a_ItemInfo.m_CurItemCount);
 
-            if (ii != (int)m_BuyCrType || 1 <= a_ItemInfo.m_CurItemCount) //구매 조건 체크
+            if (ii != (int)m_BuyCrType || GlobalUserData.CurStageNum+1 <= a_ItemInfo.m_CurItemCount) //구매 조건 체크
                 continue;
 
             int a_Cost = a_ItemInfo.m_Price;
