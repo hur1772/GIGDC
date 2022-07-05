@@ -1,43 +1,40 @@
 fileFormatVersion: 2
-guid: 4f58f32a3905bf0418e9d52eda6822cf
+guid: caeee65a4a0dd2249b8930c8e8a8c1bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1006827319546262577
-    second: Player_Jump_Sprite_2_0
+      213: 4292721367664698300
+    second: walk sword 3 v.1.2_0
   - first:
-      213: -72881014978527910
-    second: Player_Jump_Sprite_2_1
+      213: 3544163622211504676
+    second: walk sword 3 v.1.2_1
   - first:
-      213: -7449341370347574606
-    second: Player_Jump_Sprite_2_2
+      213: -6322899821740035115
+    second: walk sword 3 v.1.2_2
   - first:
-      213: 7001972062553501920
-    second: Player_Jump_Sprite_2_3
+      213: 5538454775511210453
+    second: walk sword 3 v.1.2_3
   - first:
-      213: -1692617491516744618
-    second: Player_Jump_Sprite_2_4
+      213: 6739751353119728763
+    second: walk sword 3 v.1.2_4
   - first:
-      213: -146371943936009256
-    second: Player_Jump_Sprite_2_5
+      213: -3997245478265373138
+    second: walk sword 3 v.1.2_5
   - first:
-      213: 5553353736068007457
-    second: Player_Jump_Sprite_2_6
+      213: 6305864249550629936
+    second: walk sword 3 v.1.2_6
   - first:
-      213: 7652568066579589445
-    second: Player_Jump_Sprite_2_7
+      213: 4193395735070142479
+    second: walk sword 3 v.1.2_7
   - first:
-      213: 969234692608336040
-    second: Player_Jump_Sprite_2_8
+      213: -7707762106612572897
+    second: walk sword 3 v.1.2_8
   - first:
-      213: -3373759325558434932
-    second: Player_Jump_Sprite_2_9
+      213: 5971876994073836122
+    second: walk sword 3 v.1.2_9
   - first:
-      213: 3443110667648187388
-    second: Player_Jump_Sprite_2_10
-  - first:
-      213: -7792658517585901307
-    second: Player_Jump_Sprite_2_11
+      213: 5222345950765597787
+    second: walk sword 3 v.1.2_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +65,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -163,13 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_0
+      name: walk sword 3 v.1.2_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 631
-        height: 1052
+        width: 726
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcb494423e70702f0800000000000000
-      internalID: -1006827319546262577
+      spriteID: cb3226f075fc29b30800000000000000
+      internalID: 4292721367664698300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_1
+      name: walk sword 3 v.1.2_1
       rect:
         serializedVersion: 2
-        x: 637
+        x: 877
         y: 0
-        width: 608
-        height: 1034
+        width: 770
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5db55f5a131dfef0800000000000000
-      internalID: -72881014978527910
+      spriteID: 42a47cf59066f2130800000000000000
+      internalID: 3544163622211504676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_2
+      name: walk sword 3 v.1.2_2
       rect:
         serializedVersion: 2
-        x: 1273
+        x: 1751
         y: 0
-        width: 603
-        height: 1021
+        width: 747
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2baafc1fd7f9e9890800000000000000
-      internalID: -7449341370347574606
+      spriteID: 5d3fdcebc1c8048a0800000000000000
+      internalID: -6322899821740035115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_3
+      name: walk sword 3 v.1.2_3
       rect:
         serializedVersion: 2
-        x: 1910
+        x: 2620
         y: 0
-        width: 602
-        height: 1058
+        width: 733
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0f5bb2e700c2160800000000000000
-      internalID: 7001972062553501920
+      spriteID: 5d959ea364b8cdc40800000000000000
+      internalID: 5538454775511210453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_4
+      name: walk sword 3 v.1.2_4
       rect:
         serializedVersion: 2
-        x: 2543
+        x: 3494
         y: 0
-        width: 606
-        height: 1074
+        width: 733
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,41 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65c188dfb5d9288e0800000000000000
-      internalID: -1692617491516744618
+      spriteID: b74e82d9528688d50800000000000000
+      internalID: 6739751353119728763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_5
+      name: walk sword 3 v.1.2_5
       rect:
         serializedVersion: 2
-        x: 3180
-        y: 65
-        width: 618
-        height: 1009
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8db5c941e7bf7fdf0800000000000000
-      internalID: -146371943936009256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Jump_Sprite_2_6
-      rect:
-        serializedVersion: 2
-        x: 3817
+        x: 4373
         y: 0
-        width: 639
-        height: 1058
+        width: 761
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1260c6eccc9711d40800000000000000
-      internalID: 5553353736068007457
+      spriteID: e2eb4f37a6ee688c0800000000000000
+      internalID: -3997245478265373138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_7
+      name: walk sword 3 v.1.2_6
       rect:
         serializedVersion: 2
-        x: 4475
+        x: 5252
         y: 0
-        width: 606
-        height: 1058
+        width: 761
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,41 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54969fb8c12633a60800000000000000
-      internalID: 7652568066579589445
+      spriteID: 03cec44002ee28750800000000000000
+      internalID: 6305864249550629936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Jump_Sprite_2_9
+      name: walk sword 3 v.1.2_7
       rect:
         serializedVersion: 2
-        x: 5112
-        y: 16
-        width: 614
-        height: 1046
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c839d62b4cffd21d0800000000000000
-      internalID: -3373759325558434932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Jump_Sprite_2_10
-      rect:
-        serializedVersion: 2
-        x: 5748
+        x: 6121
         y: 0
-        width: 593
-        height: 1052
+        width: 771
+        height: 1070
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,8 +321,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfb378be8e268cf20800000000000000
-      internalID: 3443110667648187388
+      spriteID: f007e77143fe13a30800000000000000
+      internalID: 4193395735070142479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk sword 3 v.1.2_8
+      rect:
+        serializedVersion: 2
+        x: 6996
+        y: 0
+        width: 812
+        height: 1070
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d14269337880590800000000000000
+      internalID: -7707762106612572897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk sword 3 v.1.2_9
+      rect:
+        serializedVersion: 2
+        x: 7870
+        y: 0
+        width: 883
+        height: 1070
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a391a5c7e50e250800000000000000
+      internalID: 5971876994073836122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk sword 3 v.1.2_10
+      rect:
+        serializedVersion: 2
+        x: 8749
+        y: 0
+        width: 876
+        height: 1070
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54459919ff797840800000000000000
+      internalID: 5222345950765597787
       vertices: []
       indices: 
       edges: []

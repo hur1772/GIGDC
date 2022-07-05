@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: fbcd8f72add238d46b9e8dd94942e2a8
+guid: 005b27fd2d71e134095b640ebfca97ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3576951125384412878
-    second: attack1 v.1.3_0
+      213: 785913432653501620
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_0"
   - first:
-      213: -5512464480994888671
-    second: attack1 v.1.3_1
+      213: -4603258670396601684
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_1"
   - first:
-      213: 4118864327522063785
-    second: attack1 v.1.3_2
+      213: -8981549007337046901
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_2"
   - first:
-      213: 6892285157052820256
-    second: attack1 v.1.3_3
+      213: -7028710514588038398
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_3"
   - first:
-      213: -1536562903480748665
-    second: attack1 v.1.3_4
+      213: -1652324880821199201
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_4"
   - first:
-      213: 6784060647285645936
-    second: attack1 v.1.3_5
+      213: 6052078516358800527
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_5"
   - first:
-      213: 7450814022816449990
-    second: attack1 v.1.3_6
+      213: 7239636953596723358
+    second: "idle sword 3\uB2E8\uACC4 v.1.1_6"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -148,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack1 v.1.3_0
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 643
-        height: 1300
+        width: 733
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eceb877d812e3a130800000000000000
-      internalID: 3576951125384412878
+      spriteID: 4b415816a1028ea00800000000000000
+      internalID: 785913432653501620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack1 v.1.3_1
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_1"
       rect:
         serializedVersion: 2
-        x: 1147
+        x: 748
         y: 0
-        width: 650
-        height: 1300
+        width: 715
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1247755c2cacf73b0800000000000000
-      internalID: -5512464480994888671
+      spriteID: caa06cdd0a0fd10c0800000000000000
+      internalID: -4603258670396601684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack1 v.1.3_2
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_2"
       rect:
         serializedVersion: 2
-        x: 2074
+        x: 1468
         y: 0
-        width: 1041
-        height: 1300
+        width: 726
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a51bff7845292930800000000000000
-      internalID: 4118864327522063785
+      spriteID: b8cb9ec93c02b5380800000000000000
+      internalID: -8981549007337046901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack1 v.1.3_3
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_3"
       rect:
         serializedVersion: 2
-        x: 3113
+        x: 2190
         y: 0
-        width: 923
-        height: 1300
+        width: 735
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ba4dc55d056af50800000000000000
-      internalID: 6892285157052820256
+      spriteID: 20b4de4d601057e90800000000000000
+      internalID: -7028710514588038398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack1 v.1.3_4
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_4"
       rect:
         serializedVersion: 2
-        x: 4152
+        x: 2930
         y: 0
-        width: 877
-        height: 1004
+        width: 726
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 785bcfa2e280daae0800000000000000
-      internalID: -1536562903480748665
+      spriteID: f9edc197643c119e0800000000000000
+      internalID: -1652324880821199201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack1 v.1.3_5
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_5"
       rect:
         serializedVersion: 2
-        x: 5144
+        x: 3672
         y: 0
-        width: 1078
-        height: 1300
+        width: 717
+        height: 1074
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,8 +267,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 072ea281733d52e50800000000000000
-      internalID: 6784060647285645936
+      spriteID: f84e658685d4df350800000000000000
+      internalID: 6052078516358800527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "idle sword 3\uB2E8\uACC4 v.1.1_6"
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 0
+        width: 713
+        height: 1074
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e908ce9b37b587460800000000000000
+      internalID: 7239636953596723358
       vertices: []
       indices: 
       edges: []
