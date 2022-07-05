@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1345961619216697380}
   - component: {fileID: 5824923331237349953}
   - component: {fileID: 3733675979415562984}
-  - component: {fileID: 7208401020455547413}
   - component: {fileID: 3654868520020848225}
+  - component: {fileID: 7372649589555910844}
   m_Layer: 7
   m_Name: Stage1 Boss
   m_TagString: Monster
@@ -143,22 +143,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!70 &7208401020455547413
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261164714830009224}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.67}
-  m_Size: {x: 5.58, y: 2.21}
-  m_Direction: 0
 --- !u!114 &3654868520020848225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +171,32 @@ MonoBehaviour:
   m_DelayTime: 0
   Protal: {fileID: 2269875320446877070, guid: ec6a6d7bd80c94949b57f39c7ff1452f, type: 3}
   HPBar: {fileID: 276243228733359301}
+--- !u!61 &7372649589555910844
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261164714830009224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16478944, y: 1.7002636}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.6, y: 0.05}
+    oldSize: {x: 5.7, y: 6.93}
+    newSize: {x: 5.7, y: 6.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.2687368, y: 3.4077861}
+  m_EdgeRadius: 0
 --- !u!1 &276243227895984841
 GameObject:
   m_ObjectHideFlags: 0
