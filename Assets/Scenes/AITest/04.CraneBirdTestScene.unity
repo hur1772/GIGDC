@@ -2827,10 +2827,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crane(B)_Complelte
       objectReference: {fileID: 0}
-    - target: {fileID: 5084920858080965936, guid: 4a68a08a95aca4944886810ef1b9c947, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5084920858080965941, guid: 4a68a08a95aca4944886810ef1b9c947, type: 3}
       propertyPath: m_RootOrder
       value: 6
