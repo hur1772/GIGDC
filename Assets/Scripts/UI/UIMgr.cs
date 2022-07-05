@@ -62,6 +62,7 @@ public class UIMgr : MonoBehaviour
         if (SaveLoadBtn != null)
             SaveLoadBtn.onClick.AddListener(SaveLoadBtnFunc);
 
+        GlobalUserData.InitData();
     }
 
     // Update is called once per frame

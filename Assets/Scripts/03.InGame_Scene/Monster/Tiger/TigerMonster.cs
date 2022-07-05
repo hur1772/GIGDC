@@ -444,7 +444,9 @@ public class TigerMonster : Monster
 
     public override void TakeDamage(int WeaponState)
     {
-        
+        if (m_CurHP <= 0.0f || m_Monstate == MonsterState.CORPSE)
+            return;
+
         base.TakeDamage(WeaponState);
 
         if (m_CurHP <= 0.0f && m_Animator.enabled == false)
