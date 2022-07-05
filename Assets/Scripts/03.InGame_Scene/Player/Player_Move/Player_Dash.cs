@@ -39,12 +39,10 @@ public class Player_Dash : MonoBehaviour
             return;
         }
 
-
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (Interaction.Inst.IsUpdate == false)
             {
-
                 if (Player_state.p_state == PlayerState.player_die)
                     return;
 
@@ -72,7 +70,11 @@ public class Player_Dash : MonoBehaviour
 
         if (0.0f < dash_time)
         {
-            SoundMgr.Instance.PlayEffSound("Player_Dash", 0.5f);
+
+
+            if (Player_state.p_Move_state == PlayerMoveState.player_dash)
+                SoundMgr.Instance.PlayGUISound("Player_Dash", 1.0f);
+
             P_Move_Dash();
 
             this.gameObject.layer = 8;
@@ -86,6 +88,7 @@ public class Player_Dash : MonoBehaviour
 
     private void P_Move_Dash()
     {
+
         Vector2 p_vector = new Vector2(p_input.horizontal, 0);
         Vector2 p_dash = p_vector * dash_speed * Time.deltaTime;
         rigid.position += p_dash;
