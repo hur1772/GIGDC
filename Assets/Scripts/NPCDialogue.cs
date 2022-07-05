@@ -181,7 +181,8 @@ public class NPCDialogue : MonoBehaviour
                                 Player_StandingCG.gameObject.SetActive( false );
                                 Interaction.Inst.m_interactionState = InteractionState.Fight;
                                 TutorialMgr.m_TutorialState = TutorialState.NextStage;
-                                Interaction.Inst.GKey.gameObject.SetActive( false );                                
+                                Interaction.Inst.GKey.gameObject.SetActive( false );
+                                Interaction.Inst.IsInteraction = false;
                                 Player.SetActive( true );                               
                                 break;
                             }

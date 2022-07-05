@@ -45,6 +45,7 @@ public class KingInteraction : MonoBehaviour
                 {
                     if (Interaction.Inst.GKey != null)
                     {
+                        Interaction.Inst.m_interactionState = InteractionState.Nomal;
                         Interaction.Inst.GKey.gameObject.SetActive(false);
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.KingDistance);
 

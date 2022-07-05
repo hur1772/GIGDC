@@ -45,6 +45,7 @@ public class BeaconInteraction : MonoBehaviour
                     {
                         InfoUI.Inst.HStore.gameObject.SetActive(false);
                         Interaction.Inst.GKey.gameObject.SetActive(false);
+                        Interaction.Inst.m_interactionState = InteractionState.Nomal; 
                         Interaction.Inst.animator.SetFloat("Interaction", Interaction.Inst.BeaconDistance);
                         Interaction.Inst.IsInteraction = false;
                     }
