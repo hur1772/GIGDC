@@ -13,9 +13,7 @@ public class BossCtrl1_1 : Monster
     float dieAlpha = 1.0f;
     Color dieColor = Color.white;
     SpriteRenderer _spRenderer;
-    [SerializeField] Image HPBar = null;
-    public GameObject Wall1;
-    public GameObject Wall2;
+    [SerializeField] Image HPBar = null; 
     //public float m_SizeUpDelay = 4.0f;
 
     private void Start() => StartFunc();
@@ -140,9 +138,7 @@ public class BossCtrl1_1 : Monster
             {
                 StageMgr.Inst.InfoText.gameObject.SetActive(true);
                 StageMgr.Inst.InfoTimer = 3.0f;
-                StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
-                Wall1.gameObject.SetActive(false);
-                Wall2.gameObject.SetActive(false);
+                StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";             
             }
             Protal.gameObject.SetActive(true);           
             Vector3 ProtalPos = new Vector3(426.1f,0.7f, 0.0f);

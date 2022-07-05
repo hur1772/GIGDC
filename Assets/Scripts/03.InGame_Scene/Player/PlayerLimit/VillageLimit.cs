@@ -9,13 +9,20 @@ public class VillageLimit : MonoBehaviour
 
     private Transform tr;
     private Vector2 m_Pos = Vector2.zero;
-    // Start is called before the first frame update
+    // Start is called before the first frame update    
+    
+
+    public GameObject Tiger;
+    public GameObject monsters;
+    public GameObject Wall1;
+    public GameObject Wall2;
 
     private void Start()
     {
         Debug.Log(GlobalUserData.SwordTier);
 
         tr = GetComponent<Transform>();
+        
     }
 
     void OnEnable()
@@ -107,6 +114,33 @@ public class VillageLimit : MonoBehaviour
             }
 
             tr.position = m_Pos;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.name.Contains("Tiger_Trigger_Pos") == true)
+        {
+            SoundMgr.Instance.PlayGUISound("Tiger_Gen", 1.5f);
+            if (Tiger != null)
+            {
+                Tiger.SetActive(true);
+            }
+            if (monsters != null)
+            {
+                monsters.SetActive(false);
+            }
+            if (Wall1 != null)
+            {
+                Wall1.SetActive(true);
+            }
+            if (Wall2 != null)
+            {
+                Wall2.SetActive(true);
+            }
+
+
+            
         }
     }
 }

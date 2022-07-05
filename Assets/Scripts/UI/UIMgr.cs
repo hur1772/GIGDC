@@ -42,6 +42,7 @@ public class UIMgr : MonoBehaviour
     public Button TitleBtn = null;
     public Button SaveLoadBtn = null;
 
+
     private void Awake()
     {
         Inst = this;
