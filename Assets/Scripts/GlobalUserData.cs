@@ -216,7 +216,7 @@ public class Item_Info  //각 Item 정보
 
 public class GlobalUserData 
 {
-    public static int s_GoldCount = 20000;
+    public static int s_GoldCount = 0;
     public static int BowTier = 0;
     public static int SwordTier = 0;
     public static PlayerAttackState Player_Att_State;
