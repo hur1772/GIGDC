@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossGirl : Monster
 {
@@ -24,6 +25,9 @@ public class BossGirl : Monster
     [Header("--- Boss ---")]
     public Transform bossSpawnPos;
     public GameObject bossPrefab;
+    [SerializeField] Image HPBar = null;
+    [SerializeField] Image HPBack = null;
+    [SerializeField] Image Icon = null;
 
     // Start is called before the first frame update
     void Start()
@@ -223,6 +227,9 @@ public class BossGirl : Monster
         m_Animator.SetBool("CanAttack", false);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
         m_Animator.SetTrigger("Die");
+        HPBack.gameObject.SetActive(false);
+        HPBar.gameObject.SetActive(false);
+        Icon.gameObject.SetActive(false);
     }
 
     public void SpawnBoss()

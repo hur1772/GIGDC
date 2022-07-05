@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossMan : Monster
 {
@@ -19,7 +20,9 @@ public class BossMan : Monster
     [SerializeField] Transform womanSpawnPos;
     [SerializeField] GameObject monsterPotal;
     [SerializeField] Transform potalPos;
-
+    [SerializeField] Image HPBar = null;
+    [SerializeField] Image HPBack = null;
+    [SerializeField] Image Icon = null;
     bool firstSpawn = false, secondSpawn = false;
 
     //보스소환
@@ -142,7 +145,9 @@ public class BossMan : Monster
             SoundMgr.Instance.PlayEffSound("BossManDie", 1.0f);
             m_Animator.SetTrigger("DieTrigger");
             m_Monstate = MonsterState.CORPSE;
-
+            HPBack.gameObject.SetActive(false);
+            HPBar.gameObject.SetActive(false);
+            Icon.gameObject.SetActive(false);
             CoinDrop();
         }
         else if (m_Monstate == MonsterState.CORPSE)
@@ -204,7 +209,7 @@ public class BossMan : Monster
     public override void TakeDamage(int WeaponState)
     {
         base.TakeDamage(WeaponState);
-
+        HPBar.fillAmount = m_CurHP / m_MaxHP;
         if (m_CurHP <= m_MaxHP * 0.7f && !firstSpawn)
         {
             m_Animator.SetTrigger("SpawnMonster");

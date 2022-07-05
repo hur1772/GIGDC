@@ -112,6 +112,7 @@ public class StageMgr : MonoBehaviour
     public void ExitGameFunc()
     {
         Debug.Log("ExitGame");
+        Application.Quit();
     }
 
 }
