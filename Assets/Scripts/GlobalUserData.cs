@@ -116,7 +116,7 @@ public class Item_Info  //각 Item 정보
             m_CurItemCount = 4;
 
             m_ItemExp = "Hp +50 회복";
-            m_IconImg = Resources.Load("IconImg/고약", typeof(Sprite)) as Sprite;
+            m_IconImg = Resources.Load("IconImg/약재v2", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("보약", typeof(Sprite)) as Sprite;
             m_Help = "< R >을 눌러 사용 가능";
         }
