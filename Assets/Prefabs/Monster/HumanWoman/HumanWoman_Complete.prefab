@@ -223,6 +223,7 @@ MonoBehaviour:
     m_Bits: 64
   attackPos: {fileID: 7937888248003081272}
   originPos: {x: 0, y: 0, z: 0}
+  isAType: 1
   m_AttackDelay: 1.5
   weaponPos: {fileID: 7937888248003081272}
   attackDealy_2: 0
@@ -272,4 +273,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
