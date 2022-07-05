@@ -10,6 +10,7 @@ public class HlepBoxCtrl : MonoBehaviour
     public Text txt_ItemName;
     public Text txt_ItemDesc;
     public Text txt_ItemHowtoUsed;
+    public Text txt_itemCurCount;
 
     public void ShowToolTip(int a_itemType, Vector3 pos)
     {
@@ -24,6 +25,9 @@ public class HlepBoxCtrl : MonoBehaviour
 
         if (txt_ItemHowtoUsed != null)
             txt_ItemHowtoUsed.text = GlobalUserData.m_ItemDataList[a_itemType].m_Help;
+
+        if (txt_itemCurCount != null)
+            txt_itemCurCount.text = "보유개수 : " + GlobalUserData.m_ItemDataList[a_itemType].m_CurItemCount;
     }
 
     public void HideToolTip()
