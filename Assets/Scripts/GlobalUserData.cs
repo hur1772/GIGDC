@@ -220,7 +220,7 @@ public class GlobalUserData
     public static int BowTier = 0;
     public static int SwordTier = 0;
     public static PlayerAttackState Player_Att_State;
-    public static int CurStageNum = 0;
+    public static int CurStageNum = 2;
 
     public static ulong UniqueCount = 0; //임시 Item 고유키 발급기...
                                          //public static List<ItemValue> g_ItemList = new List<ItemValue>();
