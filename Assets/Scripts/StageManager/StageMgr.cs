@@ -29,8 +29,8 @@ public class StageMgr : MonoBehaviour
     void Start()
     {
         //GlobalUserData.Load();
-        GlobalUserData.InitData();
-        GlobalUserData.InitWeaponData();
+        //GlobalUserData.InitData();
+        //GlobalUserData.InitWeaponData();
         menuOn = false;
         if (BacktoGame_Btn != null)
             BacktoGame_Btn.onClick.AddListener(BackGameFunc);
