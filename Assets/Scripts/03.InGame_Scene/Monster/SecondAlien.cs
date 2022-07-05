@@ -159,7 +159,7 @@ public class SecondAlien : Monster
                         StageMgr.Inst.InfoText.text = "Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.";
                     }
                     Protal.gameObject.SetActive(true);
-                    Vector3 ProtalPos = new Vector3(483.45f, 7.4f, 0.0f);
+                    Vector3 ProtalPos = new Vector3(483.45f, 9.4f, 0.0f);
                     Protal.transform.position = ProtalPos;
                     Instantiate(Protal);
                 }
