@@ -22,6 +22,8 @@ public class Player_Attack : MonoBehaviour
 
     bool State = true;
 
+    float SwapDelay = 0.0f;
+
     void Awake()
     {
         Inst = this;
@@ -51,31 +53,41 @@ public class Player_Attack : MonoBehaviour
     private void Update() => UpdateFunc();
     private void UpdateFunc()
     {
-        if (Interaction.Inst.IsUpdate == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                SoundMgr.Instance.PlayEffSound("SwordCHNG", 0.5f);
-                Debug.Log((0 + GlobalUserData.SwordTier * 2));
-                animator.runtimeAnimatorController = runtimeAnimatorControllers[0 + GlobalUserData.SwordTier * 2];
-                Player_State.p_state = PlayerState.player_attack;
-                Player_State.p_Attack_state = PlayerAttackState.player_sword;
-                GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
-                State = true;
-                //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_sword);
-            }
+        SwapDelay -= Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (0.0f >= SwapDelay)
+            SwapDelay = 0.0f;
+
+        if (SwapDelay <= 0.0f)
+        {
+            if (Interaction.Inst.IsUpdate == false)
             {
-                SoundMgr.Instance.PlayEffSound("BowCHNG", 0.5f);
-                Debug.Log((1 + GlobalUserData.BowTier * 2));
-                animator.runtimeAnimatorController = runtimeAnimatorControllers[1 + GlobalUserData.BowTier * 2];
-                //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
-                Player_State.p_state = PlayerState.player_attack;
-                Player_State.p_Attack_state = PlayerAttackState.player_bow;
-                GlobalUserData.Player_Att_State = PlayerAttackState.player_bow;
-                State = true;
-                //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    SoundMgr.Instance.PlayEffSound("SwordCHNG", 0.5f);
+                    Debug.Log((0 + GlobalUserData.SwordTier * 2));
+                    animator.runtimeAnimatorController = runtimeAnimatorControllers[0 + GlobalUserData.SwordTier * 2];
+                    Player_State.p_state = PlayerState.player_attack;
+                    Player_State.p_Attack_state = PlayerAttackState.player_sword;
+                    GlobalUserData.Player_Att_State = PlayerAttackState.player_sword;
+                    State = true;
+                    SwapDelay = 2.0f;
+                    //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_sword);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    SoundMgr.Instance.PlayEffSound("BowCHNG", 0.5f);
+                    Debug.Log((1 + GlobalUserData.BowTier * 2));
+                    animator.runtimeAnimatorController = runtimeAnimatorControllers[1 + GlobalUserData.BowTier * 2];
+                    //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
+                    Player_State.p_state = PlayerState.player_attack;
+                    Player_State.p_Attack_state = PlayerAttackState.player_bow;
+                    GlobalUserData.Player_Att_State = PlayerAttackState.player_bow;
+                    State = true;
+                    SwapDelay = 2.0f;
+                    //animator.SetInteger("WeaponState", (int)PlayerAttackState.player_bow);
+                }
             }
         }
     }
