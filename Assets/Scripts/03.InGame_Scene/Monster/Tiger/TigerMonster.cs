@@ -52,6 +52,8 @@ public class TigerMonster : Monster
     [Header("--- Boss ---")]
     public Transform bossSpawnPos;
     public GameObject bossPrefab;
+    public GameObject Wall1;
+    public GameObject Wall2;
 
     private void Start() => StartFunc();
 
@@ -417,6 +419,8 @@ public class TigerMonster : Monster
         HPBar.gameObject.SetActive(false);
         HPBack.gameObject.SetActive(false);
         Icon.gameObject.SetActive(false);
+        Wall1.gameObject.SetActive(false);
+        Wall2.gameObject.SetActive(false);
 
     }
 
