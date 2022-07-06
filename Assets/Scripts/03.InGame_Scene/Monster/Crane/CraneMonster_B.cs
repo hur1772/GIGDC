@@ -9,6 +9,7 @@ public class CraneMonster_B : Monster
 
     public GameObject attackEff;
     public Transform effSpawnPos;
+    [SerializeField] CircleCollider2D bottomColl = null;
 
     Vector2 attackSize = new Vector2(3, 3);
 
@@ -21,6 +22,9 @@ public class CraneMonster_B : Monster
 
     private void StartFunc()
     {
+        if (bottomColl == null)
+            bottomColl = this.GetComponentInChildren<CircleCollider2D>();
+
         InitMonster();
         m_Monstate = MonsterState.PATROL;
     }
@@ -57,6 +61,7 @@ public class CraneMonster_B : Monster
         else if (m_Monstate == MonsterState.CORPSE)
         {
             //-- 아무것도 안함
+            bottomColl.offset = new Vector2(0, 5.5f);
         }
     }
 

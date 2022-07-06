@@ -230,7 +230,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -289,3 +289,4 @@ MonoBehaviour:
   originPos: {x: 0, y: 0, z: 0}
   attackEff: {fileID: 3956147696298606077, guid: 52346d398a5729f4b9ffcd790d33cd29, type: 3}
   effSpawnPos: {fileID: 5084920857949523683}
+  bottomColl: {fileID: 5084920857347392288}
