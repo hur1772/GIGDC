@@ -36,7 +36,6 @@ public class CraneMonster_B : Monster
 
     public void MonUpdate()
     {
-        m_CalcVec.y = this.transform.position.y;
         if (m_Monstate == MonsterState.PATROL)
         {
             PatrolUpdate();
@@ -92,7 +91,7 @@ public class CraneMonster_B : Monster
             }
         }
 
-
+        Debug.Log(m_CalcVec.magnitude);
         if (m_CalcVec.magnitude <= m_ChaseDistance)
         {
             m_Monstate = MonsterState.CHASE;
