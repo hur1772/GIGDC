@@ -17,7 +17,7 @@ public class Player_TakeDamage : MonoBehaviour
         Player_State = GetComponent<Player_State_Ctrl>();
         animator = GetComponent<Animator>();
         Player_State.p_state = PlayerState.player_takeDamage;
-        maxHp = 100;
+        maxHp = 150;
         curHp = maxHp;
     }
 
