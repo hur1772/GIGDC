@@ -8,7 +8,6 @@ public class Player_Jump : MonoBehaviour
     private Player_Input p_input;
     private Player_State_Ctrl Player_state;
     private Animator animator;
-
     private float jump_power;
 
     bool isJumping;

@@ -542,7 +542,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2925999849401489815, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2925999849401489815, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1152,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142941397637392021, guid: a3ec6bc3e8070044ba18b4b31f673ff3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1142941397637392021, guid: a3ec6bc3e8070044ba18b4b31f673ff3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37240,7 +37240,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230586312}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -37689,7 +37689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4926890595061099005, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1704726
+      value: -2.18
       objectReference: {fileID: 0}
     - target: {fileID: 4926890595061099005, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38923,7 +38923,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2812334401942617401, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2812334401942617401, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39106,7 +39106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4926890595061099005, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4926890595061099005, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41701,7 +41701,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2925999849401489815, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2925999849401489815, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43938,7 +43938,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2812334401942617401, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2812334401942617401, guid: 8975836a782d4764c825f9fe09b048fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44384,7 +44384,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4692019282596616491, guid: 8ab66c9d0786dbe4d806092fcdfc1c78, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4692019282596616491, guid: 8ab66c9d0786dbe4d806092fcdfc1c78, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44605,7 +44605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2925999849401489815, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2925999849401489815, guid: 01a0141125c2a82428cad69dfcf1e78c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47643,7 +47643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4926890595061099005, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1438007
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 4926890595061099005, guid: 88588b1e6c4233c44b02d6c84d984828, type: 3}
       propertyPath: m_LocalPosition.z
