@@ -40,38 +40,38 @@ public class WeaponState_Info
         if (a_WpType == WeaponType.Sword3Tier)
         {
             m_WeaponDamage = 30;
-            m_Critical = 10;
-            m_CriticalDmg = 0.5f;
+            m_Critical = 3;
+            m_CriticalDmg = 0.4f;
         }
         else if (a_WpType == WeaponType.Bow3Tier)
         {
-            m_WeaponDamage = 25;
-            m_Critical = 15;
-            m_CriticalDmg = 0.45f;
+            m_WeaponDamage = 15;
+            m_Critical = 3;
+            m_CriticalDmg = 0.3f;
         }
         else if (a_WpType == WeaponType.Sword2Tier)
         {
-            m_WeaponDamage = 38;
-            m_Critical = 15;
-            m_CriticalDmg = 0.55f;
+            m_WeaponDamage = 35;
+            m_Critical = 5;
+            m_CriticalDmg = 0.45f;
         }
         else if (a_WpType == WeaponType.Bow2Tier)
         {
-            m_WeaponDamage = 33;
-            m_Critical = 20;
-            m_CriticalDmg = 0.5f;
+            m_WeaponDamage = 20;
+            m_Critical = 4;
+            m_CriticalDmg = 0.25f;
         }
         else if (a_WpType == WeaponType.Sword1Tier)
         {
-            m_WeaponDamage = 45;
-            m_Critical = 25;
-            m_CriticalDmg = 0.65f;
+            m_WeaponDamage = 40;
+            m_Critical = 7;
+            m_CriticalDmg = 0.5f;
         }
         else if (a_WpType == WeaponType.Bow1Tier)
         {
-            m_WeaponDamage = 40;
-            m_Critical = 29;
-            m_CriticalDmg = 0.6f;
+            m_WeaponDamage = 25;
+            m_Critical = 5;
+            m_CriticalDmg = 0.3f;
         }
     }
 }
@@ -165,7 +165,7 @@ public class Item_Info  //각 Item 정보
             m_Price = 2000; //기본가격
             m_CurItemCount = 0;
 
-            m_ItemExp = "공격력 + 5";
+            m_ItemExp = "공격력 + 2";
             m_IconImg = Resources.Load("IconImg/추어탕v2", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("추어탕", typeof(Sprite)) as Sprite;
         }
@@ -179,7 +179,7 @@ public class Item_Info  //각 Item 정보
             m_Price = 2000; //기본가격
             m_CurItemCount = 0;
 
-            m_ItemExp = "치명타 데미지 + 5%";
+            m_ItemExp = "치명타 데미지 + 2%";
             m_IconImg = Resources.Load("IconImg/감자전v2", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("감자전", typeof(Sprite)) as Sprite;
         }
@@ -193,7 +193,7 @@ public class Item_Info  //각 Item 정보
             m_Price = 2000; //기본가격
             m_CurItemCount = 0;
 
-            m_ItemExp = "치명타 확률 + 10%";
+            m_ItemExp = "치명타 확률 + 1%";
             m_IconImg = Resources.Load("IconImg/막걸리v2", typeof(Sprite)) as Sprite;
             m_ShopIconImg = Resources.Load("막걸리", typeof(Sprite)) as Sprite;
         }

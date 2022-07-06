@@ -261,9 +261,9 @@ void Update()
         if (m_CurHP <= 0.0f)
             return;
 
-        float a_DamVal = GlobalUserData.m_weaponDataList[WeaponState].m_WeaponDamage + (GlobalUserData.m_ItemDataList[5].m_CurItemCount * 5);
-        int a_CritVal = GlobalUserData.m_weaponDataList[WeaponState].m_Critical + (GlobalUserData.m_ItemDataList[7].m_CurItemCount * 10);
-        float a_CritDmg = a_DamVal + (a_DamVal * (GlobalUserData.m_weaponDataList[WeaponState].m_CriticalDmg + ((float)GlobalUserData.m_ItemDataList[6].m_CurItemCount * 0.05f)));
+        float a_DamVal = GlobalUserData.m_weaponDataList[WeaponState].m_WeaponDamage + (GlobalUserData.m_ItemDataList[5].m_CurItemCount * 2);
+        int a_CritVal = GlobalUserData.m_weaponDataList[WeaponState].m_Critical + (GlobalUserData.m_ItemDataList[7].m_CurItemCount * 1);
+        float a_CritDmg = a_DamVal + (a_DamVal * (GlobalUserData.m_weaponDataList[WeaponState].m_CriticalDmg + ((float)GlobalUserData.m_ItemDataList[6].m_CurItemCount * 0.02f)));
 
         Debug.Log(a_CritDmg);
 
