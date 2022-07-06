@@ -9,6 +9,7 @@ public class InfoUI : MonoBehaviour
     public GameObject HStore;
     public GameObject WPStore;
     public GameObject STStore;
+    public GameObject MusaBack;
     public float GuideTimer = 4.0f;
 
     public static InfoUI Inst = null;

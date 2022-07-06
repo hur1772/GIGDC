@@ -9148,7 +9148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 600471856}
   - component: {fileID: 600471858}
-  - component: {fileID: 600471857}
   m_Layer: 0
   m_Name: "\uC6B0\uD638npc \uD638\uC704\uBB34\uC0AC"
   m_TagString: Untagged
@@ -9170,18 +9169,6 @@ Transform:
   m_Father: {fileID: 1847756294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &600471857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600471855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f933ff93225374aa7cd30e1d487e2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &600471858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11073,7 +11060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &830852412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15231,6 +15218,7 @@ MonoBehaviour:
   HStore: {fileID: 816746991}
   WPStore: {fileID: 727292164}
   STStore: {fileID: 1239147807}
+  MusaBack: {fileID: 830852411}
   GuideTimer: 4
 --- !u!4 &1772387598
 Transform:
