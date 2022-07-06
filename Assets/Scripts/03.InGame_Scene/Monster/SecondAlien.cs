@@ -266,6 +266,7 @@ public class SecondAlien : Monster
         m_Animator.SetBool("IsAttack3", false);
         m_Animator.SetBool("IsAttack", false);
         changing = true;
+        m_Atk = 60;
         m_Monstate = MonsterState.IDLE;
     }
 

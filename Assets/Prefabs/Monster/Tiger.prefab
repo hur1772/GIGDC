@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccaa03674b3bdbf4697961296550e1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHP: 250
+  m_MaxHP: 400
   m_CurHP: 10
   m_Atk: 35
   m_MoveSpeed: 1
@@ -517,6 +517,8 @@ MonoBehaviour:
   Icon: {fileID: 0}
   bossSpawnPos: {fileID: 6448571185795891496}
   bossPrefab: {fileID: 261164714830009224, guid: c2a0dda8e8bbcbb4e8e365c0463349a1, type: 3}
+  Wall1: {fileID: 0}
+  Wall2: {fileID: 0}
 --- !u!1 &6448571185520773390
 GameObject:
   m_ObjectHideFlags: 0

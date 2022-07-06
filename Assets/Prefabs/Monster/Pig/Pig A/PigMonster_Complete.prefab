@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48415567ee433384285ddbe2bb2a9fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHP: 180
+  m_MaxHP: 100
   m_CurHP: 180
   m_Atk: 15
   m_MoveSpeed: 4
@@ -303,3 +303,4 @@ MonoBehaviour:
   originPos: {x: 0, y: 0, z: 0}
   attackEff: {fileID: 1874900421175834534, guid: b313792b872082d4d9146a91379255f0, type: 3}
   effSpawnPos: {fileID: 1155675801226732846}
+  SkillDam: 30

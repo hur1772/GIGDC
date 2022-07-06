@@ -24,6 +24,7 @@ public class PigMonster : Monster
 
     public GameObject attackEff;
     public Transform effSpawnPos;
+    [SerializeField] float SkillDam;
 
     bool m_SkillTriggerBool = true;
 
@@ -316,7 +317,7 @@ public class PigMonster : Monster
         {
             Debug.Log("돌진 데미지");
             if(collision.gameObject.TryGetComponent(out playerTakeDmg))
-                playerTakeDmg.P_TakeDamage(15);
+                playerTakeDmg.P_TakeDamage(SkillDam);
         }
     }
     

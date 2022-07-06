@@ -43,7 +43,7 @@ public class FoxNiddle : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out playerdmg))
         {
-            playerdmg.P_TakeDamage();
+            playerdmg.P_TakeDamage(35);
             Destroy(this.gameObject);
         }
     }
