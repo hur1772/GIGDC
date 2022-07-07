@@ -24,9 +24,9 @@ public class CreditScene_Mgr : MonoBehaviour
     {
         CreditTxt.transform.position = new Vector2(CreditTxt.transform.position.x, CreditTxt.transform.position.y + 0.3f);
 
-        if (1900f < CreditTxt.transform.position.y)
+        if (2900f < CreditTxt.transform.position.y)
         {
-            CreditTxt.transform.position = new Vector2(CreditTxt.transform.position.x, -1500f);
+            CreditTxt.transform.position = new Vector2(CreditTxt.transform.position.x, -2240f);
         }
     }
 

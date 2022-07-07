@@ -3909,15 +3909,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<color=Red>\uC5ED\uBCD1 \uAD34\uB2F4</color>\n\n\n<color=green>---\uAE30\uD68D---</color>\n\n\uC774\uD558\uB9BC\n\uC815\uB2E4\uD76C\n\n\n<color=yellow>---\uADF8\uB798\uD53D---</color>\n\n\uD50C\uB808\uC774\uC5B4\n\uCD5C\uD61C\uC9C4\n\nNPC
+  m_Text: "<color=Red>\uC5ED\uBCD1 \uAD34\uB2F4</color>\n\n<\uD300\uC7A5>\r\n\uC774\uD558\uB9BC\r\n\n<\uCD1D\uBB34>\r\n\uC815\uB2E4\uD76C\r\n\n<\uADF8\uB798\uD53D
+    \uD300\uC7A5>\r\n\uCD5C\uD61C\uC9C4\r\n\n<\uD504\uB85C\uADF8\uB7A8 \uD300\uC7A5>\r\n\uC870\uC131\uC7AC\n\n\n<color=green>---\uAE30\uD68D---</color>\n\n\uC774\uD558\uB9BC\n\uC815\uB2E4\uD76C\n\n\n<color=yellow>---\uADF8\uB798\uD53D---</color>\n\n\uD50C\uB808\uC774\uC5B4\n\uCD5C\uD61C\uC9C4\n\nNPC
     / \uC778\uAC04\uD615 \uBAAC\uC2A4\uD130\n\uC18C\uBCD1\uC724\n\n\uBC30\uACBD /
     UI\n\uC724\uC815\uBBFC\n\n\uB3D9\uBB3C\uD615 \uBAAC\uC2A4\uD130\n\uD615\uC900\uC601\n\n\n<color=blue>---\uAC1C\uBC1C---</color>\n\n\uD50C\uB808\uC774\uC5B4
     / \uB9F5 \uB514\uC790\uC778\n\uC870\uC131\uC7AC\n\n\uBAAC\uC2A4\uD130 AI\n\uCD5C\uC740\uBC94\n\nUI
     / \uCE74\uBA54\uB77C\n\uAE40\uC885\uCC2C\n\n\uC0C1\uD638\uC791\uC6A9 / \uC720\uC800
     \uB370\uC774\uD130 / \uC0C1\uC810\n\uD5C8\uB3C4\uD6C8\n\n\uC74C\uC545\n\uC870\uC131\uC7AC\n\n\uC0AC\uC6B4\uB4DC
-    \uB9AC\uC18C\uC2A4\nzapsplat\nTrollCrawlBeat\n\uB208\uC194\uC758 \uC74C\uC545\uC800\uC7A5\uC18C\n\n\uADF8\uB798\uD53D
+    \uC18C\uC2A4\nzapsplat\nTrollCrawlBeat\n\uB208\uC194\uC758 \uC74C\uC545\uC800\uC7A5\uC18C\n\n\uADF8\uB798\uD53D
     \uB9AC\uC18C\uC2A4\n\uB2E4\uC774\uC544\uD230\n\uBC30\uACBD\uD0A4\uD2B8\nTito
-    L\xEDvio\nAssets Brush\nILLYRIS_STUDIO\n"
+    L\xEDvio\nAssets Brush\nILLYRIS_STUDIO\n\n"
 --- !u!222 &886789406
 CanvasRenderer:
   m_ObjectHideFlags: 0
